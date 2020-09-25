@@ -2,29 +2,29 @@ package leppa.planarartifice.items;
 
 import java.lang.reflect.Method;
 
-import leppa.planarartifice.PlanarArtifice;
-import net.minecraft.creativetab.CreativeTabs;
+import leppa.planarartifice.registry.PAItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemElytra;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import thaumcraft.api.items.ItemsTC;
 
 public class ItemThaumostaticJetHarness extends ItemArmor{
 	
-	public ItemThaumostaticJetHarness() {
-		super(PAItems.jetHarness, 3, EntityEquipmentSlot.CHEST);
+	public ItemThaumostaticJetHarness(String name, ArmorMaterial mat) {
+		super(mat, 3, EntityEquipmentSlot.CHEST);
+		
+		this.setRegistryName(name);
+		this.setUnlocalizedName(name);
+		
+		PAItems.ITEMS.add(this);
+		
 	}
 	
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair){

@@ -2,7 +2,8 @@ package leppa.planarartifice.tiles;
 
 import javax.annotation.Nullable;
 
-import leppa.planarartifice.PlanarArtifice;
+import leppa.planarartifice.main.CommonProxy;
+import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.network.PacketRequestUpdateTeleporter;
 import leppa.planarartifice.network.PacketUpdateTeleporter;
 import net.minecraft.item.ItemStack;
@@ -31,7 +32,7 @@ public class TileTeleporter extends TileEntity implements ITickable{
 		protected void onContentsChanged(int slot){
 			if(!world.isRemote){
 				lastChangeTime = world.getTotalWorldTime();
-				PlanarArtifice.network.sendToAllAround(new PacketUpdateTeleporter(TileTeleporter.this),
+				CommonProxy.network.sendToAllAround(new PacketUpdateTeleporter(TileTeleporter.this),
 						new NetworkRegistry.TargetPoint(world.provider.getDimension(), pos.getX(), pos.getY(),
 								pos.getZ(), 64));
 			}
@@ -68,7 +69,7 @@ public class TileTeleporter extends TileEntity implements ITickable{
 	@Override
 	public void onLoad(){
 		if(world.isRemote){
-			PlanarArtifice.network.sendToServer(new PacketRequestUpdateTeleporter(this));
+			CommonProxy.network.sendToServer(new PacketRequestUpdateTeleporter(this));
 		}
 	}
 	

@@ -9,6 +9,8 @@ item.dimensional_curiosity.name=Dimensional Curiosity
 item.dimensional_singularity.name=Dimensional Singularity
 item.alchemical_scribing_tools.name=Alchemical Scribing Tools
 item.bismuth_ingot.name=Bismuth Ingot
+item.bismuth_nugget.name=Bismuth Nugget
+item.bismuth_plate.name=Bismuth Plate
 item.aura_meter.name=Aura Meter
 item.belt_of_suspension.name=Belt Of Suspension
 item.mirrored_amulet.name=Mirrored Amulet
@@ -26,6 +28,10 @@ tile.teleporter.name=Mirromirous Waystone
 tile.teleporter_matrix.name=Mirromirous Matrix
 tile.potion_mixer.name=Potion Mixer
 tile.flux_scrubber.name=Flux Scrubber
+
+tile.alkimium_smeltery_mithrillium.name=Alkimium Mithrillium Smeltery
+tile.alkimium_smeltery_adaminite.name=Alkimium Adaminite Smeltery
+tile.alkimium_smeltery_mithminite.name=Alkimium Mithminite Smeltery
 
 fluid.molten_alkimium=Molten Alkimium
 fluid.molten_bismuth=Molten Bismuth
@@ -153,6 +159,24 @@ research.INFUSIONENCHANTMENTII.complete.text=I have created a few new infusion e
 
 research.MATSTUDYALKIMIUM.title=Material Studies: Alkimium
 research.MATSTUDYALKIMIUM.stage.1.text=While alkimium is more brittle than brass, it is much more resistant to heat and explosions.<BR>Its colour stands out against most backgrounds, and retains brass' lightness. It should be an improvement over plain brass, so long as it isn't being hit.
+
+# --- Compat ---
+research.alkimiumsmelterymithrillium.title=[PA] Mithrillium Smeltery Upgrade
+research.alkimiumsmelterymithrillium.stage.1.text=I am not quite sure what this Mithrillium metal is or where it came from, however it seems to be much more potent that plain Void Metal, maybe this we fullfill my dreams of a perfect Smeltery.
+research.alkimiumsmelterymithrillium.stage.2.text=The closer I get to completion of my Smeltery, the more I actually belive this could work, however I should be careful I do not want this to explode like my first Void Metal prototype.
+research.alkimiumsmelterymithrillium.complete.text=It took some time to create this masterful piece of Thaumaturgy, but now I am finally able to produce essentia without any loss. It is a little slow though, only being as fast at the regular Essentia Smeltery. Oddly enough it seems like the internal storage nearly tripled, even though it has the same physical size, this is possibly a reaction between the Alkimium and the Mithrillium, but non the less weired.
+
+research.alkimiumsmelteryadaminite.title=[PA] Adaminite Smeltery Upgrade
+research.alkimiumsmelteryadaminite.stage.1.text=I doubt that this research will have any significance, I am already able to turn things into essentia without any loss, all this metal could possibly do is making the process a little faster, but that is what alumentum is for right ?
+research.alkimiumsmelteryadaminite.stage.2.text=During my experiments with Adaminite I observered an interesting interaction between between the metal and essentia, somehow the whole slurry boiled over even though I only used a tiny amount, which was a mess to clean up, but could it be that this reaction could be enhanced by some Alkimium ?
+research.alkimiumsmelteryadaminite.complete.text=This new Smeltery, forged from Adaminite, is probably one of the unexplainablest devices I ever came up with, not only is it as fast as a regular Thaumium Smeltery, but it seems to provide 25% of additional essentia from nothing, I belive to explain this behavior it requires an Unified Theory of Quantum Thaumaturgy, but for now I think I should just run with it. 
+
+research.alkimiumsmelterymithminite.title=[PA] Mithminite Smeltery Upgrade
+research.alkimiumsmelterymithminite.stage.1.text=After my studies of Adaminite it is now time to look at this metal called mithminite, but I should be carful with it, since I do not want to clean up an ocean of unrefined essentia slurry just because the metal cam in contact with something.
+research.alkimiumsmelterymithminite.stage.2.text=While assembling the smeltery something odd happened, the Mithminite and the Alkimium somehow stuck to each other and I was unable to seperate them ever since, I can not explain why but I doubt that I will be able to upgrade this smeltery one again.
+research.alkimiumsmelterymithminite.complete.text=As I exspected Mithminite has an even stronger influence on the refining of essentia that Adaminite, resulting in an essentia bonus of 50%, what was unexspected though is that this Smeltery it is by far the fastest of them all, which is probably a result of the huge internal pressure caused by the 4000 units of stored essentia. I think finally the time has come to let this field of research rest for a long time.   
+
+
 
 tooltip.usablevis=Current Usable Vis:
 tooltip.basevis=Current Base Vis:

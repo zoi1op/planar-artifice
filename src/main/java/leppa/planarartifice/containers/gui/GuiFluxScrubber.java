@@ -1,7 +1,7 @@
 package leppa.planarartifice.containers.gui;
 
-import leppa.planarartifice.PlanarArtifice;
 import leppa.planarartifice.containers.ContainerFluxScrubber;
+import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.tiles.TileFluxScrubber;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;

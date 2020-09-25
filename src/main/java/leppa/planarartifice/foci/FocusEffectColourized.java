@@ -4,7 +4,7 @@ import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Set;
 
-import leppa.planarartifice.PlanarArtifice;
+import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import thaumcraft.api.aspects.Aspect;

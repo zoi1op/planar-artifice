@@ -3,10 +3,8 @@ package leppa.planarartifice.tiles;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import leppa.planarartifice.potion.PotionCatalouges;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
+import leppa.planarartifice.recipe.RecipePotionMixer;
+import leppa.planarartifice.registry.PARecipes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -19,7 +17,6 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.aspects.IAspectContainer;
 import thaumcraft.api.aspects.IEssentiaTransport;
-import thaumcraft.api.blocks.BlocksTC;
 
 public class TilePotionMixer extends TileEntity implements ITickable, IAspectContainer, IEssentiaTransport{
 	
@@ -34,7 +31,7 @@ public class TilePotionMixer extends TileEntity implements ITickable, IAspectCon
 	public AspectList recipe = new AspectList();
 	public AspectList recipeProgress = new AspectList();
 	public Aspect currentSuction = null;
-	public PotionCatalouges currentPossibilities;
+	public RecipePotionMixer currentRecipe;
 	
 	@Override
 	@Nonnull
@@ -64,28 +61,16 @@ public class TilePotionMixer extends TileEntity implements ITickable, IAspectCon
 	
 	@Override
 	public void update(){
-		ItemStack catalyst = inventory.getStackInSlot(3);
+		ItemStack catalyst = inventory.getStackInSlot(3);		
 		
-		if(catalyst == null){
-			currentPossibilities = null;
-		}else if(catalyst.getItem() == Item.getItemFromBlock(Blocks.PISTON)){
-			currentPossibilities = PotionCatalouges.piston;
-		}else if(catalyst.getItem() == Item.getItemFromBlock(Blocks.ICE)){
-			currentPossibilities = PotionCatalouges.ice;
-		}else if(catalyst.getItem() == Items.IRON_INGOT){
-			currentPossibilities = PotionCatalouges.iron;
-		}else if(catalyst.getItem() == Items.APPLE){
-			currentPossibilities = PotionCatalouges.apple;
-		}else if(catalyst.getItem() == Items.FISH && catalyst.getItemDamage() == 3){
-			currentPossibilities = PotionCatalouges.pufferfish;
-		}else if(catalyst.getItem() == Item.getItemFromBlock(Blocks.GLASS)){
-			currentPossibilities = PotionCatalouges.glass;
-		}else if(catalyst.getItem() == Items.ROTTEN_FLESH){
-			currentPossibilities = PotionCatalouges.rotten_flesh;
-		}else if(catalyst.getItem() == Items.GOLD_INGOT){
-			currentPossibilities = PotionCatalouges.gold;
-		}
-		//TODO: Fix, make, add Nitor
+		PARecipes.getRecipesOfType(RecipePotionMixer.class).forEach(recipe -> {
+			
+			if(recipe.matches(catalyst))
+				currentRecipe = recipe;
+			
+		});
+		
+		
 	}
 	
 	@Override

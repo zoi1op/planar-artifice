@@ -12,9 +12,7 @@
             "meta": [
 
             ],
-            "location": [-7,
-                0
-            ],
+            "location": [-7, 0],
             "reward_item": [
 
             ],
@@ -126,6 +124,7 @@
                     "text": "research.alkimium.complete.text",
                     "recipes": [
                         "planarartifice:alkimium_ingot",
+                        "planarartifice:alkimium_stuff",
                         "planarartifice:alchemical_alkimium_construct"
                     ]
                 }
@@ -350,16 +349,19 @@
                 {
                     "text": "research.alkimiumsmelteryvoid.stage.2.text",
                     "recipes": [
-                        "planarartifice:alkimium_smeltery_void"
+                        "planarartifice:alkimium_smeltery_void",
+                        "thaumcraft:metal_alchemical_advanced"
                     ],
                     "required_craft": [
+                        "thaumcraft:AdvAlchemyConstruct",
                         "planarartifice:alkimium_smeltery_void"
                     ]
                 },
                 {
                     "text": "research.alkimiumsmelteryvoid.complete.text",
                     "recipes": [
-                        "planarartifice:alkimium_smeltery_void"
+                        "planarartifice:alkimium_smeltery_void",
+                        "thaumcraft:AdvAlchemyConstruct"
                     ]
                 }
             ]
@@ -516,13 +518,15 @@
                         "OBSERVATION;AUROMANCY;2"
                     ],
                     "recipes": [
-                        "planarartifice:bismuth"
+                        "planarartifice:bismuth",
+                        "planarartifice:bismuth_stuff"
                     ]
                 },
                 {
                     "text": "research.bismuth.complete.text",
                     "recipes": [
                         "planarartifice:bismuth",
+                        "planarartifice:bismuth_stuff",
                         "planarartifice:aura_meter",
                         "planarartifice:bismuth_claymore"
                     ],

@@ -9,46 +9,47 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 
-public class PacketRequestUpdateTeleporter implements IMessage{
-	
+public class PacketRequestUpdateTeleporter implements IMessage {
+
 	private BlockPos pos;
 	private int dimension;
-	
-	public PacketRequestUpdateTeleporter(BlockPos pos, int dimension){
+
+	public PacketRequestUpdateTeleporter(BlockPos pos, int dimension) {
 		this.pos = pos;
 		this.dimension = dimension;
 	}
-	
-	public PacketRequestUpdateTeleporter(TileTeleporter te){
+
+	public PacketRequestUpdateTeleporter(TileTeleporter te) {
 		this(te.getPos(), te.getWorld().provider.getDimension());
 	}
-	
-	public PacketRequestUpdateTeleporter(){}
-	
+
+	public PacketRequestUpdateTeleporter() {
+	}
+
 	@Override
-	public void fromBytes(ByteBuf buf){
+	public void fromBytes(ByteBuf buf) {
 		pos = BlockPos.fromLong(buf.readLong());
 		dimension = buf.readInt();
 	}
-	
+
 	@Override
-	public void toBytes(ByteBuf buf){
+	public void toBytes(ByteBuf buf) {
 		buf.writeLong(pos.toLong());
 		buf.writeInt(dimension);
 	}
-	
-	public static class Handler implements IMessageHandler<PacketRequestUpdateTeleporter, PacketUpdateTeleporter>{
-		
+
+	public static class Handler implements IMessageHandler<PacketRequestUpdateTeleporter, PacketUpdateTeleporter> {
+
 		@Override
-		public PacketUpdateTeleporter onMessage(PacketRequestUpdateTeleporter message, MessageContext ctx){
+		public PacketUpdateTeleporter onMessage(PacketRequestUpdateTeleporter message, MessageContext ctx) {
 			World world = FMLCommonHandler.instance().getMinecraftServerInstance().getWorld(message.dimension);
-			TileTeleporter te = (TileTeleporter)world.getTileEntity(message.pos);
-			if(te != null){
+			TileTeleporter te = (TileTeleporter) world.getTileEntity(message.pos);
+			if(te != null) {
 				return new PacketUpdateTeleporter(te);
-			}else{
+			} else {
 				return null;
 			}
 		}
-		
+
 	}
 }

@@ -1,9 +1,7 @@
 package leppa.planarartifice.containers.gui;
 
-import leppa.planarartifice.PlanarArtifice;
-import leppa.planarartifice.containers.ContainerFluxScrubber;
 import leppa.planarartifice.containers.ContainerPotionMixer;
-import leppa.planarartifice.tiles.TileFluxScrubber;
+import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.tiles.TilePotionMixer;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;

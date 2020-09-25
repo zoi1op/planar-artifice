@@ -1,0 +1,158 @@
+{
+    "entries": [{
+    
+            "key": "ALKIMIUMMITHRILLIUMSMELTERY",
+            "name": "research.alkimiumsmelterymithrillium.title",
+            "icons": [
+                "planarartifice:alkimium_smeltery_mithrillium"
+            ],
+            "category": "PLANARARTIFICE",
+            "parents": [
+                "ALKIMIUMVOIDSMELTERY",
+                "TAR_MITHRILLIUM_SMELTER"
+            ],
+            "meta": [
+				"HIDDEN"
+            ],
+            "location": [
+                6, -5
+            ],
+            "reward_item": [
+
+            ],
+            "reward_knowledge": [
+
+            ],
+            "stages": [{
+                    "text": "research.alkimiumsmelterymithrillium.stage.1.text",
+                    "required_knowledge": [
+                        "THEORY;ALCHEMY;3",
+                        "OBSERVATION;ALCHEMY;3"
+                    ]
+                },
+                {
+                    "text": "research.alkimiumsmelterymithrillium.stage.2.text",
+                    "recipes": [           
+                        "planarartifice:alkimium_smeltery_mithrillium",    
+                        "thaumcraft:AdvAlchemyConstruct"
+                    ],
+                    "required_craft": [
+                        "thaumcraft:AdvAlchemyConstruct",
+                        "planarartifice:alkimium_smeltery_mithrillium"
+                    ]
+                },
+                {
+                    "text": "research.alkimiumsmelterymithrillium.complete.text",
+                    "recipes": [
+                        "planarartifice:alkimium_smeltery_mithrillium",
+                        "thaumcraft:AdvAlchemyConstruct"
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "ALKIMIUMADAMINITEMELTERY",
+            "name": "research.alkimiumsmelteryadaminite.title",
+            "icons": [
+                "planarartifice:alkimium_smeltery_adaminite"
+            ],
+            "category": "PLANARARTIFICE",
+            "parents": [
+                "ALKIMIUMMITHRILLIUMSMELTERY",
+                "TAR_ADAMINITE_SMELTER"
+            ],
+            "meta": [
+				"HIDDEN"
+            ],
+            "location": [
+                7, -6
+            ],
+            "reward_item": [
+
+            ],
+            "reward_knowledge": [
+
+            ],
+            "stages": [{
+                    "text": "research.alkimiumsmelteryadaminite.stage.1.text",
+                    "required_knowledge": [
+                        "THEORY;ALCHEMY;3",
+                        "OBSERVATION;ALCHEMY;3"
+                    ]
+                },
+                {
+                    "text": "research.alkimiumsmelteryadaminite.stage.2.text",
+                    "recipes": [                  
+                        "planarartifice:alkimium_smeltery_adaminite",
+                        "thaumcraft:AdvAlchemyConstruct"
+                                  
+                    ],
+                    "required_craft": [
+                        "thaumcraft:AdvAlchemyConstruct",
+                        "planarartifice:alkimium_smeltery_adaminite"
+                    ]
+                },
+                {
+                    "text": "research.alkimiumsmelteryadaminite.complete.text",
+                    "recipes": [
+                        "planarartifice:alkimium_smeltery_adaminite",
+                        "thaumcraft:AdvAlchemyConstruct"
+                                  
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "ALKIMIUMMITHMINITESMELTERY",
+            "name": "research.alkimiumsmelterymithminite.title",
+            "icons": [
+                "planarartifice:alkimium_smeltery_mithminite"
+            ],
+            "category": "PLANARARTIFICE",
+            "parents": [
+                "ALKIMIUMADAMINITEMELTERY",
+                "TAR_MITHMINITE_SMELTER"
+            ],
+            "meta": [
+				"HIDDEN"
+            ],
+            "location": [
+                8, -7
+            ],
+            "reward_item": [
+
+            ],
+            "reward_knowledge": [
+
+            ],
+            "stages": [{
+                    "text": "research.alkimiumsmelterymithminite.stage.1.text",
+                    "required_knowledge": [
+                        "THEORY;ALCHEMY;3",
+                        "OBSERVATION;ALCHEMY;3"
+                    ]
+                },
+                {
+                    "text": "research.alkimiumsmelterymithminite.stage.2.text",
+                    "recipes": [         
+                        "planarartifice:alkimium_smeltery_mithminite",
+                        "thaumcraft:AdvAlchemyConstruct"
+                                  
+                    ],
+                    "required_craft": [
+                        "thaumcraft:AdvAlchemyConstruct",
+                        "planarartifice:alkimium_smeltery_mithminite"
+                    ]
+                },
+                {
+                    "text": "research.alkimiumsmelterymithminite.complete.text",
+                    "recipes": [
+                        "planarartifice:alkimium_smeltery_mithminite",
+                        "thaumcraft:AdvAlchemyConstruct"
+                                  
+                    ]
+                }
+            ]
+        }
+    ]
+}

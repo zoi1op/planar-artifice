@@ -1,7 +1,7 @@
 package leppa.planarartifice.foci;
 
-import leppa.planarartifice.PlanarArtifice;
-import leppa.planarartifice.aspects.PAAspects;
+import leppa.planarartifice.main.PlanarArtifice;
+import leppa.planarartifice.registry.PAAspects;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;

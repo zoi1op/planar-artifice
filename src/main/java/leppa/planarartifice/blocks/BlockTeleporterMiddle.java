@@ -4,7 +4,8 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
-import leppa.planarartifice.PlanarArtifice;
+import leppa.planarartifice.main.PlanarArtifice;
+import leppa.planarartifice.registry.PABlocks;
 import leppa.planarartifice.tiles.TileTeleporter;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
@@ -30,10 +31,10 @@ import thaumcraft.api.blocks.BlocksTC;
 import thaumcraft.api.items.ItemGenericEssentiaContainer;
 import thaumcraft.common.items.resources.ItemCrystalEssence;
 
-public class BlockTeleporterMiddle extends Block implements ITileEntityProvider{
+public class BlockTeleporterMiddle extends BlockPA implements ITileEntityProvider{
 	
-	public BlockTeleporterMiddle(){
-		super(Material.ROCK);
+	public BlockTeleporterMiddle(String name){
+		super(Material.ROCK, name);
 		setHardness(3);
 	}
 	

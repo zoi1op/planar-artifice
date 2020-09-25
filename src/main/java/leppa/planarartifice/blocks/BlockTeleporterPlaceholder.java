@@ -5,6 +5,7 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import leppa.planarartifice.registry.PABlocks;
 import leppa.planarartifice.tiles.TileTeleporter;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -27,10 +28,10 @@ import net.minecraft.world.World;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.blocks.BlocksTC;
 
-public class BlockTeleporterPlaceholder extends Block{
+public class BlockTeleporterPlaceholder extends BlockPA {
 
-	public BlockTeleporterPlaceholder(){
-		super(Material.ROCK);
+	public BlockTeleporterPlaceholder(String name){
+		super(Material.ROCK, name);
 		setHardness(3);
 	}
 	
