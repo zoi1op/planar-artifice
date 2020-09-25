@@ -2,6 +2,7 @@ package leppa.planarartifice.items;
 
 import java.util.List;
 
+import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.registry.PAItems;
 import leppa.planarartifice.util.LocalizationHelper;
 import net.minecraft.client.util.ITooltipFlag;
@@ -26,7 +27,7 @@ public class ItemBismuthCaster extends ItemCaster {
 	
 	public ItemBismuthCaster(String name){
 		super(name, 0);
-		
+		this.setCreativeTab(PlanarArtifice.creativetab);
 		PAItems.ITEMS.add(this);
 	}
 	

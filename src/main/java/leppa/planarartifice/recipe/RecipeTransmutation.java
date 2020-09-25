@@ -5,10 +5,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import net.minecraftforge.registries.IForgeRegistryEntry.Impl;
 
-public class RecipeTransmutation implements IRecipe {
 
-	private ResourceLocation regName;
+public class RecipeTransmutation extends Impl<IRecipe> implements IRecipe {
 	
 	private final ItemStack input;
 	private final ItemStack output;
@@ -16,27 +16,12 @@ public class RecipeTransmutation implements IRecipe {
 	public RecipeTransmutation(ResourceLocation name, ItemStack input, ItemStack output) {
 		this.input = input;
 		this.output = output;
-		this.regName = name;
+		
+		this.setRegistryName(name);
 	}
 
 	public boolean matches(ItemStack stack) {
 		return ItemStack.areItemsEqual(stack, input);
-	}
-
-	@Override
-	public IRecipe setRegistryName(ResourceLocation name) {
-		this.regName = name;
-		return this;
-	}
-
-	@Override
-	public ResourceLocation getRegistryName() {
-		return regName;
-	}
-
-	@Override
-	public Class<IRecipe> getRegistryType() {
-		return (Class<IRecipe>) this.getClass();
 	}
 
 	@Override
