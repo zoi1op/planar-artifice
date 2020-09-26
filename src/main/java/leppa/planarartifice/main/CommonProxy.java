@@ -4,6 +4,9 @@ import leppa.planarartifice.compat.PACompatHandler;
 import leppa.planarartifice.network.MessageProjectingAttack;
 import leppa.planarartifice.network.PacketRequestUpdateTeleporter;
 import leppa.planarartifice.network.PacketUpdateTeleporter;
+import leppa.planarartifice.registry.PAAspects;
+import leppa.planarartifice.registry.PAMultiblocks;
+import leppa.planarartifice.registry.PAResearch;
 import leppa.planarartifice.tiles.TileAlkimiumSmeltery;
 import leppa.planarartifice.tiles.TileFluxScrubber;
 import leppa.planarartifice.tiles.TilePotionMixer;
@@ -49,6 +52,9 @@ public class CommonProxy {
 	
 	public void postInit(FMLPostInitializationEvent e){
 		PACompatHandler.postInit(e);
+		PAAspects.registerItemAspects();
+		PAResearch.registerResearch();
+		PAMultiblocks.registerMultiblocks();
 		
 	}
 

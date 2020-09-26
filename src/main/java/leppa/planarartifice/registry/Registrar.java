@@ -26,11 +26,6 @@ public class Registrar {
 	@SubscribeEvent
 	public static void registerRecipes(Register<IRecipe> event) {
 		PARecipes.registerRecipes(event);
-
-		PAAspects.registerItemAspects();
-		PAResearch.registerResearch();
-		PAMultiblocks.registerMultiblocks();
-
 	}
 
 	@SubscribeEvent
