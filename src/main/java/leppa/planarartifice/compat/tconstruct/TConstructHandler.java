@@ -37,9 +37,6 @@ public class TConstructHandler implements ICompatModule {
 	@Override
 	public void preInit(FMLPreInitializationEvent e){
 		
-		System.out.println("HELLO");
-		
-		
 		MinecraftForge.EVENT_BUS.register(traitTransmutative);
 		MinecraftForge.EVENT_BUS.register(traitAuraInfusing);
 		

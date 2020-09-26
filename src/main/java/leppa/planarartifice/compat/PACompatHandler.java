@@ -2,7 +2,6 @@ package leppa.planarartifice.compat;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.function.Supplier;
 
 import leppa.planarartifice.compat.tconstruct.TConstructHandler;
 import leppa.planarartifice.compat.thaumicadditions.ThaumicAdditionsHandler;
@@ -15,19 +14,22 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class PACompatHandler {
 
-	public static final HashMap<String, Supplier<ICompatModule>> SUPPLIERS = new HashMap<>();
+	public static final HashMap<String, Class<? extends ICompatModule>> CLASSES = new HashMap<>();
 	public static final ArrayList<ICompatModule> MODULES = new ArrayList<ICompatModule>();
 
 	static {
-		SUPPLIERS.put("tconstruct", TConstructHandler::new);
-		SUPPLIERS.put("thaumadditions", ThaumicAdditionsHandler::new);
-
+		CLASSES.put("tconstruct", TConstructHandler.class);
+		CLASSES.put("thaumadditions", ThaumicAdditionsHandler.class);
 	}
 
 	public static void setup() {
-		SUPPLIERS.forEach((modid, sup) -> {
+		CLASSES.forEach((modid, clazz) -> {
 			if(Loader.isModLoaded(modid))
-				MODULES.add(sup.get());
+				try {
+					MODULES.add(clazz.newInstance());
+				} catch(Exception e) {
+					e.printStackTrace();
+				}
 		});
 	}
 
