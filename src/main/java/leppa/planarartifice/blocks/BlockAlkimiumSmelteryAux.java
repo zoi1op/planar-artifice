@@ -32,7 +32,7 @@ public class BlockAlkimiumSmelteryAux extends BlockPA implements IBlockFacingHor
 	}
 
 	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-		tooltip.add("§3Alkimium compatible");
+		tooltip.add("\u00a7Alkimium compatible");
 	}
 
 	public boolean isOpaqueCube(IBlockState state) {

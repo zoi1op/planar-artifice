@@ -6,6 +6,7 @@ import leppa.planarartifice.blocks.BlockAlkimiumSmeltery;
 import leppa.planarartifice.registry.PABlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntityFurnace;
@@ -21,6 +22,7 @@ import thaumcraft.common.lib.crafting.ThaumcraftCraftingManager;
 import thaumcraft.common.lib.utils.BlockStateUtils;
 import thaumcraft.common.tiles.essentia.TileAlembic;
 import thaumcraft.common.tiles.essentia.TileSmelter;
+import net.minecraft.inventory.IInventory;
 
 public class TileAlkimiumSmeltery extends TileSmelter {
 
@@ -66,19 +68,19 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 			
 			if(this.furnaceBurnTime == 0) {
 				if(this.canSmelt()) {
-					this.currentItemBurnTime = this.furnaceBurnTime = TileEntityFurnace.getItemBurnTime( this.getStackInSlot(1));
+					this.currentItemBurnTime = this.furnaceBurnTime = TileEntityFurnace.getItemBurnTime( ((IInventory)this).getStackInSlot(1));
 					if(this.furnaceBurnTime > 0) {
 						BlockSmelter.setFurnaceState(this.world, this.getPos(), true);
 						flag1 = true;
 						this.speedBoost = false;
-						if(this.getStackInSlot(1) != null) {
-							if(this.getStackInSlot(1).isItemEqual(new ItemStack(ItemsTC.alumentum))) {
+						if(((IInventory)this).getStackInSlot(1) != ItemStack.EMPTY) {
+							if(((IInventory)this).getStackInSlot(1).isItemEqual(new ItemStack(ItemsTC.alumentum))) {
 								this.speedBoost = true;
 							}
-							this.getStackInSlot(1).shrink(1);
-							if(this.getStackInSlot(1).getCount() == 0) {
-								this.setInventorySlotContents(1,
-										this.getStackInSlot(1).getItem().getContainerItem(this.getStackInSlot(1)));
+							((IInventory)this).getStackInSlot(1).shrink(1);
+							if(((IInventory)this).getStackInSlot(1).getCount() == 0) {
+								((IInventory)this).setInventorySlotContents(1,
+										((IInventory)this).getStackInSlot(1).getItem().getContainerItem(((IInventory)this).getStackInSlot(1)));
 							}
 						}
 					} else {
@@ -108,10 +110,10 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 	}
 
 	public boolean canSmelt() {
-		if(this.getStackInSlot(0).isEmpty()) {
+		if(((IInventory)this).getStackInSlot(0).isEmpty()) {
 			return false;
 		}
-		AspectList al = ThaumcraftCraftingManager.getObjectTags(this.getStackInSlot(0));
+		AspectList al = ThaumcraftCraftingManager.getObjectTags(((IInventory)this).getStackInSlot(0));
 		if(al == null || al.size() == 0) {
 			return false;
 		}
@@ -127,7 +129,7 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 	public void smeltItem() {
 		if(this.canSmelt()) {
 			int flux = 0;
-			AspectList al = ThaumcraftCraftingManager.getObjectTags(this.getStackInSlot(0));
+			AspectList al = ThaumcraftCraftingManager.getObjectTags(((IInventory)this).getStackInSlot(0));
 			for(Aspect a : al.getAspects()) {
 				if(this.getEfficiency() < 1.0f) {
 					int qq = al.getAmount(a);
@@ -138,7 +140,7 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 						flux++;
 					}
 				}
-				
+
 				else if(this.getEfficiency() > 1.0F) {
 					int qq = al.getAmount(a);
 					for(int q = 0; q < qq; ++q) {
@@ -148,7 +150,7 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 					}
 				}
 
-				
+
 				this.aspects.add(a, al.getAmount(a));
 			}
 			if(flux > 0) {
@@ -168,9 +170,9 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 				AuraHelper.polluteAura(this.getWorld(), this.getPos(), pp, true);
 			}
 			this.vis = this.aspects.visSize();
-			this.getStackInSlot(0).shrink(1);
-			if(this.getStackInSlot(0).getCount() <= 0) {
-				this.setInventorySlotContents(0, ItemStack.EMPTY);
+			((IInventory)this).getStackInSlot(0).shrink(1);
+			if(((IInventory)this).getStackInSlot(0).getCount() <= 0) {
+				((IInventory)this).setInventorySlotContents(0, ItemStack.EMPTY);
 			}
 		}
 	}

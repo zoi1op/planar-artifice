@@ -35,7 +35,7 @@ public class BlockAlkimiumSmelteryVent extends BlockPA implements IBlockFacingHo
 	}
 
 	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-		tooltip.add("§3Alkimium compatible");
+		tooltip.add("\u00a7Alkimium compatible");
 	}
 
 	public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
