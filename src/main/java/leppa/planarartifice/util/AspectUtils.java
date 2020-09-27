@@ -46,14 +46,14 @@ public class AspectUtils {
     public static void addByRegex(String regex, AspectList aspects) {
         // probably will be less efficient? don't use this unless necessary?
         for (Item item : Item.REGISTRY) {
-            if (item.getUnlocalizedName().matches(regex)) add(new ItemStack(item), aspects);
+            if (item.getRegistryName().toString().matches(regex)) add(new ItemStack(item), aspects);
         }
     }
 
     public static void setByRegex(String regex, AspectList aspects) {
         // probably will be less efficient? don't use this unless necessary?
         for (Item item : Item.REGISTRY) {
-            if (item.getUnlocalizedName().matches(regex)) set(new ItemStack(item), aspects);
+            if (item.getRegistryName().toString().matches(regex)) set(new ItemStack(item), aspects);
         }
     }
 }

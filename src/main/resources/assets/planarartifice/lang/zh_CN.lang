@@ -145,6 +145,6 @@ tooltip.willlastforseconds=将燃烧 %s 秒。
 tooltip.willlastforminutes=将燃烧 %s 分 %s 秒。
 
 tc.research_category.PLANARARTIFICE=镜像学
-tc.aspect.Tempus=时间
-tc.aspect.Spatio=空间，维
-tc.aspect.Tinctura=颜色，艺术，创造力，表现力
+tc.aspect.tempus=时间
+tc.aspect.spatio=空间，维
+tc.aspect.tinctura=颜色，艺术，创造力，表现力

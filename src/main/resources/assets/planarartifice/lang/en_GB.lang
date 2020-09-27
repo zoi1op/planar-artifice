@@ -152,8 +152,9 @@ tooltip.willlastforseconds=Will burn for %s seconds.
 tooltip.willlastforminutes=Will burn for %s minutes, and %s seconds.
 
 tc.research_category.PLANARARTIFICE=Planar Artifice
-tc.aspect.Tempus=Time
-tc.aspect.Spatio=Space, Dimensions
+tc.aspect.tempus=Time
+tc.aspect.spatio=Space, Dimensions
+tc.aspect.tinctura=Colours, Art, Creativity, Expressiveness
 
 enchantment.infusion.PROJECTING=Projecting
 golem.material.alkimium=Alkimium

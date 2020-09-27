@@ -54,12 +54,12 @@ golem.addon.text.teleport_pack=Allows the golem to teleport when it needs to tra
 planarartifice.PRISMLIGHT.name=Prismatic Light
 planarartifice.PRISMLIGHT.text=Forms a beam of potent light to damage things. Particularly potent on undead, blinds players.
 
-planarartifice.FOCUSCOLOURED.name=Focus Colourizer
-planarartifice.FOCUSCOLOURED.text=Acts as a different focus effect, but with a custom colour. The focus base and colour can be set at the bottom. (This only works correctly on Singleplayer.)
+planarartifice.FOCUSCOLOURED.name=Focus Colorizer
+planarartifice.FOCUSCOLOURED.text=Acts as a different focus effect, but with a custom color. The focus base and color can be set at the bottom. (This only works correctly on Singleplayer.)
 
 focus.colourizer.focus=Base Focus Effect
 focus.colourizer.invisible=(Not Applicable)
-focus.colourizer.colour=Colour (Hexadecimal, right arrow to type, finish, and retype)
+focus.colourizer.colour=Color (Hexadecimal, right arrow to type, finish, and retype)
 focus.colourizer.colour.start=-> to type
 
 itemGroup.planarartifice.tab.name=Planar Artifice
@@ -136,9 +136,9 @@ research.beltofsuspension.title=[PA] Belt of Suspension
 research.beltofsuspension.stage.1.text=The ability to fly is an incredible one. Whilst I have been able to reach significant heights with the Cloudstepper Ring, I'm still reliant on the ground for support. <BR>However, with my newfound knowledge of dimensions, I may be able to enhance this to allow constant horizontal movement, even if I don't actually use a Dimensional Singularity.
 research.beltofsuspension.complete.text=The Belt of Suspension, when properly equipped, will allow me to disable downwards vertical movement simply by holding the jump button. All vertical movement can be stopped by holding the sneak key. While floating in this way, I can still move around horizontally. If I hold jump from the ground, I will end up floating one-and-a-quarter blocks above the ground. This is also compatible with the Boots of the Traveller and Cloudstepper Ring. Fall damage is also disabled whilst wearing this.
 
-research.focuscolour.title=[PA] Focus Colourizers
-research.focuscolour.stage.1.text=Whilst foci are on their own quite versitile, their colour seems to be several times harder to modify. Whilst this is hardly a big issue, it would be a nice extra if I could dictate the colour my foci take.
-research.focuscolour.complete.text=I can now change the colour of foci via the use of the Fcous Colourizer effect. I can set it to mimic any other focus, and it will do exactly that, using it's vis type and having it's effects. I can change the colour through the three sliders at the bottom of the interface. Colours are per focus, not focus effect. (This only works on singleplayer. Settings cannot be changed. Crafting two immediately after eachother will cause them to share the same colour; wait after crafting one.)
+research.focuscolour.title=[PA] Focus Colorizers
+research.focuscolour.stage.1.text=Whilst foci are on their own quite versitile, their color seems to be several times harder to modify. Whilst this is hardly a big issue, it would be a nice extra if I could dictate the color my foci take.
+research.focuscolour.complete.text=I can now change the color of foci via the use of the Fcous Colorizer effect. I can set it to mimic any other focus, and it will do exactly that, using it's vis type and having it's effects. I can change the color through the three sliders at the bottom of the interface. Colors are per focus, not focus effect. (This only works on singleplayer. Settings cannot be changed. Crafting two immediately after eachother will cause them to share the same color; wait after crafting one.)
 
 research.mirroramulet.title=[PA] Mirrored Amulet
 research.mirroramulet.stage.1.text=Death, in this world, is an inconvenience. The further I travel,  the more likely I am to have uncommon or difficult to find items, and the more likely I am to die. The further away I die, the harder it becomes to recover my items. A way to keep all of my items intact after death would be incredibly useful, and useful in essentially every situation. 
@@ -158,7 +158,7 @@ research.INFUSIONENCHANTMENTII.stage.1.text=My thaumaturgy has come a long way s
 research.INFUSIONENCHANTMENTII.complete.text=I have created a few new infusion enchantments. Much like the original ones, some enchantments can be applied multiple times to the same item, but each rank has an increased essentia cost when crafted.<BR>Each different infusion enchantment on the item also increases the cost by 33% and has an increased chance of giving it the Warping property; all independent of original infusion enchantments<BR>Certain infusion enchantments can only be applied to specific tools or weapons. This will be listed under each individual entry that follows.<BR>Tools with infusion enchantments can still be enchanted with the normal enchanting table and visa versa.<BR>Unlike with the original ones, sneaking while using an infusion enchanted tool will §onot§r suppress its abilities.<PAGE>§oTransmutative§r<DIV>Any items dropped my monsters killed with a Transmutative weapon will have their drops changed into rarer or more useful items.<DIV>§oRanks§r: none<BR>§oTarget§r: axe, pickaxe, shovel, weapon<PAGE>§oAura Infusing§r<DIV>XP from monsters killed by an Aura Infusing weapon will instead be converted into aura vis, at a 2:1 rate.<DIV>§oRanks§r: none<BR>§oTarget§r: weapon<PAGE>§oProjecting§r<DIV>Infusing a weapon with Projecting will grant it extra reach, allowing it to break blocks out of your regular range, at two blocks per level. Mobs cannot be hit from a distance, however.<DIV>§oRanks§r: 1-5<BR>§oTarget§r: axe, pickaxe, shovel, weapon
 
 research.MATSTUDYALKIMIUM.title=Material Studies: Alkimium
-research.MATSTUDYALKIMIUM.stage.1.text=While alkimium is more brittle than brass, it is much more resistant to heat and explosions.<BR>Its colour stands out against most backgrounds, and retains brass' lightness. It should be an improvement over plain brass, so long as it isn't being hit.
+research.MATSTUDYALKIMIUM.stage.1.text=While alkimium is more brittle than brass, it is much more resistant to heat and explosions.<BR>Its color stands out against most backgrounds, and retains brass' lightness. It should be an improvement over plain brass, so long as it isn't being hit.
 
 # --- Compat ---
 research.alkimiumsmelterymithrillium.title=[PA] Mithrillium Smeltery Upgrade
@@ -186,6 +186,6 @@ tooltip.willlastforseconds=Will burn for %s seconds.
 tooltip.willlastforminutes=Will burn for %s minutes, and %s seconds.
 
 tc.research_category.PLANARARTIFICE=Planar Artifice
-tc.aspect.Tempus=Time
-tc.aspect.Spatio=Space, Dimensions
-tc.aspect.Tinctura=Colours, Art, Creativity, Expressiveness
+tc.aspect.tempus=Time
+tc.aspect.spatio=Space, Dimensions
+tc.aspect.tinctura=Colors, Art, Creativity, Expressiveness

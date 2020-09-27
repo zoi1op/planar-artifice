@@ -1,16 +1,14 @@
 package leppa.planarartifice.registry;
 
-import java.awt.Color;
-
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ResourceLocation;
-import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
-import thaumcraft.api.aspects.AspectHelper;
 import thaumcraft.api.aspects.AspectList;
+
+import java.awt.*;
 
 import static leppa.planarartifice.util.AspectUtils.*;
 
