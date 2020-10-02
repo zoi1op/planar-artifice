@@ -70,6 +70,6 @@ public class PAAspects{
 			add(new ItemStack(Blocks.STAINED_GLASS, 1, i), new AspectList().add(PAAspects.COLOR, 15));
 		}
 		
-		set(new ItemStack(PAItems.condensed_crystal_cluster), new AspectList().add(Aspect.FIRE, 12).add(Aspect.AIR, 12).add(Aspect.EARTH, 12).add(Aspect.ORDER, 12).add(Aspect.ENTROPY, 12).add(Aspect.MAGIC, 12).add(Aspect.ENERGY, 12).add(Aspect.WATER, 12));
+		set(new ItemStack(PAItems.condensed_crystal_cluster), new AspectList().add(Aspect.FIRE, 12).add(Aspect.AIR, 12).add(Aspect.EARTH, 12).add(Aspect.ORDER, 12).add(Aspect.ENTROPY, 12).add(Aspect.MAGIC, 12).add(Aspect.WATER, 12));
 	}
 }
