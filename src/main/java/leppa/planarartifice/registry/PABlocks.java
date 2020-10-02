@@ -40,8 +40,6 @@ public class PABlocks {
 
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		BLOCKS.forEach(b -> event.getRegistry().register(b));
-		OreDictionary.registerOre("blockAlkimium", alkimium_block);
-		OreDictionary.registerOre("blockBismuth", bismuth_block);
 	}
 
 	public static void registerItemBlocks(RegistryEvent.Register<Item> event) {
@@ -53,7 +51,7 @@ public class PABlocks {
 	}
 
 	public static void registerRender(Block block) {
-		
+
 		if(block instanceof BlockFluidBase)
 			ModelLoader.setCustomStateMapper(block, new StateMap.Builder().ignore(BlockFluidBase.LEVEL).build());
 		else

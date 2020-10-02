@@ -56,13 +56,6 @@ public class PAItems{
 	
 	public static void registerItems(RegistryEvent.Register<Item> event){
 		ITEMS.forEach(i -> event.getRegistry().register(i));
-		
-		OreDictionary.registerOre("ingotAlkimium", alkimium_ingot);
-		OreDictionary.registerOre("plateAlkimium", alkimium_plate);
-		OreDictionary.registerOre("nuggetAlkimium", alkimium_nugget);
-		OreDictionary.registerOre("ingotBismuth", bismuth_ingot);
-		OreDictionary.registerOre("plateBismuth", bismuth_plate);
-		OreDictionary.registerOre("nuggetBismuth", bismuth_nugget);
 	}
 	
 	public static void registerModels(){
