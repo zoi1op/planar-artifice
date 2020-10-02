@@ -1,7 +1,7 @@
 # [Planar Artifice](https://www.curseforge.com/minecraft/mc-mods/planar-artifice-unofficial) Unofficial
 *Reaching the Skies with the Arcane of the Earth.*
 
-<img src="https://raw.githubusercontent.com/prodzpod/planar-artifice/master/src/main/resources/assets/planarartifice/textures/meta/logo_text.png" width=50% align="center">
+![Planar Artifice](src/main/resources/assets/planarartifice/textures/meta/logo_text.png)
 
 an addon for [Thaumcraft 6](https://www.curseforge.com/minecraft/mc-mods/thaumcraft).
 
