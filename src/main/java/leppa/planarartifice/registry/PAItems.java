@@ -31,7 +31,7 @@ public class PAItems{
 	public static Item alkimium_nugget = new ItemPA("alkimium_nugget");
 	
 	public static Item bismuth_ingot = new ItemPA("bismuth_ingot");
-//	public static Item bismuth_plate = new ItemPA("bismuth_plate");
+	public static Item bismuth_plate = new ItemPA("bismuth_plate");
 	public static Item bismuth_nugget = new  ItemPA("bismuth_nugget");
 	
 	public static Item flux_venting_circuit = new ItemPA("flux_venting_circuit");
@@ -61,9 +61,8 @@ public class PAItems{
 		OreDictionary.registerOre("plateAlkimium", alkimium_plate);
 		OreDictionary.registerOre("nuggetAlkimium", alkimium_nugget);
 		OreDictionary.registerOre("ingotBismuth", bismuth_ingot);
-//		OreDictionary.registerOre("plateBismuth", bismuth_plate);
+		OreDictionary.registerOre("plateBismuth", bismuth_plate);
 		OreDictionary.registerOre("nuggetBismuth", bismuth_nugget);
-
 	}
 	
 	public static void registerModels(){

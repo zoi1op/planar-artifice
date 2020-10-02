@@ -14,7 +14,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = "1.0.0"
+version = "1.0.1"
 group = "leppa.planarartifice"
 archivesBaseName = "planarartifice"
 
@@ -102,12 +102,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "examplemod",
-            "Specification-Vendor": "examplemodsareus",
+            "Specification-Title": "planarartifice",
+            "Specification-Vendor": "planarartificesareus",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"examplemodsareus",
+            "Implementation-Vendor" :"planarartificesareus",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }

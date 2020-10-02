@@ -2,7 +2,7 @@
     "forge_marker": 1,
     "defaults": {
         "textures": {
-            "all": "planarartifice:blocks/alkimium_block"
+            "all": "planarartifice:blocks/bismuth_block"
         }
     },
     "variants": {

@@ -20,6 +20,7 @@ item.flux_venting_circuit.name=Flux Venting Circuit
 item.condensed_crystal_cluster.name=Condensed Crystal Cluster
 
 tile.alkimium_block.name=Block of Alkimium
+tile.bismuth_block.name=Block of Bismuth
 tile.alkimium_smeltery.name=Alkimium Essentia Smeltery
 tile.alkimium_smeltery_thaumium.name=Alkimium Thaumium Smeltery
 tile.alkimium_smeltery_void.name=Alkimium Void Smeltery
@@ -63,6 +64,7 @@ focus.colourizer.colour=Color (Hexadecimal, right arrow to type, finish, and ret
 focus.colourizer.colour.start=-> to type
 
 itemGroup.planarartifice.tab.name=Planar Artifice
+planarartifice.beaconBase=Can be used as a beacon base
 
 research.rareitems.title=[PA] Rare Items
 research.rareitems.stage.1.text=There are many rare ores and items available in the world. I should try to catalogue them; starting with diamond.

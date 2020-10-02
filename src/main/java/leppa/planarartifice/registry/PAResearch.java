@@ -29,6 +29,7 @@ public class PAResearch {
 			new ResourceLocation("planarartifice:textures/research/gui_research_back_2.jpg"));
 
 	public static void registerResearch() {
+		PlanarArtifice.LOGGER.info("Research active");
 		ThaumcraftApi.registerResearchLocation(new ResourceLocation("planarartifice:research/planarartifice.json"));
 
         // Scannables
@@ -42,8 +43,6 @@ public class PAResearch {
 
         // Golem Addon
         GolemAddon.register(new GolemAddon("TELEPORT_PACK", new String[]{"MATSTUDYALKIMIUM"}, new ResourceLocation("planarartifice", "textures/misc/golem/addon_teleport_pack.png"), new PartModelHauler(new ResourceLocation("thaumcraft", "models/obj/golem_hauler.obj"), new ResourceLocation("thaumcraft", "textures/entity/golems/golem_hauler.png"), PartModel.EnumAttachPoint.BODY), new Object[]{new ItemStack(PAItems.dimensional_singularity), new ItemStack(Blocks.OBSIDIAN)}, new EnumGolemTrait[]{PlanarArtifice.golemTraitTeleporter}));
-  
-		
 	}
 
 }

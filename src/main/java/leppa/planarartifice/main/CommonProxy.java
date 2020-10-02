@@ -48,12 +48,12 @@ public class CommonProxy {
 	
 	public void init(FMLInitializationEvent e){
 		PACompatHandler.init(e);
+		PAResearch.registerResearch();
 	}
 	
 	public void postInit(FMLPostInitializationEvent e){
 		PACompatHandler.postInit(e);
 		PAAspects.registerItemAspects();
-		PAResearch.registerResearch();
 		PAMultiblocks.registerMultiblocks();
 		
 	}

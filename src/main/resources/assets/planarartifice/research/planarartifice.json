@@ -683,7 +683,7 @@
                         "OBSERVATION;AUROMANCY;1"
                     ],
                     "required_research": [
-                        "!Tinctura"
+                        "!tinctura"
                     ]
                 },
                 {

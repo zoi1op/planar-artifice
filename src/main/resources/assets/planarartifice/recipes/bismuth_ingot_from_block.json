@@ -1,14 +1,14 @@
 { 
   "type": "minecraft:crafting_shapeless",
-  "group": "planarartifice:alkimium_stuff",
+  "group": "planarartifice:bismuth_stuff",
   "ingredients": [
     {
-	  "item": "planarartifice:alkimium_block",
+	  "item": "planarartifice:bismuth_block",
 	  "data": 0
 	}
   ],
   "result": {
-    "item": "planarartifice:alkimium_ingot",
+    "item": "planarartifice:bismuth_ingot",
     "count": 9,
     "data": 0
   }
