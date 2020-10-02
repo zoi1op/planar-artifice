@@ -67,7 +67,7 @@ repositories {
         url = 'https://maven.blamejared.com/'
     }
     maven {
-        name = 'DVS1 Maven FS'
+        name = 'Progwml6 maven'
         url = 'http://dvs1.progwml6.com/files/maven'
     }
     maven {
@@ -86,7 +86,8 @@ repositories {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2854'
-//    compile 'jei:jei_1.12.2:4.15.0.291'
+    compileOnly fg.deobf('mezz.jei:jei_1.12.2:4.16.1.302:api')
+    runtimeOnly fg.deobf('mezz.jei:jei_1.12.2:4.16.1.302')
 //    compile 'CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.19.548'
 //    compile "com.blamejared:MTLib:3.0.4.8"
     compile "com.azanor.baubles:Baubles:1.12-1.5.2"
