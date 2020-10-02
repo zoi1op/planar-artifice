@@ -1,7 +1,7 @@
 {
     "entries": [{
             "key": "RAREITEMS",
-            "name": "research.rareitems.title",
+            "name": "planarartifice.research.rareitems.title",
             "icons": [
                 "minecraft:nether_star"
             ],
@@ -20,37 +20,37 @@
 
             ],
             "stages": [{
-                    "text": "research.rareitems.stage.1.text",
+                    "text": "planarartifice.research.rareitems.stage.1.text",
                     "required_item": [
                         "minecraft:diamond"
                     ]
                 },
                 {
-                    "text": "research.rareitems.stage.2.text",
+                    "text": "planarartifice.research.rareitems.stage.2.text",
                     "required_item": [
                         "minecraft:emerald"
                     ]
                 },
                 {
-                    "text": "research.rareitems.stage.3.text",
+                    "text": "planarartifice.research.rareitems.stage.3.text",
                     "required_item": [
                         "minecraft:golden_apple"
                     ]
                 },
                 {
-                    "text": "research.rareitems.stage.4.text",
+                    "text": "planarartifice.research.rareitems.stage.4.text",
                     "required_item": [
                         "minecraft:nether_star"
                     ]
                 },
                 {
-                    "text": "research.rareitems.complete.text"
+                    "text": "planarartifice.research.rareitems.complete.text"
                 }
             ]
         },
         {
             "key": "THAUMICAPPLE",
-            "name": "research.magicapple.title",
+            "name": "planarartifice.research.magicapple.title",
             "icons": [
                 "planarartifice:magic_apple"
             ],
@@ -70,7 +70,7 @@
 
             ],
             "stages": [{
-                    "text": "research.magicapple.stage.1.text",
+                    "text": "planarartifice.research.magicapple.stage.1.text",
                     "required_craft": [
                         "planarartifice:magic_apple"
                     ],
@@ -79,7 +79,7 @@
                     ]
                 },
                 {
-                    "text": "research.magicapple.complete.text",
+                    "text": "planarartifice.research.magicapple.complete.text",
                     "recipes": [
                         "planarartifice:magic_apple"
                     ]
@@ -88,7 +88,7 @@
         },
         {
             "key": "ALKIMIUM",
-            "name": "research.alkimium.title",
+            "name": "planarartifice.research.alkimium.title",
             "icons": [
                 "planarartifice:alkimium_ingot"
             ],
@@ -112,7 +112,7 @@
 
             ],
             "stages": [{
-                    "text": "research.alkimium.stage.1.text",
+                    "text": "planarartifice.research.alkimium.stage.1.text",
                     "required_craft": [
                         "planarartifice:alkimium_ingot"
                     ],
@@ -121,7 +121,7 @@
                     ]
                 },
                 {
-                    "text": "research.alkimium.complete.text",
+                    "text": "planarartifice.research.alkimium.complete.text",
                     "recipes": [
                         "planarartifice:alkimium_ingot",
                         "planarartifice:alkimium_stuff",
@@ -132,7 +132,7 @@
         },
         {
             "key": "ALCHEMICALSCIBETOOLS",
-            "name": "research.alchemicalscribetools.title",
+            "name": "planarartifice.research.alchemicalscribetools.title",
             "icons": [
                 "planarartifice:alchemical_scribing_tools"
             ],
@@ -151,13 +151,13 @@
 
             ],
             "stages": [{
-                "text": "research.alchemicalscribetools.complete.text",
+                "text": "planarartifice.research.alchemicalscribetools.complete.text",
                 "recipes": [
                     "planarartifice:alchemical_scribing_tools"
                 ]
             }],
             "addenda": [{
-                "text": "research.alchemicalscribetools.addendum.text",
+                "text": "planarartifice.research.alchemicalscribetools.addendum.text",
                 "required_research": [
                     "RECHARGEPEDESTAL"
                 ]
@@ -165,7 +165,7 @@
         },
         {
             "key": "ALKIMIUMAPPLICATIONS",
-            "name": "research.alkimiumsmeltery.title",
+            "name": "planarartifice.research.alkimiumsmeltery.title",
             "icons": [
                 "planarartifice:alkimium_smeltery"
             ],
@@ -187,13 +187,13 @@
 
             ],
             "stages": [{
-                    "text": "research.alkimiumsmeltery.stage.1.text",
+                    "text": "planarartifice.research.alkimiumsmeltery.stage.1.text",
                     "required_knowledge": [
                         "THEORY;ALCHEMY;1"
                     ]
                 },
                 {
-                    "text": "research.alkimiumsmeltery.complete.text",
+                    "text": "planarartifice.research.alkimiumsmeltery.complete.text",
                     "recipes": [
                         "planarartifice:alkimium_smeltery",
                         "planarartifice:alchemical_alkimium_construct"
@@ -203,7 +203,7 @@
         },
         {
             "key": "ALKIMIUMGOGGLES",
-            "name": "research.alkimiumgoggles.title",
+            "name": "planarartifice.research.alkimiumgoggles.title",
             "icons": [
                 "planarartifice:alkimium_goggles"
             ],
@@ -224,13 +224,13 @@
 
             ],
             "stages": [{
-                    "text": "research.alkimiumgoggles.stage.1.text",
+                    "text": "planarartifice.research.alkimiumgoggles.stage.1.text",
                     "required_knowledge": [
                         "THEORY;INFUSION;2"
                     ]
                 },
                 {
-                    "text": "research.alkimiumgoggles.complete.text",
+                    "text": "planarartifice.research.alkimiumgoggles.complete.text",
                     "recipes": [
                         "planarartifice:alkimium_goggles"
                     ]
@@ -239,7 +239,7 @@
         },
         {
             "key": "ALKIMIUMDISTILLATION",
-            "name": "research.alkimiumimproveddistillation.title",
+            "name": "planarartifice.research.alkimiumimproveddistillation.title",
             "icons": [
                 "planarartifice:smelter_aux",
                 "planarartifice:smelter_vent"
@@ -262,13 +262,13 @@
 
             ],
             "stages": [{
-                    "text": "research.alkimiumimproveddistillation.stage.1.text",
+                    "text": "planarartifice.research.alkimiumimproveddistillation.stage.1.text",
                     "required_knowledge": [
                         "THEORY;ALCHEMY;1"
                     ]
                 },
                 {
-                    "text": "research.alkimiumimproveddistillation.complete.text",
+                    "text": "planarartifice.research.alkimiumimproveddistillation.complete.text",
                     "recipes": [
                         "planarartifice:alkimiumimproveddistillationaux1",
                         "planarartifice:alkimiumimproveddistillationaux2",
@@ -280,7 +280,7 @@
         },
         {
             "key": "ALKIMIUMTHAUMIUMSMELTERY",
-            "name": "research.alkimiumsmelterythaumium.title",
+            "name": "planarartifice.research.alkimiumsmelterythaumium.title",
             "icons": [
                 "planarartifice:alkimium_smeltery_thaumium"
             ],
@@ -302,13 +302,13 @@
 
             ],
             "stages": [{
-                    "text": "research.alkimiumsmelterythaumium.stage.1.text",
+                    "text": "planarartifice.research.alkimiumsmelterythaumium.stage.1.text",
                     "required_knowledge": [
                         "THEORY;ALCHEMY;2"
                     ]
                 },
                 {
-                    "text": "research.alkimiumsmelterythaumium.complete.text",
+                    "text": "planarartifice.research.alkimiumsmelterythaumium.complete.text",
                     "recipes": [
                         "planarartifice:alkimium_smeltery_thaumium",
                         "planarartifice:alchemical_alkimium_construct"
@@ -318,7 +318,7 @@
         },
         {
             "key": "ALKIMIUMVOIDSMELTERY",
-            "name": "research.alkimiumsmelteryvoid.title",
+            "name": "planarartifice.research.alkimiumsmelteryvoid.title",
             "icons": [
                 "planarartifice:alkimium_smeltery_void"
             ],
@@ -340,14 +340,14 @@
 
             ],
             "stages": [{
-                    "text": "research.alkimiumsmelteryvoid.stage.1.text",
+                    "text": "planarartifice.research.alkimiumsmelteryvoid.stage.1.text",
                     "required_knowledge": [
                         "THEORY;ALCHEMY;3",
                         "OBSERVATION;ALCHEMY;3"
                     ]
                 },
                 {
-                    "text": "research.alkimiumsmelteryvoid.stage.2.text",
+                    "text": "planarartifice.research.alkimiumsmelteryvoid.stage.2.text",
                     "recipes": [
                         "planarartifice:alkimium_smeltery_void",
                         "thaumcraft:metal_alchemical_advanced"
@@ -358,7 +358,7 @@
                     ]
                 },
                 {
-                    "text": "research.alkimiumsmelteryvoid.complete.text",
+                    "text": "planarartifice.research.alkimiumsmelteryvoid.complete.text",
                     "recipes": [
                         "planarartifice:alkimium_smeltery_void",
                         "thaumcraft:AdvAlchemyConstruct"
@@ -368,7 +368,7 @@
         },
         {
             "key": "!Portal",
-            "name": "research.portal.title",
+            "name": "planarartifice.research.portal.title",
             "icons": [
                 "planarartifice:dimensional_curiosity"
             ],
@@ -391,12 +391,12 @@
 
             ],
             "stages": [{
-                "text": "research.portal.complete.text"
+                "text": "planarartifice.research.portal.complete.text"
             }]
         },
         {
             "key": "DIMENSIONALSINGULARITY",
-            "name": "research.singularity.title",
+            "name": "planarartifice.research.singularity.title",
             "icons": [
                 "planarartifice:dimensional_singularity"
             ],
@@ -417,7 +417,7 @@
 
             ],
             "stages": [{
-                    "text": "research.singularity.stage.1.text",
+                    "text": "planarartifice.research.singularity.stage.1.text",
                     "required_knowledge": [
                         "THEORY;INFUSION;2",
                         "THEORY;ALCHEMY;2",
@@ -426,7 +426,7 @@
                     ]
                 },
                 {
-                    "text": "research.singularity.complete.text",
+                    "text": "planarartifice.research.singularity.complete.text",
                     "recipes": [
                         "planarartifice:dimensional_singularity"
                     ],
@@ -436,7 +436,7 @@
         },
         {
             "key": "MIRRORTELEPORTER",
-            "name": "research.mirrorteleporter.title",
+            "name": "planarartifice.research.mirrorteleporter.title",
             "icons": [
                 "planarartifice:teleporter_matrix"
             ],
@@ -458,14 +458,14 @@
 
             ],
             "stages": [{
-                    "text": "research.mirrorteleporter.stage.1.text",
+                    "text": "planarartifice.research.mirrorteleporter.stage.1.text",
                     "required_knowledge": [
                         "THEORY;INFUSION;3",
                         "THEORY;ARTIFICE;1"
                     ]
                 },
                 {
-                    "text": "research.mirrorteleporter.stage.2.text",
+                    "text": "planarartifice.research.mirrorteleporter.stage.2.text",
                     "recipes": [
                         "planarartifice:teleporter_matrix"
                     ],
@@ -474,7 +474,7 @@
                     ]
                 },
                 {
-                    "text": "research.mirrorteleporter.complete.text",
+                    "text": "planarartifice.research.mirrorteleporter.complete.text",
                     "recipes": [
                         "planarartifice:teleporter_matrix",
                         "planarartifice:teleporter_matrix2",
@@ -485,7 +485,7 @@
         },
         {
             "key": "BISMUTH",
-            "name": "research.bismuth.title",
+            "name": "planarartifice.research.bismuth.title",
             "icons": [
                 "planarartifice:bismuth_ingot"
             ],
@@ -508,7 +508,7 @@
 
             ],
             "stages": [{
-                    "text": "research.bismuth.stage.1.text",
+                    "text": "planarartifice.research.bismuth.stage.1.text",
                     "required_craft": [
                         "planarartifice:bismuth_ingot"
                     ],
@@ -523,7 +523,7 @@
                     ]
                 },
                 {
-                    "text": "research.bismuth.complete.text",
+                    "text": "planarartifice.research.bismuth.complete.text",
                     "recipes": [
                         "planarartifice:bismuth",
                         "planarartifice:bismuth_stuff",
@@ -536,7 +536,7 @@
         },
         {
             "key": "FLUXSCRUBBER",
-            "name": "research.fluxscrubber.title",
+            "name": "planarartifice.research.fluxscrubber.title",
             "icons": [
                 "planarartifice:flux_scrubber"
             ],
@@ -560,14 +560,14 @@
 
             ],
             "stages": [{
-                    "text": "research.fluxscrubber.stage.1.text",
+                    "text": "planarartifice.research.fluxscrubber.stage.1.text",
                     "required_knowledge": [
                         "THEORY;AUROMANCY;1",
                         "OBSERVATION;AUROMANCY;1"
                     ]
                 },
                 {
-                    "text": "research.fluxscrubber.complete.text",
+                    "text": "planarartifice.research.fluxscrubber.complete.text",
                     "recipes": [
                         "planarartifice:flux_scrubber"
                     ],
@@ -577,7 +577,7 @@
         },
         {
             "key": "FOCUSLIGHT",
-            "name": "research.focuslight.title",
+            "name": "planarartifice.research.focuslight.title",
             "icons": [
                 "focus:planarartifice.PRISMLIGHT"
             ],
@@ -599,20 +599,20 @@
 
             ],
             "stages": [{
-                    "text": "research.focuslight.stage.1.text",
+                    "text": "planarartifice.research.focuslight.stage.1.text",
                     "required_knowledge": [
                         "THEORY;AUROMANCY;1",
                         "OBSERVATION;AUROMANCY;1"
                     ]
                 },
                 {
-                    "text": "research.focuslight.stage.1.text"
+                    "text": "planarartifice.research.focuslight.stage.1.text"
                 }
             ]
         },
         {
             "key": "BELTOFSUSPENSION",
-            "name": "research.beltofsuspension.title",
+            "name": "planarartifice.research.beltofsuspension.title",
             "icons": [
                 "planarartifice:belt_of_suspension"
             ],
@@ -639,14 +639,14 @@
 
             ],
             "stages": [{
-                    "text": "research.beltofsuspension.stage.1.text",
+                    "text": "planarartifice.research.beltofsuspension.stage.1.text",
                     "required_knowledge": [
                         "THEORY;ARTIFICE;1",
                         "THEORY;PLANARARTIFICE;1"
                     ]
                 },
                 {
-                    "text": "research.beltofsuspension.complete.text",
+                    "text": "planarartifice.research.beltofsuspension.complete.text",
                     "recipes": [
                         "planarartifice:belt_of_suspension"
                     ]
@@ -655,7 +655,7 @@
         },
         {
             "key": "FOCUSCOLOUR",
-            "name": "research.focuscolour.title",
+            "name": "planarartifice.research.focuscolour.title",
             "icons": [
                 "focus:planarartifice.FOCUSCOLOURED"
             ],
@@ -677,7 +677,7 @@
 
             ],
             "stages": [{
-                    "text": "research.focuscolour.stage.1.text",
+                    "text": "planarartifice.research.focuscolour.stage.1.text",
                     "required_knowledge": [
                         "THEORY;AUROMANCY;1",
                         "OBSERVATION;AUROMANCY;1"
@@ -687,13 +687,13 @@
                     ]
                 },
                 {
-                    "text": "research.focuscolour.complete.text"
+                    "text": "planarartifice.research.focuscolour.complete.text"
                 }
             ]
         },
         {
             "key": "MIRROREDAMULET",
-            "name": "research.mirroramulet.title",
+            "name": "planarartifice.research.mirroramulet.title",
             "icons": [
                 "planarartifice:mirrored_amulet"
             ],
@@ -719,7 +719,7 @@
 
             ],
             "stages": [{
-                    "text": "research.mirroramulet.stage.1.text",
+                    "text": "planarartifice.research.mirroramulet.stage.1.text",
                     "required_knowledge": [
                         "THEORY;ARTIFICE;2",
                         "THEORY;PLANARARTIFICE;2",
@@ -727,7 +727,7 @@
                     ]
                 },
                 {
-                    "text": "research.mirroramulet.complete.text",
+                    "text": "planarartifice.research.mirroramulet.complete.text",
                     "recipes": [
                         "planarartifice:mirrored_amulet",
                         "planarartifice:mirrored_amulet2"
@@ -737,7 +737,7 @@
         },
         {
             "key": "BISMUTHCASTERSGAUNTLET",
-            "name": "research.bismuthcaster.title",
+            "name": "planarartifice.research.bismuthcaster.title",
             "icons": [
                 "planarartifice:bismuth_caster"
             ],
@@ -757,7 +757,7 @@
 
             ],
             "stages": [{
-                    "text": "research.bismuthcaster.stage.1.text",
+                    "text": "planarartifice.research.bismuthcaster.stage.1.text",
                     "required_knowledge": [
                         "THEORY;AUROMANCY;2",
                         "THEORY;ARTIFICE;1"
@@ -768,7 +768,7 @@
                     ]
                 },
                 {
-                    "text": "research.bismuthcaster.stage.2.text",
+                    "text": "planarartifice.research.bismuthcaster.stage.2.text",
                     "required_knowledge": [
                         "THEORY;AUROMANCY;1"
                     ],
@@ -780,7 +780,7 @@
                     ]
                 },
                 {
-                    "text": "research.bismuthcaster.complete.text",
+                    "text": "planarartifice.research.bismuthcaster.complete.text",
                     "recipes": [
                         "planarartifice:bismuth_caster",
                         "planarartifice:flux_vent"
@@ -790,7 +790,7 @@
         },
         {
             "key": "MOREALCHEMY",
-            "name": "research.morealchemy.title",
+            "name": "planarartifice.research.morealchemy.title",
             "icons": [
                 "planarartifice:condensed_crystal_cluster"
             ],
@@ -813,7 +813,7 @@
 
             ],
             "stages": [{
-                    "text": "research.morealchemy.stage.1.text",
+                    "text": "planarartifice.research.morealchemy.stage.1.text",
                     "required_knowledge": [
                         "THEORY;ARTIFICE;2",
                         "THEORY;PLANARARTIFICE;2",
@@ -821,7 +821,7 @@
                     ]
                 },
                 {
-                    "text": "research.morealchemy.complete.text",
+                    "text": "planarartifice.research.morealchemy.complete.text",
                     "recipes": [
                         "planarartifice:condensed_crystal_cluster1",
                         "planarartifice:condensed_crystal_cluster2",
@@ -844,31 +844,31 @@
         },
         {
             "key": "INFUSIONENCHANTMENTII",
-            "name": "research.INFUSIONENCHANTMENTII.title",
+            "name": "planarartifice.research.INFUSIONENCHANTMENTII.title",
             "icons": ["planarartifice:textures/research/r_inf_enchant.png"],
             "category": "PLANARARTIFICE",
             "location": [-8, -4],
             "parents": ["INFUSIONENCHANTMENT", "FOCUSLIGHT", "~MOREALCHEMY"],
             "stages": [{
-                    "text": "research.INFUSIONENCHANTMENTII.stage.1.text",
+                    "text": "planarartifice.research.INFUSIONENCHANTMENTII.stage.1.text",
                     "required_knowledge": ["THEORY;INFUSION;2"],
                     "required_item": ["thaumcraft:enchanted_placeholder;1;0;{ench:[{id:16s,lvl:1s}]}", "thaumcraft:enchanted_placeholder;1;0;{ench:[{id:51s,lvl:1s}]}", "thaumcraft:enchanted_placeholder;1;0;{ench:[{id:21s,lvl:2s}]}", "planarartifice:alkimium_block", "minecraft:fishing_rod"]
                 },
                 {
-                    "text": "research.INFUSIONENCHANTMENTII.complete.text",
+                    "text": "planarartifice.research.INFUSIONENCHANTMENTII.complete.text",
                     "recipes": ["planarartifice:IETransmutativeFake", "planarartifice:IEAuraInfusingFake", "planarartifice:IEProjectingFake"]
                 }
             ]
         },
         {
             "key": "MATSTUDYALKIMIUM",
-            "name": "research.MATSTUDYALKIMIUM.title",
+            "name": "planarartifice.research.MATSTUDYALKIMIUM.title",
             "icons": ["planarartifice:alkimium_plate"],
             "category": "PLANARARTIFICE",
             "location": [5, -1],
             "parents": ["ALKIMIUMGOGGLES", "ALKIMIUMDISTILLATION"],
             "stages": [{
-                    "text": "research.MATSTUDYALKIMIUM.stage.1.text",
+                    "text": "planarartifice.research.MATSTUDYALKIMIUM.stage.1.text",
                     "required_knowledge": ["THEORY;GOLEMANCY;   "]
                 }
             ]

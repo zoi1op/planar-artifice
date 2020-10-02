@@ -52,7 +52,9 @@ public class PAItems{
 	public static Item alchemical_scribing_tools = new ItemAlchemicalScribingTools("alchemical_scribing_tools");
 	public static Item bismuth_caster = new ItemBismuthCaster("bismuth_caster").setCreativeTab(PlanarArtifice.creativetab);
 	public static Item bismuth_claymore = new ItemBismuthSword("bismuth_claymore", toolMatBismuth);
-	
+
+	//Misc
+	public static Item alchemical_universe = new ItemPA("alchemical_universe");
 	
 	public static void registerItems(RegistryEvent.Register<Item> event){
 		ITEMS.forEach(i -> event.getRegistry().register(i));

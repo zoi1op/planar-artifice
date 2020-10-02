@@ -44,7 +44,7 @@ public class PlanarArtifice {
 	public static final String MODID = "planarartifice";
 	public static final String NAME = "Planar Artifice";
 	public static final String VERSION = "1.0.1";
-	public static final String DEPS = "required-after:thaumcraft;after:tconstruct;after:thaumicadds;after:jei@[4.12.0.0,)";
+	public static final String DEPS = "required-after:thaumcraft;after:tconstruct;after:thaumicadds;after:bewitchment;after:thaumicbases;after:jei@[4.12.0.0,)";
 
 	public static final PlanarTab creativetab = new PlanarTab();
 
@@ -80,7 +80,6 @@ public class PlanarArtifice {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.init(event);
-
 	}
 
 	@EventHandler

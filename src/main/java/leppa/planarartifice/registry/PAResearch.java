@@ -25,7 +25,7 @@ public class PAResearch {
 	
 	public static final ResearchCategory catPA = ResearchCategories.registerCategory("PLANARARTIFICE", null,
 			new AspectList().add(Aspect.AURA, 1),
-			new ResourceLocation("planarartifice:textures/research/cat_planarartifice.png"),
+			new ResourceLocation("planarartifice:textures/meta/logo_icon.png"),
 			new ResourceLocation("planarartifice:textures/research/gui_research_back_2.jpg"));
 
 	public static void registerResearch() {

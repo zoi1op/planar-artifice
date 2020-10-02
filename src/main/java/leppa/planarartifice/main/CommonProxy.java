@@ -4,6 +4,7 @@ import leppa.planarartifice.compat.PACompatHandler;
 import leppa.planarartifice.network.MessageProjectingAttack;
 import leppa.planarartifice.network.PacketRequestUpdateTeleporter;
 import leppa.planarartifice.network.PacketUpdateTeleporter;
+import leppa.planarartifice.recipe.CrucibleRecipeRandomCrystal;
 import leppa.planarartifice.registry.PAAspects;
 import leppa.planarartifice.registry.PAMultiblocks;
 import leppa.planarartifice.registry.PAResearch;
@@ -49,6 +50,7 @@ public class CommonProxy {
 	
 	public void init(FMLInitializationEvent e){
 		Registrar.registerOres();
+		CrucibleRecipeRandomCrystal.registerAspectList();
 		PACompatHandler.init(e);
 		PAResearch.registerResearch();
 	}

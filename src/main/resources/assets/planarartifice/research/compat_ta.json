@@ -2,7 +2,7 @@
     "entries": [{
     
             "key": "ALKIMIUMMITHRILLIUMSMELTERY",
-            "name": "research.alkimiumsmelterymithrillium.title",
+            "name": "planarartifice.research.alkimiumsmelterymithrillium.title",
             "icons": [
                 "planarartifice:alkimium_smeltery_mithrillium"
             ],
@@ -24,14 +24,14 @@
 
             ],
             "stages": [{
-                    "text": "research.alkimiumsmelterymithrillium.stage.1.text",
+                    "text": "planarartifice.research.alkimiumsmelterymithrillium.stage.1.text",
                     "required_knowledge": [
                         "THEORY;ALCHEMY;3",
                         "OBSERVATION;ALCHEMY;3"
                     ]
                 },
                 {
-                    "text": "research.alkimiumsmelterymithrillium.stage.2.text",
+                    "text": "planarartifice.research.alkimiumsmelterymithrillium.stage.2.text",
                     "recipes": [           
                         "planarartifice:alkimium_smeltery_mithrillium",    
                         "thaumcraft:AdvAlchemyConstruct"
@@ -42,7 +42,7 @@
                     ]
                 },
                 {
-                    "text": "research.alkimiumsmelterymithrillium.complete.text",
+                    "text": "planarartifice.research.alkimiumsmelterymithrillium.complete.text",
                     "recipes": [
                         "planarartifice:alkimium_smeltery_mithrillium",
                         "thaumcraft:AdvAlchemyConstruct"
@@ -52,7 +52,7 @@
         },
         {
             "key": "ALKIMIUMADAMINITEMELTERY",
-            "name": "research.alkimiumsmelteryadaminite.title",
+            "name": "planarartifice.research.alkimiumsmelteryadaminite.title",
             "icons": [
                 "planarartifice:alkimium_smeltery_adaminite"
             ],
@@ -74,14 +74,14 @@
 
             ],
             "stages": [{
-                    "text": "research.alkimiumsmelteryadaminite.stage.1.text",
+                    "text": "planarartifice.research.alkimiumsmelteryadaminite.stage.1.text",
                     "required_knowledge": [
                         "THEORY;ALCHEMY;3",
                         "OBSERVATION;ALCHEMY;3"
                     ]
                 },
                 {
-                    "text": "research.alkimiumsmelteryadaminite.stage.2.text",
+                    "text": "planarartifice.research.alkimiumsmelteryadaminite.stage.2.text",
                     "recipes": [                  
                         "planarartifice:alkimium_smeltery_adaminite",
                         "thaumcraft:AdvAlchemyConstruct"
@@ -93,7 +93,7 @@
                     ]
                 },
                 {
-                    "text": "research.alkimiumsmelteryadaminite.complete.text",
+                    "text": "planarartifice.research.alkimiumsmelteryadaminite.complete.text",
                     "recipes": [
                         "planarartifice:alkimium_smeltery_adaminite",
                         "thaumcraft:AdvAlchemyConstruct"
@@ -104,7 +104,7 @@
         },
         {
             "key": "ALKIMIUMMITHMINITESMELTERY",
-            "name": "research.alkimiumsmelterymithminite.title",
+            "name": "planarartifice.research.alkimiumsmelterymithminite.title",
             "icons": [
                 "planarartifice:alkimium_smeltery_mithminite"
             ],
@@ -126,14 +126,14 @@
 
             ],
             "stages": [{
-                    "text": "research.alkimiumsmelterymithminite.stage.1.text",
+                    "text": "planarartifice.research.alkimiumsmelterymithminite.stage.1.text",
                     "required_knowledge": [
                         "THEORY;ALCHEMY;3",
                         "OBSERVATION;ALCHEMY;3"
                     ]
                 },
                 {
-                    "text": "research.alkimiumsmelterymithminite.stage.2.text",
+                    "text": "planarartifice.research.alkimiumsmelterymithminite.stage.2.text",
                     "recipes": [         
                         "planarartifice:alkimium_smeltery_mithminite",
                         "thaumcraft:AdvAlchemyConstruct"
@@ -145,7 +145,7 @@
                     ]
                 },
                 {
-                    "text": "research.alkimiumsmelterymithminite.complete.text",
+                    "text": "planarartifice.research.alkimiumsmelterymithminite.complete.text",
                     "recipes": [
                         "planarartifice:alkimium_smeltery_mithminite",
                         "thaumcraft:AdvAlchemyConstruct"

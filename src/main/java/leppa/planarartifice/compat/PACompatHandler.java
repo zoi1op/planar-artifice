@@ -3,10 +3,8 @@ package leppa.planarartifice.compat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import leppa.planarartifice.compat.jei.JEIHandler;
 import leppa.planarartifice.compat.tconstruct.TConstructHandler;
 import leppa.planarartifice.compat.thaumicadditions.ThaumicAdditionsHandler;
-import leppa.planarartifice.main.PAConfig;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -19,11 +17,12 @@ public class PACompatHandler {
 	public static final HashMap<String, Class<? extends ICompatModule>> CLASSES = new HashMap<>();
 	public static final ArrayList<ICompatModule> MODULES = new ArrayList<ICompatModule>();
 
-	public static void setup() {
-		if (!PAConfig.compat.disableTinkersCompat) CLASSES.put("tconstruct", TConstructHandler.class);
-		if (!PAConfig.compat.disableTACompat) CLASSES.put("thaumadditions", ThaumicAdditionsHandler.class);
-		// jei
+	static {
+		CLASSES.put("tconstruct", TConstructHandler.class);
+		CLASSES.put("thaumadditions", ThaumicAdditionsHandler.class);
+	}
 
+	public static void setup() {
 		CLASSES.forEach((modid, clazz) -> {
 			if(Loader.isModLoaded(modid))
 				try {
