@@ -1,10 +1,12 @@
 package leppa.planarartifice.registry;
 
+import com.zeitheron.thaumicadditions.api.ResearchEntryBuilder;
 import leppa.planarartifice.foci.FocusEffectColourized;
 import leppa.planarartifice.foci.FocusEffectPrismLight;
 import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.JsonUtils;
 import net.minecraft.util.ResourceLocation;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
@@ -20,6 +22,7 @@ import thaumcraft.api.research.ResearchCategory;
 import thaumcraft.api.research.ScanBlock;
 import thaumcraft.api.research.ScanningManager;
 import thaumcraft.common.golems.client.PartModelHauler;
+import thaumcraft.common.lib.research.ResearchManager;
 
 public class PAResearch {
 	
@@ -30,7 +33,8 @@ public class PAResearch {
 
 	public static void registerResearch() {
 		PlanarArtifice.LOGGER.info("Research active");
-		ThaumcraftApi.registerResearchLocation(new ResourceLocation("planarartifice:research/planarartifice.json"));
+
+		ThaumcraftApi.registerResearchLocation(new ResourceLocation("planarartifice:research/main.json"));
 
         // Scannables
         ScanningManager.addScannableThing(new ScanBlock("!Portal", Blocks.PORTAL));
@@ -39,10 +43,10 @@ public class PAResearch {
         FocusEngine.registerElement(FocusEffectColourized.class, new ResourceLocation("planarartifice", "textures/foci/colourizer.png"), 0xffffff);
 
         // Golem Material
-        GolemMaterial.register(new GolemMaterial("ALKIMIUM", new String[]{"MATSTUDYALKIMIUM"}, new ResourceLocation("planarartifice", "textures/models/golem/alkimium_golem.png"), 0x4CD482, 13, 12, 4, new ItemStack(PAItems.alkimium_ingot), new ItemStack(ItemsTC.mechanismSimple), new EnumGolemTrait[]{EnumGolemTrait.BLASTPROOF, EnumGolemTrait.LIGHT, EnumGolemTrait.FIREPROOF, EnumGolemTrait.FRAGILE}));
+        GolemMaterial.register(new GolemMaterial("ALKIMIUM", new String[]{"PA_MATSTUDY_ALKIMIUM"}, new ResourceLocation("planarartifice", "textures/models/golem/alkimium_golem.png"), 0x4CD482, 13, 12, 4, new ItemStack(PAItems.alkimium_ingot), new ItemStack(ItemsTC.mechanismSimple), new EnumGolemTrait[]{EnumGolemTrait.BLASTPROOF, EnumGolemTrait.LIGHT, EnumGolemTrait.FIREPROOF, EnumGolemTrait.FRAGILE}));
 
         // Golem Addon
-        GolemAddon.register(new GolemAddon("TELEPORT_PACK", new String[]{"MATSTUDYALKIMIUM"}, new ResourceLocation("planarartifice", "textures/misc/golem/addon_teleport_pack.png"), new PartModelHauler(new ResourceLocation("thaumcraft", "models/obj/golem_hauler.obj"), new ResourceLocation("thaumcraft", "textures/entity/golems/golem_hauler.png"), PartModel.EnumAttachPoint.BODY), new Object[]{new ItemStack(PAItems.dimensional_singularity), new ItemStack(Blocks.OBSIDIAN)}, new EnumGolemTrait[]{PlanarArtifice.golemTraitTeleporter}));
+        GolemAddon.register(new GolemAddon("TELEPORT_PACK", new String[]{"PA_MATSTUDY_ALKIMIUM"}, new ResourceLocation("planarartifice", "textures/misc/golem/addon_teleport_pack.png"), new PartModelHauler(new ResourceLocation("thaumcraft", "models/obj/golem_hauler.obj"), new ResourceLocation("thaumcraft", "textures/entity/golems/golem_hauler.png"), PartModel.EnumAttachPoint.BODY), new Object[]{new ItemStack(PAItems.dimensional_singularity), new ItemStack(Blocks.OBSIDIAN)}, new EnumGolemTrait[]{PlanarArtifice.golemTraitTeleporter}));
 	}
 
 }

@@ -41,7 +41,7 @@ public class ItemDimensionalCuriosity extends ItemPA {
 			ThaumcraftApi.internalMethods.addKnowledge(player, IPlayerKnowledge.EnumKnowledgeType.OBSERVATION,ResearchCategories.getResearchCategory("PLANARARTIFICE"),MathHelper.getInt(player.getRNG(), oProg / 2, oProg));
 			ThaumcraftApi.internalMethods.addKnowledge(player, IPlayerKnowledge.EnumKnowledgeType.THEORY,ResearchCategories.getResearchCategory("PLANARARTIFICE"),MathHelper.getInt(player.getRNG(), tProg / 3, tProg / 2));
 
-			ResearchCategory[] rc = (ResearchCategory[]) ResearchCategories.researchCategories.values().toArray((Object[]) new ResearchCategory[0]);
+			ResearchCategory[] rc = ResearchCategories.researchCategories.values().toArray(new ResearchCategory[0]);
 			ThaumcraftApi.internalMethods.addKnowledge(player, IPlayerKnowledge.EnumKnowledgeType.OBSERVATION,rc[player.getRNG().nextInt(rc.length)], MathHelper.getInt(player.getRNG(), oProg / 2, oProg));
 			ThaumcraftApi.internalMethods.addKnowledge(player, IPlayerKnowledge.EnumKnowledgeType.THEORY,rc[player.getRNG().nextInt(rc.length)], MathHelper.getInt(player.getRNG(), tProg / 3, tProg / 2));
 
