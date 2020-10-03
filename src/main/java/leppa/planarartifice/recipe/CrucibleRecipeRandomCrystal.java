@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+import com.zeitheron.hammercore.internal.init.ItemsHC;
+import com.zeitheron.thaumicadditions.TAReconstructed;
+import com.zeitheron.thaumicadditions.api.AspectUtil;
+import com.zeitheron.thaumicadditions.init.ItemsTAR;
+import com.zeitheron.thaumicadditions.init.RecipesTAR;
+import com.zeitheron.thaumicadditions.items.ItemSaltEssence;
+import leppa.planarartifice.compat.thaumicadditions.ThaumicAdditionsHandler;
 import leppa.planarartifice.main.PAConfig;
 import leppa.planarartifice.registry.PAAspects;
 import net.minecraft.item.ItemStack;
@@ -29,6 +36,8 @@ public class CrucibleRecipeRandomCrystal extends CrucibleRecipe {
 	@Override
 	public ItemStack getRecipeOutput() {
 		ArrayList<Aspect> listToUse = isDark ? yinAspects : yangAspects;
+		if (ThaumicAdditionsHandler.extraActivated)
+			return AspectUtil.salt(listToUse.get(random.nextInt(listToUse.size())), 3);
 		return ThaumcraftApiHelper.makeCrystal(listToUse.get(random.nextInt(listToUse.size())), 3);
 	}
 

@@ -35,7 +35,7 @@ public class PABlocks {
 	public static final Block teleporter_placeholder = new BlockTeleporterPlaceholder("teleporter_placeholder").setCreativeTab(null);
 
 	public static final Block bismuth_block = new BlockMetal("bismuth_block").setHardness(2);
-	public static final Block potion_mixer = new BlockPotionMixer("potion_mixer");
+//	public static final Block potion_mixer = new BlockPotionMixer("potion_mixer");
 	public static final Block flux_scrubber = new BlockFluxScrubber("flux_scrubber").setHardness(3).setHardness(3);
 
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {

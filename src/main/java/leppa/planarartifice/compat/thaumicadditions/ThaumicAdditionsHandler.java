@@ -25,6 +25,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ThaumicAdditionsHandler implements ICompatModule {
+
+	public static boolean extraActivated = false;
 	
 	public static final Block alkimium_smeltery_mithrillium = new BlockAlkimiumSmeltery("alkimium_smeltery_mithrillium", 15, 1F, 1000).setCreativeTab(PlanarArtifice.creativetab);
 	public static final Block alkimium_smeltery_adaminite = new BlockAlkimiumSmeltery("alkimium_smeltery_adaminite", 10, 1.25F, 2000).setCreativeTab(PlanarArtifice.creativetab);
@@ -32,6 +34,9 @@ public class ThaumicAdditionsHandler implements ICompatModule {
 
     static ResourceLocation defaultGroup = new ResourceLocation("");
 
+    public ThaumicAdditionsHandler() {
+    	extraActivated = !PAConfig.compat.disableTAExtraCompat;
+	}
 	
 	@Override
 	public void preInit(FMLPreInitializationEvent e) {
