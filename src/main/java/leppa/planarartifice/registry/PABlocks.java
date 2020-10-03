@@ -30,9 +30,9 @@ public class PABlocks {
 	public static final Block smelter_aux = new BlockAlkimiumSmelteryAux("smelter_aux");
 	public static final Block smelter_vent = new BlockAlkimiumSmelteryVent("smelter_vent");
 
-	public static final Block teleporter = new BlockTeleporterMiddle("teleporter");
+	public static final Block teleporter = new BlockTeleporterMiddle("teleporter").setCreativeTab(null);
 	public static final Block teleporter_matrix = new BlockPA(Material.ROCK,"teleporter_matrix").setHardness(3);
-	public static final Block teleporter_placeholder = new BlockTeleporterPlaceholder("teleporter_placeholder");
+	public static final Block teleporter_placeholder = new BlockTeleporterPlaceholder("teleporter_placeholder").setCreativeTab(null);
 
 	public static final Block bismuth_block = new BlockMetal("bismuth_block").setHardness(2);
 	public static final Block potion_mixer = new BlockPotionMixer("potion_mixer");

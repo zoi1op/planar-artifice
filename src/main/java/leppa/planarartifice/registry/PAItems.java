@@ -16,6 +16,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.oredict.OreDictionary;
+import slimeknights.mantle.client.CreativeTab;
 
 public class PAItems{
 	
@@ -32,7 +33,7 @@ public class PAItems{
 	
 	public static Item bismuth_ingot = new ItemPA("bismuth_ingot");
 	public static Item bismuth_plate = new ItemPA("bismuth_plate");
-	public static Item bismuth_nugget = new  ItemPA("bismuth_nugget");
+	public static Item bismuth_nugget = new ItemPA("bismuth_nugget");
 	
 	public static Item flux_venting_circuit = new ItemPA("flux_venting_circuit");
 	public static Item condensed_crystal_cluster = new ItemPA("condensed_crystal_cluster");
@@ -54,7 +55,7 @@ public class PAItems{
 	public static Item bismuth_claymore = new ItemBismuthSword("bismuth_claymore", toolMatBismuth);
 
 	//Misc
-	public static Item alchemical_universe = new ItemPA("alchemical_universe");
+	public static Item alchemical_universe = new ItemPA("alchemical_universe").setCreativeTab(null);
 	
 	public static void registerItems(RegistryEvent.Register<Item> event){
 		ITEMS.forEach(i -> event.getRegistry().register(i));

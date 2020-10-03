@@ -3,6 +3,7 @@ package leppa.planarartifice.compat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import leppa.planarartifice.compat.bewitchment.BewitchmentHandler;
 import leppa.planarartifice.compat.tconstruct.TConstructHandler;
 import leppa.planarartifice.compat.thaumicadditions.ThaumicAdditionsHandler;
 import net.minecraft.item.ItemStack;
@@ -20,6 +21,7 @@ public class PACompatHandler {
 	static {
 		CLASSES.put("tconstruct", TConstructHandler.class);
 		CLASSES.put("thaumadditions", ThaumicAdditionsHandler.class);
+		CLASSES.put("bewitchment", BewitchmentHandler.class);
 	}
 
 	public static void setup() {
