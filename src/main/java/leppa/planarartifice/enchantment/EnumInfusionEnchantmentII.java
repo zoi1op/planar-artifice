@@ -19,9 +19,9 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 
 public enum EnumInfusionEnchantmentII{
-	TRANSMUTATIVE(ImmutableSet.of("axe", "pickaxe", "shovel", "weapon"), 1, "INFUSIONENCHANTMENTII"), 
-	AURAINFUSING(ImmutableSet.of("weapon"), 1, "INFUSIONENCHANTMENTII"),
-	PROJECTING(ImmutableSet.of("weapon", "axe", "pickaxe", "shovel"), 5, "INFUSIONENCHANTMENTII");
+	TRANSMUTATIVE(ImmutableSet.of("axe", "pickaxe", "shovel", "weapon"), 1, "PA_INFUSION_ENCHANTMENT_2"),
+	AURAINFUSING(ImmutableSet.of("weapon"), 1, "PA_INFUSION_ENCHANTMENT_2"),
+	PROJECTING(ImmutableSet.of("weapon", "axe", "pickaxe", "shovel"), 5, "PA_INFUSION_ENCHANTMENT_2");
 	
 	public Set<String> toolClasses;
 	public int maxLevel;

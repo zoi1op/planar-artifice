@@ -33,7 +33,7 @@ public class PABlocks {
 	public static final Block teleporter_placeholder = new BlockTeleporterPlaceholder("teleporter_placeholder").setCreativeTab(null);
 	
 //	public static final Block potion_mixer = new BlockPotionMixer("potion_mixer");
-	public static final Block flux_scrubber = new BlockFluxScrubber("flux_scrubber");;
+	public static final Block flux_scrubber = new BlockFluxScrubber("flux_scrubber");
 
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		BLOCKS.forEach(b -> event.getRegistry().register(b));

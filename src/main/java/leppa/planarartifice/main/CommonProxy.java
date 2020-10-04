@@ -4,6 +4,7 @@ import leppa.planarartifice.compat.PACompatHandler;
 import leppa.planarartifice.network.MessageProjectingAttack;
 import leppa.planarartifice.network.PacketRequestUpdateTeleporter;
 import leppa.planarartifice.network.PacketUpdateTeleporter;
+import leppa.planarartifice.recipe.CrucibleRecipeRandomCrystal;
 import leppa.planarartifice.registry.PAAspects;
 import leppa.planarartifice.registry.PAMultiblocks;
 import leppa.planarartifice.registry.PAResearch;
@@ -47,6 +48,7 @@ public class CommonProxy {
 	}
 	
 	public void init(FMLInitializationEvent e) {
+		CrucibleRecipeRandomCrystal.registerAspectList();
 		PAResearch.registerResearch();
 		PACompatHandler.init(e);
 	}
@@ -55,12 +57,10 @@ public class CommonProxy {
 		PACompatHandler.postInit(e);
 		PAAspects.registerItemAspects();
 		PAMultiblocks.registerMultiblocks();
-		
 	}
 
 	public static EntityPlayer getPlayerEntityFromContext(MessageContext ctx) {
 		return ctx.side.isClient() ? Minecraft.getMinecraft().player : ctx.getServerHandler().player;
-		
 	}
 
 }

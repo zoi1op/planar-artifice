@@ -46,10 +46,10 @@ public class PAResearch {
         FocusEngine.registerElement(FocusEffectColourized.class, new ResourceLocation("planarartifice", "textures/foci/colourizer.png"), 0xffffff);
 
         // Golem Material
-        GolemMaterial.register(new GolemMaterial("ALKIMIUM", new String[]{"MATSTUDYALKIMIUM"}, new ResourceLocation("planarartifice", "textures/models/golem/alkimium_golem.png"), 0x4CD482, 13, 12, 4, new ItemStack(PAItems.alkimium_ingot), new ItemStack(ItemsTC.mechanismSimple), new EnumGolemTrait[]{EnumGolemTrait.BLASTPROOF, EnumGolemTrait.LIGHT, EnumGolemTrait.FIREPROOF, EnumGolemTrait.FRAGILE}));
+        GolemMaterial.register(new GolemMaterial("ALKIMIUM", new String[]{"PA_MATSTUDY_ALKIMIUM"}, new ResourceLocation("planarartifice", "textures/models/golem/alkimium_golem.png"), 0x4CD482, 13, 12, 4, new ItemStack(PAItems.alkimium_ingot), new ItemStack(ItemsTC.mechanismSimple), new EnumGolemTrait[]{EnumGolemTrait.BLASTPROOF, EnumGolemTrait.LIGHT, EnumGolemTrait.FIREPROOF, EnumGolemTrait.FRAGILE}));
 
         // Golem Addon
-        GolemAddon.register(new GolemAddon("TELEPORT_PACK", new String[]{"MATSTUDYALKIMIUM"}, new ResourceLocation("planarartifice", "textures/misc/golem/addon_teleport_pack.png"), new PartModelHauler(new ResourceLocation("thaumcraft", "models/obj/golem_hauler.obj"), new ResourceLocation("thaumcraft", "textures/entity/golems/golem_hauler.png"), PartModel.EnumAttachPoint.BODY), new Object[]{new ItemStack(PAItems.dimensional_singularity), new ItemStack(Blocks.OBSIDIAN)}, new EnumGolemTrait[]{PlanarArtifice.golemTraitTeleporter}));
+        GolemAddon.register(new GolemAddon("TELEPORT_PACK", new String[]{"PA_MATSTUDY_ALKIMIUM"}, new ResourceLocation("planarartifice", "textures/misc/golem/addon_teleport_pack.png"), new PartModelHauler(new ResourceLocation("thaumcraft", "models/obj/golem_hauler.obj"), new ResourceLocation("thaumcraft", "textures/entity/golems/golem_hauler.png"), PartModel.EnumAttachPoint.BODY), new Object[]{new ItemStack(PAItems.dimensional_singularity), new ItemStack(Blocks.OBSIDIAN)}, new EnumGolemTrait[]{PlanarArtifice.golemTraitTeleporter}));
   
 		
 	}
