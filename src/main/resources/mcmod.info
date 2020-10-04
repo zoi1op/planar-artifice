@@ -9,7 +9,7 @@
   "updateUrl": "",
   "authorList": ["Pixel Breaker AKA Leppaisawesome", "Zoko061602"],
   "credits": "Me, for making this, Azanor, for making TC6, MinerGuyLex, for lots of textures, and dycoldwind for Chinese Translations",
-  "logoFile": "",
+  "logoFile": "assets/planarartifice/textures/meta/logo_long.png",
   "screenshots": [],
   "dependencies": ["Thaumcraft"]
 }

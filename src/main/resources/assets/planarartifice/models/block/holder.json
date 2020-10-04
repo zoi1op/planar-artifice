@@ -3,7 +3,7 @@
 	"textures": {
 		"0": "blocks/glass",
 		"2": "blocks/plank_silverwood",
-		"3": "blocks/alkimium_block_alt",
+		"3": "blocks/alkimium_block",
 		"particle": "blocks/glass"
 	},
 	"elements": [

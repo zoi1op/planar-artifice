@@ -1,18 +1,18 @@
 { 
   "type": "minecraft:crafting_shaped",
-  "group": "planarartifice:alkimium_stuff",
+  "group": "planarartifice:bismuth_stuff",
   "pattern": [
     "AAA"  ],
   "key": {
     "A": [
       {
-        "item": "planarartifice:alkimium_ingot",
+        "item": "planarartifice:bismuth_ingot",
         "data": 0
       }
     ]
   },
   "result": {
-    "item": "planarartifice:alkimium_plate",
+    "item": "planarartifice:bismuth_plate",
     "count": 3,
     "data": 0
   }
