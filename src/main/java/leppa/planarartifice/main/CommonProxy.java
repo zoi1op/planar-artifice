@@ -24,12 +24,16 @@ import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
+import thaumcraft.api.aspects.Aspect;
+
+import java.util.Arrays;
 
 public class CommonProxy {
 	
     public static SimpleNetworkWrapper network;
 	
-	public void preInit(FMLPreInitializationEvent e){	
+	public void preInit(FMLPreInitializationEvent e){
+		PAAspects.registerAspects();
     	PACompatHandler.setup();
 		PACompatHandler.preInit(e);
 		
@@ -50,9 +54,11 @@ public class CommonProxy {
 	
 	public void init(FMLInitializationEvent e) {
 		CrucibleRecipeRandomCrystal.registerAspectList();
-		Registrar.registerOres();
+//		Registrar.registerOres();
 		PAResearch.registerResearch();
 		PACompatHandler.init(e);
+		PlanarArtifice.LOGGER.info("ESSENTIA DEBUG");
+		Aspect.getCompoundAspects().stream().map(Aspect::getName).forEach(PlanarArtifice.LOGGER::info);
 	}
 	
 	public void postInit(FMLPostInitializationEvent e){

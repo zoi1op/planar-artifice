@@ -122,6 +122,7 @@ public class PARecipes {
             } else {
                 ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:gold_to_lead"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotLead"), new ItemStack(Items.GOLD_INGOT), metalRevert));
             }
+//            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:gold_to_lead"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotLead"), new ItemStack(Items.GOLD_INGOT), metalRevert));
         } else {
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:lead_to_gold"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_2", new ItemStack(Items.GOLD_INGOT), OreUtils.getFirst("ingotLead"), metalLeveling2));
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:gold_to_lead"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_2", OreUtils.getFirst("ingotLead"), new ItemStack(Items.GOLD_INGOT), metalRevert));
