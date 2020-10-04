@@ -211,6 +211,12 @@ planarartifice.research.bush_alchemy_metal_3.complete.text=It's a bit expensive,
 # --- End of Research --- #
 planarartifice.alkimium=Alkimium Compatible
 
+# CONFIG
+planarartifice.config.compat.tacompat=Set the value to true to disable compatibility with Thaumic Additions.
+planarartifice.config.compat.taextracompat=Set the value to true to disable extra compatibility (changing recipes) with Thaumic Additions.
+planarartifice.config.compat.tinkerscompat=Set the value to true to disable compatibility with Tinkers' Construct.
+planarartifice.config.compat.aspectcompat=Set the value to true to only get Thaumcraft essentia from Random Crystal Alchemy.
+
 tooltip.usablevis=Current Usable Vis:
 tooltip.basevis=Current Base Vis:
 tooltip.castercost= Vis Cost
