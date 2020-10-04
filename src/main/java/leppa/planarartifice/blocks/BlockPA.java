@@ -12,7 +12,7 @@ public class BlockPA extends Block {
 		this.setRegistryName(name);
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(PlanarArtifice.creativetab);
+		this.setHardness(3);
 		PABlocks.BLOCKS.add(this);
 	}
-
 }

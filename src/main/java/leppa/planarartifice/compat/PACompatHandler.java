@@ -1,3 +1,4 @@
+
 package leppa.planarartifice.compat;
 
 import leppa.planarartifice.compat.bewitchment.BewitchmentHandler;
@@ -21,6 +22,7 @@ public class PACompatHandler {
 	static {
 		CLASSES.put("tconstruct", TConstructHandler.class);
 		CLASSES.put("thaumadditions", ThaumicAdditionsHandler.class);
+		// jei
 		CLASSES.put("bewitchment", BewitchmentHandler.class);
 	}
 
@@ -54,7 +56,7 @@ public class PACompatHandler {
 		void init(FMLInitializationEvent e);
 
 		void postInit(FMLPostInitializationEvent e);
-		
+
 		default ItemStack getModItem(String name, int amount, int meta) {
 			return GameRegistry.makeItemStack(name, meta, amount, null);
 		}

@@ -10,6 +10,7 @@ public class ItemPA extends Item {
 		this.setRegistryName(name);
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(PlanarArtifice.creativetab);
+		
 		PAItems.ITEMS.add(this);
 	}
 

@@ -38,7 +38,6 @@ public class Registrar {
 	public static void registerOres() {
 		OreDictionary.registerOre("blockAlkimium", PABlocks.alkimium_block);
 		OreDictionary.registerOre("blockBismuth", PABlocks.bismuth_block);
-
 		OreDictionary.registerOre("ingotAlkimium", PAItems.alkimium_ingot);
 		OreDictionary.registerOre("plateAlkimium", PAItems.alkimium_plate);
 		OreDictionary.registerOre("nuggetAlkimium", PAItems.alkimium_nugget);

@@ -103,6 +103,7 @@ dependencies {
 //    compile "curse.maven:dummycore:2611426"
     compile "tk.zeitheron.HammerLib:HammerLib-1.12.2:2.0.6.19:deobf"
     compile "tk.zeitheron.ThaumicAdditions:ThaumicAdditions-1.12.2:12.4.3:deobf"
+    compile "curse.maven:soot:3056967"
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..

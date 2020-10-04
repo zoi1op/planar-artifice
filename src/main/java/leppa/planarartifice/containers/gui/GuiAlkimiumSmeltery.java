@@ -1,11 +1,12 @@
 package leppa.planarartifice.containers.gui;
 
+import org.lwjgl.opengl.GL11;
+
 import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.tiles.TileAlkimiumSmeltery;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-import org.lwjgl.opengl.GL11;
 import thaumcraft.common.container.ContainerSmelter;
 
 public class GuiAlkimiumSmeltery extends GuiContainer{

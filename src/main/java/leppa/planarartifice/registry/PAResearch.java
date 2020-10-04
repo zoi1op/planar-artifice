@@ -31,7 +31,6 @@ public class PAResearch {
 
 	public static void registerResearch() {
 		PlanarArtifice.LOGGER.info("Research active");
-
 		ThaumcraftApi.registerResearchLocation(new ResourceLocation("planarartifice:research/main.json"));
 		if (!OreDictionary.doesOreNameExist("ingotLead"))
 			ThaumcraftApi.registerResearchLocation(new ResourceLocation(PlanarArtifice.MODID, "research/metal_1.json"));
@@ -41,6 +40,7 @@ public class PAResearch {
 
         // Scannables
         ScanningManager.addScannableThing(new ScanBlock("!Portal", Blocks.PORTAL));
+
         // Caster
         FocusEngine.registerElement(FocusEffectPrismLight.class, new ResourceLocation("planarartifice", "textures/foci/prism.png"), 0xff00ff);
         FocusEngine.registerElement(FocusEffectColourized.class, new ResourceLocation("planarartifice", "textures/foci/colourizer.png"), 0xffffff);
@@ -50,6 +50,8 @@ public class PAResearch {
 
         // Golem Addon
         GolemAddon.register(new GolemAddon("TELEPORT_PACK", new String[]{"PA_MATSTUDY_ALKIMIUM"}, new ResourceLocation("planarartifice", "textures/misc/golem/addon_teleport_pack.png"), new PartModelHauler(new ResourceLocation("thaumcraft", "models/obj/golem_hauler.obj"), new ResourceLocation("thaumcraft", "textures/entity/golems/golem_hauler.png"), PartModel.EnumAttachPoint.BODY), new Object[]{new ItemStack(PAItems.dimensional_singularity), new ItemStack(Blocks.OBSIDIAN)}, new EnumGolemTrait[]{PlanarArtifice.golemTraitTeleporter}));
+  
+		
 	}
 
 }

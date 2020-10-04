@@ -1,5 +1,9 @@
 package leppa.planarartifice.compat.tconstruct;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
+
 import leppa.planarartifice.recipe.RecipeTransmutation;
 import leppa.planarartifice.registry.PARecipes;
 import net.minecraft.entity.item.EntityItem;
@@ -17,10 +21,6 @@ import slimeknights.tconstruct.library.traits.AbstractTrait;
 import slimeknights.tconstruct.library.utils.TinkerUtil;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.TinkerTraits;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ListIterator;
 
 public class TraitTransmutative extends AbstractTrait {
 
