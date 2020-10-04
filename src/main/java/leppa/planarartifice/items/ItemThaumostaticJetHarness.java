@@ -1,7 +1,5 @@
 package leppa.planarartifice.items;
 
-import java.lang.reflect.Method;
-
 import leppa.planarartifice.registry.PAItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -14,6 +12,8 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import thaumcraft.api.items.ItemsTC;
+
+import java.lang.reflect.Method;
 
 public class ItemThaumostaticJetHarness extends ItemArmor{
 	

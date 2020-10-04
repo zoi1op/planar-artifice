@@ -65,7 +65,7 @@ planarartifice.research.alkimium.complete.text=我称这种新的金属为——
 # 炼金笔与墨
 planarartifice.research.alchemical_scribing_tools.title=炼金笔与墨
 planarartifice.research.alchemical_scribing_tools.complete.text=常规的笔与墨对你来说或许耗尽太快了，而且墨囊的获取也枯燥乏味。因此，你何从不考虑对其进行改良呢？
-planarartifice.research.alchemical_scribing_tools.addendum.text=或许，充能基座能解决其对于能量的需求（最多充能至200）。
+planarartifice.research.alchemical_scribing_tools.addendum.1.text=或许，充能基座能解决其对于能量的需求（最多充能至200）。
 # 炼金应用
 planarartifice.research.alkimium_applications.title=炼金应用
 planarartifice.research.alkimium_applications.stage.1.text=我最初的想法之一就是升级源质冶炼厂，使用炼化锭替代传统的黄铜看看会发生什么样的效果，我应该去试验下。

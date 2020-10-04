@@ -78,7 +78,7 @@
         "parents": ["PA_ALKIMIUM_APPLICATIONS", "ESSENTIASMELTERTHAUMIUM"],
         "location": [3, -4],
         "stages": [
-            {"knowledges": ["THEORY;ALCHEMY;2"]},
+            {"knowledges": ["THEORY;ALCHEMY;2"], "crafts": ["planarartifice:alkimium_smeltery"]},
             {"recipes": [
                 "alkimium_smeltery_thaumium",
                 "alchemical_alkimium_construct"
@@ -92,7 +92,6 @@
         "stages": [
             {"knowledges": ["THEORY;ALCHEMY;3", "OBSERVATION;ALCHEMY;3"]},
             {
-                "crafts": ["thaumcraft:AdvAlchemyConstruct"],
                 "recipes": ["!alkimium_smeltery_void"]
             },
             {}
@@ -102,12 +101,6 @@
         "icons": ["planarartifice:dimensional_curiosity"],
         "meta": ["ROUND", "HIDDEN"],
         "location": [0, 1],
-        "stages": [{}]
-    },{
-        "key": "DIMENSIONAL_SINGULARITY",
-        "icons": ["planarartifice:dimensional_curiosity"],
-        "parents": ["!Portal"],
-        "location": [-2, 3],
         "stages": [{}]
     },{
         "key": "DIMENSIONAL_SINGULARITY",
@@ -133,17 +126,10 @@
         "icons": ["planarartifice:bismuth_ingot"],
         "parents": ["PA_ALKIMIUM", "!Portal"],
         "location": [-2, -1],
-        "stages": [{}]
-    },{
-        "key": "DIMENSIONAL_SINGULARITY",
-        "icons": ["planarartifice:dimensional_curiosity"],
-        "parents": ["!Portal"],
-        "location": [0, 1],
         "stages": [
             {
-                "crafts": ["planarartifice:bismuth_ingot"],
                 "knowledges": ["THEORY;INFUSION;1", "THEORY;AUROMANCY;2", "OBSERVATION;AUROMANCY;2"],
-                "recipes": ["bismuth", "bismuth_stuff"]
+                "recipes": ["!bismuth", "bismuth_stuff"]
             }, {
                 "recipes": ["aura_meter", "bismuth_claymore"], "warp": 2
             }
@@ -213,19 +199,45 @@
         ]
     },{
         "key": "BUSH_ALCHEMY",
-        "icons": ["planarartifice:condensed_crystal_cluster"],
-        "parents": ["PA_ALKIMIUM_APPLICATIONS", "HEDGEALCHEMY"],
+        "icons": ["minecraft:ender_eye"],
+        "parents": ["PA_ALKIMIUM", "HEDGEALCHEMY"],
         "location": [1, -5],
         "stages": [
             {"knowledges": ["THEORY;ARTIFICE;2", "THEORY;PLANARARTIFICE;2", "THEORY;BASICS;3"]},
-            {"recipes": [
-                "condensed_crystal_cluster1", "condensed_crystal_cluster2", "condensed_crystal_cluster3", "condensed_crystal_cluster4", "condensed_crystal_cluster5", "condensed_crystal_cluster6",
-                "random_vis_crystal1", "random_vis_crystal2", "endereye", "redstone", "iron", "gold", "blaze_powder", "ender_pearls", "redstone2"]}
+            {
+                "recipes": ["endereye", "redstone"],
+                "items": ["minecraft:blaze_rod;16"]
+            },
+            {"recipes": ["blaze_powder"]}
+        ]
+    },{
+        "key": "BUSH_ALCHEMY_CONJURING",
+        "icons": ["minecraft:redstone"],
+        "parents": ["PA_BUSH_ALCHEMY"],
+        "location": [0, -6],
+        "stages": [
+            {"knowledges": ["THEORY;BASICS;3"], "items": ["minecraft:redstone_block;64", "minecraft:chorus_fruit;64"]},
+            {"recipes": ["ender_pearls", "redstone2"]}
+        ]
+    },{
+        "key": "BUSH_ALCHEMY_ESSENTIA",
+        "icons": ["planarartifice:condensed_crystal_cluster"],
+        "parents": ["PA_BUSH_ALCHEMY"],
+        "location": [2, -6],
+        "stages": [
+            {"knowledges": ["THEORY;ALCHEMY;1", "THEORY;PLANARARTIFICE;1"]},
+            {
+                "recipes": ["condensed_crystal_cluster1", "condensed_crystal_cluster2", "condensed_crystal_cluster3", "condensed_crystal_cluster4", "condensed_crystal_cluster5", "condensed_crystal_cluster6"],
+                "crafts": ["planarartifice:condensed_crystal_cluster"],
+                "items": ["crystal:aer", "crystal:ignis", "crystal:aqua", "crystal:terra", "crystal:ordo", "crystal:perditio", "crystal:vitium", "crystal:tinctura"]
+            },{
+                "recipes": ["random_vis_crystal1", "random_vis_crystal2"]
+            }
         ]
     },{
         "key": "INFUSION_ENCHANTMENT_2",
         "icons": ["planarartifice:textures/research/r_inf_enchant.png"],
-        "parents": ["INFUSIONENCHANTMENT", "PA_FOCUS_LIGHT", "~PA_MORE_ALCHEMY"],
+        "parents": ["INFUSIONENCHANTMENT", "PA_FOCUS_LIGHT", "~PA_BUSH_ALCHEMY"],
         "location": [-8, -4],
         "stages": [
             {"knowledges": ["THEORY;INFUSION;2"], "items": ["enchant:16;1", "enchant:51;1", "enchant:21;2", "planarartifice:alkimium_block", "minecraft:fishing_rod"]},

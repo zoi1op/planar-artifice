@@ -9,10 +9,10 @@
         "meta": ["HIDDEN"],
         "location": [5, -6],
         "stages": [{
-            "knowledges": ["THEORY;ALCHEMY;3", "OBSERVATION;ALCHEMY;3"]
+            "knowledges": ["THEORY;ALCHEMY;3", "OBSERVATION;ALCHEMY;3"],
+            "items": ["phial:caeles"]
         },{
-            "recipes": ["!alkimium_smeltery_mithrillium"],
-            "crafts": ["thaumcraft:AdvAlchemyConstruct"]
+            "recipes": ["!alkimium_smeltery_mithrillium"]
         }, {}]
     },{
         "key": "ALKIMIUM_ADAMINITE_SMELTERY",
@@ -21,10 +21,10 @@
         "meta": ["HIDDEN"],
         "location": [6, -7],
         "stages": [{
-            "knowledges": ["THEORY;ALCHEMY;3", "OBSERVATION;ALCHEMY;3"]
+            "knowledges": ["THEORY;ALCHEMY;3", "OBSERVATION;ALCHEMY;3"],
+            "items": ["phial:infernum"], "crafts": ["planarartifice:alkimium_smeltery_mithrillium"]
         },{
-            "recipes": ["!alkimium_smeltery_adaminite"],
-            "crafts": ["thaumcraft:AdvAlchemyConstruct"]
+            "recipes": ["!alkimium_smeltery_adaminite"]
         }, {}]
     },{
         "key": "ALKIMIUM_MITHMINITE_SMELTERY",
@@ -33,10 +33,9 @@
         "meta": ["HIDDEN"],
         "location": [7, -8],
         "stages": [{
-            "knowledges": ["THEORY;ALCHEMY;3", "OBSERVATION;ALCHEMY;3"]
+            "knowledges": ["THEORY;ALCHEMY;3", "OBSERVATION;ALCHEMY;3"], "crafts": ["planarartifice:alkimium_smeltery_adaminite"]
         },{
-            "recipes": ["!alkimium_smeltery_mithminite"],
-            "crafts": ["thaumcraft:AdvAlchemyConstruct"]
+            "recipes": ["!alkimium_smeltery_mithminite"]
         }, {}]
     }]
 }

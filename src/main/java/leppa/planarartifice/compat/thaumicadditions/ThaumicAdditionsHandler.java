@@ -1,7 +1,5 @@
 package leppa.planarartifice.compat.thaumicadditions;
 
-import com.zeitheron.thaumicadditions.TAReconstructed;
-import com.zeitheron.thaumicadditions.api.AspectUtil;
 import com.zeitheron.thaumicadditions.init.KnowledgeTAR;
 import leppa.planarartifice.blocks.BlockAlkimiumSmeltery;
 import leppa.planarartifice.compat.PACompatHandler.ICompatModule;
@@ -22,7 +20,6 @@ import thaumcraft.api.blocks.BlocksTC;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class ThaumicAdditionsHandler implements ICompatModule {
 
@@ -47,7 +44,6 @@ public class ThaumicAdditionsHandler implements ICompatModule {
 	public void init(FMLInitializationEvent e) {
 		if (!PAConfig.compat.disableTACompat) {
 			ThaumcraftApi.registerResearchLocation(new ResourceLocation(PlanarArtifice.MODID, "research/compat_ta.json"));
-
 			ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation(PlanarArtifice.MODID, "alkimium_smeltery_mithrillium"), new ShapedArcaneRecipe(defaultGroup, "PA_ALKIMIUM_MITHRILLIUM_SMELTERY@2", 1250, new AspectList().add(Aspect.FIRE, 9).add(Aspect.WATER, 3), new ItemStack(alkimium_smeltery_mithrillium), "#C#", "ADA", "AAA", '#', "plateAlkimium", 'A', "plateMithrillium", 'C', new ItemStack(PABlocks.alkimium_smeltery_void), 'D', new ItemStack(BlocksTC.metalAlchemicalAdvanced)));
 			ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation(PlanarArtifice.MODID, "alkimium_smeltery_adaminite"), new ShapedArcaneRecipe(defaultGroup, "PA_ALKIMIUM_ADAMINITE_SMELTERY@2", 1600, new AspectList().add(Aspect.FIRE, 18).add(Aspect.WATER, 9), new ItemStack(alkimium_smeltery_adaminite), "#C#", "ADA", "AAA", '#', "plateAlkimium", 'A', "plateAdaminite", 'C', new ItemStack(alkimium_smeltery_mithrillium), 'D', new ItemStack(BlocksTC.metalAlchemicalAdvanced)));
 			ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation(PlanarArtifice.MODID, "alkimium_smeltery_mithminite"), new ShapedArcaneRecipe(defaultGroup, "PA_ALKIMIUM_MITHMINITE_SMELTERY@2", 2000, new AspectList().add(Aspect.FIRE, 36).add(Aspect.WATER, 18), new ItemStack(alkimium_smeltery_mithminite), "#C#", "ADA", "AAA", '#', "plateAlkimium", 'A', "plateMithminite", 'C', new ItemStack(alkimium_smeltery_adaminite), 'D', new ItemStack(BlocksTC.metalAlchemicalAdvanced)));

@@ -1,20 +1,17 @@
 package leppa.planarartifice.registry;
 
-import java.util.ArrayList;
-
 import leppa.planarartifice.blocks.*;
-import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMap;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.BlockFluidBase;
-import net.minecraftforge.oredict.OreDictionary;
+
+import java.util.ArrayList;
 
 public class PABlocks {
 

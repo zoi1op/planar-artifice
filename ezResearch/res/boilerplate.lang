@@ -62,8 +62,8 @@ planarartifice.research.portal.title=
 planarartifice.research.portal.complete.text=
 # Dimensional Singularity
 planarartifice.research.dimensional_singularity.title=
-planarartifice.research.dimensional_singularity.complete.text=
 planarartifice.research.dimensional_singularity.stage.1.text=
+planarartifice.research.dimensional_singularity.complete.text=
 # Mirror Teleporter
 planarartifice.research.mirror_teleporter.title=
 planarartifice.research.mirror_teleporter.stage.1.text=
@@ -71,6 +71,7 @@ planarartifice.research.mirror_teleporter.stage.2.text=
 planarartifice.research.mirror_teleporter.complete.text=
 # Bismuth
 planarartifice.research.bismuth.title=
+planarartifice.research.bismuth.stage.1.text=
 planarartifice.research.bismuth.complete.text=
 # Flux Scrubber
 planarartifice.research.flux_scrubber.title=
@@ -100,7 +101,17 @@ planarartifice.research.bismuth_casters_gauntlet.complete.text=
 # Bush Alchemy
 planarartifice.research.bush_alchemy.title=
 planarartifice.research.bush_alchemy.stage.1.text=
+planarartifice.research.bush_alchemy.stage.2.text=
 planarartifice.research.bush_alchemy.complete.text=
+# Bush Alchemy Conjuring
+planarartifice.research.bush_alchemy_conjuring.title=
+planarartifice.research.bush_alchemy_conjuring.stage.1.text=
+planarartifice.research.bush_alchemy_conjuring.complete.text=
+# Bush Alchemy Essentia
+planarartifice.research.bush_alchemy_essentia.title=
+planarartifice.research.bush_alchemy_essentia.stage.1.text=
+planarartifice.research.bush_alchemy_essentia.stage.2.text=
+planarartifice.research.bush_alchemy_essentia.complete.text=
 # Infusion Enchantment 2
 planarartifice.research.infusion_enchantment_2.title=
 planarartifice.research.infusion_enchantment_2.stage.1.text=
@@ -109,4 +120,16 @@ planarartifice.research.infusion_enchantment_2.complete.text=
 planarartifice.research.matstudy_alkimium.title=
 planarartifice.research.matstudy_alkimium.stage.1.text=
 planarartifice.research.matstudy_alkimium.complete.text=
+# Bush Alchemy Metal 1
+planarartifice.research.bush_alchemy_metal_1.title=
+planarartifice.research.bush_alchemy_metal_1.stage.1.text=
+planarartifice.research.bush_alchemy_metal_1.complete.text=
+# Bush Alchemy Metal 2
+planarartifice.research.bush_alchemy_metal_2.title=
+planarartifice.research.bush_alchemy_metal_2.stage.1.text=
+planarartifice.research.bush_alchemy_metal_2.complete.text=
+# Bush Alchemy Metal 3
+planarartifice.research.bush_alchemy_metal_3.title=
+planarartifice.research.bush_alchemy_metal_3.stage.1.text=
+planarartifice.research.bush_alchemy_metal_3.complete.text=
 # --- End of Research --- #

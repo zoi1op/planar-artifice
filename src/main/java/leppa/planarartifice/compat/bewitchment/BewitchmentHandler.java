@@ -1,6 +1,5 @@
 package leppa.planarartifice.compat.bewitchment;
 
-import com.bewitchment.api.BewitchmentAPI;
 import com.bewitchment.common.integration.thaumcraft.ThaumcraftCompat;
 import leppa.planarartifice.compat.PACompatHandler;
 import leppa.planarartifice.main.PAConfig;

@@ -19,6 +19,7 @@
             },
             {
                 "items": ["enchant:16;1", "woah look at this new syntax", "this translates to", "thaumcraft:enchanted_placeholder;1;0;{ench:[{id:16s,lvl:1s}]}"],
+                "crafts": ["crystal:ignis", "phial:vitium", "wow look at these new syntaxes too"],
                 "knowledges": ["THEORY;GOLEMANCY;2","OBSERVATION;AUROMANCY;1", "notice the lack of 'text' key, localization keys will be auto generated"],
                 "recipes": ["!recipe1", "recipe2", "notice the lack of modid", "you can change this in config if you need", "! prefix also adds this recipe as required craft for this stage (DONT PUT THIS IN THE LAST ELEMENT)"]
             },

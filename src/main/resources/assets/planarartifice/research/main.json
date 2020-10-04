@@ -61,11 +61,17 @@
         {
           "text": "planarartifice.research.magic_apple.stage.1.text", 
           "recipes": [
-            "planarartifice:!magic_apple"
+            "planarartifice:magic_apple"
+          ], 
+          "required_craft": [
+            "planarartifice:magic_apple"
           ]
         }, 
         {
-          "text": "planarartifice.research.magic_apple.complete.text"
+          "text": "planarartifice.research.magic_apple.complete.text", 
+          "recipes": [
+            "planarartifice:magic_apple"
+          ]
         }
       ]
     }, 
@@ -87,15 +93,18 @@
         {
           "text": "planarartifice.research.alkimium.stage.1.text", 
           "recipes": [
-            "planarartifice:!alkimium_ingot", 
+            "planarartifice:alkimium_ingot", 
             "planarartifice:alkimium_stuff", 
             "planarartifice:alchemical_alkimium_construct"
+          ], 
+          "required_craft": [
+            "planarartifice:alkimium_ingot"
           ]
         }, 
         {
           "text": "planarartifice.research.alkimium.complete.text", 
           "recipes": [
-            "planarartifice:!alkimium_ingot", 
+            "planarartifice:alkimium_ingot", 
             "planarartifice:alkimium_stuff", 
             "planarartifice:alchemical_alkimium_construct"
           ]
@@ -247,7 +256,10 @@
           "required_knowledge": [
             "THEORY;ALCHEMY;2"
           ], 
-          "text": "planarartifice.research.alkimium_thaumium_smeltery.stage.1.text"
+          "text": "planarartifice.research.alkimium_thaumium_smeltery.stage.1.text", 
+          "required_craft": [
+            "planarartifice:alkimium_smeltery"
+          ]
         }, 
         {
           "text": "planarartifice.research.alkimium_thaumium_smeltery.complete.text", 
@@ -283,15 +295,18 @@
         }, 
         {
           "text": "planarartifice.research.alkimium_void_smeltery.stage.2.text", 
-          "required_craft": [
-            "thaumcraft:AdvAlchemyConstruct"
-          ], 
           "recipes": [
-            "planarartifice:!alkimium_smeltery_void"
+            "planarartifice:alkimium_smeltery_void"
+          ], 
+          "required_craft": [
+            "planarartifice:alkimium_smeltery_void"
           ]
         }, 
         {
-          "text": "planarartifice.research.alkimium_void_smeltery.complete.text"
+          "text": "planarartifice.research.alkimium_void_smeltery.complete.text", 
+          "recipes": [
+            "planarartifice:alkimium_smeltery_void"
+          ]
         }
       ]
     }, 
@@ -313,26 +328,6 @@
       "stages": [
         {
           "text": "planarartifice.research.portal.complete.text"
-        }
-      ]
-    }, 
-    {
-      "category": "PLANARARTIFICE", 
-      "name": "planarartifice.research.dimensional_singularity.title", 
-      "icons": [
-        "planarartifice:dimensional_curiosity"
-      ], 
-      "parents": [
-        "!Portal"
-      ], 
-      "location": [
-        -2, 
-        3
-      ], 
-      "key": "PA_DIMENSIONAL_SINGULARITY", 
-      "stages": [
-        {
-          "text": "planarartifice.research.dimensional_singularity.complete.text"
         }
       ]
     }, 
@@ -394,15 +389,18 @@
         {
           "text": "planarartifice.research.mirror_teleporter.stage.2.text", 
           "recipes": [
-            "planarartifice:!teleporter_matrix", 
+            "planarartifice:teleporter_matrix", 
             "planarartifice:teleporter_matrix2", 
             "planarartifice:mirror_teleporter"
+          ], 
+          "required_craft": [
+            "planarartifice:teleporter_matrix"
           ]
         }, 
         {
           "text": "planarartifice.research.mirror_teleporter.complete.text", 
           "recipes": [
-            "planarartifice:!teleporter_matrix", 
+            "planarartifice:teleporter_matrix", 
             "planarartifice:teleporter_matrix2", 
             "planarartifice:mirror_teleporter"
           ]
@@ -426,44 +424,24 @@
       "key": "PA_BISMUTH", 
       "stages": [
         {
-          "text": "planarartifice.research.bismuth.complete.text"
-        }
-      ]
-    }, 
-    {
-      "category": "PLANARARTIFICE", 
-      "name": "planarartifice.research.dimensional_singularity.title", 
-      "icons": [
-        "planarartifice:dimensional_curiosity"
-      ], 
-      "parents": [
-        "!Portal"
-      ], 
-      "location": [
-        0, 
-        1
-      ], 
-      "key": "PA_DIMENSIONAL_SINGULARITY", 
-      "stages": [
-        {
           "required_knowledge": [
             "THEORY;INFUSION;1", 
             "THEORY;AUROMANCY;2", 
             "OBSERVATION;AUROMANCY;2"
           ], 
-          "text": "planarartifice.research.dimensional_singularity.stage.1.text", 
-          "required_craft": [
-            "planarartifice:bismuth_ingot"
-          ], 
+          "text": "planarartifice.research.bismuth.stage.1.text", 
           "recipes": [
             "planarartifice:bismuth", 
             "planarartifice:bismuth_stuff", 
             "planarartifice:aura_meter", 
             "planarartifice:bismuth_claymore"
+          ], 
+          "required_craft": [
+            "planarartifice:bismuth"
           ]
         }, 
         {
-          "text": "planarartifice.research.dimensional_singularity.complete.text", 
+          "text": "planarartifice.research.bismuth.complete.text", 
           "recipes": [
             "planarartifice:bismuth", 
             "planarartifice:bismuth_stuff", 
@@ -679,10 +657,10 @@
       "category": "PLANARARTIFICE", 
       "name": "planarartifice.research.bush_alchemy.title", 
       "icons": [
-        "planarartifice:condensed_crystal_cluster"
+        "minecraft:ender_eye"
       ], 
       "parents": [
-        "PA_ALKIMIUM_APPLICATIONS", 
+        "PA_ALKIMIUM", 
         "HEDGEALCHEMY"
       ], 
       "location": [
@@ -700,7 +678,87 @@
           "text": "planarartifice.research.bush_alchemy.stage.1.text"
         }, 
         {
+          "text": "planarartifice.research.bush_alchemy.stage.2.text", 
+          "recipes": [
+            "planarartifice:endereye", 
+            "planarartifice:redstone", 
+            "planarartifice:blaze_powder"
+          ], 
+          "required_item": [
+            "minecraft:blaze_rod;16"
+          ]
+        }, 
+        {
           "text": "planarartifice.research.bush_alchemy.complete.text", 
+          "recipes": [
+            "planarartifice:endereye", 
+            "planarartifice:redstone", 
+            "planarartifice:blaze_powder"
+          ]
+        }
+      ]
+    }, 
+    {
+      "category": "PLANARARTIFICE", 
+      "name": "planarartifice.research.bush_alchemy_conjuring.title", 
+      "icons": [
+        "minecraft:redstone"
+      ], 
+      "parents": [
+        "PA_BUSH_ALCHEMY"
+      ], 
+      "location": [
+        0, 
+        -6
+      ], 
+      "key": "PA_BUSH_ALCHEMY_CONJURING", 
+      "stages": [
+        {
+          "required_knowledge": [
+            "THEORY;BASICS;3"
+          ], 
+          "text": "planarartifice.research.bush_alchemy_conjuring.stage.1.text", 
+          "required_item": [
+            "minecraft:redstone_block;64", 
+            "minecraft:chorus_fruit;64"
+          ]
+        }, 
+        {
+          "text": "planarartifice.research.bush_alchemy_conjuring.complete.text", 
+          "recipes": [
+            "planarartifice:ender_pearls", 
+            "planarartifice:redstone2"
+          ]
+        }
+      ]
+    }, 
+    {
+      "category": "PLANARARTIFICE", 
+      "name": "planarartifice.research.bush_alchemy_essentia.title", 
+      "icons": [
+        "planarartifice:condensed_crystal_cluster"
+      ], 
+      "parents": [
+        "PA_BUSH_ALCHEMY"
+      ], 
+      "location": [
+        2, 
+        -6
+      ], 
+      "key": "PA_BUSH_ALCHEMY_ESSENTIA", 
+      "stages": [
+        {
+          "required_knowledge": [
+            "THEORY;ALCHEMY;1", 
+            "THEORY;PLANARARTIFICE;1"
+          ], 
+          "text": "planarartifice.research.bush_alchemy_essentia.stage.1.text"
+        }, 
+        {
+          "text": "planarartifice.research.bush_alchemy_essentia.stage.2.text", 
+          "required_craft": [
+            "planarartifice:condensed_crystal_cluster"
+          ], 
           "recipes": [
             "planarartifice:condensed_crystal_cluster1", 
             "planarartifice:condensed_crystal_cluster2", 
@@ -709,14 +767,30 @@
             "planarartifice:condensed_crystal_cluster5", 
             "planarartifice:condensed_crystal_cluster6", 
             "planarartifice:random_vis_crystal1", 
-            "planarartifice:random_vis_crystal2", 
-            "planarartifice:endereye", 
-            "planarartifice:redstone", 
-            "planarartifice:iron", 
-            "planarartifice:gold", 
-            "planarartifice:blaze_powder", 
-            "planarartifice:ender_pearls", 
-            "planarartifice:redstone2"
+            "planarartifice:random_vis_crystal2"
+          ], 
+          "required_item": [
+            "thaumcraft:crystal_essence;1;0;{Aspects:[{amount:1,key:\"aer\"}]}", 
+            "thaumcraft:crystal_essence;1;0;{Aspects:[{amount:1,key:\"ignis\"}]}", 
+            "thaumcraft:crystal_essence;1;0;{Aspects:[{amount:1,key:\"aqua\"}]}", 
+            "thaumcraft:crystal_essence;1;0;{Aspects:[{amount:1,key:\"terra\"}]}", 
+            "thaumcraft:crystal_essence;1;0;{Aspects:[{amount:1,key:\"ordo\"}]}", 
+            "thaumcraft:crystal_essence;1;0;{Aspects:[{amount:1,key:\"perditio\"}]}", 
+            "thaumcraft:crystal_essence;1;0;{Aspects:[{amount:1,key:\"vitium\"}]}", 
+            "thaumcraft:crystal_essence;1;0;{Aspects:[{amount:1,key:\"tinctura\"}]}"
+          ]
+        }, 
+        {
+          "text": "planarartifice.research.bush_alchemy_essentia.complete.text", 
+          "recipes": [
+            "planarartifice:condensed_crystal_cluster1", 
+            "planarartifice:condensed_crystal_cluster2", 
+            "planarartifice:condensed_crystal_cluster3", 
+            "planarartifice:condensed_crystal_cluster4", 
+            "planarartifice:condensed_crystal_cluster5", 
+            "planarartifice:condensed_crystal_cluster6", 
+            "planarartifice:random_vis_crystal1", 
+            "planarartifice:random_vis_crystal2"
           ]
         }
       ]
@@ -730,7 +804,7 @@
       "parents": [
         "INFUSIONENCHANTMENT", 
         "PA_FOCUS_LIGHT", 
-        "~PA_MORE_ALCHEMY"
+        "~PA_BUSH_ALCHEMY"
       ], 
       "location": [
         -8, 

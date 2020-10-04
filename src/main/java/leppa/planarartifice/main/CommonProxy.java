@@ -1,7 +1,5 @@
 package leppa.planarartifice.main;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import leppa.planarartifice.compat.PACompatHandler;
 import leppa.planarartifice.network.MessageProjectingAttack;
 import leppa.planarartifice.network.PacketRequestUpdateTeleporter;
@@ -26,14 +24,6 @@ import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
-import thaumcraft.common.lib.research.ResearchManager;
-
-import java.io.File;
-import java.io.Writer;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class CommonProxy {
 	

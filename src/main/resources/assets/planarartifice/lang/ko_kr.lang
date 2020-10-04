@@ -104,7 +104,7 @@ planarartifice.research.alkimium.complete.text=I have dubbed this new substance 
 # Alchemical Scribing Tools
 planarartifice.research.alchemical_scribing_tools.title=Alchemical Scribing Tools
 planarartifice.research.alchemical_scribing_tools.complete.text=Regular Scribing Tools run out far too often, and getting ink sacs is just tedious. With these, however, I can condense ink from the aura instead; the only problem being charging it with enough vis to work.
-planarartifice.research.alchemical_scribing_tools.addendum.text=The Recharge Pedestal provides exactly the vis charge I need. This has a maximum charge of 200.
+planarartifice.research.alchemical_scribing_tools.addendum.1.text=The Recharge Pedestal provides exactly the vis charge I need. This has a maximum charge of 200.
 # Alkimium Applications
 planarartifice.research.alkimium_applications.title=Alkimium Applications
 planarartifice.research.alkimium_applications.stage.1.text=One of the first concepts I've drawn up with this new metal in mind is an upgrade to the Alchemical Furnace, replacing the brass on the inside and out with Alkimium. I should experiment and see what happens.
@@ -150,7 +150,6 @@ planarartifice.research.flux_scrubber.complete.text=After working on a solution 
 # Focus Light
 planarartifice.research.focus_light.title=Focus Effect: Prismatic Light
 planarartifice.research.focus_light.stage.1.text=All the focus effects I have researched thus far are pretty great, but blasting searing light is better; it can also blind players and burn undead in a similar way as sunlight does.
-planarartifice.research.focus_light.complete.text=
 # Belt Of Suspension
 planarartifice.research.belt_of_suspension.title=Belt of Suspension
 planarartifice.research.belt_of_suspension.stage.1.text=The ability to fly is an incredible one. Whilst I have been able to reach significant heights with the Cloudstepper Ring, I'm still reliant on the ground for support. <BR>However, with my newfound knowledge of dimensions, I may be able to enhance this to allow constant horizontal movement, even if I don't actually use a Dimensional Singularity.

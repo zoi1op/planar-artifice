@@ -1,7 +1,5 @@
 package leppa.planarartifice.registry;
 
-import java.util.ArrayList;
-
 import leppa.planarartifice.items.*;
 import leppa.planarartifice.items.baubles.ItemAuraMeter;
 import leppa.planarartifice.items.baubles.ItemBeltOfSuspension;
@@ -15,8 +13,8 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.oredict.OreDictionary;
-import slimeknights.mantle.client.CreativeTab;
+
+import java.util.ArrayList;
 
 public class PAItems{
 	

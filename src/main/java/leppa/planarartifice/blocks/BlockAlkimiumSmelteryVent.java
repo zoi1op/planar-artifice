@@ -1,7 +1,5 @@
 package leppa.planarartifice.blocks;
 
-import java.util.List;
-
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
@@ -16,6 +14,8 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import thaumcraft.common.blocks.IBlockFacingHorizontal;
 import thaumcraft.common.lib.utils.BlockStateUtils;
+
+import java.util.List;
 
 public class BlockAlkimiumSmelteryVent extends BlockPA implements IBlockFacingHorizontal {
 

@@ -1,8 +1,5 @@
 package leppa.planarartifice.tiles;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import leppa.planarartifice.recipe.RecipePotionMixer;
 import leppa.planarartifice.registry.PARecipes;
 import net.minecraft.item.ItemStack;
@@ -17,6 +14,9 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.aspects.IAspectContainer;
 import thaumcraft.api.aspects.IEssentiaTransport;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public class TilePotionMixer extends TileEntity implements ITickable, IAspectContainer, IEssentiaTransport{
 	

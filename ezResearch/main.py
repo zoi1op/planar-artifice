@@ -3,6 +3,7 @@
 ######################################
 import os
 import json
+import re
 # Made to remove duplicate contents for Thaumcraft researches.
 ################################################################################
 ################################################################################
@@ -24,7 +25,7 @@ def capAll(n):
     return n.upper()
 
 def hasExclamation(n):
-    return n[0] is '!'
+    return n[0] == '!'
 
 def recipefy(n):
     if hasExclamation(n):
@@ -35,11 +36,14 @@ def recipefy(n):
         return n
 
 def itemify(n):
-    if n.startswith("enchant:"):
+    if re.search(r'enchant:\d+;\d+', n):
         l = n[8:].split(";")
         return "thaumcraft:enchanted_placeholder;1;0;{ench:[{id:" + l[0] + "s,lvl:" + l[1] + "s}]}"
-    else:
-        return n
+    if re.search(r'crystal:\w+', n):
+        return "thaumcraft:crystal_essence;1;0;{Aspects:[{amount:1,key:\"" + n[8:] + "\"}]}"
+    if re.search(r'phial:\w+', n):
+        return "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"" + n[6:] + "\"}]}"
+    return n
 
 def getTitle(n):
     n = n.split(".")[2]
@@ -132,6 +136,8 @@ for filename in os.listdir(DIR_SRC):
                     if "required_craft" not in destStage:
                         destStage["required_craft"] = []
                     destStage["required_craft"].extend(map(recipefy, alsoRequired))
+            elif len(recipes) is not 0:
+                destStage["recipes"] = recipes
             if "warp" in srcStage:
                 destStage["warp"] = srcStage["warp"]
             destEnt["stages"].append(destStage)

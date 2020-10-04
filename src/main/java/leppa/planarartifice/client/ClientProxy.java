@@ -1,7 +1,5 @@
 package leppa.planarartifice.client;
 
-import org.lwjgl.input.Mouse;
-
 import leppa.planarartifice.client.render.tile.TESRTeleporter;
 import leppa.planarartifice.main.CommonProxy;
 import leppa.planarartifice.main.PlanarArtifice;
@@ -20,6 +18,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import org.lwjgl.input.Mouse;
 import thaumcraft.client.gui.GuiFocalManipulator;
 import thaumcraft.client.gui.plugins.GuiSliderTC;
 

@@ -1,7 +1,5 @@
 package leppa.planarartifice.blocks;
 
-import java.util.Random;
-
 import leppa.planarartifice.main.PAGuiHandler;
 import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.tiles.TileAlkimiumSmeltery;
@@ -27,6 +25,8 @@ import thaumcraft.common.blocks.IBlockEnabled;
 import thaumcraft.common.blocks.IBlockFacingHorizontal;
 import thaumcraft.common.lib.utils.BlockStateUtils;
 import thaumcraft.common.tiles.essentia.TileSmelter;
+
+import java.util.Random;
 
 public class BlockAlkimiumSmeltery extends BlockPA implements IBlockEnabled, IBlockFacingHorizontal {
 

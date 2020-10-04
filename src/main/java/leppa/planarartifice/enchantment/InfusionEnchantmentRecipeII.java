@@ -1,12 +1,7 @@
 package leppa.planarartifice.enchantment;
 
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-
-import com.google.common.collect.Multimap;
-
 import baubles.api.IBauble;
+import com.google.common.collect.Multimap;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -23,7 +18,10 @@ import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.capabilities.ThaumcraftCapabilities;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.items.IRechargable;
-import thaumcraft.common.lib.crafting.InfusionEnchantmentRecipe;
+
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 /*
  * This is a complete copypasta. I am not responsible for any deaths associated with the use of this.

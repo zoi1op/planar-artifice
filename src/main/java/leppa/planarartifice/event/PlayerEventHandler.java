@@ -1,9 +1,5 @@
 package leppa.planarartifice.event;
 
-import java.util.ListIterator;
-
-import javax.annotation.Nonnull;
-
 import baubles.api.BaublesApi;
 import baubles.api.cap.IBaublesItemHandler;
 import leppa.planarartifice.main.PlanarArtifice;
@@ -19,6 +15,9 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+import javax.annotation.Nonnull;
+import java.util.ListIterator;
 
 @EventBusSubscriber(modid = PlanarArtifice.MODID)
 public class PlayerEventHandler {

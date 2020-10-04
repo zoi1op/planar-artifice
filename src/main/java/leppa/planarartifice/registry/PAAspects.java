@@ -10,7 +10,8 @@ import thaumcraft.api.aspects.AspectList;
 
 import java.awt.*;
 
-import static leppa.planarartifice.util.AspectUtils.*;
+import static leppa.planarartifice.util.AspectUtils.add;
+import static leppa.planarartifice.util.AspectUtils.set;
 
 public class PAAspects{
 	

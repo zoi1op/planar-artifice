@@ -1,13 +1,12 @@
 package leppa.planarartifice.registry;
 
-import com.zeitheron.thaumicadditions.api.ResearchEntryBuilder;
 import leppa.planarartifice.foci.FocusEffectColourized;
 import leppa.planarartifice.foci.FocusEffectPrismLight;
 import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.JsonUtils;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
@@ -22,7 +21,6 @@ import thaumcraft.api.research.ResearchCategory;
 import thaumcraft.api.research.ScanBlock;
 import thaumcraft.api.research.ScanningManager;
 import thaumcraft.common.golems.client.PartModelHauler;
-import thaumcraft.common.lib.research.ResearchManager;
 
 public class PAResearch {
 	
@@ -35,6 +33,11 @@ public class PAResearch {
 		PlanarArtifice.LOGGER.info("Research active");
 
 		ThaumcraftApi.registerResearchLocation(new ResourceLocation("planarartifice:research/main.json"));
+		if (!OreDictionary.doesOreNameExist("ingotLead"))
+			ThaumcraftApi.registerResearchLocation(new ResourceLocation(PlanarArtifice.MODID, "research/metal_1.json"));
+		else if (OreDictionary.doesOreNameExist("ingotTin") && OreDictionary.doesOreNameExist("ingotCopper") && OreDictionary.doesOreNameExist("ingotSilver"))
+			ThaumcraftApi.registerResearchLocation(new ResourceLocation(PlanarArtifice.MODID, "research/metal_3.json"));
+		else ThaumcraftApi.registerResearchLocation(new ResourceLocation(PlanarArtifice.MODID, "research/metal_2.json"));
 
         // Scannables
         ScanningManager.addScannableThing(new ScanBlock("!Portal", Blocks.PORTAL));

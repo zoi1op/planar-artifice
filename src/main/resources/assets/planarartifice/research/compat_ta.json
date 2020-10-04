@@ -25,19 +25,25 @@
             "THEORY;ALCHEMY;3", 
             "OBSERVATION;ALCHEMY;3"
           ], 
-          "text": "planarartifice.research.alkimium_mithrillium_smeltery.stage.1.text"
-        }, 
-        {
-          "text": "planarartifice.research.alkimium_mithrillium_smeltery.stage.2.text", 
-          "required_craft": [
-            "thaumcraft:AdvAlchemyConstruct"
-          ], 
-          "recipes": [
-            "planarartifice:!alkimium_smeltery_mithrillium"
+          "text": "planarartifice.research.alkimium_mithrillium_smeltery.stage.1.text", 
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"caeles\"}]}"
           ]
         }, 
         {
-          "text": "planarartifice.research.alkimium_mithrillium_smeltery.complete.text"
+          "text": "planarartifice.research.alkimium_mithrillium_smeltery.stage.2.text", 
+          "recipes": [
+            "planarartifice:alkimium_smeltery_mithrillium"
+          ], 
+          "required_craft": [
+            "planarartifice:alkimium_smeltery_mithrillium"
+          ]
+        }, 
+        {
+          "text": "planarartifice.research.alkimium_mithrillium_smeltery.complete.text", 
+          "recipes": [
+            "planarartifice:alkimium_smeltery_mithrillium"
+          ]
         }
       ]
     }, 
@@ -65,19 +71,28 @@
             "THEORY;ALCHEMY;3", 
             "OBSERVATION;ALCHEMY;3"
           ], 
-          "text": "planarartifice.research.alkimium_adaminite_smeltery.stage.1.text"
-        }, 
-        {
-          "text": "planarartifice.research.alkimium_adaminite_smeltery.stage.2.text", 
+          "text": "planarartifice.research.alkimium_adaminite_smeltery.stage.1.text", 
           "required_craft": [
-            "thaumcraft:AdvAlchemyConstruct"
+            "planarartifice:alkimium_smeltery_mithrillium"
           ], 
-          "recipes": [
-            "planarartifice:!alkimium_smeltery_adaminite"
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"infernum\"}]}"
           ]
         }, 
         {
-          "text": "planarartifice.research.alkimium_adaminite_smeltery.complete.text"
+          "text": "planarartifice.research.alkimium_adaminite_smeltery.stage.2.text", 
+          "recipes": [
+            "planarartifice:alkimium_smeltery_adaminite"
+          ], 
+          "required_craft": [
+            "planarartifice:alkimium_smeltery_adaminite"
+          ]
+        }, 
+        {
+          "text": "planarartifice.research.alkimium_adaminite_smeltery.complete.text", 
+          "recipes": [
+            "planarartifice:alkimium_smeltery_adaminite"
+          ]
         }
       ]
     }, 
@@ -105,19 +120,25 @@
             "THEORY;ALCHEMY;3", 
             "OBSERVATION;ALCHEMY;3"
           ], 
-          "text": "planarartifice.research.alkimium_mithminite_smeltery.stage.1.text"
-        }, 
-        {
-          "text": "planarartifice.research.alkimium_mithminite_smeltery.stage.2.text", 
+          "text": "planarartifice.research.alkimium_mithminite_smeltery.stage.1.text", 
           "required_craft": [
-            "thaumcraft:AdvAlchemyConstruct"
-          ], 
-          "recipes": [
-            "planarartifice:!alkimium_smeltery_mithminite"
+            "planarartifice:alkimium_smeltery_adaminite"
           ]
         }, 
         {
-          "text": "planarartifice.research.alkimium_mithminite_smeltery.complete.text"
+          "text": "planarartifice.research.alkimium_mithminite_smeltery.stage.2.text", 
+          "recipes": [
+            "planarartifice:alkimium_smeltery_mithminite"
+          ], 
+          "required_craft": [
+            "planarartifice:alkimium_smeltery_mithminite"
+          ]
+        }, 
+        {
+          "text": "planarartifice.research.alkimium_mithminite_smeltery.complete.text", 
+          "recipes": [
+            "planarartifice:alkimium_smeltery_mithminite"
+          ]
         }
       ]
     }

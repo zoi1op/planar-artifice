@@ -1,19 +1,16 @@
 package leppa.planarartifice.foci;
 
-import java.lang.reflect.Field;
-import java.util.HashMap;
-import java.util.Set;
-
 import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.casters.FocusEffect;
-import thaumcraft.api.casters.FocusEngine;
 import thaumcraft.api.casters.FocusNode;
-import thaumcraft.api.casters.IFocusElement;
 import thaumcraft.api.casters.NodeSetting;
 import thaumcraft.api.casters.Trajectory;
+
+import java.lang.reflect.Field;
+import java.util.HashMap;
 
 public class FocusEffectColourized extends FocusEffect{
 	

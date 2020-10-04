@@ -1,7 +1,5 @@
 package leppa.planarartifice.tiles;
 
-import java.lang.reflect.Method;
-
 import leppa.planarartifice.blocks.BlockAlkimiumSmeltery;
 import leppa.planarartifice.registry.PABlocks;
 import net.minecraft.block.Block;
@@ -22,7 +20,8 @@ import thaumcraft.common.lib.crafting.ThaumcraftCraftingManager;
 import thaumcraft.common.lib.utils.BlockStateUtils;
 import thaumcraft.common.tiles.essentia.TileAlembic;
 import thaumcraft.common.tiles.essentia.TileSmelter;
-import net.minecraft.inventory.IInventory;
+
+import java.lang.reflect.Method;
 
 public class TileAlkimiumSmeltery extends TileSmelter {
 

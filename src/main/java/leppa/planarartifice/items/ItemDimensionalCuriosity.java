@@ -1,9 +1,5 @@
 package leppa.planarartifice.items;
 
-import java.util.List;
-
-import javax.annotation.Nullable;
-
 import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
@@ -23,6 +19,9 @@ import thaumcraft.api.capabilities.IPlayerKnowledge;
 import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchCategory;
 import thaumcraft.common.lib.SoundsTC;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class ItemDimensionalCuriosity extends ItemPA {
 
