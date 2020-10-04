@@ -767,7 +767,8 @@
             "planarartifice:condensed_crystal_cluster5", 
             "planarartifice:condensed_crystal_cluster6", 
             "planarartifice:random_vis_crystal1", 
-            "planarartifice:random_vis_crystal2"
+            "planarartifice:random_vis_crystal2", 
+            "planarartifice:salis_mundus"
           ], 
           "required_item": [
             "thaumcraft:crystal_essence;1;0;{Aspects:[{amount:1,key:\"aer\"}]}", 
@@ -781,6 +782,23 @@
           ]
         }, 
         {
+          "text": "planarartifice.research.bush_alchemy_essentia.stage.3.text", 
+          "recipes": [
+            "planarartifice:condensed_crystal_cluster1", 
+            "planarartifice:condensed_crystal_cluster2", 
+            "planarartifice:condensed_crystal_cluster3", 
+            "planarartifice:condensed_crystal_cluster4", 
+            "planarartifice:condensed_crystal_cluster5", 
+            "planarartifice:condensed_crystal_cluster6", 
+            "planarartifice:random_vis_crystal1", 
+            "planarartifice:random_vis_crystal2", 
+            "planarartifice:salis_mundus"
+          ], 
+          "required_item": [
+            "thaumcraft:salis_mundus;64"
+          ]
+        }, 
+        {
           "text": "planarartifice.research.bush_alchemy_essentia.complete.text", 
           "recipes": [
             "planarartifice:condensed_crystal_cluster1", 
@@ -790,7 +808,8 @@
             "planarartifice:condensed_crystal_cluster5", 
             "planarartifice:condensed_crystal_cluster6", 
             "planarartifice:random_vis_crystal1", 
-            "planarartifice:random_vis_crystal2"
+            "planarartifice:random_vis_crystal2", 
+            "planarartifice:salis_mundus"
           ]
         }
       ]

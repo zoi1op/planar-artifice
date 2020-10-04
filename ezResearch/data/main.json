@@ -231,7 +231,10 @@
                 "crafts": ["planarartifice:condensed_crystal_cluster"],
                 "items": ["crystal:aer", "crystal:ignis", "crystal:aqua", "crystal:terra", "crystal:ordo", "crystal:perditio", "crystal:vitium", "crystal:tinctura"]
             },{
+                "items": ["thaumcraft:salis_mundus;64"],
                 "recipes": ["random_vis_crystal1", "random_vis_crystal2"]
+            },{
+                "recipes": ["salis_mundus"]
             }
         ]
     },{

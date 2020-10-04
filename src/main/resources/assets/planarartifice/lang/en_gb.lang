@@ -157,7 +157,18 @@ planarartifice.research.bismuth_casters_gauntlet.complete.text=By venting the in
 # Bush Alchemy
 planarartifice.research.bush_alchemy.title=Bush Alchemy
 planarartifice.research.bush_alchemy.stage.1.text=There are still many items that are difficult or troublesome to obtain, and there are some items similar enough that I should be able to apply some simple alchemy to change between them.
-planarartifice.research.bush_alchemy.complete.text=I have created a few somewhat simple crucible recipes. Using these, obtaining difficult items should be much simpler. <BR>The Condensed Crystal Cluster is more of an essentia storage item; Allowing me to convert from 50 of any primal to 12 of all primals, as well as Praecantatio and Potentia. It might also be useful for other things. <BR> By combining Salis Mundus with either 4 Vitium or 20 Tinctura, I can convert it into 3 crystals of a random aspect. <BR> I can also convert Spider Eyes into Ender Eyes, Gunpowder into Redstone, and Gold into Iron (and vice versa).
+planarartifice.research.bush_alchemy.stage.2.text=The alchemy surely wasn't "simple", but the hunger for knowledge always finds a way. I have managed to convert a common eye into one of the otherworldly beings, and extract the essence of gunpowders - creating a powder full of energy. That does not mean there is more I can do to this concept.
+planarartifice.research.bush_alchemy.complete.text=Gotcha - in additions to the previous recipes, I have managed to create a way to forge the hellish rod from mundane items and a nice stew of essentia. Although I'll have to find another way to turn it back to the rod forms, as it can only create powders.
+# Bush Alchemy Conjuring
+planarartifice.research.bush_alchemy_conjuring.title=Bush Alchemy Specialization: Conjuring
+planarartifice.research.bush_alchemy_conjuring.stage.1.text=With the power of alchemy, I might be able to duplicate a few more items. However, it will require a lot of materials to test with. I'm going for the items that I seem to require many times - regarding energetic and alien objects.
+planarartifice.research.bush_alchemy_conjuring.complete.text=This is possibly my greatest achievement when it comes to alchemical recipes - I have managed to find a way to stabilize a concoction that will duplicate ender pearls for extremely cheap. In addition, I also learned how to duplicate redstone. not as impressive, but still very useful.
+# Bush Alchemy Essentia
+planarartifice.research.bush_alchemy_essentia.title=Bush Alchemy Specialization: Essentia Manipulation
+planarartifice.research.bush_alchemy_essentia.stage.1.text=I always need essentia. Essentia makes the world go round. I have a ton of Terra or Perditio essentia, but it seems like I'm always out of Ordo or Aer. maybe there's a way to remedy this somehow...
+planarartifice.research.bush_alchemy_essentia.stage.2.text=This is it! By crystalizing the magical dust that's now so familiar with, I have managed to convert a single type of essentia into all of them. It is a lossy conversion - about 2% of the essentia dissipate into the aura, and a few of them gets converted into praecantatio - but this is still a huge win.
+planarartifice.research.bush_alchemy_essentia.stage.3.text=Perhaps I have tinkered with this idea a bit too much. I have now managed to make the crucible spit out seemingly random essentia chaotically, by throwing a pinch of Tinctura or Vitium into it. oddly enough, Ordo seems to never appear when I throw Vitium into the crucible, and Aqua seems to never appear for the case of Tinctura. perhaps there's a link?
+planarartifice.research.bush_alchemy_essentia.complete.text=Eureka! I am finally free from the cumbersome method of individually crushing up Vis Crystals. by infusing a piece of Redstone Dust with arcane energy, I now have an easier way of making salis mundus.
 # Infusion Enchantment 2
 planarartifice.research.infusion_enchantment_2.title=Infusion Enchantment II
 planarartifice.research.infusion_enchantment_2.stage.1.text=My thaumaturgy has come a long way since I originally invented infusion enchantments, and I now have access to a wider variety of materials and expertise. Many interesting ideas and concepts have come to my mind, which should hopefully be useful to me.
@@ -167,7 +178,19 @@ planarartifice.research.matstudy_alkimium.title=Material Studies: Alkimium
 planarartifice.research.matstudy_alkimium.stage.1.text=Perhaps Alkimium can even be used as a Golem material. Brass sure seemed to work fine as a light and elegant material, but what will Alkimium give to these little mechanical assistants?
 planarartifice.research.matstudy_alkimium.complete.text=After further study, it seems that golems built from Alkimium will move more swiftly... but something feels strange about their movements.
 #planarartifice.research.MATSTUDYALKIMIUM.title=Material Studies: Alkimium
-#planarartifice.research.MATSTUDYALKIMIUM.stage.1.text=While alkimium is more brittle than brass, it is much more resistant to heat and explosions.<BR>Its colour stands out against most backgrounds, and retains brass' lightness. It should be an improvement over plain brass, so long as it isn't being hit.
+#planarartifice.research.MATSTUDYALKIMIUM.stage.1.text=While alkimium is more brittle than brass, it is much more resistant to heat and explosions.<BR>Its color stands out against most backgrounds, and retains brass' lightness. It should be an improvement over plain brass, so long as it isn't being hit.
+# Bush Alchemy Metal 1
+planarartifice.research.bush_alchemy_metal_1.title=Bush Alchemy Specialization: Metal Projection
+planarartifice.research.bush_alchemy_metal_1.stage.1.text=I have recently taken an interest to the Clockwork Mages, and how they transmutate one metal into another. Perhaps it can benefit my own research in similar veins?
+planarartifice.research.bush_alchemy_metal_1.complete.text=It's a bit expensive, but I have managed to create a way to "upgrade" metals by projecting it, and "downgrade" gold with a bit of time and earth. Perhaps I can make this cheaper if there was a better conductor of alchemical energy than Iron.
+# Bush Alchemy Metal 2
+planarartifice.research.bush_alchemy_metal_2.title=Bush Alchemy Specialization: Metal Projection
+planarartifice.research.bush_alchemy_metal_2.stage.1.text=I have recently taken an interest to the Clockwork Mages, and how they transmutate one metal into another. Perhaps it can benefit my own research in similar veins?
+planarartifice.research.bush_alchemy_metal_2.complete.text=It's a bit expensive, but I have managed to create a way to "upgrade" metals by projecting it, and "downgrade" gold with a bit of time and earth. Lead is good, but creating gold directly from lead is very costly. only if there was more kinds of metals...
+# Bush Alchemy Metal 3
+planarartifice.research.bush_alchemy_metal_3.title=Bush Alchemy Specialization: Metal Projection
+planarartifice.research.bush_alchemy_metal_3.stage.1.text=I have recently taken an interest to the Clockwork Mages, and how they transmutate one metal into another. Perhaps it can benefit my own research in similar veins?
+planarartifice.research.bush_alchemy_metal_3.complete.text=It's a bit expensive, but I have managed to create a way to "upgrade" metals by projecting it, and "downgrade" metals with a bit of time and earth. The list goes from lead to tin, tin to iron, to copper, to silver than to gold.
 # --- End of Research --- #
 
 tooltip.usablevis=Current Usable Vis:
@@ -177,7 +200,6 @@ tooltip.casterpower= Power
 tooltip.willlastforseconds=Will burn for %s seconds.
 tooltip.willlastforminutes=Will burn for %s minutes, and %s seconds.
 
-tc.research_category.PLANARARTIFICE=Planar Artifice
 tc.aspect.tempus=Time
 tc.aspect.spatio=Space, Dimensions
 tc.aspect.tinctura=Colours, Art, Creativity, Expressiveness
