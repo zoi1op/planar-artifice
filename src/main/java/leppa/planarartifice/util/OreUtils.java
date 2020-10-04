@@ -1,5 +1,6 @@
 package leppa.planarartifice.util;
 
+import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.oredict.OreDictionary;

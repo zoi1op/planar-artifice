@@ -8,6 +8,7 @@ import leppa.planarartifice.recipe.CrucibleRecipeRandomCrystal;
 import leppa.planarartifice.registry.PAAspects;
 import leppa.planarartifice.registry.PAMultiblocks;
 import leppa.planarartifice.registry.PAResearch;
+import leppa.planarartifice.registry.Registrar;
 import leppa.planarartifice.tiles.TileAlkimiumSmeltery;
 import leppa.planarartifice.tiles.TileFluxScrubber;
 import leppa.planarartifice.tiles.TilePotionMixer;
@@ -49,6 +50,7 @@ public class CommonProxy {
 	
 	public void init(FMLInitializationEvent e) {
 		CrucibleRecipeRandomCrystal.registerAspectList();
+		Registrar.registerOres();
 		PAResearch.registerResearch();
 		PACompatHandler.init(e);
 	}
