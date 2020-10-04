@@ -171,6 +171,15 @@ planarartifice.research.bismuth_casters_gauntlet.complete.text=By venting the in
 planarartifice.research.bush_alchemy.title=Bush Alchemy
 planarartifice.research.bush_alchemy.stage.1.text=There are still many items that are difficult or troublesome to obtain, and there are some items similar enough that I should be able to apply some simple alchemy to change between them.
 planarartifice.research.bush_alchemy.complete.text=I have created a few somewhat simple crucible recipes. Using these, obtaining difficult items should be much simpler. <BR>The Condensed Crystal Cluster is more of an essentia storage item; Allowing me to convert from 50 of any primal to 12 of all primals, as well as Praecantatio and Potentia. It might also be useful for other things. <BR> By combining Salis Mundus with either 4 Vitium or 20 Tinctura, I can convert it into 3 crystals of a random aspect. <BR> I can also convert Spider Eyes into Ender Eyes, Gunpowder into Redstone, and Gold into Iron (and vice versa).
+# Bush Alchemy Conjuring
+planarartifice.research.bush_alchemy_conjuring.title=DEBUG TEXT
+planarartifice.research.bush_alchemy_conjuring.stage.1.text=DEBUG TEXT
+planarartifice.research.bush_alchemy_conjuring.complete.text=DEBUG TEXT
+# Bush Alchemy Essentia
+planarartifice.research.bush_alchemy_essentia.title=DEBUG TEXT
+planarartifice.research.bush_alchemy_essentia.stage.1.text=DEBUG TEXT
+planarartifice.research.bush_alchemy_essentia.stage.2.text=DEBUG TEXT
+planarartifice.research.bush_alchemy_essentia.complete.text=DEBUG TEXT
 # Infusion Enchantment 2
 planarartifice.research.infusion_enchantment_2.title=Infusion Enchantment II
 planarartifice.research.infusion_enchantment_2.stage.1.text=My thaumaturgy has come a long way since I originally invented infusion enchantments, and I now have access to a wider variety of materials and expertise. Many interesting ideas and concepts have come to my mind, which should hopefully be useful to me.
@@ -179,6 +188,18 @@ planarartifice.research.infusion_enchantment_2.complete.text=I have created a fe
 planarartifice.research.matstudy_alkimium.title=Material Studies: Alkimium
 planarartifice.research.matstudy_alkimium.stage.1.text=Perhaps Alkimium can even be used as a Golem material. Brass sure seemed to work fine as a light and elegant material, but what will Alkimium give to these little mechanical assistants?
 planarartifice.research.matstudy_alkimium.complete.text=After further study, it seems that golems built from Alkimium will move more swiftly... but something feels strange about their movements.
+# Bush Alchemy Metal 1
+planarartifice.research.bush_alchemy_metal_1.title=DEBUG TEXT
+planarartifice.research.bush_alchemy_metal_1.stage.1.text=DEBUG TEXT
+planarartifice.research.bush_alchemy_metal_1.complete.text=DEBUG TEXT
+# Bush Alchemy Metal 2
+planarartifice.research.bush_alchemy_metal_2.title=DEBUG TEXT
+planarartifice.research.bush_alchemy_metal_2.stage.1.text=DEBUG TEXT
+planarartifice.research.bush_alchemy_metal_2.complete.text=DEBUG TEXT
+# Bush Alchemy Metal 3
+planarartifice.research.bush_alchemy_metal_3.title=DEBUG TEXT
+planarartifice.research.bush_alchemy_metal_3.stage.1.text=DEBUG TEXT
+planarartifice.research.bush_alchemy_metal_3.complete.text=DEBUG TEXT
 
 tooltip.usablevis=현재 사용 가능한 비스:
 tooltip.basevis=현재 기초 비스:

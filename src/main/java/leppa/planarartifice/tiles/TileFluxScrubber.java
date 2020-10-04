@@ -1,5 +1,7 @@
 package leppa.planarartifice.tiles;
 
+import javax.annotation.Nullable;
+
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
@@ -9,8 +11,6 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import thaumcraft.api.aura.AuraHelper;
 import thaumcraft.api.items.ItemsTC;
-
-import javax.annotation.Nullable;
 
 public class TileFluxScrubber extends TileEntity implements ITickable {
 

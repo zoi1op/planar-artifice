@@ -1,8 +1,9 @@
 package leppa.planarartifice.foci;
 
-import leppa.planarartifice.main.PlanarArtifice;
-
 import java.util.HashMap;
+import java.util.Set;
+
+import leppa.planarartifice.main.PlanarArtifice;
 
 /**
  * DO NOT USE THIS OUTSIDE OF THE COLOURIZER.

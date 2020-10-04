@@ -24,12 +24,16 @@ import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
+import thaumcraft.api.aspects.Aspect;
+
+import java.util.Arrays;
 
 public class CommonProxy {
 	
     public static SimpleNetworkWrapper network;
 	
-	public void preInit(FMLPreInitializationEvent e){	
+	public void preInit(FMLPreInitializationEvent e){
+		PAAspects.registerAspects();
     	PACompatHandler.setup();
 		PACompatHandler.preInit(e);
 		
@@ -43,26 +47,25 @@ public class CommonProxy {
         network.registerMessage(new PacketRequestUpdateTeleporter.Handler(), PacketRequestUpdateTeleporter.class, 1, Side.SERVER);
         network.registerMessage(new MessageProjectingAttack.Handler(), MessageProjectingAttack.class, 2, Side.SERVER);
 
-        
 		NetworkRegistry.INSTANCE.registerGuiHandler(PlanarArtifice.instance, new PAGuiHandler());
+		
 	}
 	
-	public void init(FMLInitializationEvent e){
-		Registrar.registerOres();
+	public void init(FMLInitializationEvent e) {
 		CrucibleRecipeRandomCrystal.registerAspectList();
-		PACompatHandler.init(e);
 		PAResearch.registerResearch();
+		PACompatHandler.init(e);
 	}
 	
 	public void postInit(FMLPostInitializationEvent e){
 		PACompatHandler.postInit(e);
+		Registrar.registerOres();
 		PAAspects.registerItemAspects();
 		PAMultiblocks.registerMultiblocks();
 	}
 
 	public static EntityPlayer getPlayerEntityFromContext(MessageContext ctx) {
 		return ctx.side.isClient() ? Minecraft.getMinecraft().player : ctx.getServerHandler().player;
-		
 	}
 
 }

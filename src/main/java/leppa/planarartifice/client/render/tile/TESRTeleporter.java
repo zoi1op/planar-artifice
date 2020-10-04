@@ -1,5 +1,7 @@
 package leppa.planarartifice.client.render.tile;
 
+import org.lwjgl.opengl.GL11;
+
 import leppa.planarartifice.tiles.TileTeleporter;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
@@ -10,7 +12,6 @@ import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.ForgeHooksClient;
-import org.lwjgl.opengl.GL11;
 
 public class TESRTeleporter extends TileEntitySpecialRenderer<TileTeleporter>{
 	

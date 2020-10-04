@@ -1,5 +1,7 @@
 package leppa.planarartifice.registry;
 
+import java.util.ArrayList;
+
 import leppa.planarartifice.items.*;
 import leppa.planarartifice.items.baubles.ItemAuraMeter;
 import leppa.planarartifice.items.baubles.ItemBeltOfSuspension;
@@ -13,8 +15,7 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
-
-import java.util.ArrayList;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class PAItems{
 	
@@ -31,7 +32,7 @@ public class PAItems{
 	
 	public static Item bismuth_ingot = new ItemPA("bismuth_ingot");
 	public static Item bismuth_plate = new ItemPA("bismuth_plate");
-	public static Item bismuth_nugget = new ItemPA("bismuth_nugget");
+	public static Item bismuth_nugget = new  ItemPA("bismuth_nugget");
 	
 	public static Item flux_venting_circuit = new ItemPA("flux_venting_circuit");
 	public static Item condensed_crystal_cluster = new ItemPA("condensed_crystal_cluster");
@@ -52,7 +53,6 @@ public class PAItems{
 	public static Item bismuth_caster = new ItemBismuthCaster("bismuth_caster").setCreativeTab(PlanarArtifice.creativetab);
 	public static Item bismuth_claymore = new ItemBismuthSword("bismuth_claymore", toolMatBismuth);
 
-	//Misc
 	public static Item alchemical_universe = new ItemPA("alchemical_universe").setCreativeTab(null);
 	
 	public static void registerItems(RegistryEvent.Register<Item> event){

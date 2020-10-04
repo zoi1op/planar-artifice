@@ -1,5 +1,9 @@
 package leppa.planarartifice.event;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
+
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
 import leppa.planarartifice.recipe.RecipeTransmutation;
 import leppa.planarartifice.registry.PARecipes;
@@ -11,10 +15,6 @@ import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.living.LivingExperienceDropEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import thaumcraft.api.aura.AuraHelper;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ListIterator;
 
 public class EntityEventHandler {
 

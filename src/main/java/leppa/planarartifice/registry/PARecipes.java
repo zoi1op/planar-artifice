@@ -1,9 +1,21 @@
 package leppa.planarartifice.registry;
 
+import static thaumcraft.api.ThaumcraftApiHelper.makeCrystal;
+import static leppa.planarartifice.main.PlanarArtifice.MODID;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.bewitchment.common.integration.thaumcraft.ThaumcraftCompat;
+import com.zeitheron.thaumicadditions.api.AspectUtil;
 import com.zeitheron.thaumicadditions.init.ItemsTAR;
+import com.zeitheron.thaumicadditions.init.KnowledgeTAR;
+import leppa.planarartifice.compat.PACompatHandler;
+import leppa.planarartifice.compat.bewitchment.BewitchmentHandler;
 import leppa.planarartifice.compat.thaumicadditions.ThaumicAdditionsHandler;
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
 import leppa.planarartifice.enchantment.InfusionEnchantmentRecipeII;
+import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.recipe.CrucibleRecipeRandomCrystal;
 import leppa.planarartifice.recipe.RecipePotionMixer;
 import leppa.planarartifice.recipe.RecipeTransmutation;
@@ -17,20 +29,20 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.event.RegistryEvent.Register;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
+import soot.Registry;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.blocks.BlocksTC;
-import thaumcraft.api.crafting.*;
+import thaumcraft.api.crafting.CrucibleRecipe;
+import thaumcraft.api.crafting.InfusionRecipe;
+import thaumcraft.api.crafting.IngredientNBTTC;
+import thaumcraft.api.crafting.ShapedArcaneRecipe;
+import thaumcraft.api.crafting.ShapelessArcaneRecipe;
 import thaumcraft.api.items.ItemsTC;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static leppa.planarartifice.main.PlanarArtifice.MODID;
-import static thaumcraft.api.ThaumcraftApiHelper.makeCrystal;
 
 public class PARecipes {
 	
@@ -40,14 +52,14 @@ public class PARecipes {
     	registerArcaneRecipes(e);
     	registerCrucibleRecipes(e);
     	registerInfusionRecipes(e);
-    	registerPotionMixerRecipes(e);
+//    	registerPotionMixerRecipes(e);
     	registerTransmutationRecipes(e);
+
     }
     
 	
 	private static void registerArcaneRecipes(Register<IRecipe> e) {
-		
-		ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("planarartifice:alkimium_smeltery"), new ShapedArcaneRecipe(defaultGroup, "PA_ALKIMIUM_APPLICATIONS", 100, new AspectList().add(Aspect.WATER, 1), new ItemStack(PABlocks.alkimium_smeltery), "#C#", "ADA", "AAA", '#', new ItemStack(PAItems.alkimium_plate, 1, 0), 'A', "plateBrass", 'C', new ItemStack(BlocksTC.smelterBasic), 'D', new ItemStack(PABlocks.alchemical_alkimium_construct)));
+        ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("planarartifice:alkimium_smeltery"), new ShapedArcaneRecipe(defaultGroup, "PA_ALKIMIUM_APPLICATIONS", 100, new AspectList().add(Aspect.WATER, 1), new ItemStack(PABlocks.alkimium_smeltery), "#C#", "ADA", "AAA", '#', new ItemStack(PAItems.alkimium_plate, 1, 0), 'A', "plateBrass", 'C', new ItemStack(BlocksTC.smelterBasic), 'D', new ItemStack(PABlocks.alchemical_alkimium_construct)));
         ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("planarartifice:alkimium_smeltery_thaumium"), new ShapedArcaneRecipe(defaultGroup, "PA_ALKIMIUM_THAUMIUM_SMELTERY", 300, new AspectList().add(Aspect.WATER, 1), new ItemStack(PABlocks.alkimium_smeltery_thaumium), "#C#", "ADA", "AAA", '#', new ItemStack(PAItems.alkimium_plate), 'A', new ItemStack(ItemsTC.plate, 1, 2), 'C', new ItemStack(PABlocks.alkimium_smeltery), 'D', new ItemStack(PABlocks.alchemical_alkimium_construct)));
         ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("planarartifice:alkimium_smeltery_void"), new ShapedArcaneRecipe(defaultGroup, "PA_ALKIMIUM_VOID_SMELTERY@2", 1000, new AspectList().add(Aspect.WATER, 1), new ItemStack(PABlocks.alkimium_smeltery_void), "#C#", "ADA", "AAA", '#', new ItemStack(PAItems.alkimium_plate, 1, 0), 'A', new ItemStack(ItemsTC.plate, 1, 3), 'C', new ItemStack(PABlocks.alkimium_smeltery_thaumium), 'D', new ItemStack(BlocksTC.metalAlchemicalAdvanced)));
         ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("planarartifice:alchemical_alkimium_construct"), new ShapedArcaneRecipe(defaultGroup, "PA_ALKIMIUM@2", 100, new AspectList().add(Aspect.WATER, 1), new ItemStack(PABlocks.alchemical_alkimium_construct), "#v#", "pwp", "#v#", '#', PAItems.alkimium_plate, 'p', BlocksTC.tube, 'v', BlocksTC.tubeValve, 'w', BlocksTC.plankSilverwood));
@@ -65,7 +77,6 @@ public class PARecipes {
 	}
 	
 	private static void registerCrucibleRecipes(Register<IRecipe> e) {
-
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:alkimium_ingot"), new CrucibleRecipe("METALLURGY@2", new ItemStack(PAItems.alkimium_ingot), new ItemStack(ItemsTC.ingots, 1, 2), new AspectList().add(Aspect.ALCHEMY, 5).add(Aspect.ORDER, 5)));
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:magic_apple"), new CrucibleRecipe("PA_RARE_ITEMS@4", new ItemStack(PAItems.magic_apple), new ItemStack(Items.APPLE), new AspectList().add(Aspect.MAGIC, 10).add(Aspect.LIFE, 70).add(Aspect.BEAST, 25).add(Aspect.EARTH, 15)));
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:alchemical_scribing_tools"), new CrucibleRecipe("PA_ALCHEMICAL_SCRIBING_TOOLS", new ItemStack(PAItems.alchemical_scribing_tools), (ThaumicAdditionsHandler.extraActivated ? new ItemStack(ItemsTAR.VIS_SCRIBING_TOOLS) : new ItemStack(ItemsTC.scribingTools)), new AspectList().add(Aspect.AURA, 15).add(Aspect.ALCHEMY, 15)));
@@ -83,23 +94,53 @@ public class PARecipes {
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:random_vis_crystal2"), new CrucibleRecipeRandomCrystal("PA_BUSH_ALCHEMY_ESSENTIA", new ItemStack(ItemsTC.salisMundus), new AspectList().add(PAAspects.COLOR, 20)));
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:ender_pearls"), new CrucibleRecipe("PA_BUSH_ALCHEMY_CONJURING", new ItemStack(Items.ENDER_PEARL, 2), new ItemStack(Items.ENDER_PEARL), new AspectList().add(Aspect.ELDRITCH, 20)));
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:redstone2"), new CrucibleRecipe("PA_BUSH_ALCHEMY_CONJURING", new ItemStack(Items.REDSTONE, 2), new ItemStack(Items.REDSTONE), new AspectList().add(Aspect.ENERGY, 20)));
-        if (!OreDictionary.doesOreNameExist("ingotLead")) {
-            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:gold_to_iron"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_1", new ItemStack(Items.GOLD_INGOT), new ItemStack(Items.IRON_INGOT), new AspectList().add(Aspect.DESIRE, 5)));
-            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:iron_to_gold"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_1", new ItemStack(Items.IRON_INGOT), new ItemStack(Items.GOLD_INGOT), new AspectList().add(Aspect.METAL, 7)));
-        } else if (OreDictionary.doesOreNameExist("ingotTin") && OreDictionary.doesOreNameExist("ingotCopper") && OreDictionary.doesOreNameExist("ingotSilver")) {
-            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:lead_to_tin"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotTin"), OreUtils.getFirst("ingotLead"), new AspectList().add(Aspect.METAL, 7)));
-            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:tin_to_iron"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", new ItemStack(Items.IRON_INGOT), OreUtils.getFirst("ingotTin"), new AspectList().add(Aspect.METAL, 7)));
-            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:iron_to_copper"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotCopper"), new ItemStack(Items.IRON_INGOT), new AspectList().add(Aspect.METAL, 7)));
-            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:copper_to_silver"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotSilver"), OreUtils.getFirst("ingotCopper"), new AspectList().add(Aspect.METAL, 7)));
-            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:silver_to_gold"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", new ItemStack(Items.GOLD_INGOT), OreUtils.getFirst("ingotSilver"), new AspectList().add(Aspect.METAL, 7)));
+        AspectList metalLeveling3 = new AspectList().add(Aspect.METAL, 2).add(Aspect.DEATH, 1).add(Aspect.ALCHEMY, 1);
+        AspectList metalLeveling2 = metalLeveling3.copy().add(Aspect.ORDER, 5).add(Aspect.DESIRE, 10);
+        AspectList metalLeveling1 = metalLeveling2.copy().add(Aspect.MAGIC, 15).add(PAAspects.COLOR, 20);
+        if (ThaumicAdditionsHandler.extraActivated) {
+            metalLeveling1 = metalLeveling1.add(KnowledgeTAR.INFERNUM, 1);
+            metalLeveling2 = metalLeveling2.add(KnowledgeTAR.INFERNUM, 1);
+            metalLeveling3 = metalLeveling3.add(KnowledgeTAR.INFERNUM, 1);
+        } else if (BewitchmentHandler.active) {
+            metalLeveling1 = metalLeveling1.add(ThaumcraftCompat.DEMON, 1);
+            metalLeveling2 = metalLeveling2.add(ThaumcraftCompat.DEMON, 1);
+            metalLeveling3 = metalLeveling3.add(ThaumcraftCompat.DEMON, 1);
         } else {
-            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:gold_to_lead"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_2", new ItemStack(Items.GOLD_INGOT), OreUtils.getFirst("ingotLead"), new AspectList().add(Aspect.DESIRE, 5)));
-            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:lead_to_gold"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_2", OreUtils.getFirst("ingotLead"), new ItemStack(Items.GOLD_INGOT), new AspectList().add(Aspect.METAL, 7)));
+            metalLeveling1 = metalLeveling1.add(Aspect.FIRE, 5);
+            metalLeveling2 = metalLeveling2.add(Aspect.FIRE, 5);
+            metalLeveling3 = metalLeveling3.add(Aspect.FIRE, 5);
+        }
+        AspectList metalRevert = new AspectList().add(Aspect.EARTH, 5).add(Aspect.SOUL, 2).add(Aspect.ALCHEMY, 1).add(PAAspects.TIME, 10);
+        if (!OreDictionary.doesOreNameExist("ingotLead")) {
+            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:iron_to_gold"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_1", new ItemStack(Items.GOLD_INGOT), new ItemStack(Items.IRON_INGOT), metalLeveling1));
+            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:gold_to_iron"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_1", new ItemStack(Items.IRON_INGOT), new ItemStack(Items.GOLD_INGOT), metalRevert));
+        } else if (OreDictionary.doesOreNameExist("ingotTin") && OreDictionary.doesOreNameExist("ingotCopper") && OreDictionary.doesOreNameExist("ingotSilver")) {
+            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:lead_to_tin"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotTin"), OreUtils.getFirst("ingotLead"), metalLeveling3));
+            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:tin_to_iron"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", new ItemStack(Items.IRON_INGOT), OreUtils.getFirst("ingotTin"), metalLeveling3));
+            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:iron_to_copper"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotCopper"), new ItemStack(Items.IRON_INGOT), metalLeveling3));
+            AspectList goldRecipe = metalLeveling3.copy().add(Aspect.DESIRE, 10);
+            AspectList silverRecipe = metalLeveling3.copy().add(Aspect.DESIRE, 5);
+            if (BewitchmentHandler.active) {
+                goldRecipe = goldRecipe.add(ThaumcraftCompat.SUN, 5);
+                silverRecipe = silverRecipe.add(ThaumcraftCompat.MOON, 5);
+            }
+            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:copper_to_silver"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotSilver"), OreUtils.getFirst("ingotCopper"), silverRecipe));
+            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:silver_to_gold"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", new ItemStack(Items.GOLD_INGOT), OreUtils.getFirst("ingotSilver"), goldRecipe));
+            if (OreDictionary.doesOreNameExist("ingotAntimony")) {
+                metalRevert = new AspectList().add(Aspect.METAL, 10).add(Aspect.DESIRE, 10).add(PAAspects.TIME, 20);
+                if (BewitchmentHandler.active) metalRevert.add(ThaumcraftCompat.SUN, 5);
+                ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:gold_to_lead"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotLead"), Registry.INGOT_ANTIMONY, metalRevert));
+            } else {
+                ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:gold_to_lead"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotLead"), new ItemStack(Items.GOLD_INGOT), metalRevert));
+            }
+//            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:gold_to_lead"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotLead"), new ItemStack(Items.GOLD_INGOT), metalRevert));
+        } else {
+            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:lead_to_gold"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_2", new ItemStack(Items.GOLD_INGOT), OreUtils.getFirst("ingotLead"), metalLeveling2));
+            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:gold_to_lead"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_2", OreUtils.getFirst("ingotLead"), new ItemStack(Items.GOLD_INGOT), metalRevert));
         }
 	}
 	
 	private static void registerInfusionRecipes(Register<IRecipe> e) {
-		
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:alkimium_goggles"), new InfusionRecipe("PA_ALKIMIUM_GOGGLES", new ItemStack(PAItems.alkimium_goggles), 1, new AspectList().add(Aspect.ALCHEMY, 50).add(Aspect.AURA, 25), new ItemStack(ItemsTC.goggles), new ItemStack(PAItems.alkimium_plate), new ItemStack(PAItems.alkimium_plate), new ItemStack(PAItems.alkimium_plate), makeCrystal(Aspect.AURA)));
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:belt_of_suspension"), new InfusionRecipe("PA_BELT_OF_SUSPENSION", new ItemStack(PAItems.belt_of_suspension), 5, new AspectList().add(Aspect.AURA, 50).add(Aspect.AIR, 75).add(Aspect.MECHANISM, 15).add(Aspect.MOTION, 75).add(Aspect.ENERGY, 65).add(Aspect.FLIGHT, 125).add(Aspect.TOOL, 15), new ItemStack(ItemsTC.baubles, 1, 2), new ItemStack(Items.FEATHER), new ItemStack(ItemsTC.ringCloud), new ItemStack(Items.SUGAR), new ItemStack(ItemsTC.alumentum), new ItemStack(BlocksTC.levitator), new ItemStack(BlocksTC.pavingStoneBarrier), new ItemStack(Blocks.PISTON), new ItemStack(BlocksTC.crystalAir)));
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:dimensional_singularity"), new InfusionRecipe("PA_DIMENSIONAL_SINGULARITY", new ItemStack(PAItems.dimensional_singularity), 5, new AspectList().add(Aspect.AURA, 75).add(Aspect.ENTROPY, 15).add(PAAspects.DIMENSIONS, 45).add(PAAspects.TIME, 10).add(Aspect.EXCHANGE, 25).add(Aspect.ENERGY, 200), new ItemStack(ItemsTC.salisMundus), new ItemStack(ItemsTC.mirroredGlass), new ItemStack(Items.ENDER_PEARL), new ItemStack(Blocks.OBSIDIAN), new ItemStack(Blocks.GOLDEN_RAIL), new ItemStack(ItemsTC.alumentum), new ItemStack(Blocks.REDSTONE_BLOCK), new ItemStack(ItemsTC.visResonator)));
@@ -124,7 +165,6 @@ public class PARecipes {
         recipeStack = new ItemStack(ItemsTC.thaumiumSword);
         recipeStack.setStackDisplayName(TextFormatting.RESET + recipeStack.getDisplayName() + " +" + TextFormatting.GOLD + "Projecting");
         ThaumcraftApi.addFakeCraftingRecipe(new ResourceLocation("planarartifice:IEProjectingFake"), new InfusionEnchantmentRecipeII(IEProjecting, recipeStack));
-	
 	}
 	
 	private static void registerPotionMixerRecipes(Register<IRecipe> e) {

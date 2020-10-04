@@ -33,7 +33,8 @@
             "planarartifice:tin_to_iron", 
             "planarartifice:iron_to_copper", 
             "planarartifice:copper_to_silver", 
-            "planarartifice:silver_to_gold"
+            "planarartifice:silver_to_gold", 
+            "planarartifice:gold_to_lead"
           ]
         }
       ]

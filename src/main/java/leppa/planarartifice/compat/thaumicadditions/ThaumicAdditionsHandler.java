@@ -24,20 +24,20 @@ import java.util.Arrays;
 public class ThaumicAdditionsHandler implements ICompatModule {
 
 	public static boolean extraActivated = false;
-	
+
 	public static final Block alkimium_smeltery_mithrillium = new BlockAlkimiumSmeltery("alkimium_smeltery_mithrillium", 15, 1F, 1000).setCreativeTab(PlanarArtifice.creativetab);
 	public static final Block alkimium_smeltery_adaminite = new BlockAlkimiumSmeltery("alkimium_smeltery_adaminite", 10, 1.25F, 2000).setCreativeTab(PlanarArtifice.creativetab);
 	public static final Block alkimium_smeltery_mithminite = new BlockAlkimiumSmeltery("alkimium_smeltery_mithminite", 3, 1.5F, 4000).setCreativeTab(PlanarArtifice.creativetab);
 
-    static ResourceLocation defaultGroup = new ResourceLocation("");
+	static ResourceLocation defaultGroup = new ResourceLocation("");
 
-    public ThaumicAdditionsHandler() {
-    	extraActivated = !PAConfig.compat.disableTAExtraCompat;
+	public ThaumicAdditionsHandler() {
+		extraActivated = !PAConfig.compat.disableTAExtraCompat;
 	}
-	
+
 	@Override
 	public void preInit(FMLPreInitializationEvent e) {
-		
+
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class ThaumicAdditionsHandler implements ICompatModule {
 			ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation(PlanarArtifice.MODID, "alkimium_smeltery_mithminite"), new ShapedArcaneRecipe(defaultGroup, "PA_ALKIMIUM_MITHMINITE_SMELTERY@2", 2000, new AspectList().add(Aspect.FIRE, 36).add(Aspect.WATER, 18), new ItemStack(alkimium_smeltery_mithminite), "#C#", "ADA", "AAA", '#', "plateAlkimium", 'A', "plateMithminite", 'C', new ItemStack(alkimium_smeltery_adaminite), 'D', new ItemStack(BlocksTC.metalAlchemicalAdvanced)));
 		}
 
-        if (!PAConfig.compat.disableAspectCompat) {
+		if (!PAConfig.compat.disableAspectCompat) {
 			final Aspect[] taYangAspects = {KnowledgeTAR.CAELES, KnowledgeTAR.FLUCTUS, KnowledgeTAR.SONUS, KnowledgeTAR.VENTUS, KnowledgeTAR.VISUM};
 			CrucibleRecipeRandomCrystal.yangAspects.addAll(Arrays.asList(taYangAspects));
 			final Aspect[] taYinAspects = {KnowledgeTAR.DRACO, KnowledgeTAR.EXITIUM, KnowledgeTAR.IMPERIUM, KnowledgeTAR.INFERNUM};
@@ -59,7 +59,7 @@ public class ThaumicAdditionsHandler implements ICompatModule {
 
 	@Override
 	public void postInit(FMLPostInitializationEvent e) {
-		
+
 	}
 
 }

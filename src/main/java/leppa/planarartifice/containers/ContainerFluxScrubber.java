@@ -8,6 +8,7 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;
+import thaumcraft.common.tiles.essentia.TileSmelter;
 
 public class ContainerFluxScrubber extends Container{
 	

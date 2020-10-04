@@ -1,7 +1,11 @@
 package leppa.planarartifice.main;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
 import leppa.planarartifice.util.ReflectionUtils;
+import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
@@ -31,10 +35,8 @@ import thaumcraft.api.casters.FocusEffect;
 import thaumcraft.api.casters.FocusEngine;
 import thaumcraft.api.casters.IFocusElement;
 import thaumcraft.api.golems.EnumGolemTrait;
+import thaumcraft.api.items.ItemsTC;
 import thaumcraft.common.items.casters.ItemCaster;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 
 @EventBusSubscriber
 @Mod(modid = PlanarArtifice.MODID, version = PlanarArtifice.VERSION, name = PlanarArtifice.NAME, dependencies = PlanarArtifice.DEPS)
@@ -42,7 +44,7 @@ public class PlanarArtifice {
 	public static final String MODID = "planarartifice";
 	public static final String NAME = "Planar Artifice";
 	public static final String VERSION = "1.0.1";
-	public static final String DEPS = "required-after:thaumcraft;after:tconstruct;after:thaumicadds;after:bewitchment;after:thaumicbases;after:jei@[4.12.0.0,)";
+	public static final String DEPS = "required-after:thaumcraft;after:tconstruct;after:thaumicadds;after:bewitchment;after:jei@[4.12.0.0,);after:soot";
 
 	public static final PlanarTab creativetab = new PlanarTab();
 
@@ -78,6 +80,7 @@ public class PlanarArtifice {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.init(event);
+
 	}
 
 	@EventHandler

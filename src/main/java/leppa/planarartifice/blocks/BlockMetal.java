@@ -1,8 +1,8 @@
 package leppa.planarartifice.blocks;
 
 import leppa.planarartifice.main.PlanarArtifice;
+import leppa.planarartifice.util.LocalizationHelper;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
@@ -26,6 +26,7 @@ public class BlockMetal extends BlockPA {
 
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced) {
-		tooltip.add(I18n.format(PlanarArtifice.MODID + ".beaconBase"));
+		tooltip.add(LocalizationHelper.localize(PlanarArtifice.MODID + ".beaconBase"));
 	}
+	
 }
