@@ -13,7 +13,6 @@ import leppa.planarartifice.tiles.TileAlkimiumSmeltery;
 import leppa.planarartifice.tiles.TileFluxScrubber;
 import leppa.planarartifice.tiles.TilePotionMixer;
 import leppa.planarartifice.tiles.TileTeleporter;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -64,8 +63,9 @@ public class CommonProxy {
 		PAMultiblocks.registerMultiblocks();
 	}
 
-	public static EntityPlayer getPlayerEntityFromContext(MessageContext ctx) {
-		return ctx.side.isClient() ? Minecraft.getMinecraft().player : ctx.getServerHandler().player;
+	public EntityPlayer getPlayerEntityFromContext(MessageContext ctx) {
+		return ctx.getServerHandler().player;
 	}
+
 
 }

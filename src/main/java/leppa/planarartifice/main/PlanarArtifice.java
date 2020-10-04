@@ -2,6 +2,7 @@ package leppa.planarartifice.main;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
 import leppa.planarartifice.util.ReflectionUtils;
@@ -13,6 +14,10 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.translation.I18n;
+import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeChunkManager;
+import net.minecraftforge.common.ForgeChunkManager.LoadingCallback;
+import net.minecraftforge.common.ForgeChunkManager.Ticket;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -38,6 +43,7 @@ import thaumcraft.api.golems.EnumGolemTrait;
 import thaumcraft.api.items.ItemsTC;
 import thaumcraft.common.items.casters.ItemCaster;
 
+@SuppressWarnings("unchecked")
 @EventBusSubscriber
 @Mod(modid = PlanarArtifice.MODID, version = PlanarArtifice.VERSION, name = PlanarArtifice.NAME, dependencies = PlanarArtifice.DEPS)
 public class PlanarArtifice {
@@ -86,6 +92,8 @@ public class PlanarArtifice {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event);
+		
+		ForgeChunkManager.setForcedChunkLoadingCallback(this, this);
 
 		for(int i = 0; i < FocusEngine.elements.values().size(); i++) {
 			try {
@@ -138,5 +146,11 @@ public class PlanarArtifice {
 				event.getToolTip().add(1, s);
 			}
 		}
+	}
+
+	@Override
+	public void ticketsLoaded(List<Ticket> tickets, World world) {
+		// TODO Auto-generated method stub
+		
 	}
 }

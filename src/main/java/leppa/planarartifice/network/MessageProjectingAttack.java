@@ -3,6 +3,7 @@ package leppa.planarartifice.network;
 import io.netty.buffer.ByteBuf;
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
 import leppa.planarartifice.main.CommonProxy;
+import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -35,7 +36,7 @@ public class MessageProjectingAttack implements IMessage {
 	public static class Handler implements IMessageHandler<MessageProjectingAttack, IMessage> {
 		@Override
 		public IMessage onMessage(final MessageProjectingAttack message, MessageContext ctx) {
-			final EntityPlayer thePlayer = CommonProxy.getPlayerEntityFromContext(ctx);
+			final EntityPlayer thePlayer = PlanarArtifice.proxy.getPlayerEntityFromContext(ctx);
 			thePlayer.getServer().addScheduledTask(() -> {
 				Entity theEntity = thePlayer.world.getEntityByID(message.entityId);
 				// Need to ensure that hackers can't cause trick kills,

@@ -13,17 +13,18 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.GuiScreenEvent;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import net.minecraftforge.fml.relauncher.Side;
 import thaumcraft.client.gui.GuiFocalManipulator;
 import thaumcraft.client.gui.plugins.GuiSliderTC;
 
-@EventBusSubscriber
+@EventBusSubscriber(value = Side.CLIENT)
 public class ClientProxy extends CommonProxy{
 	
 	public static GuiSliderTC sliderRed;
@@ -32,11 +33,12 @@ public class ClientProxy extends CommonProxy{
 	
 	static ResourceLocation tex = new ResourceLocation(PlanarArtifice.MODID, "textures/gui/colourizer_picker.png");
 	
+	@Override
 	public void preInit(FMLPreInitializationEvent e){
 		super.preInit(e);
-		MinecraftForge.EVENT_BUS.register(this.getClass());
 	}
 	
+	@Override
 	public void init(FMLInitializationEvent e){
 		super.init(e);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileTeleporter.class, new TESRTeleporter());
@@ -113,6 +115,11 @@ public class ClientProxy extends CommonProxy{
 	}
 
 	public static EntityPlayer getClientPlayer() {
+		return Minecraft.getMinecraft().player;
+	}
+	
+	@Override
+	public EntityPlayer getPlayerEntityFromContext(MessageContext ctx) {
 		return Minecraft.getMinecraft().player;
 	}
 

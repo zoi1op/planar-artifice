@@ -13,6 +13,8 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import slimeknights.tconstruct.library.MaterialIntegration;
 import slimeknights.tconstruct.library.TinkerRegistry;
 import slimeknights.tconstruct.library.client.MaterialRenderInfo;
@@ -43,9 +45,10 @@ public class TConstructHandler implements ICompatModule {
 		Material alkimium = new Material("alkimium", 0xFF0DCE53);
 		alkimium.setCraftable(false).setCastable(true);
 		alkimium.setFluid(fluidAlkimium);
-		setMetalMaterialRenderInfo(alkimium, 0xFF0DCE53, 0.7f, 0f, 0.1f);
-		
 		alkimium.addTrait(traitTransmutative);
+
+		if(e.getSide() == Side.CLIENT)
+		setMetalMaterialRenderInfo(alkimium, 0xFF0DCE53, 0.7f, 0f, 0.1f);
 		
 		TinkerRegistry.addMaterialStats(alkimium, new HeadMaterialStats(302, 9, 6f, OBSIDIAN), new HandleMaterialStats(1.3f, 24), new ExtraMaterialStats(92), new BowMaterialStats(0.6f, 1.7f, 11));
 		
@@ -58,10 +61,11 @@ public class TConstructHandler implements ICompatModule {
 		Material bismuth = new Material("bismuth", 0xFFFF0000);
 		bismuth.setCraftable(false).setCastable(true);
 		bismuth.setFluid(fluidBismuth);
-		setMetalMaterialRenderInfo(bismuth, 0xFFC05353, 0.3f, 0.2f, 36f);
-		
 		bismuth.addTrait(traitAuraInfusing);
-		
+
+		if(e.getSide() == Side.CLIENT)
+		setMetalMaterialRenderInfo(bismuth, 0xFFC05353, 0.3f, 0.2f, 36f);
+			
 		TinkerRegistry.addMaterialStats(bismuth, new HeadMaterialStats(450, 7.5f, 7f, COBALT), new HandleMaterialStats(1.1f, 55), new ExtraMaterialStats(125), new BowMaterialStats(0.7f, 1.9f, 8));
 		
 		MaterialIntegration mib = new MaterialIntegration(bismuth, fluidBismuth);
@@ -83,6 +87,7 @@ public class TConstructHandler implements ICompatModule {
 		
 	}
 	
+	@SideOnly(Side.CLIENT)
 	public static Material setMetalMaterialRenderInfo(Material material, int colour, float shinyness, float brightness, float hueshift){
 		material.setRenderInfo(new MaterialRenderInfo.Metal(colour, 0.7f, 0f, 0.1f));
 		return material;
