@@ -14,6 +14,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.BlockFluidBase;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class PABlocks {
@@ -46,10 +48,12 @@ public class PABlocks {
 		BLOCKS.forEach(b -> event.getRegistry().register(new ItemBlock(b).setRegistryName(b.getRegistryName())));
 	}
 
+	@SideOnly(Side.CLIENT)
 	public static void registerModels() {
 		BLOCKS.forEach(b -> registerRender(b));
 	}
 
+	@SideOnly(Side.CLIENT)
 	public static void registerRender(Block block) {
 		
 		if(block instanceof BlockFluidBase)

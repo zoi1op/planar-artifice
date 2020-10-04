@@ -36,6 +36,7 @@ import thaumcraft.api.golems.EnumGolemTrait;
 import thaumcraft.api.items.ItemsTC;
 import thaumcraft.common.items.casters.ItemCaster;
 
+@SuppressWarnings("unchecked")
 @EventBusSubscriber
 @Mod(modid = PlanarArtifice.MODID, version = PlanarArtifice.VERSION, name = PlanarArtifice.NAME, dependencies = "required-after:thaumcraft;after:tconstruct")
 public class PlanarArtifice {
