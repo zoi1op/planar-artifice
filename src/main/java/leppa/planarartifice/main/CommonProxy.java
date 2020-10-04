@@ -47,22 +47,19 @@ public class CommonProxy {
         network.registerMessage(new PacketRequestUpdateTeleporter.Handler(), PacketRequestUpdateTeleporter.class, 1, Side.SERVER);
         network.registerMessage(new MessageProjectingAttack.Handler(), MessageProjectingAttack.class, 2, Side.SERVER);
 
-        
 		NetworkRegistry.INSTANCE.registerGuiHandler(PlanarArtifice.instance, new PAGuiHandler());
 		
 	}
 	
 	public void init(FMLInitializationEvent e) {
 		CrucibleRecipeRandomCrystal.registerAspectList();
-//		Registrar.registerOres();
 		PAResearch.registerResearch();
 		PACompatHandler.init(e);
-		PlanarArtifice.LOGGER.info("ESSENTIA DEBUG");
-		Aspect.getCompoundAspects().stream().map(Aspect::getName).forEach(PlanarArtifice.LOGGER::info);
 	}
 	
 	public void postInit(FMLPostInitializationEvent e){
 		PACompatHandler.postInit(e);
+		Registrar.registerOres();
 		PAAspects.registerItemAspects();
 		PAMultiblocks.registerMultiblocks();
 	}

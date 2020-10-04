@@ -9,7 +9,7 @@
         "location": [1, -7],
         "stages": [
             {"knowledges": ["THEORY;ALCHEMY;3"], "items": ["minecraft:gold_ingot", "thaumcraft:quicksilver"]},
-            {"recipes": ["lead_to_tin", "tin_to_iron", "iron_to_copper", "copper_to_silver", "silver_to_gold"]}
+            {"recipes": ["lead_to_tin", "tin_to_iron", "iron_to_copper", "copper_to_silver", "silver_to_gold", "gold_to_lead"]}
         ]
     }]
 }

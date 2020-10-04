@@ -11,6 +11,7 @@ import com.zeitheron.thaumicadditions.api.AspectUtil;
 import com.zeitheron.thaumicadditions.init.ItemsTAR;
 import com.zeitheron.thaumicadditions.init.KnowledgeTAR;
 import leppa.planarartifice.compat.PACompatHandler;
+import leppa.planarartifice.compat.bewitchment.BewitchmentHandler;
 import leppa.planarartifice.compat.thaumicadditions.ThaumicAdditionsHandler;
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
 import leppa.planarartifice.enchantment.InfusionEnchantmentRecipeII;
@@ -97,9 +98,13 @@ public class PARecipes {
         AspectList metalLeveling2 = metalLeveling3.copy().add(Aspect.ORDER, 5).add(Aspect.DESIRE, 10);
         AspectList metalLeveling1 = metalLeveling2.copy().add(Aspect.MAGIC, 15).add(PAAspects.COLOR, 20);
         if (ThaumicAdditionsHandler.extraActivated) {
-            metalLeveling1 = metalLeveling1.add(KnowledgeTAR.FLUCTUS, 10).add(KnowledgeTAR.INFERNUM, 1);
+            metalLeveling1 = metalLeveling1.add(KnowledgeTAR.INFERNUM, 1);
             metalLeveling2 = metalLeveling2.add(KnowledgeTAR.INFERNUM, 1);
             metalLeveling3 = metalLeveling3.add(KnowledgeTAR.INFERNUM, 1);
+        } else if (BewitchmentHandler.active) {
+            metalLeveling1 = metalLeveling1.add(ThaumcraftCompat.DEMON, 1);
+            metalLeveling2 = metalLeveling2.add(ThaumcraftCompat.DEMON, 1);
+            metalLeveling3 = metalLeveling3.add(ThaumcraftCompat.DEMON, 1);
         } else {
             metalLeveling1 = metalLeveling1.add(Aspect.FIRE, 5);
             metalLeveling2 = metalLeveling2.add(Aspect.FIRE, 5);
@@ -113,11 +118,17 @@ public class PARecipes {
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:lead_to_tin"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotTin"), OreUtils.getFirst("ingotLead"), metalLeveling3));
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:tin_to_iron"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", new ItemStack(Items.IRON_INGOT), OreUtils.getFirst("ingotTin"), metalLeveling3));
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:iron_to_copper"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotCopper"), new ItemStack(Items.IRON_INGOT), metalLeveling3));
-            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:copper_to_silver"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotSilver"), OreUtils.getFirst("ingotCopper"), metalLeveling3));
-            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:silver_to_gold"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", new ItemStack(Items.GOLD_INGOT), OreUtils.getFirst("ingotSilver"), metalLeveling3.copy().add(Aspect.DESIRE, 10)));
-            if (Loader.isModLoaded("soot")) {
-                metalRevert = new AspectList().add(Aspect.METAL, 5).add(Aspect.DESIRE, 10).add(PAAspects.TIME, 10);
-                if (Loader.isModLoaded("bewitchment")) metalRevert.add(ThaumcraftCompat.SUN, 5);
+            AspectList goldRecipe = metalLeveling3.copy().add(Aspect.DESIRE, 10);
+            AspectList silverRecipe = metalLeveling3.copy().add(Aspect.DESIRE, 5);
+            if (BewitchmentHandler.active) {
+                goldRecipe = goldRecipe.add(ThaumcraftCompat.SUN, 5);
+                silverRecipe = silverRecipe.add(ThaumcraftCompat.MOON, 5);
+            }
+            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:copper_to_silver"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotSilver"), OreUtils.getFirst("ingotCopper"), silverRecipe));
+            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:silver_to_gold"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", new ItemStack(Items.GOLD_INGOT), OreUtils.getFirst("ingotSilver"), goldRecipe));
+            if (OreDictionary.doesOreNameExist("ingotAntimony")) {
+                metalRevert = new AspectList().add(Aspect.METAL, 10).add(Aspect.DESIRE, 10).add(PAAspects.TIME, 20);
+                if (BewitchmentHandler.active) metalRevert.add(ThaumcraftCompat.SUN, 5);
                 ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:gold_to_lead"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotLead"), Registry.INGOT_ANTIMONY, metalRevert));
             } else {
                 ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:gold_to_lead"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotLead"), new ItemStack(Items.GOLD_INGOT), metalRevert));

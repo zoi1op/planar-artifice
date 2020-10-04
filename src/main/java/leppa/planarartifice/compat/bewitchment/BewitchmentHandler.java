@@ -9,6 +9,9 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class BewitchmentHandler implements PACompatHandler.ICompatModule {
+    public static boolean active = false;
+    public BewitchmentHandler() { active = true; }
+
     @Override
     public void preInit(FMLPreInitializationEvent e) {}
 
