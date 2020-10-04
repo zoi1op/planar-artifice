@@ -49,9 +49,9 @@ public class CommonProxy {
 	
 	public void init(FMLInitializationEvent e){
 		Registrar.registerOres();
+		PAResearch.registerResearch();
 		CrucibleRecipeRandomCrystal.registerAspectList();
 		PACompatHandler.init(e);
-		PAResearch.registerResearch();
 	}
 	
 	public void postInit(FMLPostInitializationEvent e){
