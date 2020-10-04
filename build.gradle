@@ -14,7 +14,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = "1.0.0"
+version = "1.0.1"
 group = "leppa.planarartifice"
 archivesBaseName = "planarartifice"
 
@@ -63,11 +63,14 @@ repositories {
         url = 'http://minecraft.curseforge.com/api/maven/'
     }
     maven {
+        url = "https://www.cursemaven.com"
+    }
+    maven {
         name = 'jared maven'
         url = 'https://maven.blamejared.com/'
     }
     maven {
-        name = 'DVS1 Maven FS'
+        name = 'Progwml6 maven'
         url = 'http://dvs1.progwml6.com/files/maven'
     }
     maven {
@@ -86,7 +89,8 @@ repositories {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2854'
-//    compile 'jei:jei_1.12.2:4.15.0.291'
+    compileOnly fg.deobf('mezz.jei:jei_1.12.2:4.16.1.302:api')
+    runtimeOnly fg.deobf('mezz.jei:jei_1.12.2:4.16.1.302')
 //    compile 'CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.19.548'
 //    compile "com.blamejared:MTLib:3.0.4.8"
     compile "com.azanor.baubles:Baubles:1.12-1.5.2"
@@ -94,6 +98,9 @@ dependencies {
     compile 'slimeknights.mantle:Mantle:1.12-1.3.3.49'
     compile 'slimeknights:TConstruct:1.12.2-2.13.0.184'
 //    compile 'constructs-armory:conarm:1.12.2:1.2.5.4'
+    compile 'bewitchment:bewitchment:1.12.2:0.0.21.4'
+//    compile fg.deobf("curse.maven:thaumicbases:3056921")
+//    compile "curse.maven:dummycore:2611426"
     compile "tk.zeitheron.HammerLib:HammerLib-1.12.2:2.0.6.19:deobf"
     compile "tk.zeitheron.ThaumicAdditions:ThaumicAdditions-1.12.2:12.4.3:deobf"
 }
@@ -102,12 +109,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "examplemod",
-            "Specification-Vendor": "examplemodsareus",
+            "Specification-Title": "planarartifice",
+            "Specification-Vendor": "planarartificesareus",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"examplemodsareus",
+            "Implementation-Vendor" :"planarartificesareus",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
