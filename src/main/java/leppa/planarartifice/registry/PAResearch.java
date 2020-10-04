@@ -6,6 +6,7 @@ import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
@@ -25,14 +26,21 @@ public class PAResearch {
 	
 	public static final ResearchCategory catPA = ResearchCategories.registerCategory("PLANARARTIFICE", null,
 			new AspectList().add(Aspect.AURA, 1),
-			new ResourceLocation("planarartifice:textures/research/cat_planarartifice.png"),
+			new ResourceLocation("planarartifice:textures/meta/logo_icon.png"),
 			new ResourceLocation("planarartifice:textures/research/gui_research_back_2.jpg"));
 
 	public static void registerResearch() {
-		ThaumcraftApi.registerResearchLocation(new ResourceLocation("planarartifice:research/planarartifice.json"));
+		PlanarArtifice.LOGGER.info("Research active");
+		ThaumcraftApi.registerResearchLocation(new ResourceLocation("planarartifice:research/main.json"));
+		if (!OreDictionary.doesOreNameExist("ingotLead"))
+			ThaumcraftApi.registerResearchLocation(new ResourceLocation(PlanarArtifice.MODID, "research/metal_1.json"));
+		else if (OreDictionary.doesOreNameExist("ingotTin") && OreDictionary.doesOreNameExist("ingotCopper") && OreDictionary.doesOreNameExist("ingotSilver"))
+			ThaumcraftApi.registerResearchLocation(new ResourceLocation(PlanarArtifice.MODID, "research/metal_3.json"));
+		else ThaumcraftApi.registerResearchLocation(new ResourceLocation(PlanarArtifice.MODID, "research/metal_2.json"));
 
         // Scannables
         ScanningManager.addScannableThing(new ScanBlock("!Portal", Blocks.PORTAL));
+
         // Caster
         FocusEngine.registerElement(FocusEffectPrismLight.class, new ResourceLocation("planarartifice", "textures/foci/prism.png"), 0xff00ff);
         FocusEngine.registerElement(FocusEffectColourized.class, new ResourceLocation("planarartifice", "textures/foci/colourizer.png"), 0xffffff);
