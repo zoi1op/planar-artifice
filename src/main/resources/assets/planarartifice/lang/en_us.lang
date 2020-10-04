@@ -6,6 +6,9 @@ item.alkimium_gear.name=Alkimium Gear
 item.alkimium_nugget.name=Alkimium Nugget
 item.thaumostatic_jet_harness.name=Thaumostatic Jet Harness
 item.dimensional_curiosity.name=Dimensional Curiosity
+item.dimensional_curiosity.tooltip=Space warps around this.
+item.fundamental_curiosity.name=Fundamental Curiosity
+item.fundamental_curiosity.tooltip=Creative Only (for now?)
 item.dimensional_singularity.name=Dimensional Singularity
 item.alchemical_scribing_tools.name=Alchemical Scribing Tools
 item.bismuth_ingot.name=Bismuth Ingot
@@ -204,7 +207,7 @@ planarartifice.research.bush_alchemy_metal_2.complete.text=It's a bit expensive,
 # Bush Alchemy Metal 3
 planarartifice.research.bush_alchemy_metal_3.title=Bush Alchemy Specialization: Metal Projection
 planarartifice.research.bush_alchemy_metal_3.stage.1.text=I have recently taken an interest to the Clockwork Mages, and how they transmutate one metal into another. Perhaps it can benefit my own research in similar veins?
-planarartifice.research.bush_alchemy_metal_3.complete.text=It's a bit expensive, but I have managed to create a way to "upgrade" metals by projecting it, and "downgrade" metals with a bit of time and earth. The list goes from lead to tin, tin to iron, to copper, to silver than to gold.
+planarartifice.research.bush_alchemy_metal_3.complete.text=It's a bit expensive, but I have managed to create a way to "upgrade" metals by projecting it, and "downgrade" metals with a bit of time and earth. The list goes from lead to tin, tin to iron, to copper, to silver then to gold.
 # --- End of Research --- #
 
 tooltip.usablevis=Current Usable Vis:

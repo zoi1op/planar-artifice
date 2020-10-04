@@ -3,6 +3,7 @@
 ######################################
 import os
 import json
+import copy 
 import re
 # Made to remove duplicate contents for Thaumcraft researches.
 ################################################################################
@@ -130,7 +131,7 @@ for filename in os.listdir(DIR_SRC):
                 destStage["required_research"] = srcStage["researches"]
             if "recipes" in srcStage:
                 recipes.extend(map(recipefy, srcStage["recipes"]))
-                destStage["recipes"] = recipes
+                destStage["recipes"] = copy.copy(recipes)
                 alsoRequired = filter(hasExclamation, srcStage["recipes"])
                 if len(alsoRequired) is not 0:
                     if "required_craft" not in destStage:
@@ -151,7 +152,7 @@ for filename in os.listdir(DIR_SRC):
                     keys.append(destAddendum["text"])
                 if "recipes" in srcAddendum:
                     recipes.extend(map(recipefy, srcAddendum["recipes"]))
-                    destAddendum["recipes"] = recipes
+                    destAddendum["recipes"] = copy.copy(recipes)
                 if "parents" in srcAddendum:
                     destAddendum["required_research"] = srcAddendum["parents"]
                 destEnt["addenda"].append(destAddendum)

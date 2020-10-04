@@ -93,9 +93,7 @@
         {
           "text": "planarartifice.research.alkimium.stage.1.text", 
           "recipes": [
-            "planarartifice:alkimium_ingot", 
-            "planarartifice:alkimium_stuff", 
-            "planarartifice:alchemical_alkimium_construct"
+            "planarartifice:alkimium_ingot"
           ], 
           "required_craft": [
             "planarartifice:alkimium_ingot"
@@ -389,9 +387,7 @@
         {
           "text": "planarartifice.research.mirror_teleporter.stage.2.text", 
           "recipes": [
-            "planarartifice:teleporter_matrix", 
-            "planarartifice:teleporter_matrix2", 
-            "planarartifice:mirror_teleporter"
+            "planarartifice:teleporter_matrix"
           ], 
           "required_craft": [
             "planarartifice:teleporter_matrix"
@@ -432,9 +428,7 @@
           "text": "planarartifice.research.bismuth.stage.1.text", 
           "recipes": [
             "planarartifice:bismuth", 
-            "planarartifice:bismuth_stuff", 
-            "planarartifice:aura_meter", 
-            "planarartifice:bismuth_claymore"
+            "planarartifice:bismuth_stuff"
           ], 
           "required_craft": [
             "planarartifice:bismuth"
@@ -637,8 +631,7 @@
           ], 
           "text": "planarartifice.research.bismuth_casters_gauntlet.stage.2.text", 
           "recipes": [
-            "planarartifice:flux_vent", 
-            "planarartifice:bismuth_caster"
+            "planarartifice:flux_vent"
           ], 
           "required_item": [
             "planarartifice:flux_venting_circuit"
@@ -681,8 +674,7 @@
           "text": "planarartifice.research.bush_alchemy.stage.2.text", 
           "recipes": [
             "planarartifice:endereye", 
-            "planarartifice:redstone", 
-            "planarartifice:blaze_powder"
+            "planarartifice:redstone"
           ], 
           "required_item": [
             "minecraft:blaze_rod;16"
@@ -765,10 +757,7 @@
             "planarartifice:condensed_crystal_cluster3", 
             "planarartifice:condensed_crystal_cluster4", 
             "planarartifice:condensed_crystal_cluster5", 
-            "planarartifice:condensed_crystal_cluster6", 
-            "planarartifice:random_vis_crystal1", 
-            "planarartifice:random_vis_crystal2", 
-            "planarartifice:salis_mundus"
+            "planarartifice:condensed_crystal_cluster6"
           ], 
           "required_item": [
             "thaumcraft:crystal_essence;1;0;{Aspects:[{amount:1,key:\"aer\"}]}", 
@@ -791,8 +780,7 @@
             "planarartifice:condensed_crystal_cluster5", 
             "planarartifice:condensed_crystal_cluster6", 
             "planarartifice:random_vis_crystal1", 
-            "planarartifice:random_vis_crystal2", 
-            "planarartifice:salis_mundus"
+            "planarartifice:random_vis_crystal2"
           ], 
           "required_item": [
             "thaumcraft:salis_mundus;64"

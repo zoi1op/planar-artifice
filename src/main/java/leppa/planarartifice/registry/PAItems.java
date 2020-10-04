@@ -15,7 +15,7 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.oredict.OreDictionary;
+import thaumcraft.api.research.ResearchEvent;
 
 public class PAItems{
 	
@@ -37,7 +37,8 @@ public class PAItems{
 	public static Item flux_venting_circuit = new ItemPA("flux_venting_circuit");
 	public static Item condensed_crystal_cluster = new ItemPA("condensed_crystal_cluster");
 	public static Item dimensional_singularity = new ItemPA("dimensional_singularity");
-	public static Item dimensional_curiosity = new ItemDimensionalCuriosity("dimensional_curiosity");
+	public static Item dimensional_curiosity = new ItemCurio("dimensional_curiosity", PAResearch.catPA.key);
+	public static Item fundamental_curiosity = new ItemCurio("fundamental_curiosity", "BASICS");
 
 	// Baubles
 	public static Item aura_meter = new ItemAuraMeter("aura_meter");
