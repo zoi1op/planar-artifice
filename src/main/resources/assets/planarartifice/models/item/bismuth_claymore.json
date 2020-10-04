@@ -1,7 +1,7 @@
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "planarartifice:items/bismuth/bismuth_claymore"
+		"layer0": "planarartifice:items/bismuth_claymore"
 	},
 	"display": {
 		"thirdperson_righthand": {

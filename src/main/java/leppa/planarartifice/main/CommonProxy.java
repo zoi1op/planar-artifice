@@ -4,11 +4,9 @@ import leppa.planarartifice.compat.PACompatHandler;
 import leppa.planarartifice.network.MessageProjectingAttack;
 import leppa.planarartifice.network.PacketRequestUpdateTeleporter;
 import leppa.planarartifice.network.PacketUpdateTeleporter;
-import leppa.planarartifice.recipe.CrucibleRecipeRandomCrystal;
 import leppa.planarartifice.registry.PAAspects;
 import leppa.planarartifice.registry.PAMultiblocks;
 import leppa.planarartifice.registry.PAResearch;
-import leppa.planarartifice.registry.Registrar;
 import leppa.planarartifice.tiles.TileAlkimiumSmeltery;
 import leppa.planarartifice.tiles.TileFluxScrubber;
 import leppa.planarartifice.tiles.TilePotionMixer;
@@ -45,19 +43,19 @@ public class CommonProxy {
 
         
 		NetworkRegistry.INSTANCE.registerGuiHandler(PlanarArtifice.instance, new PAGuiHandler());
+		
 	}
 	
 	public void init(FMLInitializationEvent e){
-		Registrar.registerOres();
-		CrucibleRecipeRandomCrystal.registerAspectList();
 		PACompatHandler.init(e);
-		PAResearch.registerResearch();
 	}
 	
 	public void postInit(FMLPostInitializationEvent e){
 		PACompatHandler.postInit(e);
 		PAAspects.registerItemAspects();
+		PAResearch.registerResearch();
 		PAMultiblocks.registerMultiblocks();
+		
 	}
 
 	public static EntityPlayer getPlayerEntityFromContext(MessageContext ctx) {

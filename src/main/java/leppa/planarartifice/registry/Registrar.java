@@ -8,7 +8,6 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.oredict.OreDictionary;
 
 @EventBusSubscriber(modid = PlanarArtifice.MODID)
 public class Registrar {
@@ -33,18 +32,6 @@ public class Registrar {
 	public static void registerModels(ModelRegistryEvent event) {
 		PABlocks.registerModels();
 		PAItems.registerModels();
-	}
-
-	public static void registerOres() {
-		OreDictionary.registerOre("blockAlkimium", PABlocks.alkimium_block);
-		OreDictionary.registerOre("blockBismuth", PABlocks.bismuth_block);
-
-		OreDictionary.registerOre("ingotAlkimium", PAItems.alkimium_ingot);
-		OreDictionary.registerOre("plateAlkimium", PAItems.alkimium_plate);
-		OreDictionary.registerOre("nuggetAlkimium", PAItems.alkimium_nugget);
-		OreDictionary.registerOre("ingotBismuth", PAItems.bismuth_ingot);
-		OreDictionary.registerOre("plateBismuth", PAItems.bismuth_plate);
-		OreDictionary.registerOre("nuggetBismuth", PAItems.bismuth_nugget);
 	}
 
 }

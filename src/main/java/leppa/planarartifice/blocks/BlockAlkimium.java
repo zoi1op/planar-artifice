@@ -1,8 +1,10 @@
 package leppa.planarartifice.blocks;
 
-import leppa.planarartifice.main.PlanarArtifice;
+import java.util.List;
+
+import javax.annotation.Nullable;
+
 import net.minecraft.block.material.Material;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
@@ -11,12 +13,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import javax.annotation.Nullable;
-import java.util.List;
+public class BlockAlkimium extends BlockPA {
 
-public class BlockMetal extends BlockPA {
-
-	public BlockMetal(String name) {
+	public BlockAlkimium(String name) {
 		super(Material.IRON, name);
 	}
 
@@ -26,6 +25,7 @@ public class BlockMetal extends BlockPA {
 
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced) {
-		tooltip.add(I18n.format(PlanarArtifice.MODID + ".beaconBase"));
+		tooltip.add("Usable as a beacon base");
 	}
+	
 }

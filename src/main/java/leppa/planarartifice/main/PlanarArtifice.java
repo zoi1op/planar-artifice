@@ -1,7 +1,11 @@
 package leppa.planarartifice.main;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
 import leppa.planarartifice.util.ReflectionUtils;
+import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
@@ -25,24 +29,20 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ServerTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import thaumcraft.api.casters.FocusEffect;
 import thaumcraft.api.casters.FocusEngine;
 import thaumcraft.api.casters.IFocusElement;
 import thaumcraft.api.golems.EnumGolemTrait;
+import thaumcraft.api.items.ItemsTC;
 import thaumcraft.common.items.casters.ItemCaster;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 
 @EventBusSubscriber
 @Mod(modid = PlanarArtifice.MODID, version = PlanarArtifice.VERSION, name = PlanarArtifice.NAME, dependencies = PlanarArtifice.DEPS)
 public class PlanarArtifice {
 	public static final String MODID = "planarartifice";
 	public static final String NAME = "Planar Artifice";
-	public static final String VERSION = "1.0.1";
-	public static final String DEPS = "required-after:thaumcraft;after:tconstruct;after:thaumicadds;after:bewitchment;after:thaumicbases;after:jei@[4.12.0.0,)";
+	public static final String VERSION = "1.0";
+	public static final String DEPS = "required-after:thaumcraft;after:tconstruct;after:thaumicadds";
 
 	public static final PlanarTab creativetab = new PlanarTab();
 
@@ -64,7 +64,6 @@ public class PlanarArtifice {
 
 	@Instance(MODID)
 	public static PlanarArtifice instance = new PlanarArtifice();
-	public static final Logger LOGGER = LogManager.getLogger(MODID);
 
 	static {
 		p = (HashMap<String, Integer>) ReflectionUtils.getPrivateObject("elementColor", new FocusEngine());
@@ -78,6 +77,7 @@ public class PlanarArtifice {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.init(event);
+
 	}
 
 	@EventHandler

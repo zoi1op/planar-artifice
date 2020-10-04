@@ -1,6 +1,6 @@
 { 
   "type": "minecraft:crafting_shaped",
-  "group": "planarartifice:bismuth_stuff",
+  "group": "planarartifice:alkimium_stuff",
   "pattern": [
     "AAA",
     "AAA",
@@ -8,13 +8,13 @@
   "key": {
     "A": [
       {
-        "item": "planarartifice:bismuth_ingot",
+        "item": "planarartifice:alkimium_ingot",
         "data": 0
       }
     ]
   },
   "result": {
-    "item": "planarartifice:bismuth_block",
+    "item": "planarartifice:alkimium_block",
     "data": 0
   }
 }

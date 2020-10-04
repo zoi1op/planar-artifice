@@ -1,5 +1,9 @@
 package leppa.planarartifice.items;
 
+import java.util.List;
+
+import javax.annotation.Nullable;
+
 import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,9 +24,6 @@ import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchCategory;
 import thaumcraft.common.lib.SoundsTC;
 
-import javax.annotation.Nullable;
-import java.util.List;
-
 public class ItemDimensionalCuriosity extends ItemPA {
 
 	public ItemDimensionalCuriosity(String name) {
@@ -40,7 +41,7 @@ public class ItemDimensionalCuriosity extends ItemPA {
 			ThaumcraftApi.internalMethods.addKnowledge(player, IPlayerKnowledge.EnumKnowledgeType.OBSERVATION,ResearchCategories.getResearchCategory("PLANARARTIFICE"),MathHelper.getInt(player.getRNG(), oProg / 2, oProg));
 			ThaumcraftApi.internalMethods.addKnowledge(player, IPlayerKnowledge.EnumKnowledgeType.THEORY,ResearchCategories.getResearchCategory("PLANARARTIFICE"),MathHelper.getInt(player.getRNG(), tProg / 3, tProg / 2));
 
-			ResearchCategory[] rc = ResearchCategories.researchCategories.values().toArray(new ResearchCategory[0]);
+			ResearchCategory[] rc = (ResearchCategory[]) ResearchCategories.researchCategories.values().toArray((Object[]) new ResearchCategory[0]);
 			ThaumcraftApi.internalMethods.addKnowledge(player, IPlayerKnowledge.EnumKnowledgeType.OBSERVATION,rc[player.getRNG().nextInt(rc.length)], MathHelper.getInt(player.getRNG(), oProg / 2, oProg));
 			ThaumcraftApi.internalMethods.addKnowledge(player, IPlayerKnowledge.EnumKnowledgeType.THEORY,rc[player.getRNG().nextInt(rc.length)], MathHelper.getInt(player.getRNG(), tProg / 3, tProg / 2));
 

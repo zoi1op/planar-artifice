@@ -1,6 +1,8 @@
 package leppa.planarartifice.compat;
 
-import leppa.planarartifice.compat.bewitchment.BewitchmentHandler;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import leppa.planarartifice.compat.tconstruct.TConstructHandler;
 import leppa.planarartifice.compat.thaumicadditions.ThaumicAdditionsHandler;
 import net.minecraft.item.ItemStack;
@@ -10,9 +12,6 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 public class PACompatHandler {
 
 	public static final HashMap<String, Class<? extends ICompatModule>> CLASSES = new HashMap<>();
@@ -21,7 +20,6 @@ public class PACompatHandler {
 	static {
 		CLASSES.put("tconstruct", TConstructHandler.class);
 		CLASSES.put("thaumadditions", ThaumicAdditionsHandler.class);
-		CLASSES.put("bewitchment", BewitchmentHandler.class);
 	}
 
 	public static void setup() {

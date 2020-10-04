@@ -1,6 +1,6 @@
 {
     "parent": "thaumcraft:item/caster_gauntlet_focus",
     "textures": {
-        "skin": "planarartifice:items/bismuth/rainbow_caster"
+        "skin": "planarartifice:items/rainbow_caster_alt"
     }
 }

@@ -1,5 +1,7 @@
 package leppa.planarartifice.foci;
 
+import leppa.planarartifice.main.PlanarArtifice;
+import leppa.planarartifice.registry.PAAspects;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;
@@ -13,9 +15,12 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.casters.FocusEffect;
+import thaumcraft.api.casters.FocusEngine;
 import thaumcraft.api.casters.NodeSetting;
 import thaumcraft.api.casters.Trajectory;
 import thaumcraft.client.fx.FXDispatcher;
+import thaumcraft.client.fx.ParticleEngine;
+import thaumcraft.client.fx.particles.FXGeneric;
 import thaumcraft.common.lib.network.PacketHandler;
 import thaumcraft.common.lib.network.fx.PacketFXFocusPartImpact;
 
@@ -30,7 +35,7 @@ public class FocusEffectPrismLight extends FocusEffect{
 	
 	@Override
 	public String getResearch(){
-		return "PA_FOCUS_LIGHT";
+		return "FOCUSLIGHT";
 	}
 	
 	@Override

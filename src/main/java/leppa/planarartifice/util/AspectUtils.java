@@ -1,11 +1,19 @@
 package leppa.planarartifice.util;
 
+import net.minecraft.block.Block;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.AspectHelper;
 import thaumcraft.api.aspects.AspectList;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 
 public class AspectUtils {
 

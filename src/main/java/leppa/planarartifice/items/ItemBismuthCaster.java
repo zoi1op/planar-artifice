@@ -1,5 +1,7 @@
 package leppa.planarartifice.items;
 
+import java.util.List;
+
 import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.registry.PAItems;
 import leppa.planarartifice.util.LocalizationHelper;
@@ -18,8 +20,6 @@ import thaumcraft.api.casters.IFocusBlockPicker;
 import thaumcraft.api.casters.IFocusElement;
 import thaumcraft.common.items.casters.ItemCaster;
 import thaumcraft.common.items.casters.ItemFocus;
-
-import java.util.List;
 
 public class ItemBismuthCaster extends ItemCaster {
 	

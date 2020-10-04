@@ -1,7 +1,13 @@
 package leppa.planarartifice.enchantment;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
+
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Multimap;
+
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
@@ -12,15 +18,10 @@ import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
-
 public enum EnumInfusionEnchantmentII{
-	TRANSMUTATIVE(ImmutableSet.of("axe", "pickaxe", "shovel", "weapon"), 1, "PA_INFUSION_ENCHANTMENT_2"),
-	AURAINFUSING(ImmutableSet.of("weapon"), 1, "PA_INFUSION_ENCHANTMENT_2"),
-	PROJECTING(ImmutableSet.of("weapon", "axe", "pickaxe", "shovel"), 5, "PA_INFUSION_ENCHANTMENT_2");
+	TRANSMUTATIVE(ImmutableSet.of("axe", "pickaxe", "shovel", "weapon"), 1, "INFUSIONENCHANTMENTII"), 
+	AURAINFUSING(ImmutableSet.of("weapon"), 1, "INFUSIONENCHANTMENTII"),
+	PROJECTING(ImmutableSet.of("weapon", "axe", "pickaxe", "shovel"), 5, "INFUSIONENCHANTMENTII");
 	
 	public Set<String> toolClasses;
 	public int maxLevel;

@@ -10,8 +10,7 @@ import thaumcraft.api.aspects.AspectList;
 
 import java.awt.*;
 
-import static leppa.planarartifice.util.AspectUtils.add;
-import static leppa.planarartifice.util.AspectUtils.set;
+import static leppa.planarartifice.util.AspectUtils.*;
 
 public class PAAspects{
 	
@@ -29,7 +28,7 @@ public class PAAspects{
 	};	
 	
 	
-	public static void registerItemAspects() {
+	public static void registerItemAspects(){
 		add(new ItemStack(Items.CLOCK), new AspectList().add(PAAspects.TIME, 10));
 		add(new ItemStack(Items.ENDER_PEARL), new AspectList().add(PAAspects.DIMENSIONS, 10).add(PAAspects.TIME, 5));
 		add(new ItemStack(Blocks.ENDER_CHEST), new AspectList().add(PAAspects.DIMENSIONS, 12));
@@ -39,6 +38,7 @@ public class PAAspects{
 		add(new ItemStack(PAItems.dimensional_singularity), new AspectList().add(PAAspects.DIMENSIONS, 30).add(PAAspects.TIME, 30));
 		add(new ItemStack(Items.BONE), new AspectList().add(PAAspects.COLOR, 5));
 		add(new ItemStack(Items.GLOWSTONE_DUST), new AspectList().add(PAAspects.COLOR, 5));
+		add(new ItemStack(Blocks.WOOL), new AspectList().add(PAAspects.COLOR, 5));
 		add(new ItemStack(Blocks.LAPIS_BLOCK), new AspectList().add(PAAspects.COLOR, 180));
 		add(new ItemStack(Blocks.LAPIS_ORE), new AspectList().add(PAAspects.COLOR, 15));
 		add(new ItemStack(Blocks.RED_FLOWER), new AspectList().add(PAAspects.COLOR, 15));
@@ -66,13 +66,10 @@ public class PAAspects{
 		
 		for(int i = 0; i < 16; i++){
 			add(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, i), new AspectList().add(PAAspects.COLOR, 10));
-			add(new ItemStack(Blocks.WOOL, 1, i), new AspectList().add(PAAspects.COLOR, 5));
-			add(new ItemStack(Blocks.CONCRETE_POWDER, 1, i), new AspectList().add(PAAspects.COLOR, 5));
-			add(new ItemStack(Blocks.CONCRETE, 1, i), new AspectList().add(PAAspects.COLOR, 5));
 			add(new ItemStack(Items.DYE, 1, i), new AspectList().add(PAAspects.COLOR, 20));
 			add(new ItemStack(Blocks.STAINED_GLASS, 1, i), new AspectList().add(PAAspects.COLOR, 15));
 		}
 		
-		set(new ItemStack(PAItems.condensed_crystal_cluster), new AspectList().add(Aspect.FIRE, 12).add(Aspect.AIR, 12).add(Aspect.EARTH, 12).add(Aspect.ORDER, 12).add(Aspect.ENTROPY, 12).add(Aspect.MAGIC, 12).add(Aspect.WATER, 12));
+		set(new ItemStack(PAItems.condensed_crystal_cluster), new AspectList().add(Aspect.FIRE, 12).add(Aspect.AIR, 12).add(Aspect.EARTH, 12).add(Aspect.ORDER, 12).add(Aspect.ENTROPY, 12).add(Aspect.MAGIC, 12).add(Aspect.ENERGY, 12).add(Aspect.WATER, 12));
 	}
 }
