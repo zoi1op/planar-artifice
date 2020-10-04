@@ -135,6 +135,8 @@ planarartifice.research.bush_alchemy_metal_2.title=경면 연금술 특성화: �
 # Bush Alchemy Metal 3
 planarartifice.research.bush_alchemy_metal_3.title=경면 연금술 특성화: 금속 투영
 
+planarartifice.alkimium=알키미움 업그레이드
+
 tooltip.usablevis=현재 사용 가능한 비스:
 tooltip.basevis=현재 기초 비스:
 tooltip.castercost= 요구 비스

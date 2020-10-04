@@ -2,6 +2,8 @@ package leppa.planarartifice.blocks;
 
 import java.util.List;
 
+import javafx.scene.control.TextFormatter;
+import leppa.planarartifice.util.LocalizationHelper;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
@@ -11,6 +13,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import thaumcraft.common.blocks.IBlockFacingHorizontal;
 import thaumcraft.common.lib.utils.BlockStateUtils;
@@ -32,7 +35,7 @@ public class BlockAlkimiumSmelteryAux extends BlockPA implements IBlockFacingHor
 	}
 
 	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-		tooltip.add("\u00a7Alkimium compatible");
+		tooltip.add(TextFormatting.DARK_AQUA + LocalizationHelper.localize("planarartifice.alkimium"));
 	}
 
 	public boolean isOpaqueCube(IBlockState state) {

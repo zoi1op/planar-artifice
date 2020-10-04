@@ -6,8 +6,10 @@ import baubles.api.IBauble;
 import baubles.api.render.IRenderBauble;
 import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.registry.PAItems;
+import leppa.planarartifice.util.LocalizationHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -15,12 +17,17 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import thaumcraft.api.items.IGoggles;
 import thaumcraft.api.items.IRevealer;
 import thaumcraft.api.items.IVisDiscountGear;
 import thaumcraft.client.lib.UtilsFX;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class ItemAlkimiumGoggles extends ItemArmor implements IRevealer, IGoggles, IVisDiscountGear, IBauble, IRenderBauble {
 
@@ -78,6 +85,9 @@ public class ItemAlkimiumGoggles extends ItemArmor implements IRevealer, IGoggle
 		if(BaublesApi.isBaubleEquipped(player, PAItems.alkimium_goggles) != -1)
 			return true;
 		return false;
-		
+	}
+
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+		tooltip.add(TextFormatting.DARK_AQUA + LocalizationHelper.localize("planarartifice.alkimium"));
 	}
 }
