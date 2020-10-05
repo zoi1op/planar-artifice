@@ -15,7 +15,7 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.oredict.OreDictionary;
+import thaumcraft.api.research.ResearchEvent;
 
 public class PAItems{
 	
@@ -31,13 +31,14 @@ public class PAItems{
 	public static Item alkimium_nugget = new ItemPA("alkimium_nugget");
 	
 	public static Item bismuth_ingot = new ItemPA("bismuth_ingot");
-//	public static Item bismuth_plate = new ItemPA("bismuth_plate");
+	public static Item bismuth_plate = new ItemPA("bismuth_plate");
 	public static Item bismuth_nugget = new  ItemPA("bismuth_nugget");
 	
 	public static Item flux_venting_circuit = new ItemPA("flux_venting_circuit");
 	public static Item condensed_crystal_cluster = new ItemPA("condensed_crystal_cluster");
 	public static Item dimensional_singularity = new ItemPA("dimensional_singularity");
-	public static Item dimensional_curiosity = new ItemDimensionalCuriosity("dimensional_curiosity");
+	public static Item dimensional_curiosity = new ItemCurio("dimensional_curiosity", PAResearch.catPA.key);
+	public static Item fundamental_curiosity = new ItemCurio("fundamental_curiosity", "BASICS");
 
 	// Baubles
 	public static Item aura_meter = new ItemAuraMeter("aura_meter");
@@ -52,18 +53,11 @@ public class PAItems{
 	public static Item alchemical_scribing_tools = new ItemAlchemicalScribingTools("alchemical_scribing_tools");
 	public static Item bismuth_caster = new ItemBismuthCaster("bismuth_caster").setCreativeTab(PlanarArtifice.creativetab);
 	public static Item bismuth_claymore = new ItemBismuthSword("bismuth_claymore", toolMatBismuth);
-	
+
+	public static Item alchemical_universe = new ItemPA("alchemical_universe").setCreativeTab(null);
 	
 	public static void registerItems(RegistryEvent.Register<Item> event){
 		ITEMS.forEach(i -> event.getRegistry().register(i));
-		
-		OreDictionary.registerOre("ingotAlkimium", alkimium_ingot);
-		OreDictionary.registerOre("plateAlkimium", alkimium_plate);
-		OreDictionary.registerOre("nuggetAlkimium", alkimium_nugget);
-		OreDictionary.registerOre("ingotBismuth", bismuth_ingot);
-//		OreDictionary.registerOre("plateBismuth", bismuth_plate);
-		OreDictionary.registerOre("nuggetBismuth", bismuth_nugget);
-
 	}
 	
 	public static void registerModels(){

@@ -39,7 +39,7 @@ public class FocusEffectColourized extends FocusEffect{
 	
 	@Override
 	public String getResearch(){
-		return "FOCUSLIGHT";
+		return "PA_FOCUS_LIGHT";
 	}
 	
 	@Override

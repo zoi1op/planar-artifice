@@ -1,0 +1,19 @@
+{ 
+  "type": "minecraft:crafting_shaped",
+  "group": "planarartifice:bismuth_stuff",
+  "pattern": [
+    "AAA"  ],
+  "key": {
+    "A": [
+      {
+        "item": "planarartifice:bismuth_ingot",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "planarartifice:bismuth_plate",
+    "count": 3,
+    "data": 0
+  }
+}

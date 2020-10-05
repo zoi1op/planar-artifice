@@ -34,6 +34,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ServerTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import thaumcraft.api.casters.FocusEffect;
 import thaumcraft.api.casters.FocusEngine;
 import thaumcraft.api.casters.IFocusElement;
@@ -43,11 +45,12 @@ import thaumcraft.common.items.casters.ItemCaster;
 
 @SuppressWarnings("unchecked")
 @EventBusSubscriber
-@Mod(modid = PlanarArtifice.MODID, version = PlanarArtifice.VERSION, name = PlanarArtifice.NAME, dependencies = "required-after:thaumcraft;after:tconstruct")
-public class PlanarArtifice implements LoadingCallback {
+@Mod(modid = PlanarArtifice.MODID, version = PlanarArtifice.VERSION, name = PlanarArtifice.NAME, dependencies = PlanarArtifice.DEPS)
+public class PlanarArtifice {
 	public static final String MODID = "planarartifice";
 	public static final String NAME = "Planar Artifice";
-	public static final String VERSION = "1.0.1";
+	public static final String VERSION = "1.1.0";
+	public static final String DEPS = "required-after:thaumcraft;after:tconstruct;after:thaumicadds;after:bewitchment;after:jei@[4.12.0.0,);after:soot";
 
 	public static final PlanarTab creativetab = new PlanarTab();
 
@@ -69,6 +72,7 @@ public class PlanarArtifice implements LoadingCallback {
 
 	@Instance(MODID)
 	public static PlanarArtifice instance = new PlanarArtifice();
+	public static final Logger LOGGER = LogManager.getLogger(MODID);
 
 	static {
 		p = (HashMap<String, Integer>) ReflectionUtils.getPrivateObject("elementColor", new FocusEngine());

@@ -2,20 +2,27 @@ package leppa.planarartifice.blocks;
 
 import java.util.List;
 
+import leppa.planarartifice.util.LocalizationHelper;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import thaumcraft.common.blocks.IBlockFacingHorizontal;
 import thaumcraft.common.lib.utils.BlockStateUtils;
+
+import javax.annotation.Nullable;
 
 public class BlockAlkimiumSmelteryVent extends BlockPA implements IBlockFacingHorizontal {
 
@@ -34,8 +41,9 @@ public class BlockAlkimiumSmelteryVent extends BlockPA implements IBlockFacingHo
 				&& BlockStateUtils.getFacing(worldIn.getBlockState(pos.offset(side.getOpposite()))) != side;
 	}
 
-	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-		tooltip.add("§3Alkimium compatible");
+	@SideOnly(Side.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced) {
+		tooltip.add(TextFormatting.DARK_AQUA + LocalizationHelper.localize("planarartifice.alkimium"));
 	}
 
 	public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {

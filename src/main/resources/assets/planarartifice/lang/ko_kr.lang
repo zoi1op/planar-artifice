@@ -1,0 +1,155 @@
+item.magic_apple.name=마법사의 과실
+item.alkimium_ingot.name=알키미움 주괴
+item.alkimium_plate.name=알키미움 판
+item.alkimium_goggles.name=드러냄의 고글
+item.alkimium_gear.name=알키미움 톱니바퀴
+item.alkimium_nugget.name=알키미움 조각
+item.thaumostatic_jet_harness.name=사우모스태틱 제트 하네스
+item.dimensional_curiosity.name=차원 희귀점
+item.dimensional_curiosity.tooltip=주변 공간이 일그러진다.
+item.fundamental_curiosity.name=기초 희귀점
+item.fundamental_curiosity.tooltip=크리에이티브 모드 전용 (지금은?)
+item.dimensional_singularity.name=차원 특이점
+item.alchemical_scribing_tools.name=연금 필기 도구
+item.bismuth_ingot.name=비스무트 주괴
+item.bismuth_nugget.name=비스무트 조각
+item.bismuth_plate.name=비스무트 판
+item.bismuth_claymore.name=비스무트 클레이모어
+item.aura_meter.name=오라 미터
+item.belt_of_suspension.name=부유의 허리띠
+item.mirrored_amulet.name=거울 부적
+item.bismuth_caster.name=비스무트 주문 건틀릿
+item.flux_venting_circuit.name=플럭스 배기로
+item.condensed_crystal_cluster.name=응축된 크리스탈 덩어리
+item.alchemical_universe.name=연금우주
+
+tile.alkimium_block.name=알키미움 블록
+tile.bismuth_block.name=비스무트 블록
+tile.alkimium_smeltery.name=알키미움 에센시아 증류기
+tile.alkimium_smeltery_thaumium.name=알키미움 사우뮴 에센시아 증류기
+tile.alkimium_smeltery_void.name=알키미움 공허 에센시아 증류기
+tile.alchemical_alkimium_construct.name=알키미움 연금 구조물
+tile.teleporter.name=신기루 전송석
+tile.teleporter_matrix.name=신기루 매트릭스
+tile.potion_mixer.name=물약 혼합기
+tile.flux_scrubber.name=플럭스 닦개
+
+tile.alkimium_smeltery_mithrillium.name=알키미움 미스릴리움 에센시아 증류기
+tile.alkimium_smeltery_adaminite.name=알키미움 아다미나이트 에센시아 증류기
+tile.alkimium_smeltery_mithminite.name=알키미움 미스미나이트 에센시아 증류기
+
+fluid.molten_alkimium=녹은 알키미움
+fluid.molten_bismuth=녹은 비스무트
+material.alkimium.name=알키미움
+material.bismuth.name=비스무트
+modifier.transmutative.name=변성
+modifier.transmutative.desc=특정 아이템들을 다른 종류의 아이템으로 변화합니다.
+modifier.aurainfusing.name=오라 인퓨전
+modifier.aurainfusing.desc=떨어뜨린 XP의 절반이 비스로 변환됩니다.
+enchantment.infusion.TRANSMUTATIVE=변성
+enchantment.infusion.AURAINFUSING=오라 인퓨전
+enchantment.infusion.PROJECTING=투영
+golem.material.alkimium=알키미움
+golem.material.text.alkimium=이 골렘은 알키미움으로 만들어졌습니다. 이는 가볍고, 불에 타지 않고, 폭발에 강합니다. 황동 골렘에 비해 높은 방어력과 공격력을 가지고 있지만, 여전히 약한 축에 속합니다.
+golem.trait.teleporter=공간이동자
+golem.trait.text.teleporter=이 골렘은 먼 거리를 이동할 일이 생기면 체력을 소모하여 순간이동할 수 있습니다.
+golem.addon.teleport_pack=순간이동 팩
+golem.addon.text.teleport_pack=골렘에게 장거리 이동을 위한 순간이동 능력을 부여합니다.
+
+planarartifice.PRISMLIGHT.name=분광
+planarartifice.PRISMLIGHT.text=강력한 광선을 만들어 공격합니다. 언데드 몬스터에게 특히 효과가 좋고, 플레이어들에게 실명을 줍니다.
+
+planarartifice.FOCUSCOLOURED.name=포커스 염색
+planarartifice.FOCUSCOLOURED.text=다른 "포커스 효과"처럼 행동하지만, 포커스 색을 바꿔줍니다. 포커스 색과 베이스는 아래에서 선택 가능합니다. (*싱글플레이어 전용*)
+
+focus.colourizer.focus=기초 포커스 효과
+focus.colourizer.invisible=(적용 불가)
+focus.colourizer.colour=색 (Hex 코드, 오른쪽 방향키로 입력시작, 종료, 그리고 재입력)
+focus.colourizer.colour.start=→ 를 눌러 입력
+
+itemGroup.planarartifice.tab.name=거울 마법
+planarartifice.beaconBase=신호기 받침으로 사용할 수 있음
+
+# ---   ----   --- #
+# --- Research --- #
+# ---   ----   --- #
+tc.research_category.PLANARARTIFICE=경면학
+# Alkimium Mithrillium Smeltery
+planarartifice.research.alkimium_mithrillium_smeltery.title=알키미움 미스릴리움 에센시아 증류기
+# Alkimium Adaminite Smeltery
+planarartifice.research.alkimium_adaminite_smeltery.title=알키미움 아다미나이트 에센시아 증류기
+# Alkimium Mithminite Smeltery
+planarartifice.research.alkimium_mithminite_smeltery.title=알키미움 미스미나이트 에센시아 증류기
+# Rare Items
+planarartifice.research.rare_items.title=희귀한 물건들
+# Magic Apple
+planarartifice.research.magic_apple.title=마법사의 과실
+# Alkimium
+planarartifice.research.alkimium.title=알키미움
+# Alchemical Scribing Tools
+planarartifice.research.alchemical_scribing_tools.title=연금 필기구
+# Alkimium Applications
+planarartifice.research.alkimium_applications.title=알키미움 에센시아 증류기
+# Alkimium Goggles
+planarartifice.research.alkimium_goggles.title=알키미움 고글 업그레이드
+# Alkimium Distillation
+planarartifice.research.alkimium_distillation.title=알키미움 증류 업그레이드
+# Alkimium Thaumium Smeltery
+planarartifice.research.alkimium_thaumium_smeltery.title=알키미움 사우뮴 에센시아 증류기
+# Alkimium Void Smeltery
+planarartifice.research.alkimium_void_smeltery.title=알키미움 공허 에센시아 증류기
+# Portal
+planarartifice.research.portal.title=차원의 균열
+# Dimensional Singularity
+planarartifice.research.dimensional_singularity.title=차원 특이점
+# Mirror Teleporter
+planarartifice.research.mirror_teleporter.title=신기루 전송석
+# Bismuth
+planarartifice.research.bismuth.title=비스무트
+# Flux Scrubber
+planarartifice.research.flux_scrubber.title=플럭스 닦아내기
+# Focus Light
+planarartifice.research.focus_light.title=포커스 효과: 프리즘 광선
+# Belt Of Suspension
+planarartifice.research.belt_of_suspension.title=부유의 허리띠
+# Focus Colour
+planarartifice.research.focus_colour.title=포커스 착색
+# Mirrored Amulet
+planarartifice.research.mirrored_amulet.title=거울 부적
+# Bismuth Casters Gauntlet
+planarartifice.research.bismuth_casters_gauntlet.title=비스무트 주문 건틀릿
+# Bush Alchemy
+planarartifice.research.bush_alchemy.title=경면 연금술
+# Bush Alchemy Conjuring
+planarartifice.research.bush_alchemy_conjuring.title=경면 연금술 특성화: 물질 밀집
+# Bush Alchemy Essentia
+planarartifice.research.bush_alchemy_essentia.title=경면 연금술 특성화: 에센시아 다루기
+# Infusion Enchantment 2
+planarartifice.research.infusion_enchantment_2.title=인퓨전 인챈팅 II
+# Matstudy Alkimium
+planarartifice.research.matstudy_alkimium.title=재료 연구: 알키미움
+# Bush Alchemy Metal 1
+planarartifice.research.bush_alchemy_metal_1.title=경면 연금술 특성화: 금속 투영
+# Bush Alchemy Metal 2
+planarartifice.research.bush_alchemy_metal_2.title=경면 연금술 특성화: 금속 투영
+# Bush Alchemy Metal 3
+planarartifice.research.bush_alchemy_metal_3.title=경면 연금술 특성화: 금속 투영
+
+planarartifice.alkimium=알키미움 업그레이드
+
+# CONFIG
+planarartifice.config.compat.tacompat=사우믹 어디션과의 호환을 비활성화할까요?
+planarartifice.config.compat.taextracompat=사우믹 어디션과의 추가 호환 (조합법 변경) 을 비활성화할까요?
+planarartifice.config.compat.tinkerscompat=팅커스 컨스트럭트와의 호환을 비활성화할까요?
+planarartifice.config.compat.aspectcompat=랜덤 비스 크리스탈 조합에 애드온 에센시아를 넣지 말까요?
+
+tooltip.usablevis=현재 사용 가능한 비스:
+tooltip.basevis=현재 기초 비스:
+tooltip.castercost= 요구 비스
+tooltip.casterpower= 힘
+tooltip.willlastforseconds=%s초간 타는 연료.
+tooltip.willlastforminutes=%s분 %s초간 타는 연료.
+
+tc.aspect.tempus=시간
+tc.aspect.spatio=공간, 차원
+tc.aspect.tinctura=색, 예술, 창의성, 표현력

@@ -16,7 +16,7 @@ public class PlanarTab extends CreativeTabs {
 
 	@Override
 	public ItemStack getTabIconItem() {
-		return new ItemStack(PAItems.alkimium_goggles);
+		return new ItemStack(PAItems.alchemical_universe);
 	}
 	
 	@Override
