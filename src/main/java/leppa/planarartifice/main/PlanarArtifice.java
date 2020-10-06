@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
 import leppa.planarartifice.util.ReflectionUtils;
-import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
@@ -34,19 +36,16 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ServerTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import thaumcraft.api.casters.FocusEffect;
 import thaumcraft.api.casters.FocusEngine;
 import thaumcraft.api.casters.IFocusElement;
 import thaumcraft.api.golems.EnumGolemTrait;
-import thaumcraft.api.items.ItemsTC;
 import thaumcraft.common.items.casters.ItemCaster;
 
 @SuppressWarnings("unchecked")
 @EventBusSubscriber
 @Mod(modid = PlanarArtifice.MODID, version = PlanarArtifice.VERSION, name = PlanarArtifice.NAME, dependencies = PlanarArtifice.DEPS)
-public class PlanarArtifice {
+public class PlanarArtifice implements LoadingCallback {
 	public static final String MODID = "planarartifice";
 	public static final String NAME = "Planar Artifice";
 	public static final String VERSION = "1.1.0";
@@ -92,7 +91,7 @@ public class PlanarArtifice {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event);
-		
+
 		ForgeChunkManager.setForcedChunkLoadingCallback(this, this);
 
 		for(int i = 0; i < FocusEngine.elements.values().size(); i++) {
@@ -151,6 +150,6 @@ public class PlanarArtifice {
 	@Override
 	public void ticketsLoaded(List<Ticket> tickets, World world) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }

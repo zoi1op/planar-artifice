@@ -10,9 +10,9 @@ import net.minecraft.item.ItemStack;
 
 @JEIPlugin
 public class JEIHandler implements IModPlugin {
-    public void register(IModRegistry registry) {
-        IIngredientBlacklist blacklist = registry.getJeiHelpers().getIngredientBlacklist();
-        blacklist.addIngredientToBlacklist(new ItemStack(PABlocks.teleporter));
-        blacklist.addIngredientToBlacklist(new ItemStack(PAItems.alchemical_universe));
-    }
+	public void register(IModRegistry registry) {
+		IIngredientBlacklist blacklist = registry.getJeiHelpers().getIngredientBlacklist();
+		blacklist.addIngredientToBlacklist(new ItemStack(PABlocks.teleporter));
+		blacklist.addIngredientToBlacklist(new ItemStack(PAItems.alchemical_universe));
+	}
 }

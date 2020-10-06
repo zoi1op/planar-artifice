@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.AspectHelper;
@@ -45,14 +46,14 @@ public class AspectUtils {
 
     public static void addByRegex(String regex, AspectList aspects) {
         // probably will be less efficient? don't use this unless necessary?
-        for (Item item : Item.REGISTRY) {
+        for (Item item : ForgeRegistries.ITEMS.getValuesCollection()) {
             if (item.getRegistryName().toString().matches(regex)) add(new ItemStack(item), aspects);
         }
     }
 
     public static void setByRegex(String regex, AspectList aspects) {
         // probably will be less efficient? don't use this unless necessary?
-        for (Item item : Item.REGISTRY) {
+        for (Item item : ForgeRegistries.ITEMS.getValuesCollection()) {
             if (item.getRegistryName().toString().matches(regex)) set(new ItemStack(item), aspects);
         }
     }

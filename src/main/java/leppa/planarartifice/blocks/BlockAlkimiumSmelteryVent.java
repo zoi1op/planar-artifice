@@ -43,7 +43,7 @@ public class BlockAlkimiumSmelteryVent extends BlockPA implements IBlockFacingHo
 
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced) {
-		tooltip.add(TextFormatting.DARK_AQUA + LocalizationHelper.localize("planarartifice.alkimium"));
+		tooltip.add(TextFormatting.GREEN + LocalizationHelper.localize("planarartifice.alkimium"));
 	}
 
 	public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {

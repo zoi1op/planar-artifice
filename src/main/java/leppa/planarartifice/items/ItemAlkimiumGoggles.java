@@ -89,6 +89,6 @@ public class ItemAlkimiumGoggles extends ItemArmor implements IRevealer, IGoggle
 
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		tooltip.add(TextFormatting.DARK_AQUA + LocalizationHelper.localize("planarartifice.alkimium"));
+		tooltip.add(TextFormatting.GREEN + LocalizationHelper.localize("planarartifice.alkimium"));
 	}
 }

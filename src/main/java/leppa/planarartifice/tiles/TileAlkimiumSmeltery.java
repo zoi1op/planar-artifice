@@ -6,7 +6,6 @@ import leppa.planarartifice.blocks.BlockAlkimiumSmeltery;
 import leppa.planarartifice.registry.PABlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntityFurnace;
@@ -22,7 +21,6 @@ import thaumcraft.common.lib.crafting.ThaumcraftCraftingManager;
 import thaumcraft.common.lib.utils.BlockStateUtils;
 import thaumcraft.common.tiles.essentia.TileAlembic;
 import thaumcraft.common.tiles.essentia.TileSmelter;
-import net.minecraft.inventory.IInventory;
 
 public class TileAlkimiumSmeltery extends TileSmelter {
 
@@ -31,7 +29,7 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 	int bellows = -1;
 
 	public static Method processAlembics = null;
-	
+
 	@Override
 	public void update() {
 		boolean flag = this.furnaceBurnTime > 0;
@@ -41,46 +39,48 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 			this.furnaceBurnTime--;
 		}
 		if(this.world != null) {
-			if(this.bellows < 0) this.checkNeighbours();
-			
+			if(this.bellows < 0)
+				this.checkNeighbours();
+
 			int speed = (int) (this.getSpeed() * (this.speedBoost ? 0.8 : 1));
-			
+
 			if(this.count % speed == 0 && this.aspects.size() > 0) {
 				for(Aspect aspect : this.aspects.getAspects()) {
-						if(this.aspects.getAmount(aspect) <= 0 || !this.processAlembics(aspect))
-							continue;
+					if(this.aspects.getAmount(aspect) <= 0 || !this.processAlembics(aspect))
+						continue;
 					this.takeFromContainer(aspect, 1);
 					break;
 				}
-				
+
 				for(EnumFacing face : EnumFacing.HORIZONTALS) {
-					IBlockState aux = this.world.getBlockState(this.getPos().offset( face));
+					IBlockState aux = this.world.getBlockState(this.getPos().offset(face));
 					if(aux.getBlock() != PABlocks.smelter_aux || BlockStateUtils.getFacing(aux) != face.getOpposite())
 						continue;
 					for(Aspect aspect : this.aspects.getAspects()) {
-							if(this.aspects.getAmount(aspect) <= 0 || !processAlembics(aspect))
-								continue;
+						if(this.aspects.getAmount(aspect) <= 0 || !processAlembics(aspect))
+							continue;
 						this.takeFromContainer(aspect, 1);
 						continue;
 					}
 				}
 			}
-			
+
 			if(this.furnaceBurnTime == 0) {
 				if(this.canSmelt()) {
-					this.currentItemBurnTime = this.furnaceBurnTime = TileEntityFurnace.getItemBurnTime( ((IInventory)this).getStackInSlot(1));
+					this.currentItemBurnTime = this.furnaceBurnTime = TileEntityFurnace
+							.getItemBurnTime(this.getStackInSlot(1));
 					if(this.furnaceBurnTime > 0) {
 						BlockSmelter.setFurnaceState(this.world, this.getPos(), true);
 						flag1 = true;
 						this.speedBoost = false;
-						if(((IInventory)this).getStackInSlot(1) != ItemStack.EMPTY) {
-							if(((IInventory)this).getStackInSlot(1).isItemEqual(new ItemStack(ItemsTC.alumentum))) {
+						if(this.getStackInSlot(1) != ItemStack.EMPTY) {
+							if(this.getStackInSlot(1).isItemEqual(new ItemStack(ItemsTC.alumentum))) {
 								this.speedBoost = true;
 							}
-							((IInventory)this).getStackInSlot(1).shrink(1);
-							if(((IInventory)this).getStackInSlot(1).getCount() == 0) {
-								((IInventory)this).setInventorySlotContents(1,
-										((IInventory)this).getStackInSlot(1).getItem().getContainerItem(((IInventory)this).getStackInSlot(1)));
+							this.getStackInSlot(1).shrink(1);
+							if(this.getStackInSlot(1).getCount() == 0) {
+								this.setInventorySlotContents(1,
+										this.getStackInSlot(1).getItem().getContainerItem(this.getStackInSlot(1)));
 							}
 						}
 					} else {
@@ -110,10 +110,10 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 	}
 
 	public boolean canSmelt() {
-		if(((IInventory)this).getStackInSlot(0).isEmpty()) {
+		if(this.getStackInSlot(0).isEmpty()) {
 			return false;
 		}
-		AspectList al = ThaumcraftCraftingManager.getObjectTags(((IInventory)this).getStackInSlot(0));
+		AspectList al = ThaumcraftCraftingManager.getObjectTags(this.getStackInSlot(0));
 		if(al == null || al.size() == 0) {
 			return false;
 		}
@@ -129,12 +129,13 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 	public void smeltItem() {
 		if(this.canSmelt()) {
 			int flux = 0;
-			AspectList al = ThaumcraftCraftingManager.getObjectTags(((IInventory)this).getStackInSlot(0));
+			AspectList al = ThaumcraftCraftingManager.getObjectTags(this.getStackInSlot(0));
 			for(Aspect a : al.getAspects()) {
 				if(this.getEfficiency() < 1.0f) {
 					int qq = al.getAmount(a);
 					for(int q = 0; q < qq; ++q) {
-						if(this.world.rand.nextFloat() <= (a == Aspect.FLUX ? this.getEfficiency() * 0.66f : this.getEfficiency()))
+						if(this.world.rand.nextFloat() <= (a == Aspect.FLUX ? this.getEfficiency() * 0.66f
+								: this.getEfficiency()))
 							continue;
 						al.reduce(a, 1);
 						flux++;
@@ -144,12 +145,12 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 				else if(this.getEfficiency() > 1.0F) {
 					int qq = al.getAmount(a);
 					for(int q = 0; q < qq; ++q) {
-						if(this.world.rand.nextFloat() + 1 >= (a == Aspect.FLUX ? this.getEfficiency() * 0.66f : this.getEfficiency()))
+						if(this.world.rand.nextFloat()
+								+ 1 >= (a == Aspect.FLUX ? this.getEfficiency() * 0.66f : this.getEfficiency()))
 							continue;
 						al.add(a, 1);
 					}
 				}
-
 
 				this.aspects.add(a, al.getAmount(a));
 			}
@@ -170,25 +171,25 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 				AuraHelper.polluteAura(this.getWorld(), this.getPos(), pp, true);
 			}
 			this.vis = this.aspects.visSize();
-			((IInventory)this).getStackInSlot(0).shrink(1);
-			if(((IInventory)this).getStackInSlot(0).getCount() <= 0) {
-				((IInventory)this).setInventorySlotContents(0, ItemStack.EMPTY);
+			this.getStackInSlot(0).shrink(1);
+			if(this.getStackInSlot(0).getCount() <= 0) {
+				this.setInventorySlotContents(0, ItemStack.EMPTY);
 			}
 		}
 	}
-	
+
 	public boolean processAlembics(Aspect a) {
 		try {
-			
+
 			if(processAlembics == null) {
 				processAlembics = TileAlembic.class.getDeclaredMethod("processAlembics", World.class, BlockPos.class, Aspect.class);
 				processAlembics.setAccessible(true);
-			} 
-			
+			}
+
 			return (boolean) processAlembics.invoke(null, this.getWorld(), this.getPos(), a);
-			
+
 		}
-		
+
 		catch(Exception e) {
 			return false;
 		}
@@ -203,7 +204,7 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 		Block b = world.getBlockState(getPos()).getBlock();
 		return b instanceof BlockAlkimiumSmeltery ? ((BlockAlkimiumSmeltery) b).getEfficiency() : 20;
 	}
-	
+
 	public int getCapacity() {
 		Block b = world.getBlockState(getPos()).getBlock();
 		return b instanceof BlockAlkimiumSmeltery ? ((BlockAlkimiumSmeltery) b).getCapacity() : 375;

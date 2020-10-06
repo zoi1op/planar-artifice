@@ -69,6 +69,6 @@ public class ItemCurio extends ItemPA {
 	}
 
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		tooltip.add(LocalizationHelper.localize("planarartifice.alkimium"));
+		tooltip.add(LocalizationHelper.localize("planarartifice." + name));
 	}
 }
