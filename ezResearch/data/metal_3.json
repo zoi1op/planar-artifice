@@ -12,7 +12,7 @@
             {"recipes": ["lead_to_tin", "tin_to_iron", "iron_to_copper", "copper_to_silver", "silver_to_gold", "gold_to_lead"]}
         ]
     }, {
-        "key": "BUSH_ALCHEMY_METAL_BISMUTH_3",
+        "key": "BUSH_ALCHEMY_METAL_BISMUTH",
         "icons": ["planarartifice:bismuth_ingot"],
         "parents": ["PA_BUSH_ALCHEMY_METAL", "~PA_BISMUTH"],
         "location": [1, -9],

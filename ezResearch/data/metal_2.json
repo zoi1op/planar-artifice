@@ -12,7 +12,7 @@
             {"recipes": ["lead_to_gold", "gold_to_lead"]}
         ]
     }, {
-        "key": "BUSH_ALCHEMY_METAL_BISMUTH_2",
+        "key": "BUSH_ALCHEMY_METAL_BISMUTH",
         "icons": ["planarartifice:bismuth_ingot"],
         "parents": ["PA_BUSH_ALCHEMY_METAL", "~PA_BISMUTH"],
         "location": [1, -9],
