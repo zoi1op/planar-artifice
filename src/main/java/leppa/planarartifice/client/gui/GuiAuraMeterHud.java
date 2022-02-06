@@ -3,6 +3,8 @@ package leppa.planarartifice.client.gui;
 import java.awt.Color;
 import java.text.DecimalFormat;
 
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 
 import leppa.planarartifice.main.PlanarArtifice;
@@ -14,6 +16,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import thaumcraft.client.lib.events.HudHandler;
 
+@SideOnly(Side.CLIENT)
 public class GuiAuraMeterHud extends Gui {
 	
 	private static final ResourceLocation texture = new ResourceLocation(PlanarArtifice.MODID, "textures/gui/hud_aura_meter.png");

@@ -92,7 +92,7 @@ for filename in os.listdir(DIR_SRC):
         if "parents" in srcEnt:
             destEnt["parents"] = srcEnt["parents"]
         if "meta" in srcEnt:
-            destEnt["meta"] = map(capAll, srcEnt["meta"])
+            destEnt["meta"] = list(map(capAll, srcEnt["meta"]))
         if "location" in srcEnt:
             destEnt["location"] = srcEnt["location"]
         dest["entries"].append(destEnt)
@@ -105,9 +105,9 @@ for filename in os.listdir(DIR_SRC):
                     rewardKnowledge.append(srcReward)
                 else:
                     rewardItem.append(srcReward)
-            if len(rewardItem) is not 0:
+            if len(rewardItem) != 0:
                 destEnt["reward_item"] = rewardItem
-            if len(rewardKnowledge) is not 0:
+            if len(rewardKnowledge) != 0:
                 destEnt["reward_knowledge"] = rewardKnowledge
 
         # STAGES / ADDENDA
@@ -122,22 +122,22 @@ for filename in os.listdir(DIR_SRC):
             if destStage["text"] not in keys:
                 keys.append(destStage["text"])
             if "items" in srcStage:
-                destStage["required_item"] = map(itemify, srcStage["items"])
+                destStage["required_item"] = list(map(itemify, srcStage["items"]))
             if "crafts" in srcStage:
-                destStage["required_craft"] = map(itemify, srcStage["crafts"])
+                destStage["required_craft"] = list(map(itemify, srcStage["crafts"]))
             if "knowledges" in srcStage:
                 destStage["required_knowledge"] = srcStage["knowledges"]
             if "researches" in srcStage:
                 destStage["required_research"] = srcStage["researches"]
             if "recipes" in srcStage:
-                recipes.extend(map(recipefy, srcStage["recipes"]))
+                recipes.extend(list(map(recipefy, srcStage["recipes"])))
                 destStage["recipes"] = copy.copy(recipes)
-                alsoRequired = filter(hasExclamation, srcStage["recipes"])
-                if len(alsoRequired) is not 0:
+                alsoRequired = list(filter(hasExclamation, srcStage["recipes"]))
+                if len(alsoRequired) != 0:
                     if "required_craft" not in destStage:
                         destStage["required_craft"] = []
-                    destStage["required_craft"].extend(map(recipefy, alsoRequired))
-            elif len(recipes) is not 0:
+                    destStage["required_craft"].extend(list(map(recipefy, alsoRequired)))
+            elif len(recipes) != 0:
                 destStage["recipes"] = recipes
             if "warp" in srcStage:
                 destStage["warp"] = srcStage["warp"]
@@ -151,7 +151,7 @@ for filename in os.listdir(DIR_SRC):
                 if destAddendum["text"] not in keys:
                     keys.append(destAddendum["text"])
                 if "recipes" in srcAddendum:
-                    recipes.extend(map(recipefy, srcAddendum["recipes"]))
+                    recipes.extend(list(map(recipefy, srcAddendum["recipes"])))
                     destAddendum["recipes"] = copy.copy(recipes)
                 if "parents" in srcAddendum:
                     destAddendum["required_research"] = srcAddendum["parents"]
