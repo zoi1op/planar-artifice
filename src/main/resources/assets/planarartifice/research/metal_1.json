@@ -44,7 +44,7 @@
       ],
       "parents": [
         "PA_BUSH_ALCHEMY_METAL_1",
-        "PA_BISMUTH"
+        "~PA_BISMUTH"
       ],
       "location": [
         1,

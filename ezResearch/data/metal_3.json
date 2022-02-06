@@ -14,7 +14,7 @@
     }, {
         "key": "BUSH_ALCHEMY_METAL_BISMUTH_3",
         "icons": ["planarartifice:bismuth_ingot"],
-        "parents": ["PA_BUSH_ALCHEMY_METAL", "PA_BISMUTH"],
+        "parents": ["PA_BUSH_ALCHEMY_METAL", "~PA_BISMUTH"],
         "location": [1, -9],
         "stages": [
             {"knowledges": ["THEORY;ALCHEMY;3"], "items": ["planarartifice:bismuth_ingot", "thaumcraft:quicksilver"]},

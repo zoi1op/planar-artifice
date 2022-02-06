@@ -24,7 +24,7 @@ import thaumcraft.common.golems.client.PartModelHauler;
 
 public class PAResearch {
 	
-	public static final ResearchCategory catPA = ResearchCategories.registerCategory("PLANARARTIFICE", null,
+	public static final ResearchCategory catPA = ResearchCategories.registerCategory("PLANARARTIFICE", "FIRSTSTEPS",
 			new AspectList().add(Aspect.AURA, 1),
 			new ResourceLocation("planarartifice:textures/meta/logo_icon.png"),
 			new ResourceLocation("planarartifice:textures/research/gui_research_back_2.jpg"));
