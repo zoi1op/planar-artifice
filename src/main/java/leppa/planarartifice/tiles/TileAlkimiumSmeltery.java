@@ -79,7 +79,7 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 							}
 							this.getSyncedStackInSlot(1).shrink(1);
 							if(this.getSyncedStackInSlot(1).getCount() == 0) {
-								this.func_70299_a(1,
+								this.setInventorySlotContents(1,
 										this.getSyncedStackInSlot(1).getItem().getContainerItem(this.getSyncedStackInSlot(1)));
 							}
 						}
@@ -173,7 +173,7 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 			this.vis = this.aspects.visSize();
 			this.getSyncedStackInSlot(0).shrink(1);
 			if(this.getSyncedStackInSlot(0).getCount() <= 0) {
-				this.func_70299_a(0, ItemStack.EMPTY);
+				this.setInventorySlotContents(0, ItemStack.EMPTY);
 			}
 		}
 	}
