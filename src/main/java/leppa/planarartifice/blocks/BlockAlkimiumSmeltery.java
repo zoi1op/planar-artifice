@@ -25,7 +25,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import thaumcraft.api.aura.AuraHelper;
 import thaumcraft.common.blocks.IBlockEnabled;
 import thaumcraft.common.blocks.IBlockFacingHorizontal;
+import thaumcraft.common.blocks.essentia.BlockSmelter;
 import thaumcraft.common.lib.utils.BlockStateUtils;
+import thaumcraft.common.lib.utils.InventoryUtils;
 import thaumcraft.common.tiles.essentia.TileSmelter;
 
 public class BlockAlkimiumSmeltery extends BlockPA implements IBlockEnabled, IBlockFacingHorizontal {
@@ -127,6 +129,7 @@ public class BlockAlkimiumSmeltery extends BlockPA implements IBlockEnabled, IBl
 		if(tileentity instanceof TileSmelter && !worldIn.isRemote && ((TileSmelter) tileentity).vis > 0) {
 			int ess = ((TileSmelter) tileentity).vis;
 			AuraHelper.polluteAura(worldIn, pos, ess, true);
+			InventoryUtils.dropItems(worldIn, pos);
 		}
 		super.breakBlock(worldIn, pos, state);
 	}
