@@ -129,8 +129,8 @@ public class BlockAlkimiumSmeltery extends BlockPA implements IBlockEnabled, IBl
 		if(tileentity instanceof TileSmelter && !worldIn.isRemote && ((TileSmelter) tileentity).vis > 0) {
 			int ess = ((TileSmelter) tileentity).vis;
 			AuraHelper.polluteAura(worldIn, pos, ess, true);
-			InventoryUtils.dropItems(worldIn, pos);
 		}
+		InventoryUtils.dropItems(worldIn, pos);
 		super.breakBlock(worldIn, pos, state);
 	}
 
