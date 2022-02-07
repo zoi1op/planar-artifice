@@ -27,6 +27,7 @@ public class PABlocks {
 	public static final Block alkimium_smeltery = new BlockAlkimiumSmeltery("alkimium_smeltery", 14, 0.85F, 375);
 	public static final Block alkimium_smeltery_thaumium = new BlockAlkimiumSmeltery("alkimium_smeltery_thaumium", 7, 0.85F, 375);
 	public static final Block alkimium_smeltery_void = new BlockAlkimiumSmeltery("alkimium_smeltery_void", 10, 0.95F, 375);
+	public static final Block alkimium_centrifuge = new BlockAlkimiumCentrifuge("alkimium_centrifuge");
 
 	public static final Block smelter_aux = new BlockAlkimiumSmelteryAux("smelter_aux");
 	public static final Block smelter_vent = new BlockAlkimiumSmelteryVent("smelter_vent");

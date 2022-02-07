@@ -166,10 +166,26 @@
           ]
         },
         {
-          "text": "planarartifice.research.alkimium_applications.complete.text",
+          "text": "planarartifice.research.alkimium_applications.stage.2.text",
+          "required_craft": [
+            "thaumcraft:centrifuge"
+          ],
+          "required_knowledge": [
+            "THEORY;ARTIFICE;1",
+            "THEORY;ALCHEMY;1",
+            "THEORY;PLANARARTIFICE;1"
+          ],
           "recipes": [
             "planarartifice:alkimium_smeltery",
             "planarartifice:alchemical_alkimium_construct"
+          ]
+        },
+        {
+          "text": "planarartifice.research.alkimium_applications.complete.text",
+          "recipes": [
+            "planarartifice:alkimium_smeltery",
+            "planarartifice:alchemical_alkimium_construct",
+            "planarartifice:alkimium_centrifuge"
           ]
         }
       ]
@@ -741,7 +757,7 @@
             "THEORY;BASICS;3"
           ],
           "recipes": [
-            "planarartifice:glowstone_conjure",
+            "planarartifice:sugar_conjure",
             "planarartifice:ender_pearls",
             "planarartifice:redstone2"
           ]
@@ -757,7 +773,7 @@
             "THEORY;PLANARARTIFICE;3"
           ],
           "recipes": [
-            "planarartifice:glowstone_conjure",
+            "planarartifice:sugar_conjure",
             "planarartifice:ender_pearls",
             "planarartifice:redstone2",
             "planarartifice:lapis_conjure",
@@ -768,7 +784,7 @@
         {
           "text": "planarartifice.research.bush_alchemy_conjuring.complete.text",
           "recipes": [
-            "planarartifice:glowstone_conjure",
+            "planarartifice:sugar_conjure",
             "planarartifice:ender_pearls",
             "planarartifice:redstone2",
             "planarartifice:lapis_conjure",
@@ -777,13 +793,14 @@
             "planarartifice:amber_conjure",
             "planarartifice:blaze_conjure",
             "planarartifice:chorus_conjure",
-            "planarartifice:slime_conjure",
+            "planarartifice:flesh_conjure",
             "planarartifice:bone_conjure",
             "planarartifice:cactus_conjure",
             "planarartifice:mushroom_conjure",
             "planarartifice:mushroom_conjure2",
             "planarartifice:gunpowder_conjure"
-          ]
+          ],
+          "warp": 3
         }
       ]
     },
@@ -847,7 +864,8 @@
             "planarartifice:condensed_crystal_cluster6",
             "planarartifice:random_vis_crystal1",
             "planarartifice:random_vis_crystal2"
-          ]
+          ],
+          "warp": 2
         },
         {
           "text": "planarartifice.research.bush_alchemy_essentia.complete.text",

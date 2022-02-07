@@ -26,6 +26,7 @@ tile.alkimium_smeltery.name=Alkimium Essentia Smeltery
 tile.alkimium_smeltery_thaumium.name=Alkimium Thaumium Smeltery
 tile.alkimium_smeltery_void.name=Alkimium Void Smeltery
 tile.alchemical_alkimium_construct.name=Alkimium Alchemical Construct
+tile.alkimium_centrifuge.name=Alkimium Essentia Centrifuge
 tile.teleporter.name=Mirromirous Waystone
 tile.teleporter_matrix.name=Mirromirous Matrix
 tile.potion_mixer.name=Potion Mixer

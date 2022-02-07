@@ -1,5 +1,7 @@
 package leppa.planarartifice.client;
 
+import leppa.planarartifice.client.render.tile.TESRAlkimiumCentrifuge;
+import leppa.planarartifice.tiles.TileAlkimiumCentrifuge;
 import org.lwjgl.input.Mouse;
 
 import leppa.planarartifice.client.render.tile.TESRTeleporter;
@@ -42,6 +44,7 @@ public class ClientProxy extends CommonProxy{
 	public void init(FMLInitializationEvent e){
 		super.init(e);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileTeleporter.class, new TESRTeleporter());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileAlkimiumCentrifuge.class, new TESRAlkimiumCentrifuge()); // hopium
 	}
 	
 	@Override
