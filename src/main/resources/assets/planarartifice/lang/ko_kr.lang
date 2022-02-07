@@ -5,9 +5,9 @@ item.alkimium_goggles.name=드러냄의 고글
 item.alkimium_gear.name=알키미움 톱니바퀴
 item.alkimium_nugget.name=알키미움 조각
 item.thaumostatic_jet_harness.name=사우모스태틱 제트 하네스
-item.dimensional_curiosity.name=차원 희귀점
+item.dimensional_curiosity.name=차원의 지식
 item.dimensional_curiosity.tooltip=주변 공간이 일그러진다.
-item.fundamental_curiosity.name=기초 희귀점
+item.fundamental_curiosity.name=기초적 지식
 item.fundamental_curiosity.tooltip=크리에이티브 모드 전용 (지금은?)
 item.dimensional_singularity.name=차원 특이점
 item.alchemical_scribing_tools.name=연금 필기 도구
@@ -29,6 +29,7 @@ tile.alkimium_smeltery.name=알키미움 에센시아 증류기
 tile.alkimium_smeltery_thaumium.name=알키미움 사우뮴 에센시아 증류기
 tile.alkimium_smeltery_void.name=알키미움 공허 에센시아 증류기
 tile.alchemical_alkimium_construct.name=알키미움 연금 구조물
+tile.alkimium_centrifuge.name=알키미움 에센시아 원심분리기
 tile.teleporter.name=신기루 전송석
 tile.teleporter_matrix.name=신기루 매트릭스
 tile.potion_mixer.name=물약 혼합기
@@ -67,7 +68,7 @@ focus.colourizer.invisible=(적용 불가)
 focus.colourizer.colour=색 (Hex 코드, 오른쪽 방향키로 입력시작, 종료, 그리고 재입력)
 focus.colourizer.colour.start=→ 를 눌러 입력
 
-itemGroup.planarartifice.tab.name=거울 마법
+itemGroup.planarartifice.tab.name=경면학
 planarartifice.beaconBase=신호기 받침으로 사용할 수 있음
 
 # ---   ----   --- #
@@ -76,65 +77,144 @@ planarartifice.beaconBase=신호기 받침으로 사용할 수 있음
 tc.research_category.PLANARARTIFICE=경면학
 # Alkimium Mithrillium Smeltery
 planarartifice.research.alkimium_mithrillium_smeltery.title=알키미움 미스릴리움 에센시아 증류기
+planarartifice.research.alkimium_mithrillium_smeltery.stage.1.text=미스릴리움... 이 강철이 어디에서 왔는지, 무엇인지도 모릅니다. 하지만 공허 금속보다 강력한 물질임은 확실합니다. 어쩌면 이 강철이 최고의 증류기를 만들어 주지 않을까요?
+planarartifice.research.alkimium_mithrillium_smeltery.stage.2.text=증류기의 완성이 가까워지는만큼  확신은 깊어갑니다. 하지만 전에 만든 공허 금속 프로토타입처럼 터지지 않게 조심해야 합니다.
+planarartifice.research.alkimium_mithrillium_smeltery.complete.text=이 마법계의 걸작을 만들어내는 대에 시간이 약간 걸렸지만, 이제 에센시아의 손실 없이 물질을 증류할 수 있게 되었습니다. 하지만 영 속도가 마음에 안 드는데, 업그레이드 없는 일반 증류기와 같은 속도인 듯 합니다. 같은 크기임에도 내부 에센시아 저장용량이 거의 3배가 된 것은 알키미움과 미스릴리움의 상호작용임으로 생각되지만, 아무리 생각해도 이상합니다.
 # Alkimium Adaminite Smeltery
 planarartifice.research.alkimium_adaminite_smeltery.title=알키미움 아다미나이트 에센시아 증류기
+planarartifice.research.alkimium_adaminite_smeltery.stage.1.text=이번 연구가 그리 성공적일 것이라 생각하지 않습니다. 이미 손실 없이 에센시아를 증류할 수 있고, 이 금속이 할 수 있을만한 일은 속도를 높이는 것 뿐입니다. 하지만 속도를 높이는 건 알루멘툼의 몫이고...
+planarartifice.research.alkimium_adaminite_smeltery.stage.2.text=아다미나이트를 사용한 실험 중 흥미로운 관찰을 하였는데, 아주 작은 양의 에센시아를 입력했는데도 불구하고 끓는 에센시아 수프가 넘쳐 흘린 일입니다. 알키미움을 사용해 이 상호작용을 증폭할 수 있을까요?
+planarartifice.research.alkimium_adaminite_smeltery.complete.text=아다미나이트로 만들어진 이 증류기는 논리 자체를 부정합니다. 일반 사우뮴 증류기와 같은 속도를 낼 뿐만 아니라, 입력한 에센시아의 25%를 공허에서 추가로 증류합니다. 이 원리를 설명하려면 통일된 양자마도학이 필요할 것으로 보이지만, 당분간은 그냥 쓰는 게 좋을 듯 합니다.
 # Alkimium Mithminite Smeltery
 planarartifice.research.alkimium_mithminite_smeltery.title=알키미움 미스미나이트 에센시아 증류기
+planarartifice.research.alkimium_mithminite_smeltery.stage.1.text=이제 미스미나이트입니다. 저번처럼 에센시아 수프가 넘쳐 흘러 주변을 더럽히는 일은 없게 조심해야겠습니다.
+planarartifice.research.alkimium_mithminite_smeltery.stage.2.text=증류기를 만드는 중 특이한 일이 일어났습니다. 미스미나이트와 알키미움이 서로 달라붙었고, 아무리 힘을 줘도 떨어지지 않았습니다. 아무래도 이 증류기를 분해할 수 없을 것 같습니다.
+planarartifice.research.alkimium_mithminite_smeltery.complete.text=미스미나이트는 예상대로 에센시아 증류에 아다미나이트 이상의 효율을 보여주었습니다. 150%의 에센시아 증류 효율을 자랑하며, 4000의 에센시아를 담을 수 있고, 다른 어떤 증류기보다 빠른 속력을 가진 이 증류기를 끝으로 이 분야의 연구를 마칩니다.
 # Rare Items
 planarartifice.research.rare_items.title=희귀한 물건들
+planarartifice.research.rare_items.stage.1.text=이 세계에는 희귀한 광물과 물건이 많습니다. 이들을 모아 관찰하면 연구에 도움이 될 듯 합니다. 다이아몬드부터...
+planarartifice.research.rare_items.stage.2.text=다이아몬드는 희귀하지만, 광물 중 에메랄드가 제일 구하기 힘든 것으로 보입니다. 근처 주민에게서 값을 치르고 얻을 수 있을 것입니다.
+planarartifice.research.rare_items.stage.3.text=황금 사과를 만들었을 때 강철을 씹듯 몸에 독이 될 줄 알았지만, 오히려 신비한 힘을 부여했습니다. 이런 효과를 마법을 사용해 쉽게 만들 수 있을 것으로 생각합니다.
+planarartifice.research.rare_items.stage.4.text=네더의 별은 강한 에너지를 스스로 발산합니다. 이를 기계에 쓸 수 있을 것으로 보입니다.
+planarartifice.research.rare_items.complete.text=세계에는 희귀한 아이템이 많습니다. 이 넷 말고도 수많은 모험의 전리품이 있으며, 이를 계속하여 탐구할 것입니다.
 # Magic Apple
 planarartifice.research.magic_apple.title=마법사의 과실
+planarartifice.research.magic_apple.stage.1.text=황금 사과의 효과를 마법으로 복제하는 법을 고안했습니다. 가마솥을 이용해 쉽게 만들 수 있을 것으로 생각되며, 이의 효능을 테스트하는 일만 남았습니다.
+planarartifice.research.magic_apple.complete.text=이 레시피의 능력은 나의 예상을 훨씬 능가했습니다. 일반 황금 사과보다 훨씬 좋은 능력을 부여할 뿐만 아니라, 귀한 마법 황금 사과보다 더욱 뛰어난 능력을 보여주었습니다. 또한 포만감이 지속되어 한동안 음식을 먹지 않아도 되게 되었습니다.
 # Alkimium
 planarartifice.research.alkimium.title=알키미움
+planarartifice.research.alkimium.stage.1.text=연금 황동으로 많은 연구를 하고 경험을 쌓은 지금이야말로 더 나은 물질로 이를 대체할 수 있을 듯 합니다.<BR>마법이 내게 가져다 주는 많은 물질을 탐구한 결과, 고대 연금술에서 현대 마법서에 기록되지 않은 신기한 물질이 사용되는 듯 합니다. 철을 에센시아를 사용해 사우뮴으로 만들 수 있다면, 황동이라고 안 될 게 있을까요?
+planarartifice.research.alkimium.complete.text=일반 황동보다 연금 기구에 적합한 물질을 만들어 내는 데 성공했습니다. 이 물질을 알키미아라고 하겠습니다.
 # Alchemical Scribing Tools
 planarartifice.research.alchemical_scribing_tools.title=연금 필기구
+planarartifice.research.alchemical_scribing_tools.complete.text=일반 필기구는 너무 쉽게 떨어지고, 먹물을 구하는 것은 귀찮습니다. 만약 자연의 오라에서 먹물을 추출할 수 있다면 어떨까요?
+planarartifice.research.alchemical_scribing_tools.addendum.1.text=이 필기구는 한번에 200비스를 함유할 수 있습니다. 전에 만들었던 충전대로 충분할 것입니다.
 # Alkimium Applications
 planarartifice.research.alkimium_applications.title=알키미움 에센시아 증류기
+planarartifice.research.alkimium_applications.stage.1.text=이 새로운 물질로 만들 수 있는 기구들로 가장 처음 증류기를 떠올렸습니다. 황동을 알키미움으로 대체하는 연구를 실행하겠습니다.
+planarartifice.research.alkimium_applications.stage.2.text=알키미움과 관련된 또 다른 생각으로는, 복합 위상의 두 절반을 모두 추출하는 원심분리기가 있습니다. 특정 에센시아를 추출할 때 운에 맡기지 않고, 온전한 양을 추출하는 좋은 방법이 될 것으로 보입니다.
+planarartifice.research.alkimium_applications.complete.text=성공입니다! 원본보다 약간 더 많은 에센시아를 담을 수 있고, 약간 더 빠른 기계들이 만들어졌습니다. 하지만 아무리 에센시아가 알키미움에서 더 안정하다 해도, 속도를 5% 이상으로 늘릴 수는 없었습니다.
 # Alkimium Goggles
 planarartifice.research.alkimium_goggles.title=알키미움 고글 업그레이드
+planarartifice.research.alkimium_goggles.stage.1.text=알키미움은 많은 사용처가 있는 것으로 보입니다. 이 발견의 고글도 업그레이드가 필요할 때가 된 걸까요?
+planarartifice.research.alkimium_goggles.complete.text=고글의 알키미움과 약간의 에센시아를 인퓨징한 결과, 알키미움이 기구의 능력에 반응하고, 흐르는 에센시아 회로에 유착해 그 능력과 갑옷으로써의 쓰임새를 올렸습니다. 증류기가 얼마나 더 탈지 보여주고, 에센시아가 흐르는 관이나 기계에서 얼마나 흡입력이 있는지를 보여줍니다. 흡입력은 에센시아의 흐름에 중요한 역할을 하니까요.
 # Alkimium Distillation
 planarartifice.research.alkimium_distillation.title=알키미움 증류 업그레이드
+planarartifice.research.alkimium_distillation.stage.1.text=안타깝게도 이전에 세워둔 여러 잘못된 가정이나 편협한 사고는 기존 배출구를 사용할 수 없게 만들었습니다. 하지만, 이를 보완하기 위해 알키미움으로 같은 기능을 재구현할 방법을 고안했습니다. 이 기구들은 기존 황동 기구와 부합하지 않을 것이지만, 큰 일을 위해 작은 희생에 불과할 뿐입니다.
+planarartifice.research.alkimium_distillation.complete.text=계획대로 알키미움 증류기와 호환되는 배출구를 만들어냈습니다! 기존 황동 증류기와 맞지 않지만, 언제든 원래 모습으로 조합할 수 있습니다. 
 # Alkimium Thaumium Smeltery
 planarartifice.research.alkimium_thaumium_smeltery.title=알키미움 사우뮴 에센시아 증류기
+planarartifice.research.alkimium_thaumium_smeltery.stage.1.text=전에 사우뮴 황동 증류기를 만든 것 처럼, 사우뮴을 사용해 증류기의 속도를 높일 수 있을 것입니다. 하지만 사우뮴과 알키미움 간에 예기치 못한 상호작용이 있을 수 있기에 이를 염두에 둬야 합니다.
+planarartifice.research.alkimium_thaumium_smeltery.complete.text=돌아갑니다! 늘어난 최대 용량을 유지하면서도 기존 알키미움 증류기의 2.16배의 속도, 일반 증류기의 2.6배 속도를 지니고 있습니다. 다행히도 파괴적인 부작용은 없었지만, 따로 상호작용 자체를 하지 않았습니다.
 # Alkimium Void Smeltery
 planarartifice.research.alkimium_void_smeltery.title=알키미움 공허 에센시아 증류기
+planarartifice.research.alkimium_void_smeltery.stage.1.text=공허 금속은 이때까지 알키미움에 반응시킨 다른 어떤 물질과도 비슷하지 않기 때문에 무조건 모든 상호작용을 실험하고 관찰해야 합니다. 또한, 완벽한, 플럭스를 발생하지 않는 증류기의 가능성도 탐구할 것입니다.
+planarartifice.research.alkimium_void_smeltery.stage.2.text=아쉽게도, 첫 시도는 폭파로 실패한 듯 합니다. 폭발은 참으로 신기하면서도 쓸모없었지만, 문제를 알 것 같습니다!
+planarartifice.research.alkimium_void_smeltery.complete.text=드디어 안정적이고 제대로 동작하는 공허 금속 증류기를 만들어냈습니다. 속도는 황동 사우뮴 증류기와 같지만 용량은 여전히 증가한 상태입니다. 이상하게도, 에센시아의 효율을 95% 이상 끌어내지 못하였습니다. 완벽한 증류기를 만들려면 다른 수를 찾아야겠습니다.
 # Portal
 planarartifice.research.portal.title=차원의 균열
+planarartifice.research.portal.complete.text=매우, 매우 이상하군요.<BR>특이한 모양으로 건설된 흑요석을 불에 붙이는 순간, 다른 차원을 연결하는 양방향 균열이 열립니다. 아무 이유 없이요. 흑요석의 특수한 효과일까요? 불이 균열을 만들고 흑요석은 단지 촉매로 존재하는 걸까요? 어떻게 되었든, 이는 연구해봄직합니다.
 # Dimensional Singularity
 planarartifice.research.dimensional_singularity.title=차원 특이점
+planarartifice.research.dimensional_singularity.stage.1.text=약간의 마법으로 차원 균열의 효과를 구현할 수 있을 것입니다. 단지 아이템이나 물건을 움직이고 전송할 뿐만 아니라, 공간 자체를 구부리고, 접고, 만들고, 부술 수 있을 것입니다! "질량"의 정의 자체가 바뀌어야 할 수도 있습니다!
+planarartifice.research.dimensional_singularity.complete.text=생각한 만큼 큰 스케일은 아니고, 아직 가공되지 않았지만, 성공했습니다! 이 물건이 미래 연구에 미치는 영향은 무지막지할 것입니다.<BR>특이점을 이용한 조합은 지식을 남기는데, 이는 또 다른 조합법에 쓰거나 연구 포인트로 사용할 수 있습니다.
 # Mirror Teleporter
 planarartifice.research.mirror_teleporter.title=신기루 전송석
+planarartifice.research.mirror_teleporter.stage.1.text=새로 만든 차원 특이점의 사용처가 생각났습니다. 사소하게 들리지만, 마법 거울의 거리에는 한계가 있습니다. 하지만 새로운 공간을 구부리는 능력으로 먼 거리를 잇는 중심점 역할을 하는 기계를 만들 수 있을까요?
+planarartifice.research.mirror_teleporter.stage.2.text=좋아요! 이론상 가능함을 확인했습니다. 매트릭스와 비슷한 구조인데, 이는 앞으로 만들 구조물의 중심부 역할을 할 것입니다. 나머지 부분들은 일이 잘못되지 않도록 중심부를 받쳐주는 역할을 하게 될 것입니다.<BR>지식을 사용해서 조합을 할 수도 있어 보입니다.
+planarartifice.research.mirror_teleporter.complete.text=신기루 전송석은 신기루 매트릭스와 마법 벽돌을 쌓아 정화의 소금으로 활성화할 수 있습니다. 비스 수정을 사용해 '채널'을 지정하고, 사용하면 같은 채널의 전송석으로 이동합니다. 또 유의할 점으로는 한 채널에 전송석이 두 개만 있어야 한다는 것인데, 더 많은 양이 있으면 아무 일도 일어나지 않을 것입니다.
 # Bismuth
 planarartifice.research.bismuth.title=비스무트
+planarartifice.research.bismuth.stage.1.text=오라와 균열에 대해 조사한 결과 오라는 차원을 초월하는 에너지임을 알아냈습니다. 대부분은 이 세계에서 유래하지 않고, 도달할 수 없는 이상한 차원에서 흘러나오는 것으로 추정됩니다. 또한 오라는 공간의 한 점에서 새어나오는데, 이 점에 오라는 이끌리는 점을 발견했습니다.<BR>이 점을 이용해 이끌리는 점의 특성을 따라하면, 지금까지 있던 물질과 다른 강력한 물질을 만들 수 있을 것으로 보입니다. 이를 "비스무트"로 칭하겠습니다.
+planarartifice.research.bismuth.complete.text=비스무트는 지금껏 만들었던 물질 중 오라와 가장 강력히 연결된 물질입니다. 이 물질은 많은 가치와 가능성이 있는데, 들고 있어야 동작하는 사우모미터와 달리 어디서나 비스의 양을 알려주는 오라 미터, 오라가 높은 곳에서 강해지는 검, 화살에 비스의 힘을 입히는 활을 만들어냈습니다.
 # Flux Scrubber
 planarartifice.research.flux_scrubber.title=플럭스 닦아내기
+planarartifice.research.flux_scrubber.stage.1.text=플럭스는 여전히 문제가 되고 있습니다. 일이 커지기 전에 해결 방안을 찾아봐야겠습니다.
+planarartifice.research.flux_scrubber.complete.text=쉽고 효과적으로 플럭스를 줄이는 방법을 고안했습니다. 플럭스 닦개는 정화의 소금을 원료로 하며, 비스를 사용해 플럭스를 제거합니다. 이 때문에 비스가 없는 곳에서는 아무 일도 하지 않는 단점이 있습니다.
 # Focus Light
 planarartifice.research.focus_light.title=포커스 효과: 프리즘 광선
+planarartifice.research.focus_light.stage.1.text=지금까지 만든 포커스 효과는 꽤 괜찮았지만, 눈부신 광선을 직통으로 쏘는것은 더욱 멋집니다.
+planarartifice.research.focus_light.complete.text=빛을 빔 형태로 모아 발사하는 이 효과는 플레이어들을 실명하게 하고 언데드에게 강합니다.
 # Belt Of Suspension
 planarartifice.research.belt_of_suspension.title=부유의 허리띠
+planarartifice.research.belt_of_suspension.stage.1.text=비행은 환상적인 능력 중 하나입니다. 구름의 반지를 사용해 꽤 높은 곳에 이를 수 있었지만, 여전히 땅에 의존해야만 했습니다.<BR>하지만, 차원에 관한 새로운 지식으로 무한한 가로 움직임을 가능케 할 수 있다 생각합니다.
+planarartifice.research.belt_of_suspension.complete.text=부유의 허리띠를 장착했을 때, 세로 움직임을 수그려 멈출 수 있는 능력을 얻게 됩니다. 이 상태로 공중에서 움직일 수 있으며, 땅에서 점프 키를 누르면 약간 위로 부유하게 됩니다. 이 벨트는 구름의 반지나 여행자의 부츠와 함께 쓸 수 있으며, 낙하 데미지를 입지 않습니다.
 # Focus Colour
 planarartifice.research.focus_colour.title=포커스 착색
+planarartifice.research.focus_colour.stage.1.text=포커스는 그 자체로도 다재다능한 물건이지만, 그 색을 바꾸는 일은 힘들어 보입니다. 딱히 중요한 일은 아니지만, 색을 다르게 하여 포커스를 구분하는 것은 삶을 편하게 할 것입니다.
+planarartifice.research.focus_colour.complete.text=포커스 착색 효과를 사용해 포커스의 색을 바꿀 수 있게 되었습니다. 아래 슬라이더를 사용해 포커스의 색을 지정할 수 있습니다. 색은 포커스 효과가 아닌 전체 포커스 기준입니다.
 # Mirrored Amulet
 planarartifice.research.mirrored_amulet.title=거울 부적
+planarartifice.research.mirrored_amulet.stage.1.text=이 세계에서의 죽음은 귀찮은 존재입니다. 멀리 이동할수록 희귀한 아이템을 찾기 쉬워지지만, 그만큼 죽기도 쉬워집니다. 또한 멀리서 죽을수록 물건을 회수하기 힘들어집니다. 죽고 나서도 아이템을 유지할 수 있는 길이 있다면 모든 상황에서 편해질 것입니다.
+planarartifice.research.mirrored_amulet.complete.text=이 부적을 쓰고 있는 동안은 죽어도 아이템이 몸에서 떨어지지 않습니다. 갑옷, 장신구, 인벤토리 전부 보존되니 안심하고 멀리 여행해도 될 듯 합니다.
 # Bismuth Casters Gauntlet
 planarartifice.research.bismuth_casters_gauntlet.title=비스무트 주문 건틀릿
+planarartifice.research.bismuth_casters_gauntlet.stage.1.text=비스무트의 오라를 끌어오는 능력은 여러 상황에서 유용해집니다. 주문 건틀릿에 비스무트를 써 오라에 더 잘 반응하도록 하면 포커스의 효율도 늘어날 것입니다.
+planarartifice.research.bismuth_casters_gauntlet.stage.2.text=안타깝게도 계산이 틀렸습니다. 비스무트가 오라를 끌어올 때 약간의 불안정성을 만드는 것으로 보이며, 이번 시도에서 이 불안정성이 너무 쌓여 작용을 깨트린 것으로 보입니다.
+planarartifice.research.bismuth_casters_gauntlet.complete.text=포커스의 효과로 불안정성을 환기함으로써 효과를 더욱 강력하게 할 수 있습니다. 비스무트의 효과는 원래보다 더 많은 오라의 소모를 요구하지만, 그만큼 능력도 증폭됩니다.
 # Bush Alchemy
 planarartifice.research.bush_alchemy.title=경면 연금술
-# Bush Alchemy Conjuring
-planarartifice.research.bush_alchemy_conjuring.title=경면 연금술 특성화: 물질 밀집
+planarartifice.research.bush_alchemy.stage.1.text=아직 가지기 어렵거나 위험한 물건들이 많습니다. 이는 연금술을 이용해 해결할 수 있을 것으로 보입니다.
+planarartifice.research.bush_alchemy.stage.2.text=연금술이 간단하진 않았지만, 지식을 향한 집념은 언제나 길을 찾습니다. 흔한 눈을 이상한 세계의 눈으로 바꾸는 데 성공했고, 화약의 에너지를 이용해 다른 종류의 가루로 변환했습니다. 이건 불과 시작에 불과합니다...
+planarartifice.research.bush_alchemy.stage.3.text=이전 레시피에 더해서 일반 아이템으로 뜨거운 다른 차원의 물질을 만드는 데 성공했습니다. 이는 또 다른 발견으로 이어졌는데, 마법의 재료가 되는 광물들 - 둘 사이에 연관성이 있을까요?
+planarartifice.research.bush_alchemy.complete.text=해답은 내 눈 앞에 있었습니다. 호박과 수은을 연금술로 바꿔 하나로 만들 수 있게 되었습니다.
 # Bush Alchemy Essentia
 planarartifice.research.bush_alchemy_essentia.title=경면 연금술 특성화: 에센시아 다루기
-# Infusion Enchantment 2
-planarartifice.research.infusion_enchantment_2.title=인퓨전 인챈팅 II
-# Matstudy Alkimium
-planarartifice.research.matstudy_alkimium.title=재료 연구: 알키미움
+planarartifice.research.bush_alchemy_essentia.stage.1.text=에센시아는 언제나 부족합니다. 에센시아는 언제나 필요합니다. 대지와 혼돈 에센시아는 많이 있지만 질서와 공기 에센시아는 언제나 바닥인 듯 합니다. 이 문제를 해결할 방법이 있을까요?
+planarartifice.research.bush_alchemy_essentia.stage.2.text=친숙한 마법의 가루를 결정화하여 한 종류의 에센시아를 모든 종류로 변환하는 데에 성공하였습니다. 하지만 이는 완벽하지 않습니다 - 약 2%의 에센시아가 대기 중으로 증발하고 약간은 혼돈 에센시아로 변환되지만 - 여전히 매우 유용한 발견입니다.
+planarartifice.research.bush_alchemy_essentia.stage.3.text=이 분야를 너무 많이 공부한 듯 합니다. 색과 테인트 에센시아를 사용해 가마솥에서 무작위로 에센시아가 튀어나오게 만들었습니다. 이상하게도, 질서는 테인트 에센시아를 넣었을 때 나오지 않고, 물은 색 에센시아를 넣었을 때 나오지 않습니다. 어떤 연관성이 있는 걸까요? 
+planarartifice.research.bush_alchemy_essentia.complete.text=이제 귀찮게 비스 수정을 부술 필요가 없습니다. 레드스톤과 약간의 마법 에너지로 정화의 수정을 만드는 방법을 고안했습니다.
+# Bush Alchemy Conjuring
+planarartifice.research.bush_alchemy_conjuring.title=경면 연금술 특성화: 물질 밀집
+planarartifice.research.bush_alchemy_conjuring.stage.1.text=자연과 식물을 공부하는 동료 마도사들의 말로는 물질을 복제하는 것은 쉽다고 들었습니다. 이전에 복제한 아이템을 토대로 간단한 물질의 복제를 연구해봅시다.
+planarartifice.research.bush_alchemy_conjuring.stage.2.text=엄청난 발견입니다 - 항상 필요하던 엔더 진주를 매우 간단히 복제할 수 있게 되었습니다. 또한 레드스톤 역시 복제할 수 있게 되었는데, 다른 발견보다 중요하진 않지만 역시 무시할 수 없는 유용한 발견입니다. 다른 자원도 이 방식으로 복제할 수 있을까요?
+planarartifice.research.bush_alchemy_conjuring.stage.3.text=동료 학자들과 비슷한 능력을 얻은 듯 합니다. 추가로 에센시아에 대한 연구 결과 청금석의 복제 방식도 알아낼 수 있었습니다. 지금부터가 재밌는 부분인데, 유기물도 같은 방식으로 연구를 진행하겠습니다. 가능하리라 믿지만, 쉽지 않을 것입니다.
+planarartifice.research.bush_alchemy_conjuring.complete.text=이제 얼마든지 유기물을 원하는 대로 얻을 수 있게 되었습니다. 광물과는 다르게, 두 가지 종류의 에센시아가 필요한 점이 아쉽습니다.
 # Bush Alchemy Metal 1
 planarartifice.research.bush_alchemy_metal_1.title=경면 연금술 특성화: 금속 투영
+planarartifice.research.bush_alchemy_metal_1.stage.1.text=동료 태엽 마도학자의 일에 관심을 가지게 되었는데, 한 종류의 금속을 다른 종류로 바꾸는 능력은 내 연구에도 도움을 줄 듯 합니다. 이 마법으로도 비슷한 역할을 할 수 있을까요?
+planarartifice.research.bush_alchemy_metal_1.complete.text=약간 비싸지만, 금속을 투영해 "업그레이드"할 수 있는 능력을 얻었습니다. 또한 시간과 땅을 사용해 "다운그레이드"할 수도 있습니다. 만약 철보다 더 나은 연금 에너지 매체가 있다면 값이 덜 들 지도 모르겠습니다.
 # Bush Alchemy Metal 2
 planarartifice.research.bush_alchemy_metal_2.title=경면 연금술 특성화: 금속 투영
+planarartifice.research.bush_alchemy_metal_2.stage.1.text=동료 태엽 마도학자의 일에 관심을 가지게 되었는데, 한 종류의 금속을 다른 종류로 바꾸는 능력은 내 연구에도 도움을 줄 듯 합니다. 이 마법으로도 비슷한 역할을 할 수 있을까요?
+planarartifice.research.bush_alchemy_metal_2.complete.text=약간 비싸지만, 금속을 투영해 "업그레이드"할 수 있는 능력을 얻었습니다. 또한 시간과 땅을 사용해 "다운그레이드"할 수도 있습니다. 납은 좋지만, 금을 직접적으로 만드는 데에는 큰 힘이 듭니다. 만약 금속의 종류가 더 많았다면...
 # Bush Alchemy Metal 3
 planarartifice.research.bush_alchemy_metal_3.title=경면 연금술 특성화: 금속 투영
-
+planarartifice.research.bush_alchemy_metal_3.stage.1.text=동료 태엽 마도학자의 일에 관심을 가지게 되었는데, 한 종류의 금속을 다른 종류로 바꾸는 능력은 내 연구에도 도움을 줄 듯 합니다. 이 마법으로도 비슷한 역할을 할 수 있을까요?
+planarartifice.research.bush_alchemy_metal_3.complete.text=약간 비싸지만, 금속을 투영해 "업그레이드"할 수 있는 능력을 얻었습니다. 또한 시간과 땅을 사용해 "다운그레이드"할 수도 있습니다. 납에서 주석, 철, 구리, 은, 그리고 금 순서로 금속이 변형됩니다.
+# Bush Alchemy Metal Bismuth
+planarartifice.research.bush_alchemy_metal_bismuth.title=경면 연금술 특성화: 비스무트 투영
+planarartifice.research.bush_alchemy_metal_bismuth.stage.1.text=비스무트는 흥미로운 금속입니다. 일하기 쉽고, 특이하고, 약간 불안정합니다. 만약 이 불안정함을 이용해 비스무트를 금과 같은 다른 금속으로 바꿀 수 있다면...
+planarartifice.research.bush_alchemy_metal_bismuth.complete.text=지하자원을 송두리째 흔드는 발견입니다. 금뿐만 아니라 거의 모든 종류의 금속으로 에센시아를 사용해 비스무트를 "가이드"하여 변환할 수 있게 되었습니다.
+# Infusion Enchantment 2
+planarartifice.research.infusion_enchantment_2.title=인퓨전 인챈팅 II
+planarartifice.research.infusion_enchantment_2.stage.1.text=내 마법은 인퓨전 인챈팅을 개발한 후 크게 발전했습니다. 더 많은 지식과 물질들로 많은 생각들이 떠오릅니다. 이 중 몇 개는 효과적이겠죠.
+planarartifice.research.infusion_enchantment_2.complete.text=인퓨전 인챈트를 몇개 더 고안했습니다. 기존 인챈트처럼, 일부 인챈트는 한 도구에 여러번 부여할 수 있지만, 매번 그 값이 늘어나고 뒤틀릴 확률이 늘어납니다.<BR>어떤 인챈트는 특정한 도구나 무기에만 부여할 수 있는데, 이는 각 항목 아래에 기재될 예정입니다.<BR>인퓨전 인챈트는 일반 인챈트와 중첩됩니다.<BR>하지만 일반 인퓨전 인챈트와는 달리, 이들은 웅크려 그 능력을 해제할 수 없어 보입니다.<PAGE>§o변성§r<DIV>변성이 붙은 무기로 처치한 몬스터나 채집한 아이템은 더 희귀하거나 유용한 아이템으로 변화하여 드롭합니다.<DIV>§o레벨§r: 없음<BR>§o도구§r: 도끼, 곡괭이, 삽, 무기<PAGE>§o오라 인퓨전§r<DIV>이를 이용해 처치한 몬스터의 XP는 비스로 변환됩니다.<DIV>§o레벨§r: 없음<BR>§o도구§r: 무기<PAGE>§o투영§r<DIV>투영이 있는 도구는 더욱 먼 거리에서 사용할 수 있게 됩니다. 레벨당 2블럭이 늘어납니다.<DIV>§o레벨§r: 1-5<BR>§o도구§r: 도끼, 곡괭이, 삽, 무기
+# Matstudy Alkimium
+planarartifice.research.matstudy_alkimium.title=재료 연구: 알키미움
+planarartifice.research.matstudy_alkimium.stage.1.text=황동은 가볍고 우아한 강철로 골렘의 재료로 적합했습니다. 그렇다면 알키미움은 작은 기계 도우미들에게 어떤 능력을 부여할까요?
+planarartifice.research.matstudy_alkimium.complete.text=연구 결과, 알키미움으로 만들어진 골렘은 원래보다 더욱 빨리 움직였습니다. 다만 그 움직임이 약간 이상합니다.
+# --- End of Research --- #
 planarartifice.alkimium=알키미움 업그레이드
 
 # CONFIG

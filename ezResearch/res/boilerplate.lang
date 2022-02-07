@@ -39,6 +39,7 @@ planarartifice.research.alchemical_scribing_tools.addendum.1.text=
 # Alkimium Applications
 planarartifice.research.alkimium_applications.title=
 planarartifice.research.alkimium_applications.stage.1.text=
+planarartifice.research.alkimium_applications.stage.2.text=
 planarartifice.research.alkimium_applications.complete.text=
 # Alkimium Goggles
 planarartifice.research.alkimium_goggles.title=
@@ -102,10 +103,13 @@ planarartifice.research.bismuth_casters_gauntlet.complete.text=
 planarartifice.research.bush_alchemy.title=
 planarartifice.research.bush_alchemy.stage.1.text=
 planarartifice.research.bush_alchemy.stage.2.text=
+planarartifice.research.bush_alchemy.stage.3.text=
 planarartifice.research.bush_alchemy.complete.text=
 # Bush Alchemy Conjuring
 planarartifice.research.bush_alchemy_conjuring.title=
 planarartifice.research.bush_alchemy_conjuring.stage.1.text=
+planarartifice.research.bush_alchemy_conjuring.stage.2.text=
+planarartifice.research.bush_alchemy_conjuring.stage.3.text=
 planarartifice.research.bush_alchemy_conjuring.complete.text=
 # Bush Alchemy Essentia
 planarartifice.research.bush_alchemy_essentia.title=
@@ -125,6 +129,10 @@ planarartifice.research.matstudy_alkimium.complete.text=
 planarartifice.research.bush_alchemy_metal_1.title=
 planarartifice.research.bush_alchemy_metal_1.stage.1.text=
 planarartifice.research.bush_alchemy_metal_1.complete.text=
+# Bush Alchemy Metal Bismuth
+planarartifice.research.bush_alchemy_metal_bismuth.title=
+planarartifice.research.bush_alchemy_metal_bismuth.stage.1.text=
+planarartifice.research.bush_alchemy_metal_bismuth.complete.text=
 # Bush Alchemy Metal 2
 planarartifice.research.bush_alchemy_metal_2.title=
 planarartifice.research.bush_alchemy_metal_2.stage.1.text=

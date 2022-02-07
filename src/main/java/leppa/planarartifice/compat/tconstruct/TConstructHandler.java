@@ -41,40 +41,43 @@ public class TConstructHandler implements ICompatModule {
 		
 		MinecraftForge.EVENT_BUS.register(traitTransmutative);
 		MinecraftForge.EVENT_BUS.register(traitAuraInfusing);
-		
-		Material alkimium = new Material("alkimium", 0xFF0DCE53);
-		alkimium.setCraftable(false).setCastable(true);
-		alkimium.setFluid(fluidAlkimium);
-		alkimium.addTrait(traitTransmutative);
 
-		if(e.getSide() == Side.CLIENT)
-		setMetalMaterialRenderInfo(alkimium, 0xFF0DCE53, 0.7f, 0f, 0.1f);
-		
-		TinkerRegistry.addMaterialStats(alkimium, new HeadMaterialStats(302, 9, 6f, OBSIDIAN), new HandleMaterialStats(1.3f, 24), new ExtraMaterialStats(92), new BowMaterialStats(0.6f, 1.7f, 11));
-		
-		MaterialIntegration mi = new MaterialIntegration(alkimium, fluidAlkimium);
-		mi.oreSuffix = "Alchemical";
-		mi.toolforge();
-		mi.setRepresentativeItem("ingotAlchemical");
-		TinkerRegistry.integrate(mi).preInit();
-		
-		Material bismuth = new Material("bismuth", 0xFFFF0000);
-		bismuth.setCraftable(false).setCastable(true);
-		bismuth.setFluid(fluidBismuth);
-		bismuth.addTrait(traitAuraInfusing);
+		if (TinkerRegistry.getMaterial("alkimium") == Material.UNKNOWN) {
+			Material alkimium = new Material("alkimium", 0xFF0DCE53);
+			alkimium.setCraftable(false).setCastable(true);
+			alkimium.setFluid(fluidAlkimium);
+			alkimium.addTrait(traitTransmutative);
 
-		if(e.getSide() == Side.CLIENT)
-		setMetalMaterialRenderInfo(bismuth, 0xFFC05353, 0.3f, 0.2f, 36f);
-			
-		TinkerRegistry.addMaterialStats(bismuth, new HeadMaterialStats(450, 7.5f, 7f, COBALT), new HandleMaterialStats(1.1f, 55), new ExtraMaterialStats(125), new BowMaterialStats(0.7f, 1.9f, 8));
-		
-		MaterialIntegration mib = new MaterialIntegration(bismuth, fluidBismuth);
-		mib.oreSuffix = "Bismuth";
-		mib.setRepresentativeItem("ingotBismuth");
-		TinkerRegistry.integrate(mib).preInit();
-		
-		TinkerRegistry.registerSmelteryFuel(new FluidStack(fluidAlkimium, 50), 120);
-		TinkerRegistry.registerSmelteryFuel(new FluidStack(fluidBismuth, 50), 150);
+			if (e.getSide() == Side.CLIENT)
+				setMetalMaterialRenderInfo(alkimium, 0xFF0DCE53, 0.7f, 0f, 0.1f);
+
+			TinkerRegistry.addMaterialStats(alkimium, new HeadMaterialStats(302, 9, 6f, OBSIDIAN), new HandleMaterialStats(1.3f, 24), new ExtraMaterialStats(92), new BowMaterialStats(0.6f, 1.7f, 11));
+
+			MaterialIntegration mi = new MaterialIntegration(alkimium, fluidAlkimium);
+			mi.oreSuffix = "Alkimium";
+			mi.toolforge();
+			mi.setRepresentativeItem("ingotAlkimium");
+			TinkerRegistry.integrate(mi).preInit();
+			TinkerRegistry.registerSmelteryFuel(new FluidStack(fluidAlkimium, 50), 120);
+		}
+
+		if (TinkerRegistry.getMaterial("alkimium") == Material.UNKNOWN) {
+			Material bismuth = new Material("bismuth", 0xFFFF0000);
+			bismuth.setCraftable(false).setCastable(true);
+			bismuth.setFluid(fluidBismuth);
+			bismuth.addTrait(traitAuraInfusing);
+
+			if (e.getSide() == Side.CLIENT)
+				setMetalMaterialRenderInfo(bismuth, 0xFFC05353, 0.3f, 0.2f, 36f);
+
+			TinkerRegistry.addMaterialStats(bismuth, new HeadMaterialStats(450, 7.5f, 7f, COBALT), new HandleMaterialStats(1.1f, 55), new ExtraMaterialStats(125), new BowMaterialStats(0.7f, 1.9f, 8));
+
+			MaterialIntegration mib = new MaterialIntegration(bismuth, fluidBismuth);
+			mib.oreSuffix = "Bismuth";
+			mib.setRepresentativeItem("ingotBismuth");
+			TinkerRegistry.integrate(mib).preInit();
+			TinkerRegistry.registerSmelteryFuel(new FluidStack(fluidBismuth, 50), 150);
+		}
 	}
 	
 	@Override

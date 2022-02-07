@@ -9,10 +9,7 @@ import leppa.planarartifice.registry.PAAspects;
 import leppa.planarartifice.registry.PAMultiblocks;
 import leppa.planarartifice.registry.PAResearch;
 import leppa.planarartifice.registry.Registrar;
-import leppa.planarartifice.tiles.TileAlkimiumSmeltery;
-import leppa.planarartifice.tiles.TileFluxScrubber;
-import leppa.planarartifice.tiles.TilePotionMixer;
-import leppa.planarartifice.tiles.TileTeleporter;
+import leppa.planarartifice.tiles.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -40,6 +37,7 @@ public class CommonProxy {
 		GameRegistry.registerTileEntity(TileFluxScrubber.class, new ResourceLocation(PlanarArtifice.MODID,"fluxScrubber"));
 		GameRegistry.registerTileEntity(TilePotionMixer.class, new ResourceLocation(PlanarArtifice.MODID,"potionMixer"));
 		GameRegistry.registerTileEntity(TileAlkimiumSmeltery.class, new ResourceLocation(PlanarArtifice.MODID,"alkimiumSmeltery"));
+		GameRegistry.registerTileEntity(TileAlkimiumCentrifuge.class, new ResourceLocation(PlanarArtifice.MODID,"alkimiumCentrifuge"));
 
 		network = NetworkRegistry.INSTANCE.newSimpleChannel(PlanarArtifice.MODID);
 		network.registerMessage(new PacketUpdateTeleporter.Handler(), PacketUpdateTeleporter.class, 0, Side.CLIENT);

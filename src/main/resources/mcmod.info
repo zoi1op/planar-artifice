@@ -2,13 +2,13 @@
 {
   "modid": "planarartifice",
   "name": "Planar Artifice",
-  "description": "An unfinished addon for TC6.",
-  "version": "${version}",
+  "description": "A High-power addon for TC6 that makes doing thaumaturgy viable utility-wise.",
+  "version": "1.1.2",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["Pixel Breaker AKA Leppaisawesome", "Zokonius"],
-  "credits": "Me, for making this, Azanor, for making TC6, MinerGuyLex, for lots of textures, and dycoldwind for Chinese Translations",
+  "authorList": ["Pixel Breaker AKA Leppaisawesome", "Zokonius", "prodzpod"],
+  "credits": "Azanor, for making TC6, MinerGuyLex, for lots of textures, dycoldwind for Chinese Translations, and TheCodex6824 for gradle stuff",
   "logoFile": "assets/planarartifice/textures/meta/logo_long.png",
   "screenshots": [],
   "dependencies": ["Thaumcraft"]

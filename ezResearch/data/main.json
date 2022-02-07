@@ -5,6 +5,7 @@
     "entries": [{
         "key": "RARE_ITEMS",
         "icons": ["minecraft:nether_star"],
+        "parents": ["FIRSTSTEPS"],
         "location": [-7, 0],
         "stages": [
             {"items": ["minecraft:diamond"]},
@@ -16,7 +17,7 @@
     },{
         "key": "MAGIC_APPLE",
         "icons": ["planarartifice:magic_apple"],
-        "parents": ["RARE_ITEMS@4", "METALLURGY@3"],
+        "parents": ["PA_RARE_ITEMS@4", "METALLURGY@3"],
         "location": [-7, -2],
         "stages": [{"recipes": ["!magic_apple"]}, {}]
     },{
@@ -47,7 +48,11 @@
         "stages": [{
             "knowledges": ["THEORY;ALCHEMY;1"]
         },{
-            "recipes": ["alkimium_smeltery", "alchemical_alkimium_construct"]
+            "recipes": ["alkimium_smeltery", "alchemical_alkimium_construct"],
+            "crafts": ["thaumcraft:centrifuge"],
+            "knowledges": ["THEORY;ARTIFICE;1", "THEORY;ALCHEMY;1", "THEORY;PLANARARTIFICE;1"]
+        },{
+            "recipes": ["alkimium_centrifuge"]
         }]
     },{
         "key": "ALKIMIUM_GOGGLES",
@@ -208,7 +213,11 @@
                 "recipes": ["endereye", "redstone"],
                 "items": ["minecraft:blaze_rod;16"]
             },
-            {"recipes": ["blaze_powder"]}
+            {
+                "recipes": ["blaze_powder"],
+                "items": ["thaumcraft:amber;8", "thaumcraft:quicksilver;8"]
+            },
+            {"recipes": ["amber_alchemy", "quicksilver_alchemy"]}
         ]
     },{
         "key": "BUSH_ALCHEMY_CONJURING",
@@ -216,8 +225,10 @@
         "parents": ["PA_BUSH_ALCHEMY"],
         "location": [0, -6],
         "stages": [
-            {"knowledges": ["THEORY;BASICS;3"], "items": ["minecraft:redstone_block;64", "minecraft:chorus_fruit;64"]},
-            {"recipes": ["ender_pearls", "redstone2"]}
+            {"knowledges": ["THEORY;BASICS;3"], "items": ["minecraft:redstone_block;64"]},
+            {"recipes": ["sugar_conjure", "ender_pearls", "redstone2"], "knowledges": ["THEORY;ALCHEMY;3", "THEORY;BASICS;3"], "items": ["minecraft:coal_block;64"]},
+            {"recipes": ["lapis_conjure", "coal_conjure", "quartz_conjure"], "knowledges": ["THEORY;ALCHEMY;3", "THEORY;BASICS;3", "THEORY;PLANARARTIFICE;3"], "items": ["thaumcraft:amber_block;64"]},
+            {"recipes": ["amber_conjure", "blaze_conjure", "chorus_conjure", "flesh_conjure", "bone_conjure", "cactus_conjure", "mushroom_conjure", "mushroom_conjure2", "gunpowder_conjure"], "warp": 3}
         ]
     },{
         "key": "BUSH_ALCHEMY_ESSENTIA",
@@ -232,7 +243,7 @@
                 "items": ["crystal:aer", "crystal:ignis", "crystal:aqua", "crystal:terra", "crystal:ordo", "crystal:perditio", "crystal:vitium", "crystal:tinctura"]
             },{
                 "items": ["thaumcraft:salis_mundus;64"],
-                "recipes": ["random_vis_crystal1", "random_vis_crystal2"]
+                "recipes": ["random_vis_crystal1", "random_vis_crystal2"], "warp": 2
             },{
                 "recipes": ["salis_mundus"]
             }
