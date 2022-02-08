@@ -5,6 +5,7 @@ import static slimeknights.tconstruct.library.utils.HarvestLevels.*;
 import leppa.planarartifice.blocks.fluid.PAFluid;
 import leppa.planarartifice.blocks.fluid.PAFluidBlock;
 import leppa.planarartifice.compat.PACompatHandler.ICompatModule;
+import leppa.planarartifice.main.PAConfig;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -41,6 +42,8 @@ public class TConstructHandler implements ICompatModule {
 		
 		MinecraftForge.EVENT_BUS.register(traitTransmutative);
 		MinecraftForge.EVENT_BUS.register(traitAuraInfusing);
+
+		if (PAConfig.compat.disableTinkersCompat) return;
 
 		if (TinkerRegistry.getMaterial("alkimium") == Material.UNKNOWN) {
 			Material alkimium = new Material("alkimium", 0xFF0DCE53);
