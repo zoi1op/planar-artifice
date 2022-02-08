@@ -68,19 +68,19 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 			if(this.furnaceBurnTime == 0) {
 				if(this.canSmelt()) {
 					this.currentItemBurnTime = this.furnaceBurnTime = TileEntityFurnace
-							.getItemBurnTime(this.getSyncedStackInSlot(1));
+							.getItemBurnTime(this.getStackInSlot(1));
 					if(this.furnaceBurnTime > 0) {
 						BlockSmelter.setFurnaceState(this.world, this.getPos(), true);
 						flag1 = true;
 						this.speedBoost = false;
-						if(this.getSyncedStackInSlot(1) != ItemStack.EMPTY) {
-							if(this.getSyncedStackInSlot(1).isItemEqual(new ItemStack(ItemsTC.alumentum))) {
+						if(this.getStackInSlot(1) != ItemStack.EMPTY) {
+							if(this.getStackInSlot(1).isItemEqual(new ItemStack(ItemsTC.alumentum))) {
 								this.speedBoost = true;
 							}
-							this.getSyncedStackInSlot(1).shrink(1);
-							if(this.getSyncedStackInSlot(1).getCount() == 0) {
+							this.getStackInSlot(1).shrink(1);
+							if(this.getStackInSlot(1).getCount() == 0) {
 								this.setInventorySlotContents(1,
-										this.getSyncedStackInSlot(1).getItem().getContainerItem(this.getSyncedStackInSlot(1)));
+										this.getStackInSlot(1).getItem().getContainerItem(this.getStackInSlot(1)));
 							}
 						}
 					} else {
@@ -110,10 +110,10 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 	}
 
 	public boolean canSmelt() {
-		if(this.getSyncedStackInSlot(0).isEmpty()) {
+		if(this.getStackInSlot(0).isEmpty()) {
 			return false;
 		}
-		AspectList al = ThaumcraftCraftingManager.getObjectTags(this.getSyncedStackInSlot(0));
+		AspectList al = ThaumcraftCraftingManager.getObjectTags(this.getStackInSlot(0));
 		if(al == null || al.size() == 0) {
 			return false;
 		}
@@ -129,7 +129,7 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 	public void smeltItem() {
 		if(this.canSmelt()) {
 			int flux = 0;
-			AspectList al = ThaumcraftCraftingManager.getObjectTags(this.getSyncedStackInSlot(0));
+			AspectList al = ThaumcraftCraftingManager.getObjectTags(this.getStackInSlot(0));
 			for(Aspect a : al.getAspects()) {
 				if(this.getEfficiency() < 1.0f) {
 					int qq = al.getAmount(a);
@@ -171,8 +171,8 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 				AuraHelper.polluteAura(this.getWorld(), this.getPos(), pp, true);
 			}
 			this.vis = this.aspects.visSize();
-			this.getSyncedStackInSlot(0).shrink(1);
-			if(this.getSyncedStackInSlot(0).getCount() <= 0) {
+			this.getStackInSlot(0).shrink(1);
+			if(this.getStackInSlot(0).getCount() <= 0) {
 				this.setInventorySlotContents(0, ItemStack.EMPTY);
 			}
 		}
