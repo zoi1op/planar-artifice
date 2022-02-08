@@ -1,11 +1,13 @@
 package leppa.planarartifice.registry;
 
 import leppa.planarartifice.main.PlanarArtifice;
+import magicbees.integration.thaumcraft.IntegrationThaumcraft;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.Loader;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 
@@ -21,7 +23,8 @@ public class PAAspects {
 
 	public static void registerAspects() {
 		DIMENSIONS = new Aspect("spatio", 0x4AF755, new Aspect[]{Aspect.VOID, Aspect.ENTROPY}, new ResourceLocation(PlanarArtifice.MODID, "textures/aspects/spatium.png"), 1);
-		TIME = new Aspect("tempus", 0xD6DB43, new Aspect[]{DIMENSIONS, Aspect.EXCHANGE}, new ResourceLocation(PlanarArtifice.MODID, "textures/aspects/tempus.png"), 1);
+		if (Loader.isModLoaded("magicbees")) TIME = IntegrationThaumcraft.ASPECT_TIME;
+		else TIME = new Aspect("tempus", 0xD6DB43, new Aspect[]{DIMENSIONS, Aspect.EXCHANGE}, new ResourceLocation(PlanarArtifice.MODID, "textures/aspects/tempus.png"), 1);
 		COLOR = new Aspect("tinctura", 0xFFFFFF, new Aspect[]{Aspect.EXCHANGE, Aspect.SENSES}, new ResourceLocation(PlanarArtifice.MODID, "textures/aspects/tinctura.png"), 1) {
 			@Override
 			public int getColor() {

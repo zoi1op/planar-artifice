@@ -15,7 +15,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import thaumcraft.api.items.ItemsTC;
 
-public class ItemThaumostaticJetHarness extends ItemArmor{
+public class ItemThaumostaticJetHarness extends ItemArmor {
 	
 	public ItemThaumostaticJetHarness(String name, ArmorMaterial mat) {
 		super(mat, 3, EntityEquipmentSlot.CHEST);
