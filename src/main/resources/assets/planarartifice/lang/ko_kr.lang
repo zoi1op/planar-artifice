@@ -222,6 +222,10 @@ planarartifice.config.compat.tacompat=사우믹 어디션과의 호환을 비활
 planarartifice.config.compat.taextracompat=사우믹 어디션과의 추가 호환 (조합법 변경) 을 비활성화할까요?
 planarartifice.config.compat.tinkerscompat=팅커스 컨스트럭트와의 호환을 비활성화할까요?
 planarartifice.config.compat.aspectcompat=랜덤 비스 크리스탈 조합에 애드온 에센시아를 넣지 말까요?
+planarartifice.config.overhaul.ingot_re_aspect=주괴의 위상을 전체적으로 바꾸지 말까요?
+planarartifice.config.overhaul.alloy_re_aspect=합금의 위상을 전체적으로 바꾸지 말까요?
+planarartifice.config.balance.bismuth_crash_cost=비스무트 투영에 필요한 에센시아 양
+planarartifice.config.balance.duplication_cost=아이템 복제에 필요한 에센시아 양
 
 tooltip.usablevis=현재 사용 가능한 비스:
 tooltip.basevis=현재 기초 비스:
