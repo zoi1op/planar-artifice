@@ -1,5 +1,6 @@
 package leppa.planarartifice.client.render.tile;
 
+import leppa.planarartifice.tiles.TileAlkimiumCentrifuge;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
@@ -8,7 +9,7 @@ import org.lwjgl.opengl.GL11;
 import thaumcraft.client.renderers.models.block.ModelCentrifuge;
 import thaumcraft.common.tiles.essentia.TileCentrifuge;
 
-public class TESRAlkimiumCentrifuge extends TileEntitySpecialRenderer {
+public class TESRAlkimiumCentrifuge extends TileEntitySpecialRenderer<TileAlkimiumCentrifuge> {
     private ModelCentrifuge model = new ModelCentrifuge();
     private static final ResourceLocation TEX = new ResourceLocation("planarartifice", "textures/models/block/alkimium_centrifuge.png");
 
@@ -40,8 +41,9 @@ public class TESRAlkimiumCentrifuge extends TileEntitySpecialRenderer {
         GL11.glPopMatrix();
     }
 
-    public void render(TileEntity te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
+    @Override
+    public void render(TileAlkimiumCentrifuge te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
         super.render(te, x, y, z, partialTicks, destroyStage, alpha);
-        this.renderEntityAt((TileCentrifuge)te, x, y, z, partialTicks, destroyStage);
+        this.renderEntityAt(te, x, y, z, partialTicks, destroyStage);
     }
 }

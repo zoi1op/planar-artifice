@@ -9,6 +9,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
+import thaumcraft.api.aspects.AspectEventProxy;
 import thaumcraft.api.aspects.AspectHelper;
 import thaumcraft.api.aspects.AspectList;
 
@@ -17,21 +18,22 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 public class AspectUtils {
+    private static AspectEventProxy event = new AspectEventProxy();
 
     public static void add(ItemStack stack, AspectList aspects) {
-        ThaumcraftApi.registerObjectTag(stack, AspectHelper.getObjectAspects(stack).add(aspects));
+        event.registerObjectTag(stack, AspectHelper.getObjectAspects(stack).add(aspects));
     }
 
     public static void set(ItemStack stack, AspectList aspects) {
-        ThaumcraftApi.registerObjectTag(stack, aspects);
+        event.registerObjectTag(stack, aspects);
     }
 
     public static void addOreDict(String ore, AspectList aspects) {
-        ThaumcraftApi.registerObjectTag(ore, AspectHelper.getObjectAspects(OreDictionary.getOres(ore).get(0)).add(aspects));
+        event.registerObjectTag(ore, AspectHelper.getObjectAspects(OreDictionary.getOres(ore).get(0)).add(aspects));
     }
 
     public static void setOreDict(String ore, AspectList aspects) {
-        ThaumcraftApi.registerObjectTag(ore, aspects);
+        event.registerObjectTag(ore, aspects);
     }
 
     public static void addById(String id, AspectList aspects) {
