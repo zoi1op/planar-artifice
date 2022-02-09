@@ -9,6 +9,7 @@ import baubles.api.cap.IBaublesItemHandler;
 import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.registry.PAItems;
 import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.item.ItemArmor;
@@ -16,9 +17,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.event.entity.player.PlayerDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.entity.player.PlayerPickupXpEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import thaumcraft.api.ThaumcraftApi;
+import thaumcraft.api.capabilities.IPlayerKnowledge;
+import thaumcraft.api.research.ResearchCategories;
 
 @EventBusSubscriber(modid = PlanarArtifice.MODID)
 public class PlayerEventHandler {
@@ -162,6 +167,28 @@ public class PlayerEventHandler {
 
 	public static int hasPlayerMirroredAmulet(EntityPlayer player) {
 		return BaublesApi.isBaubleEquipped(player, PAItems.mirrored_amulet);
+	}
+
+	@SubscribeEvent
+	public static void pickupXP(PlayerPickupXpEvent event) {
+		if (event.getEntityPlayer() != null && !event.getEntityPlayer().world.isRemote && BaublesApi.isBaubleEquipped(event.getEntityPlayer(), PAItems.mirromirous_headband) >= 0 && event.getOrb().getXpValue() > 1) {
+			int d = event.getOrb().xpValue / 2;
+			EntityXPOrb orb = event.getOrb();
+			orb.xpValue -= d;
+			float r = event.getEntityPlayer().getRNG().nextFloat();
+			String[] s;
+			String cat;
+			if ((double)r < 0.1D * (double)d) {
+				s = ResearchCategories.researchCategories.keySet().toArray(new String[0]);
+				cat = s[event.getEntityPlayer().getRNG().nextInt(s.length)];
+				ThaumcraftApi.internalMethods.addKnowledge(event.getEntityPlayer(), IPlayerKnowledge.EnumKnowledgeType.THEORY, ResearchCategories.getResearchCategory(cat), 2);
+			} else if ((double)r < 0.4D * (double)d) {
+				s = ResearchCategories.researchCategories.keySet().toArray(new String[0]);
+				cat = s[event.getEntityPlayer().getRNG().nextInt(s.length)];
+				ThaumcraftApi.internalMethods.addKnowledge(event.getEntityPlayer(), IPlayerKnowledge.EnumKnowledgeType.OBSERVATION, ResearchCategories.getResearchCategory(cat), 2);
+			}
+		}
+
 	}
 
 }

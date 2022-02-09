@@ -5,21 +5,40 @@ import java.util.List;
 import java.util.ListIterator;
 
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
+import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.recipe.RecipeTransmutation;
 import leppa.planarartifice.registry.PARecipes;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemTool;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.IThreadListener;
+import net.minecraft.util.SoundCategory;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.living.LivingExperienceDropEvent;
+import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import thaumcraft.api.aura.AuraHelper;
+import thaumcraft.api.blocks.BlocksTC;
+import thaumcraft.api.items.ItemsTC;
+import thaumcraft.common.lib.enchantment.EnumInfusionEnchantment;
+import thaumcraft.common.lib.utils.BlockUtils;
+import thaumcraft.common.lib.utils.InventoryUtils;
+import thaumcraft.common.lib.utils.Utils;
 
+@Mod.EventBusSubscriber(modid = PlanarArtifice.MODID)
 public class EntityEventHandler {
 
 	@SubscribeEvent
-	public static void onLivingDropsInfusion(LivingDropsEvent e) {
+	public static void onLivingDropsInfusion(final LivingDropsEvent e) {
 		if(e.getSource().getTrueSource() instanceof EntityPlayer) {
 			ItemStack item = ((EntityPlayer) e.getSource().getTrueSource()).getHeldItem(EnumHand.MAIN_HAND);
 			int level = EnumInfusionEnchantmentII.getInfusionEnchantmentLevel(item,
@@ -52,12 +71,30 @@ public class EntityEventHandler {
 					}
 
 			}
-
+			int level2 = EnumInfusionEnchantmentII.getInfusionEnchantmentLevel(item, EnumInfusionEnchantmentII.CURIOUS);
+			if (level2 > 0 && level2 > e.getEntity().world.rand.nextInt(50)) {
+				ItemStack curio = EnumInfusionEnchantmentII.CURIOS[e.getEntity().world.rand.nextInt(EnumInfusionEnchantmentII.CURIOS.length)].copy();
+				e.getDrops().add(new EntityItem(e.getEntity().world, e.getEntity().posX, e.getEntity().posY, e.getEntity().posZ, curio));
+			}
 		}
 	}
 
 	@SubscribeEvent
-	public static void onLivingExperienceDrop(LivingExperienceDropEvent event) {
+	public static void harvestBlockEvent(final BlockEvent.HarvestDropsEvent e) {
+		if (!e.getWorld().isRemote && e.getHarvester() != null) {
+			ItemStack item = e.getHarvester().getHeldItem(e.getHarvester().getActiveHand());
+			if (!item.isEmpty()) {
+				int level2 = EnumInfusionEnchantmentII.getInfusionEnchantmentLevel(item, EnumInfusionEnchantmentII.CURIOUS);
+				if (level2 > 0 && level2 > e.getWorld().rand.nextInt(500)) {
+					ItemStack curio = EnumInfusionEnchantmentII.CURIOS[e.getWorld().rand.nextInt(EnumInfusionEnchantmentII.CURIOS.length)].copy();
+					e.getDrops().add(curio);
+				}
+			}
+		}
+	}
+
+	@SubscribeEvent
+	public static void onLivingExperienceDrop(final LivingExperienceDropEvent event) {
 		if(event.getAttackingPlayer() != null) {
 			event.getAttackingPlayer().getHeldItemMainhand();
 			EntityPlayer p = event.getAttackingPlayer();

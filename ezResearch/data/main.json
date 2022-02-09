@@ -186,6 +186,15 @@
             {"recipes": ["mirrored_amulet", "mirrored_amulet2"]}
         ]
     },{
+        "key": "MIRROMIROUS_HEADBAND",
+        "icons": ["planarartifice:mirromirous_headband"],
+        "parents": ["PA_BISMUTH", "CURIOSITYBAND"],
+        "location": [-4, 0],
+        "stages": [
+            {"knowledges": ["THEORY;PLANARARTIFICE;1", "THEORY;INFUSION;1"], "items": ["thaumcraft:curio;1;1"]},
+            {"recipes": ["mirromirous_headband"]}
+        ]
+    },{
         "key": "BISMUTH_CASTERS_GAUNTLET",
         "icons": ["planarartifice:bismuth_caster"],
         "parents": ["PA_BISMUTH", "PA_FOCUS_LIGHT"],
@@ -255,7 +264,7 @@
         "location": [-8, -4],
         "stages": [
             {"knowledges": ["THEORY;INFUSION;2"], "items": ["enchant:16;1", "enchant:51;1", "enchant:21;2", "planarartifice:alkimium_block", "minecraft:fishing_rod"]},
-            {"recipes": ["IETransmutativeFake", "IEAuraInfusingFake", "IEProjectingFake"]}
+            {"recipes": ["IETransmutativeFake", "IEAuraInfusingFake", "IEProjectingFake", "IECuriousFake"]}
         ]
     },{
         "key": "MATSTUDY_ALKIMIUM",

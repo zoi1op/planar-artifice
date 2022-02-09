@@ -6,9 +6,9 @@ item.alkimium_gear.name=알키미움 톱니바퀴
 item.alkimium_nugget.name=알키미움 조각
 item.thaumostatic_jet_harness.name=사우모스태틱 제트 하네스
 item.dimensional_curiosity.name=차원의 지식
-item.dimensional_curiosity.tooltip=주변 공간이 일그러진다.
+planarartifice.dimensional_curiosity=주변 공간이 일그러진다.
 item.fundamental_curiosity.name=기초적 지식
-item.fundamental_curiosity.tooltip=크리에이티브 모드 전용 (지금은?)
+planarartifice.fundamental_curiosity=기본으로 돌아가자...
 item.dimensional_singularity.name=차원 특이점
 item.alchemical_scribing_tools.name=연금 필기 도구
 item.bismuth_ingot.name=비스무트 주괴
@@ -18,6 +18,7 @@ item.bismuth_claymore.name=비스무트 클레이모어
 item.aura_meter.name=오라 미터
 item.belt_of_suspension.name=부유의 허리띠
 item.mirrored_amulet.name=거울 부적
+item.mirromirous_headband.name=신기루 머리띠
 item.bismuth_caster.name=비스무트 주문 건틀릿
 item.flux_venting_circuit.name=플럭스 배기로
 item.condensed_crystal_cluster.name=응축된 크리스탈 덩어리
@@ -50,6 +51,7 @@ modifier.aurainfusing.desc=떨어뜨린 XP의 절반이 비스로 변환됩니�
 enchantment.infusion.TRANSMUTATIVE=변성
 enchantment.infusion.AURAINFUSING=오라 인퓨전
 enchantment.infusion.PROJECTING=투영
+enchantment.infusion.CURIOUS=호기심
 golem.material.alkimium=알키미움
 golem.material.text.alkimium=이 골렘은 알키미움으로 만들어졌습니다. 이는 가볍고, 불에 타지 않고, 폭발에 강합니다. 황동 골렘에 비해 높은 방어력과 공격력을 가지고 있지만, 여전히 약한 축에 속합니다.
 golem.trait.teleporter=공간이동자
@@ -167,6 +169,10 @@ planarartifice.research.focus_colour.complete.text=포커스 착색 효과를 �
 planarartifice.research.mirrored_amulet.title=거울 부적
 planarartifice.research.mirrored_amulet.stage.1.text=이 세계에서의 죽음은 귀찮은 존재입니다. 멀리 이동할수록 희귀한 아이템을 찾기 쉬워지지만, 그만큼 죽기도 쉬워집니다. 또한 멀리서 죽을수록 물건을 회수하기 힘들어집니다. 죽고 나서도 아이템을 유지할 수 있는 길이 있다면 모든 상황에서 편해질 것입니다.
 planarartifice.research.mirrored_amulet.complete.text=이 부적을 쓰고 있는 동안은 죽어도 아이템이 몸에서 떨어지지 않습니다. 갑옷, 장신구, 인벤토리 전부 보존되니 안심하고 멀리 여행해도 될 듯 합니다.
+# Mirromirous Headband
+planarartifice.research.mirromirous_headband.title=신기루 머리띠
+planarartifice.research.mirromirous_headband.stage.1.text=일반적인 호기심의 머리띠는 이제 충분하지 않습니다. 지식의 범위가 확장될수록 이를 향한 열망 또한 커져갑니다.
+planarartifice.research.mirromirous_headband.complete.text=최근에 발견한 새 물질들을 사용해, 머리띠의 상위 모델을 만드는 데 성공하였습니다. 이 머리띠는 경험치를 원본에 비해 두 배 더 빨리 빨아들이고, 두 배 더 효율적으로 경험치를 지식으로 전환합니다. 이를 사용해 네 배 빨리 지식을 얻을 수 있습니다.
 # Bismuth Casters Gauntlet
 planarartifice.research.bismuth_casters_gauntlet.title=비스무트 주문 건틀릿
 planarartifice.research.bismuth_casters_gauntlet.stage.1.text=비스무트의 오라를 끌어오는 능력은 여러 상황에서 유용해집니다. 주문 건틀릿에 비스무트를 써 오라에 더 잘 반응하도록 하면 포커스의 효율도 늘어날 것입니다.
@@ -209,7 +215,7 @@ planarartifice.research.bush_alchemy_metal_bismuth.complete.text=지하자원을
 # Infusion Enchantment 2
 planarartifice.research.infusion_enchantment_2.title=인퓨전 인챈팅 II
 planarartifice.research.infusion_enchantment_2.stage.1.text=내 마법은 인퓨전 인챈팅을 개발한 후 크게 발전했습니다. 더 많은 지식과 물질들로 많은 생각들이 떠오릅니다. 이 중 몇 개는 효과적이겠죠.
-planarartifice.research.infusion_enchantment_2.complete.text=인퓨전 인챈트를 몇개 더 고안했습니다. 기존 인챈트처럼, 일부 인챈트는 한 도구에 여러번 부여할 수 있지만, 매번 그 값이 늘어나고 뒤틀릴 확률이 늘어납니다.<BR>어떤 인챈트는 특정한 도구나 무기에만 부여할 수 있는데, 이는 각 항목 아래에 기재될 예정입니다.<BR>인퓨전 인챈트는 일반 인챈트와 중첩됩니다.<BR>하지만 일반 인퓨전 인챈트와는 달리, 이들은 웅크려 그 능력을 해제할 수 없어 보입니다.<PAGE>§o변성§r<DIV>변성이 붙은 무기로 처치한 몬스터나 채집한 아이템은 더 희귀하거나 유용한 아이템으로 변화하여 드롭합니다.<DIV>§o레벨§r: 없음<BR>§o도구§r: 도끼, 곡괭이, 삽, 무기<PAGE>§o오라 인퓨전§r<DIV>이를 이용해 처치한 몬스터의 XP는 비스로 변환됩니다.<DIV>§o레벨§r: 없음<BR>§o도구§r: 무기<PAGE>§o투영§r<DIV>투영이 있는 도구는 더욱 먼 거리에서 사용할 수 있게 됩니다. 레벨당 2블럭이 늘어납니다.<DIV>§o레벨§r: 1-5<BR>§o도구§r: 도끼, 곡괭이, 삽, 무기
+planarartifice.research.infusion_enchantment_2.complete.text=인퓨전 인챈트를 몇개 더 고안했습니다. 기존 인챈트처럼, 일부 인챈트는 한 도구에 여러번 부여할 수 있지만, 매번 그 값이 늘어나고 뒤틀릴 확률이 늘어납니다.<BR>어떤 인챈트는 특정한 도구나 무기에만 부여할 수 있는데, 이는 각 항목 아래에 기재될 예정입니다.<BR>인퓨전 인챈트는 일반 인챈트와 중첩됩니다.<BR>하지만 일반 인퓨전 인챈트와는 달리, 이들은 웅크려 그 능력을 해제할 수 없어 보입니다.<PAGE>§o변성§r<DIV>변성이 붙은 무기로 처치한 몬스터나 채집한 아이템은 더 희귀하거나 유용한 아이템으로 변화하여 드롭합니다.<DIV>§o레벨§r: 없음<BR>§o도구§r: 도끼, 곡괭이, 삽, 무기<PAGE>§o오라 인퓨전§r<DIV>이를 이용해 처치한 몬스터의 XP는 비스로 변환됩니다.<DIV>§o레벨§r: 없음<BR>§o도구§r: 무기<PAGE>§o투영§r<DIV>투영이 있는 도구는 더욱 먼 거리에서 사용할 수 있게 됩니다. 레벨당 2블럭이 늘어납니다.<DIV>§o레벨§r: 1-5<BR>§o도구§r: 도끼, 곡괭이, 삽, 무기<PAGE>§o호기심§r<DIV>호기심이 있는 도구로 처치한 몹이나 부순 블럭은 적은 확률로 지식을 드랍합니다.<DIV>§o레벨§r: 1-5<BR>§o도구§r: 도끼, 곡괭이, 삽, 무기
 # Matstudy Alkimium
 planarartifice.research.matstudy_alkimium.title=재료 연구: 알키미움
 planarartifice.research.matstudy_alkimium.stage.1.text=황동은 가볍고 우아한 강철로 골렘의 재료로 적합했습니다. 그렇다면 알키미움은 작은 기계 도우미들에게 어떤 능력을 부여할까요?
