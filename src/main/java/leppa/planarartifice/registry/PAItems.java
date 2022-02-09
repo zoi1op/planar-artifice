@@ -6,6 +6,7 @@ import leppa.planarartifice.items.*;
 import leppa.planarartifice.items.baubles.ItemAuraMeter;
 import leppa.planarartifice.items.baubles.ItemBeltOfSuspension;
 import leppa.planarartifice.items.baubles.ItemMirroredAmulet;
+import leppa.planarartifice.items.baubles.ItemMirroredHeadband;
 import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.SoundEvents;
@@ -51,12 +52,13 @@ public class PAItems{
 	//Tools
 	public static Item alkimium_goggles = new ItemAlkimiumGoggles("alkimium_goggles", armorMatAlkimium);
 	public static Item alchemical_scribing_tools = new ItemAlchemicalScribingTools("alchemical_scribing_tools");
+	public static Item mirromirous_headband = new ItemMirroredHeadband("mirromirous_headband");
 	public static Item bismuth_caster = new ItemBismuthCaster("bismuth_caster").setCreativeTab(PlanarArtifice.creativetab);
 	public static Item bismuth_claymore = new ItemBismuthSword("bismuth_claymore", toolMatBismuth);
 
 	public static Item alchemical_universe = new ItemPA("alchemical_universe").setCreativeTab(null);
-	
-	public static void registerItems(RegistryEvent.Register<Item> event){
+
+    public static void registerItems(RegistryEvent.Register<Item> event){
 		ITEMS.forEach(i -> event.getRegistry().register(i));
 	}
 	

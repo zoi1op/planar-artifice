@@ -8,6 +8,7 @@ import java.util.Set;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Multimap;
 
+import leppa.planarartifice.registry.PAItems;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
@@ -17,15 +18,19 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import thaumcraft.api.items.ItemsTC;
 
 public enum EnumInfusionEnchantmentII{
 	TRANSMUTATIVE(ImmutableSet.of("axe", "pickaxe", "shovel", "weapon"), 1, "PA_INFUSION_ENCHANTMENT_2"),
 	AURAINFUSING(ImmutableSet.of("weapon"), 1, "PA_INFUSION_ENCHANTMENT_2"),
-	PROJECTING(ImmutableSet.of("weapon", "axe", "pickaxe", "shovel"), 5, "PA_INFUSION_ENCHANTMENT_2");
+	PROJECTING(ImmutableSet.of("weapon", "axe", "pickaxe", "shovel"), 5, "PA_INFUSION_ENCHANTMENT_2"),
+	CURIOUS(ImmutableSet.of("weapon", "axe", "pickaxe", "shovel"), 5, "PA_INFUSION_ENCHANTMENT_2");
 	
 	public Set<String> toolClasses;
 	public int maxLevel;
 	public String research;
+
+	public static final ItemStack[] CURIOS = {new ItemStack(ItemsTC.curio), new ItemStack(ItemsTC.curio, 1, 1), new ItemStack(ItemsTC.curio, 1, 2), new ItemStack(ItemsTC.curio, 1, 3), new ItemStack(ItemsTC.curio, 1, 4), new ItemStack(ItemsTC.curio, 1, 5), new ItemStack(PAItems.dimensional_curiosity), new ItemStack(PAItems.fundamental_curiosity)};
 	
 	private EnumInfusionEnchantmentII(Set<String> toolClasses, int ml, String research){
 		this.toolClasses = toolClasses;

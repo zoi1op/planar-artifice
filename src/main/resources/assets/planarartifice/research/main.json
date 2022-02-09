@@ -618,6 +618,40 @@
       ]
     },
     {
+      "key": "PA_MIRROMIROUS_HEADBAND",
+      "name": "planarartifice.research.mirromirous_headband.title",
+      "category": "PLANARARTIFICE",
+      "icons": [
+        "planarartifice:mirromirous_headband"
+      ],
+      "parents": [
+        "PA_BISMUTH",
+        "CURIOSITYBAND"
+      ],
+      "location": [
+        -4,
+        0
+      ],
+      "stages": [
+        {
+          "text": "planarartifice.research.mirromirous_headband.stage.1.text",
+          "required_item": [
+            "thaumcraft:curio;1;1"
+          ],
+          "required_knowledge": [
+            "THEORY;PLANARARTIFICE;1",
+            "THEORY;INFUSION;1"
+          ]
+        },
+        {
+          "text": "planarartifice.research.mirromirous_headband.complete.text",
+          "recipes": [
+            "planarartifice:mirromirous_headband"
+          ]
+        }
+      ]
+    },
+    {
       "key": "PA_BISMUTH_CASTERS_GAUNTLET",
       "name": "planarartifice.research.bismuth_casters_gauntlet.title",
       "category": "PLANARARTIFICE",
@@ -918,7 +952,8 @@
           "recipes": [
             "planarartifice:IETransmutativeFake",
             "planarartifice:IEAuraInfusingFake",
-            "planarartifice:IEProjectingFake"
+            "planarartifice:IEProjectingFake",
+            "planarartifice:IECuriousFake"
           ]
         }
       ]

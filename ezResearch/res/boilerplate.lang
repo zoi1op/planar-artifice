@@ -94,6 +94,10 @@ planarartifice.research.focus_colour.complete.text=
 planarartifice.research.mirrored_amulet.title=
 planarartifice.research.mirrored_amulet.stage.1.text=
 planarartifice.research.mirrored_amulet.complete.text=
+# Mirromirous Headband
+planarartifice.research.mirromirous_headband.title=
+planarartifice.research.mirromirous_headband.stage.1.text=
+planarartifice.research.mirromirous_headband.complete.text=
 # Bismuth Casters Gauntlet
 planarartifice.research.bismuth_casters_gauntlet.title=
 planarartifice.research.bismuth_casters_gauntlet.stage.1.text=

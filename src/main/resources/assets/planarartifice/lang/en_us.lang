@@ -6,9 +6,9 @@ item.alkimium_gear.name=Alkimium Gear
 item.alkimium_nugget.name=Alkimium Nugget
 item.thaumostatic_jet_harness.name=Thaumostatic Jet Harness
 item.dimensional_curiosity.name=Dimensional Curiosity
-item.dimensional_curiosity.tooltip=Space warps around this.
+planarartifice.dimensional_curiosity=Space warps around this.
 item.fundamental_curiosity.name=Fundamental Curiosity
-item.fundamental_curiosity.tooltip=Creative Only (for now?)
+planarartifice.fundamental_curiosity=Back to Basics...
 item.dimensional_singularity.name=Dimensional Singularity
 item.alchemical_scribing_tools.name=Alchemical Scribing Tools
 item.bismuth_ingot.name=Bismuth Ingot
@@ -18,6 +18,7 @@ item.bismuth_claymore.name=Bismuth Claymore
 item.aura_meter.name=Aura Meter
 item.belt_of_suspension.name=Belt Of Suspension
 item.mirrored_amulet.name=Mirrored Amulet
+item.mirromirous_headband.name=Mirromirous Headband
 item.bismuth_caster.name=Bismuth Caster's Gauntlet
 item.flux_venting_circuit.name=Flux Venting Circuit
 item.condensed_crystal_cluster.name=Condensed Crystal Cluster
@@ -50,6 +51,7 @@ modifier.aurainfusing.desc=Half of dropped XP is turned into vis.
 enchantment.infusion.TRANSMUTATIVE=Transmutative
 enchantment.infusion.AURAINFUSING=Aura Infusing
 enchantment.infusion.PROJECTING=Projecting
+enchantment.infusion.CURIOUS=Curious
 golem.material.alkimium=Alkimium
 golem.material.text.alkimium=The golem is crafted from alkimium. It's light, fireproof, and blastproof, with more defense and attacking power than a brass golem, but is also more fragile as a golem material.
 golem.trait.teleporter=Teleporter
@@ -167,6 +169,10 @@ planarartifice.research.focus_colour.complete.text=I can now change the color of
 planarartifice.research.mirrored_amulet.title=Mirrored Amulet
 planarartifice.research.mirrored_amulet.stage.1.text=Death, in this world, is an inconvenience. The further I travel, the more likely I am to have uncommon or difficult to find items, and the more likely I am to die. The further away I die, the harder it becomes to recover my items. A way to keep all of my items intact after death would be incredibly useful, and useful in essentially every situation.
 planarartifice.research.mirrored_amulet.complete.text=The Mirrored Amulet, when properly equipped, allows my to keep all of my items after death. Upon respawning, all of my items will be put back into my inventory. These items won't be dropped. This includes my armour, main inventory, hotbar, and baubles.
+# Mirromirous Headband
+planarartifice.research.mirromirous_headband.title=Mirromirous Headband
+planarartifice.research.mirromirous_headband.stage.1.text=The original headband of curiosity has been run its course. As my knowledge continues to expand, the hunger for it grows as well.
+planarartifice.research.mirromirous_headband.complete.text=Using some of my new materials, I have managed to build an upgraded version of the headband. It draws twice as more experience and is also twice as effective, making it four times as fast.
 # Bismuth Casters Gauntlet
 planarartifice.research.bismuth_casters_gauntlet.title=Bismuth Caster's Gauntlet
 planarartifice.research.bismuth_casters_gauntlet.stage.1.text=Bismuth's ability to pull in aura, seemingly without consequences, makes it useful for a huge variety of things. One obvious application is the Caster's Gauntlet; a higher affinity for aura means more effective foci.
@@ -206,11 +212,10 @@ planarartifice.research.bush_alchemy_metal_3.complete.text=It's a bit expensive,
 planarartifice.research.bush_alchemy_metal_bismuth.title=Bush Alchemy Specialization: Bismuth Projection
 planarartifice.research.bush_alchemy_metal_bismuth.stage.1.text=Bismuth is an interesting metal, It is malleable, inorganic, and seemingly unstable. I wonder if I could cause it to "crash" into other metals, such as gold...
 planarartifice.research.bush_alchemy_metal_bismuth.complete.text=This could revolutionize underground resources forever. I have figured out the way to "nudge" the bismuth into other metals using part of the corresponding metal's essences.
-
 # Infusion Enchantment 2
 planarartifice.research.infusion_enchantment_2.title=Infusion Enchantment II
 planarartifice.research.infusion_enchantment_2.stage.1.text=My thaumaturgy has come a long way since I originally invented infusion enchantments, and I now have access to a wider variety of materials and expertise. Many interesting ideas and concepts have come to my mind, which should hopefully be useful to me.
-planarartifice.research.infusion_enchantment_2.complete.text=I have created a few new infusion enchantments. Much like the original ones, some enchantments can be applied multiple times to the same item, but each rank has an increased essentia cost when crafted.<BR>Each different infusion enchantment on the item also increases the cost by 33% and has an increased chance of giving it the Warping property; all independent of original infusion enchantments<BR>Certain infusion enchantments can only be applied to specific tools or weapons. This will be listed under each individual entry that follows.<BR>Tools with infusion enchantments can still be enchanted with the normal enchanting table and visa versa.<BR>Unlike with the original ones, sneaking while using an infusion enchanted tool will §onot§r suppress its abilities.<PAGE>§oTransmutative§r<DIV>Any items dropped my monsters killed with a Transmutative weapon will have their drops changed into rarer or more useful items.<DIV>§oRanks§r: none<BR>§oTarget§r: axe, pickaxe, shovel, weapon<PAGE>§oAura Infusing§r<DIV>XP from monsters killed by an Aura Infusing weapon will instead be converted into aura vis, at a 2:1 rate.<DIV>§oRanks§r: none<BR>§oTarget§r: weapon<PAGE>§oProjecting§r<DIV>Infusing a weapon with Projecting will grant it extra reach, allowing it to break blocks out of your regular range, at two blocks per level. Mobs cannot be hit from a distance, however.<DIV>§oRanks§r: 1-5<BR>§oTarget§r: axe, pickaxe, shovel, weapon
+planarartifice.research.infusion_enchantment_2.complete.text=I have created a few new infusion enchantments. Much like the original ones, some enchantments can be applied multiple times to the same item, but each rank has an increased essentia cost when crafted.<BR>Each different infusion enchantment on the item also increases the cost by 33% and has an increased chance of giving it the Warping property; all independent of original infusion enchantments<BR>Certain infusion enchantments can only be applied to specific tools or weapons. This will be listed under each individual entry that follows.<BR>Tools with infusion enchantments can still be enchanted with the normal enchanting table and visa versa.<BR>Unlike with the original ones, sneaking while using an infusion enchanted tool will §onot§r suppress its abilities.<PAGE>§oTransmutative§r<DIV>Any items dropped my monsters killed with a Transmutative weapon will have their drops changed into rarer or more useful items.<DIV>§oRanks§r: none<BR>§oTarget§r: axe, pickaxe, shovel, weapon<PAGE>§oAura Infusing§r<DIV>XP from monsters killed by an Aura Infusing weapon will instead be converted into aura vis, at a 2:1 rate.<DIV>§oRanks§r: none<BR>§oTarget§r: weapon<PAGE>§oProjecting§r<DIV>Infusing a weapon with Projecting will grant it extra reach, allowing it to break blocks out of your regular range, at two blocks per level. Mobs cannot be hit from a distance, however.<DIV>§oRanks§r: 1-5<BR>§oTarget§r: axe, pickaxe, shovel, weapon<PAGE>§oCurious§r<DIV>Blocks broken or Mobs killed with items infused with this enchantment has a small chance to drop a random curio.<DIV>§oRanks§r: 1-5<BR>§oTarget§r: axe, pickaxe, shovel, weapon
 # Matstudy Alkimium
 planarartifice.research.matstudy_alkimium.title=Material Studies: Alkimium
 planarartifice.research.matstudy_alkimium.stage.1.text=Perhaps Alkimium can even be used as a Golem material. Brass sure seemed to work fine as a light and elegant material, but what will Alkimium give to these little mechanical assistants?

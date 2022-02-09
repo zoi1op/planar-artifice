@@ -7,16 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.bewitchment.common.integration.thaumcraft.ThaumcraftCompat;
-import com.zeitheron.thaumicadditions.api.AspectUtil;
-import com.zeitheron.thaumicadditions.init.ItemsTAR;
 import com.zeitheron.thaumicadditions.init.KnowledgeTAR;
-import leppa.planarartifice.compat.PACompatHandler;
 import leppa.planarartifice.compat.bewitchment.BewitchmentHandler;
 import leppa.planarartifice.compat.thaumicadditions.ThaumicAdditionsHandler;
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
 import leppa.planarartifice.enchantment.InfusionEnchantmentRecipeII;
 import leppa.planarartifice.main.PAConfig;
-import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.recipe.CrucibleRecipeRandomCrystal;
 import leppa.planarartifice.recipe.RecipePotionMixer;
 import leppa.planarartifice.recipe.RecipeTransmutation;
@@ -29,21 +25,17 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 import soot.Registry;
-import soot.Soot;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.blocks.BlocksTC;
-import thaumcraft.api.crafting.CrucibleRecipe;
-import thaumcraft.api.crafting.InfusionRecipe;
-import thaumcraft.api.crafting.IngredientNBTTC;
-import thaumcraft.api.crafting.ShapedArcaneRecipe;
-import thaumcraft.api.crafting.ShapelessArcaneRecipe;
+import thaumcraft.api.crafting.*;
 import thaumcraft.api.items.ItemsTC;
 
 public class PARecipes {
@@ -199,25 +191,32 @@ public class PARecipes {
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:dimensional_singularity"), new InfusionRecipe("PA_DIMENSIONAL_SINGULARITY", new ItemStack(PAItems.dimensional_singularity), 5, new AspectList().add(Aspect.AURA, 75).add(Aspect.ENTROPY, 15).add(PAAspects.DIMENSIONS, 45).add(PAAspects.TIME, 10).add(Aspect.EXCHANGE, 25).add(Aspect.ENERGY, 200), new ItemStack(ItemsTC.salisMundus), new ItemStack(ItemsTC.mirroredGlass), new ItemStack(Items.ENDER_PEARL), new ItemStack(Blocks.OBSIDIAN), new ItemStack(Blocks.GOLDEN_RAIL), new ItemStack(ItemsTC.alumentum), new ItemStack(Blocks.REDSTONE_BLOCK), new ItemStack(ItemsTC.visResonator)));
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:mirrored_amulet"), new InfusionRecipe("PA_MIRRORED_AMULET", new ItemStack(PAItems.mirrored_amulet), 8, new AspectList().add(Aspect.AURA, 50).add(Aspect.CRYSTAL, 25).add(Aspect.ENERGY, 35).add(Aspect.TOOL, 20).add(PAAspects.DIMENSIONS, 65).add(Aspect.EXCHANGE, 64), new ItemStack(ItemsTC.baubles, 1, 4), new ItemStack(PAItems.dimensional_singularity), new ItemStack(Blocks.HOPPER), new ItemStack(BlocksTC.hungryChest), new ItemStack(BlocksTC.crystalOrder), new ItemStack(Items.NAME_TAG), new ItemStack(BlocksTC.mirror)));
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:mirrored_amulet2"), new InfusionRecipe("PA_MIRRORED_AMULET", new ItemStack(PAItems.mirrored_amulet), 8, new AspectList().add(Aspect.AURA, 50).add(Aspect.CRYSTAL, 25).add(Aspect.ENERGY, 35).add(Aspect.TOOL, 20).add(PAAspects.DIMENSIONS, 65).add(Aspect.EXCHANGE, 64), new ItemStack(ItemsTC.baubles, 1, 4), new ItemStack(PAItems.dimensional_curiosity), new ItemStack(Blocks.HOPPER), new ItemStack(BlocksTC.hungryChest), new ItemStack(BlocksTC.crystalOrder), new ItemStack(Items.NAME_TAG), new ItemStack(BlocksTC.mirror)));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:mirromirous_headband"), new InfusionRecipe("PA_MIRROMIROUS_HEADBAND", new ItemStack(PAItems.mirromirous_headband), 7, (new AspectList()).add(Aspect.MIND, 175).add(Aspect.CRYSTAL, 50).add(Aspect.TRAP, 125), new ItemStack(ItemsTC.bandCuriosity), new ItemStack(PAItems.bismuth_plate), new ItemStack(Items.ENCHANTED_BOOK), new ItemStack(PAItems.bismuth_plate), new ItemStack(Items.ENCHANTED_BOOK), new ItemStack(PAItems.bismuth_plate), new ItemStack(Items.ENCHANTED_BOOK), new ItemStack(PAItems.bismuth_plate), new ItemStack(Items.ENCHANTED_BOOK)));
 
         // Infusion Enchantments
         InfusionEnchantmentRecipeII IETransmutative = new InfusionEnchantmentRecipeII(EnumInfusionEnchantmentII.TRANSMUTATIVE, new AspectList().add(Aspect.ALCHEMY, 60).add(Aspect.FLUX, 45), new IngredientNBTTC(new ItemStack(Items.ENCHANTED_BOOK)), new ItemStack(PABlocks.alkimium_block));
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:IETransmutative"), IETransmutative);
         ItemStack recipeStack = new ItemStack(ItemsTC.thaumiumSword);
-        recipeStack.setStackDisplayName(TextFormatting.RESET + recipeStack.getDisplayName() + " +" + TextFormatting.GOLD + "Transmutative");
+        recipeStack.setStackDisplayName(TextFormatting.RESET + recipeStack.getDisplayName() + " +" + TextFormatting.GOLD + I18n.translateToLocal("enchantment.infusion.TRANSMUTATIVE"));
         ThaumcraftApi.addFakeCraftingRecipe(new ResourceLocation("planarartifice:IETransmutativeFake"), new InfusionEnchantmentRecipeII(IETransmutative, recipeStack));
 
         InfusionEnchantmentRecipeII IEAuraInfusing = new InfusionEnchantmentRecipeII(EnumInfusionEnchantmentII.AURAINFUSING, new AspectList().add(Aspect.AURA, 50).add(Aspect.ENERGY, 60), new IngredientNBTTC(new ItemStack(Items.ENCHANTED_BOOK)), new ItemStack(ItemsTC.visResonator));
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:IEAuraInfusing"), IEAuraInfusing);
         recipeStack = new ItemStack(ItemsTC.thaumiumSword);
-        recipeStack.setStackDisplayName(TextFormatting.RESET + recipeStack.getDisplayName() + " +" + TextFormatting.GOLD + "Aura Infusing");
+        recipeStack.setStackDisplayName(TextFormatting.RESET + recipeStack.getDisplayName() + " +" + TextFormatting.GOLD + I18n.translateToLocal("enchantment.infusion.AURAINFUSING"));
         ThaumcraftApi.addFakeCraftingRecipe(new ResourceLocation("planarartifice:IEAuraInfusingFake"), new InfusionEnchantmentRecipeII(IEAuraInfusing, recipeStack));
 
         InfusionEnchantmentRecipeII IEProjecting = new InfusionEnchantmentRecipeII(EnumInfusionEnchantmentII.PROJECTING, new AspectList().add(Aspect.TOOL, 15).add(Aspect.AVERSION, 15).add(Aspect.MOTION, 15), new IngredientNBTTC(new ItemStack(Items.ENCHANTED_BOOK)), new ItemStack(Items.ENDER_PEARL));
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:IEProjecting"), IEProjecting);
         recipeStack = new ItemStack(ItemsTC.thaumiumSword);
-        recipeStack.setStackDisplayName(TextFormatting.RESET + recipeStack.getDisplayName() + " +" + TextFormatting.GOLD + "Projecting");
+        recipeStack.setStackDisplayName(TextFormatting.RESET + recipeStack.getDisplayName() + " +" + TextFormatting.GOLD + I18n.translateToLocal("enchantment.infusion.PROJECTING"));
         ThaumcraftApi.addFakeCraftingRecipe(new ResourceLocation("planarartifice:IEProjectingFake"), new InfusionEnchantmentRecipeII(IEProjecting, recipeStack));
+
+        InfusionEnchantmentRecipeII IECurious = new InfusionEnchantmentRecipeII(EnumInfusionEnchantmentII.CURIOUS, new AspectList().add(Aspect.MIND, 30).add(Aspect.TOOL, 30), new IngredientNBTTC(new ItemStack(ItemsTC.curio, 1, 1)), new ItemStack(Items.EXPERIENCE_BOTTLE));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:IECurious"), IECurious);
+        recipeStack = new ItemStack(ItemsTC.thaumiumSword);
+        recipeStack.setStackDisplayName(TextFormatting.RESET + recipeStack.getDisplayName() + " +" + TextFormatting.GOLD + I18n.translateToLocal("enchantment.infusion.CURIOUS"));
+        ThaumcraftApi.addFakeCraftingRecipe(new ResourceLocation("planarartifice:IECuriousFake"), new InfusionEnchantmentRecipeII(IECurious, recipeStack));
 	}
 	
 	private static void registerPotionMixerRecipes(Register<IRecipe> e) {
@@ -253,7 +252,6 @@ public class PARecipes {
 		registerRecipe(e, new RecipeTransmutation(new ResourceLocation(MODID, "transmutation_emerald"), new ItemStack(Items.EMERALD), new ItemStack(Items.DIAMOND)));
 		registerRecipe(e, new RecipeTransmutation(new ResourceLocation(MODID, "transmutation_beetroot_seeds"), new ItemStack(Items.BEETROOT_SEEDS), new ItemStack(Items.WHEAT_SEEDS)));
 		registerRecipe(e, new RecipeTransmutation(new ResourceLocation(MODID, "transmutation_seeds"), new ItemStack(Items.WHEAT_SEEDS), new ItemStack(Items.MELON_SEEDS)));
-		
 	}
 	
 	private static void registerRecipe(Register<IRecipe> e, IRecipe recipe) {
