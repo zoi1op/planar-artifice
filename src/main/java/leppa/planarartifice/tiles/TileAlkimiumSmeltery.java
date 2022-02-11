@@ -1,8 +1,7 @@
 package leppa.planarartifice.tiles;
 
-import java.lang.reflect.Method;
-
 import leppa.planarartifice.blocks.BlockAlkimiumSmeltery;
+import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.registry.PABlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -21,6 +20,8 @@ import thaumcraft.common.lib.crafting.ThaumcraftCraftingManager;
 import thaumcraft.common.lib.utils.BlockStateUtils;
 import thaumcraft.common.tiles.essentia.TileAlembic;
 import thaumcraft.common.tiles.essentia.TileSmelter;
+
+import java.lang.reflect.Method;
 
 public class TileAlkimiumSmeltery extends TileSmelter {
 
@@ -54,13 +55,10 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 
 				for(EnumFacing face : EnumFacing.HORIZONTALS) {
 					IBlockState aux = this.world.getBlockState(this.getPos().offset(face));
-					if(aux.getBlock() != PABlocks.smelter_aux || BlockStateUtils.getFacing(aux) != face.getOpposite())
-						continue;
+					if(aux.getBlock() != PABlocks.smelter_aux || BlockStateUtils.getFacing(aux) != face.getOpposite()) continue;
 					for(Aspect aspect : this.aspects.getAspects()) {
-						if(this.aspects.getAmount(aspect) <= 0 || !processAlembics(aspect))
-							continue;
+						if (this.aspects.getAmount(aspect) <= 0 || !processAlembics(aspect)) continue;
 						this.takeFromContainer(aspect, 1);
-						continue;
 					}
 				}
 			}
@@ -180,17 +178,14 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 
 	public boolean processAlembics(Aspect a) {
 		try {
-
-			if(processAlembics == null) {
+			if (processAlembics == null) {
 				processAlembics = TileAlembic.class.getDeclaredMethod("processAlembics", World.class, BlockPos.class, Aspect.class);
 				processAlembics.setAccessible(true);
 			}
-
 			return (boolean) processAlembics.invoke(null, this.getWorld(), this.getPos(), a);
-
 		}
-
 		catch(Exception e) {
+			PlanarArtifice.LOGGER.error(e);
 			return false;
 		}
 	}

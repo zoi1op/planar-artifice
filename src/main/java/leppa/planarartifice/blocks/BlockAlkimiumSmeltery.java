@@ -1,7 +1,5 @@
 package leppa.planarartifice.blocks;
 
-import java.util.Random;
-
 import leppa.planarartifice.main.PAGuiHandler;
 import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.tiles.TileAlkimiumSmeltery;
@@ -25,10 +23,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import thaumcraft.api.aura.AuraHelper;
 import thaumcraft.common.blocks.IBlockEnabled;
 import thaumcraft.common.blocks.IBlockFacingHorizontal;
-import thaumcraft.common.blocks.essentia.BlockSmelter;
 import thaumcraft.common.lib.utils.BlockStateUtils;
 import thaumcraft.common.lib.utils.InventoryUtils;
 import thaumcraft.common.tiles.essentia.TileSmelter;
+
+import java.util.Random;
 
 public class BlockAlkimiumSmeltery extends BlockPA implements IBlockEnabled, IBlockFacingHorizontal {
 
@@ -82,7 +81,7 @@ public class BlockAlkimiumSmeltery extends BlockPA implements IBlockEnabled, IBl
 	@Override
 	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos pos2) {
 		TileEntity te = worldIn.getTileEntity(pos);
-		if(te != null && te instanceof TileSmelter) {
+		if(te instanceof TileSmelter) {
 			((TileSmelter) te).checkNeighbours();
 		}
 	}
@@ -102,8 +101,8 @@ public class BlockAlkimiumSmeltery extends BlockPA implements IBlockEnabled, IBl
 
 	public int getComparatorInputOverride(IBlockState state, World world, BlockPos pos) {
 		TileEntity te = world.getTileEntity(pos);
-		if(te != null && te instanceof IInventory) {
-			return Container.calcRedstoneFromInventory((IInventory) ((IInventory) te));
+		if(te instanceof IInventory) {
+			return Container.calcRedstoneFromInventory((IInventory) te);
 		}
 		return 0;
 	}
@@ -143,28 +142,28 @@ public class BlockAlkimiumSmeltery extends BlockPA implements IBlockEnabled, IBl
 			float f3 = 0.52f;
 			float f4 = r.nextFloat() * 0.5f - 0.25f;
 			if(BlockStateUtils.getFacing(state) == EnumFacing.WEST) {
-				w.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, (double) (f - f3), (double) f1, (double) (f2 + f4), 0.0,
-						0.0, 0.0, new int[0]);
-				w.spawnParticle(EnumParticleTypes.FLAME, (double) (f - f3), (double) f1, (double) (f2 + f4), 0.0, 0.0,
-						0.0, new int[0]);
+				w.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, (f - f3), f1, (f2 + f4), 0.0,
+						0.0, 0.0);
+				w.spawnParticle(EnumParticleTypes.FLAME, (f - f3), f1, (f2 + f4), 0.0, 0.0,
+						0.0);
 			}
 			if(BlockStateUtils.getFacing(state) == EnumFacing.EAST) {
-				w.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, (double) (f + f3), (double) f1, (double) (f2 + f4), 0.0,
-						0.0, 0.0, new int[0]);
-				w.spawnParticle(EnumParticleTypes.FLAME, (double) (f + f3), (double) f1, (double) (f2 + f4), 0.0, 0.0,
-						0.0, new int[0]);
+				w.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, (f + f3), f1, (f2 + f4), 0.0,
+						0.0, 0.0);
+				w.spawnParticle(EnumParticleTypes.FLAME, (f + f3), f1, (f2 + f4), 0.0, 0.0,
+						0.0);
 			}
 			if(BlockStateUtils.getFacing(state) == EnumFacing.NORTH) {
-				w.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, (double) (f + f4), (double) f1, (double) (f2 - f3), 0.0,
-						0.0, 0.0, new int[0]);
-				w.spawnParticle(EnumParticleTypes.FLAME, (double) (f + f4), (double) f1, (double) (f2 - f3), 0.0, 0.0,
-						0.0, new int[0]);
+				w.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, (f + f4), f1, (f2 - f3), 0.0,
+						0.0, 0.0);
+				w.spawnParticle(EnumParticleTypes.FLAME, (f + f4), f1, (f2 - f3), 0.0, 0.0,
+						0.0);
 			}
 			if(BlockStateUtils.getFacing(state) == EnumFacing.SOUTH) {
-				w.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, (double) (f + f4), (double) f1, (double) (f2 + f3), 0.0,
-						0.0, 0.0, new int[0]);
-				w.spawnParticle(EnumParticleTypes.FLAME, (double) (f + f4), (double) f1, (double) (f2 + f3), 0.0, 0.0,
-						0.0, new int[0]);
+				w.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, f + f4, f1, (f2 + f3), 0.0,
+						0.0, 0.0);
+				w.spawnParticle(EnumParticleTypes.FLAME, (f + f4), f1, (f2 + f3), 0.0, 0.0,
+						0.0);
 			}
 		}
 	}
@@ -186,15 +185,15 @@ public class BlockAlkimiumSmeltery extends BlockPA implements IBlockEnabled, IBl
 	public IBlockState getStateFromMeta(int meta) {
 		IBlockState bs = this.getDefaultState();
 		bs = bs.withProperty(IBlockFacingHorizontal.FACING, BlockStateUtils.getFacing(meta));
-		bs = bs.withProperty(IBlockEnabled.ENABLED, Boolean.valueOf(BlockStateUtils.isEnabled(meta)));
+		bs = bs.withProperty(IBlockEnabled.ENABLED, BlockStateUtils.isEnabled(meta));
 
 		return bs;
 	}
 
 	public int getMetaFromState(IBlockState state) {
-		int i = ((EnumFacing) state.getValue(IBlockFacingHorizontal.FACING)).getIndex();
+		int i = state.getValue(IBlockFacingHorizontal.FACING).getIndex();
 
-		if(!((Boolean) state.getValue(IBlockEnabled.ENABLED)).booleanValue()) {
+		if(!(Boolean) state.getValue(IBlockEnabled.ENABLED)) {
 			i |= 8;
 		}
 		return i;

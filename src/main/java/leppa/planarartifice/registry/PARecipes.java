@@ -149,10 +149,10 @@ public class PARecipes {
             metalLeveling3 = metalLeveling3.add(Aspect.FIRE, 5);
         }
         AspectList metalRevert = new AspectList().add(Aspect.EARTH, 5).add(Aspect.SOUL, 2).add(Aspect.ALCHEMY, 1).add(PAAspects.TIME, 10);
-        if (!OreDictionary.doesOreNameExist("ingotLead")) {
+        if (!doesOreExist("Lead")) {
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:iron_to_gold"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_1", new ItemStack(Items.GOLD_INGOT), new ItemStack(Items.IRON_INGOT), metalLeveling1));
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:gold_to_iron"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_1", new ItemStack(Items.IRON_INGOT), new ItemStack(Items.GOLD_INGOT), metalRevert));
-        } else if (OreDictionary.doesOreNameExist("ingotTin") && OreDictionary.doesOreNameExist("ingotCopper") && OreDictionary.doesOreNameExist("ingotSilver")) {
+        } else if (doesOreExist("Tin") && doesOreExist("Copper") && doesOreExist("Silver")) {
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:lead_to_tin"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotTin"), OreUtils.getFirst("ingotLead"), metalLeveling3));
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:tin_to_iron"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", new ItemStack(Items.IRON_INGOT), OreUtils.getFirst("ingotTin"), metalLeveling3));
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:iron_to_copper"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotCopper"), new ItemStack(Items.IRON_INGOT), metalLeveling3));
@@ -164,7 +164,7 @@ public class PARecipes {
             }
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:copper_to_silver"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotSilver"), OreUtils.getFirst("ingotCopper"), silverRecipe));
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:silver_to_gold"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", new ItemStack(Items.GOLD_INGOT), OreUtils.getFirst("ingotSilver"), goldRecipe));
-            if (OreDictionary.doesOreNameExist("ingotAntimony")) {
+            if (Loader.isModLoaded("soot")) {
                 metalRevert = new AspectList().add(Aspect.METAL, 10).add(Aspect.DESIRE, 10).add(PAAspects.TIME, 20);
                 if (BewitchmentHandler.active) metalRevert.add(ThaumcraftCompat.SUN, 5);
                 ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:gold_to_lead"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_3", OreUtils.getFirst("ingotLead"), Registry.INGOT_ANTIMONY, metalRevert));
@@ -178,34 +178,34 @@ public class PARecipes {
         }
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_iron"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", new ItemStack(Items.IRON_INGOT), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.METAL, PAConfig.balance.bismuthCrashCost)));
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_gold"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", new ItemStack(Items.GOLD_INGOT), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.DESIRE, PAConfig.balance.bismuthCrashCost)));
-        if (OreDictionary.doesOreNameExist("ingotCopper")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_copper"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotCopper"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.EXCHANGE, PAConfig.balance.bismuthCrashCost)));
-        if (OreDictionary.doesOreNameExist("ingotTin")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_tin"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotTin"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.CRYSTAL, PAConfig.balance.bismuthCrashCost)));
-        if (OreDictionary.doesOreNameExist("ingotLead")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_lead"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotLead"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.ORDER, PAConfig.balance.bismuthCrashCost)));
-        if (OreDictionary.doesOreNameExist("ingotSilver")) {
+        if (doesOreExist("Copper")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_copper"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotCopper"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.EXCHANGE, PAConfig.balance.bismuthCrashCost)));
+        if (doesOreExist("Tin")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_tin"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotTin"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.CRYSTAL, PAConfig.balance.bismuthCrashCost)));
+        if (doesOreExist("Lead")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_lead"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotLead"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.ORDER, PAConfig.balance.bismuthCrashCost)));
+        if (doesOreExist("Silver")) {
             if (BewitchmentHandler.active) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_silver"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotSilver"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(ThaumcraftCompat.MOON, PAConfig.balance.bismuthCrashCost)));
             else ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_silver"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotSilver"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.SOUL, PAConfig.balance.bismuthCrashCost)));
         }
-        if (OreDictionary.doesOreNameExist("ingotNickel")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_nickel"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotNickel"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.CRAFT, PAConfig.balance.bismuthCrashCost)));
-        if (OreDictionary.doesOreNameExist("ingotAluminium")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_aluminium"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotAluminium"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.AIR, PAConfig.balance.bismuthCrashCost)));
-        if (OreDictionary.doesOreNameExist("ingotArdite")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_ardite"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotArdite"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(PAAspects.DIMENSIONS, PAConfig.balance.bismuthCrashCost)));
-        if (OreDictionary.doesOreNameExist("ingotCobalt")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_cobalt"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotCobalt"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(PAAspects.TIME, PAConfig.balance.bismuthCrashCost)));
-        if (OreDictionary.doesOreNameExist("ingotIridium")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_iridium"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotIridium"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.MECHANISM, PAConfig.balance.bismuthCrashCost)));
-        if (OreDictionary.doesOreNameExist("ingotPlatinum")) {
+        if (doesOreExist("Nickel")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_nickel"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotNickel"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.CRAFT, PAConfig.balance.bismuthCrashCost)));
+        if (doesOreExist("Aluminium")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_aluminium"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotAluminium"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.AIR, PAConfig.balance.bismuthCrashCost)));
+        if (doesOreExist("Ardite")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_ardite"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotArdite"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(PAAspects.DIMENSIONS, PAConfig.balance.bismuthCrashCost)));
+        if (doesOreExist("Cobalt")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_cobalt"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotCobalt"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(PAAspects.TIME, PAConfig.balance.bismuthCrashCost)));
+        if (doesOreExist("Iridium")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_iridium"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotIridium"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.MECHANISM, PAConfig.balance.bismuthCrashCost)));
+        if (doesOreExist("Platinum")) {
             if (ThaumicAdditionsHandler.extraActivated) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_platinum"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotPlatinum"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(KnowledgeTAR.CAELES, PAConfig.balance.bismuthCrashCost)));
             else ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_platinum"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotPlatinum"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.MAN, PAConfig.balance.bismuthCrashCost)));
         }
-        if (OreDictionary.doesOreNameExist("ingotOsmium")) {
+        if (doesOreExist("Osmium")) {
             if (ThaumicAdditionsHandler.extraActivated) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_osmium"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotOsmium"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(KnowledgeTAR.VENTUS, PAConfig.balance.bismuthCrashCost)));
             else ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_osmium"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotOsmium"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.VOID, PAConfig.balance.bismuthCrashCost)));
         }
-        if (OreDictionary.doesOreNameExist("ingotUranium")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_uranium"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotUranium"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.DEATH, PAConfig.balance.bismuthCrashCost)));
-        if (OreDictionary.doesOreNameExist("ingotDraconium")) {
+        if (doesOreExist("Uranium")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_uranium"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotUranium"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.DEATH, PAConfig.balance.bismuthCrashCost)));
+        if (doesOreExist("Draconium")) {
             if (ThaumicAdditionsHandler.extraActivated) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_draconium"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotDraconium"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(KnowledgeTAR.DRACO, PAConfig.balance.bismuthCrashCost)));
             else ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_draconium"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotDraconium"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.ELDRITCH, PAConfig.balance.bismuthCrashCost)));
         }
-        if (OreDictionary.doesOreNameExist("ingotMithril")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_mithril"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotMithril"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.MAGIC, PAConfig.balance.bismuthCrashCost)));
-        if (OreDictionary.doesOreNameExist("ingotTitanium")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_titanium"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotTitanium"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.PROTECT, PAConfig.balance.bismuthCrashCost)));
-        if (OreDictionary.doesOreNameExist("ingotTungsten")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_tungsten"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotTungsten"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.AVERSION, PAConfig.balance.bismuthCrashCost)));
+        if (doesOreExist("Mithril")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_mithril"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotMithril"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.MAGIC, PAConfig.balance.bismuthCrashCost)));
+        if (doesOreExist("Titanium")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_titanium"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotTitanium"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.PROTECT, PAConfig.balance.bismuthCrashCost)));
+        if (doesOreExist("Tungsten")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_tungsten"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotTungsten"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.AVERSION, PAConfig.balance.bismuthCrashCost)));
         if (Loader.isModLoaded("soot")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_antimony"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", new ItemStack(Registry.INGOT_ANTIMONY), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.VOID, PAConfig.balance.bismuthCrashCost)));
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:glass_potentia"), new CrucibleRecipe("PA_GLASSWORK_REDSTONE@2", new ItemStack(PABlocks.glass_redstone), "blockGlass", new AspectList().add(Aspect.ENERGY, 10)));
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:glass_machina"), new CrucibleRecipe("PA_GLASSWORK_REDSTONE", new ItemStack(PABlocks.glass_redstone_directional), "blockGlass", new AspectList().add(Aspect.MECHANISM, 10).add(Aspect.ENERGY, 10)));
@@ -281,6 +281,8 @@ public class PARecipes {
 		registerRecipe(e, new RecipeTransmutation(new ResourceLocation(MODID, "transmutation_beetroot_seeds"), new ItemStack(Items.BEETROOT_SEEDS), new ItemStack(Items.WHEAT_SEEDS)));
 		registerRecipe(e, new RecipeTransmutation(new ResourceLocation(MODID, "transmutation_seeds"), new ItemStack(Items.WHEAT_SEEDS), new ItemStack(Items.MELON_SEEDS)));
 	}
+
+	private static boolean doesOreExist(String name) { return OreDictionary.doesOreNameExist("ingot" + name) && (OreUtils.getFirst("ingot") != ItemStack.EMPTY); }
 	
 	private static void registerRecipe(Register<IRecipe> e, IRecipe recipe) {
 		e.getRegistry().register(recipe);

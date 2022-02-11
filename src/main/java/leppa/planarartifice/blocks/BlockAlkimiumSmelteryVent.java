@@ -1,7 +1,5 @@
 package leppa.planarartifice.blocks;
 
-import java.util.List;
-
 import leppa.planarartifice.util.LocalizationHelper;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -9,7 +7,6 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -23,6 +20,7 @@ import thaumcraft.common.blocks.IBlockFacingHorizontal;
 import thaumcraft.common.lib.utils.BlockStateUtils;
 
 import javax.annotation.Nullable;
+import java.util.List;
 
 public class BlockAlkimiumSmelteryVent extends BlockPA implements IBlockFacingHorizontal {
 
