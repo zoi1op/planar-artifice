@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import thaumcraft.api.aspects.AspectRegistryEvent;
 
 @EventBusSubscriber(modid = PlanarArtifice.MODID)
 public class Registrar {
@@ -24,11 +25,13 @@ public class Registrar {
 	public static void registerItems(Register<Item> event) {
 		PABlocks.registerItemBlocks(event);
 		PAItems.registerItems(event);
+		Registrar.registerOres();
 	}
 
 	@SubscribeEvent
 	public static void registerRecipes(Register<IRecipe> event) {
 		PARecipes.registerRecipes(event);
+		PAMultiblocks.registerMultiblocks();
 	}
 
 	@SubscribeEvent
@@ -40,13 +43,31 @@ public class Registrar {
 
 	public static void registerOres() {
 		OreDictionary.registerOre("blockAlkimium", PABlocks.alkimium_block);
-		OreDictionary.registerOre("blockBismuth", PABlocks.bismuth_block);
 		OreDictionary.registerOre("ingotAlkimium", PAItems.alkimium_ingot);
 		OreDictionary.registerOre("plateAlkimium", PAItems.alkimium_plate);
 		OreDictionary.registerOre("nuggetAlkimium", PAItems.alkimium_nugget);
+
+		OreDictionary.registerOre("blockBismuth", PABlocks.bismuth_block);
 		OreDictionary.registerOre("ingotBismuth", PAItems.bismuth_ingot);
 		OreDictionary.registerOre("plateBismuth", PAItems.bismuth_plate);
 		OreDictionary.registerOre("nuggetBismuth", PAItems.bismuth_nugget);
+
+		PABlocks.glass.oredict();
+		PABlocks.glass_clear.oredict();
+		PABlocks.glass_scratched.oredict();
+		PABlocks.glass_crystal.oredict();
+		PABlocks.glass_bright.oredict();
+		PABlocks.glass_dim.oredict();
+		PABlocks.glass_dark.oredict();
+		PABlocks.glass_ghostly.oredict();
+		PABlocks.glass_ethereal.oredict();
+		PABlocks.glass_foreboding.oredict();
+		PABlocks.glass_strong.oredict();
+		OreDictionary.registerOre("blockGlass", PABlocks.glass_redstone);
 	}
 
+	@SubscribeEvent
+	public static void registerAspects(AspectRegistryEvent event) {
+		PAAspects.registerItemAspects();
+	}
 }

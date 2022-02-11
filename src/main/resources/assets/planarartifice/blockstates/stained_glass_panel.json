@@ -1,0 +1,107 @@
+
+    {
+        "forge_marker": 1,
+        "defaults": {
+            "model": "planarartifice:panel_ctm_translucent"
+        },
+        "variants": {
+            "color=white": [{
+                "textures": {
+                    "all": "blocks/glass_white",
+                    "particle": "blocks/glass_white",
+                    "connected_tex": "blocks/glass_white_ctm"
+                }
+            }],"color=orange": [{
+                "textures": {
+                    "all": "blocks/glass_orange",
+                    "particle": "blocks/glass_orange",
+                    "connected_tex": "blocks/glass_orange_ctm"
+                }
+            }],"color=magenta": [{
+                "textures": {
+                    "all": "blocks/glass_magenta",
+                    "particle": "blocks/glass_magenta",
+                    "connected_tex": "blocks/glass_magenta_ctm"
+                }
+            }],"color=light_blue": [{
+                "textures": {
+                    "all": "blocks/glass_light_blue",
+                    "particle": "blocks/glass_light_blue",
+                    "connected_tex": "blocks/glass_light_blue_ctm"
+                }
+            }],"color=yellow": [{
+                "textures": {
+                    "all": "blocks/glass_yellow",
+                    "particle": "blocks/glass_yellow",
+                    "connected_tex": "blocks/glass_yellow_ctm"
+                }
+            }],"color=lime": [{
+                "textures": {
+                    "all": "blocks/glass_lime",
+                    "particle": "blocks/glass_lime",
+                    "connected_tex": "blocks/glass_lime_ctm"
+                }
+            }],"color=pink": [{
+                "textures": {
+                    "all": "blocks/glass_pink",
+                    "particle": "blocks/glass_pink",
+                    "connected_tex": "blocks/glass_pink_ctm"
+                }
+            }],"color=gray": [{
+                "textures": {
+                    "all": "blocks/glass_gray",
+                    "particle": "blocks/glass_gray",
+                    "connected_tex": "blocks/glass_gray_ctm"
+                }
+            }],"color=silver": [{
+                "textures": {
+                    "all": "blocks/glass_silver",
+                    "particle": "blocks/glass_silver",
+                    "connected_tex": "blocks/glass_silver_ctm"
+                }
+            }],"color=cyan": [{
+                "textures": {
+                    "all": "blocks/glass_cyan",
+                    "particle": "blocks/glass_cyan",
+                    "connected_tex": "blocks/glass_cyan_ctm"
+                }
+            }],"color=purple": [{
+                "textures": {
+                    "all": "blocks/glass_purple",
+                    "particle": "blocks/glass_purple",
+                    "connected_tex": "blocks/glass_purple_ctm"
+                }
+            }],"color=blue": [{
+                "textures": {
+                    "all": "blocks/glass_blue",
+                    "particle": "blocks/glass_blue",
+                    "connected_tex": "blocks/glass_blue_ctm"
+                }
+            }],"color=brown": [{
+                "textures": {
+                    "all": "blocks/glass_brown",
+                    "particle": "blocks/glass_brown",
+                    "connected_tex": "blocks/glass_brown_ctm"
+                }
+            }],"color=green": [{
+                "textures": {
+                    "all": "blocks/glass_green",
+                    "particle": "blocks/glass_green",
+                    "connected_tex": "blocks/glass_green_ctm"
+                }
+            }],"color=red": [{
+                "textures": {
+                    "all": "blocks/glass_red",
+                    "particle": "blocks/glass_red",
+                    "connected_tex": "blocks/glass_red_ctm"
+                }
+            }],"color=black": [{
+                "textures": {
+                    "all": "blocks/glass_black",
+                    "particle": "blocks/glass_black",
+                    "connected_tex": "blocks/glass_black_ctm"
+                }
+            }]
+        }
+    }
+    

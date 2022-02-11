@@ -56,9 +56,6 @@ public class CommonProxy {
 
 	public void postInit(FMLPostInitializationEvent e){
 		PACompatHandler.postInit(e);
-		Registrar.registerOres();
-		PAAspects.registerItemAspects();
-		PAMultiblocks.registerMultiblocks();
 	}
 
 	public EntityPlayer getPlayerEntityFromContext(MessageContext ctx) {

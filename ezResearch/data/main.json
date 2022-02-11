@@ -272,5 +272,98 @@
         "parents": ["PA_ALKIMIUM_GOGGLES", "PA_ALKIMIUM_DISTILLATION"],
         "location": [5, -1],
         "stages": [{"knowledges": ["THEORY;GOLEMANCY;1"]}, {}]
+    },{
+        "key": "GLASSWORK",
+        "icons": ["minecraft:glass"],
+        "parents": ["!vitreus"],
+        "location": [1, 4],
+        "stages": [
+            {"recipes": ["minecraft:glass_pane"], "knowledges": ["OBSERVATION;PLANARARTIFICE;1"]},
+            {"recipes": ["glass_cutter", "glass_pane2"]}
+        ]
+    },{
+        "key": "GLASSWORK_COSMETIC",
+        "icons": ["planarartifice:glass_clear"],
+        "parents": ["PA_GLASSWORK", "~BASEARTIFICE", "~ESSENTIASMELTER"],
+        "location": [2, 1],
+        "stages": [
+            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'ignis'}]}", "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'tempus'}]}"]},
+            {"recipes": ["glass_ignis", "glass_tempus"], "items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'vitreus'}]}"]},
+            {"recipes": ["glass_spatio"], "items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'aqua'}]}"]},
+            {"recipes": ["glass_aqua"]}
+        ]
+    },{
+        "key": "GLASSWORK_RAINBOW",
+        "icons": ["planarartifice:glass_rainbow"],
+        "parents": ["PA_GLASSWORK_COSMETIC", "~PA_BISMUTH"],
+        "location": [4, 1],
+        "stages": [
+            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'tinctura'}]}"], "crafts": ["planarartifice:bismuth_ingot"]},
+            {"recipes": ["glass_bismuth"]}
+        ]
+    },{
+        "key": "GLASSWORK_STRONG",
+        "icons": ["planarartifice:glass_strong"],
+        "parents": ["PA_GLASSWORK", "~BASEARTIFICE", "~ESSENTIASMELTER"],
+        "location": [3, 2],
+        "stages": [
+            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'praemunio'}]}", "minecraft:obsidian"]},
+            {"recipes": ["glass_praemunio"]}
+        ]
+    },{
+        "key": "GLASSWORK_DIM",
+        "icons": ["planarartifice:glass_dim"],
+        "parents": ["PA_GLASSWORK", "~BASEARTIFICE", "~ESSENTIASMELTER"],
+        "location": [4, 3],
+        "stages": [
+            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'perditio'}]}"]},
+            {"recipes": ["glass_perditio"]}
+        ]
+    },{
+        "key": "GLASSWORK_DARK",
+        "icons": ["planarartifice:glass_dark"],
+        "parents": ["PA_GLASSWORK_DIM"],
+        "location": [6, 3],
+        "stages": [
+            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'tenebrae'}]}", "minecraft:coal_block"]},
+            {"recipes": ["glass_tenebrae"]}
+        ]
+    },{
+        "key": "GLASSWORK_BRIGHT",
+        "icons": ["planarartifice:glass_bright"],
+        "parents": ["PA_GLASSWORK_DIM"],
+        "location": [5, 4],
+        "stages": [
+            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'lux'}]}", "minecraft:glowstone"]},
+            {"recipes": ["glass_lux"]}
+        ]
+    },{
+        "key": "GLASSWORK_REDSTONE",
+        "icons": ["planarartifice:glass_redstone"],
+        "parents": ["PA_GLASSWORK", "~BASEARTIFICE", "~ESSENTIASMELTER"],
+        "location": [4, 5],
+        "stages": [
+            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'potentia'}]}", "thaumcraft:inlay"]},
+            {"recipes": ["glass_potentia"], "items": ["thaumcraft:mechanism_simple", "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'machina'}]}"]},
+            {"recipes": ["glass_machina"]}
+        ]
+    },{
+        "key": "GLASSWORK_GHOST",
+        "icons": ["planarartifice:glass_ghostly"],
+        "parents": ["PA_GLASSWORK", "~BASEARTIFICE", "~ESSENTIASMELTER"],
+        "location": [3, 6],
+        "stages": [
+            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'spiritus'}]}", "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'aversio'}]}", "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'vinculum'}]}","minecraft:soul_sand"]},
+            {"recipes": ["glass_spiritus", "glass_vinculum", "glass_aversio"]}
+        ]
+    },{
+        "key": "GLASSWORK_CUTTER",
+        "icons": ["planarartifice:vis_glass_cutter"],
+        "parents": ["PA_GLASSWORK", "~RECHARGEPEDESTAL", "~INFUSION"],
+        "location": [2, 7],
+        "stages": [
+            {"crafts": ["planarartifice:glass_cutter"], "items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'auram'}]}"]},
+            {"recipes": ["vis_glass_cutter"]}
+        ]
     }]
 }

@@ -1,0 +1,38 @@
+       
+        {
+            "forge_marker": 1,
+            "defaults": {
+                "transform": "forge:default-item",
+                "textures": {
+                    "edge"   : "blocks/glass_pane_top",
+                    "pane"   : "planarartifice:blocks/glass/glass_ghostly",
+                    "particle": "planarartifice:blocks/glass/glass_ghostly",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ghostly_ctm"
+                }
+            },
+            "variants": {
+                "inventory": [{ "model": "planarartifice:pane/ctm_ew" }],
+                "east=false,north=false,south=false,west=false": [{ "model": "planarartifice:pane/post" }],
+
+                "east=false,north=true,south=false,west=false" : [{ "model": "planarartifice:pane/ctm_n" }],
+                "east=true,north=false,south=false,west=false" : [{ "model": "planarartifice:pane/ctm_e" }],
+                "east=false,north=false,south=true,west=false" : [{ "model": "planarartifice:pane/ctm_s" }],
+                "east=false,north=false,south=false,west=true" : [{ "model": "planarartifice:pane/ctm_w" }],
+
+                "east=true,north=true,south=false,west=false"  : [{ "model": "planarartifice:pane/ctm_ne" }],
+                "east=true,north=false,south=true,west=false"  : [{ "model": "planarartifice:pane/ctm_se" }],
+                "east=false,north=false,south=true,west=true"  : [{ "model": "planarartifice:pane/ctm_sw" }],
+                "east=false,north=true,south=false,west=true"  : [{ "model": "planarartifice:pane/ctm_nw" }],
+
+                "east=false,north=true,south=true,west=false"  : [{ "model": "planarartifice:pane/ctm_ns" }],
+                "east=true,north=false,south=false,west=true"  : [{ "model": "planarartifice:pane/ctm_ew" }],
+
+                "east=true,north=true,south=true,west=false"   : [{ "model": "planarartifice:pane/ctm_nse" }],
+                "east=true,north=false,south=true,west=true"   : [{ "model": "planarartifice:pane/ctm_sew" }],
+                "east=false,north=true,south=true,west=true"   : [{ "model": "planarartifice:pane/ctm_nsw" }],
+                "east=true,north=true,south=false,west=true"   : [{ "model": "planarartifice:pane/ctm_new" }],
+
+                "east=true,north=true,south=true,west=true"    : [{ "model": "planarartifice:pane/ctm_nsew" }]
+            }
+        }
+        

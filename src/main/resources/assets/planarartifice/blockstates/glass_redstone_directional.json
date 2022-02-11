@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "inventory": { "model": "planarartifice:glass_redstone_directional" },
+        "facing=down":  { "model": "planarartifice:glass_redstone_directional", "x": 90 },
+        "facing=up":    { "model": "planarartifice:glass_redstone_directional", "x": 270 },
+        "facing=north": { "model": "planarartifice:glass_redstone_directional" },
+        "facing=south": { "model": "planarartifice:glass_redstone_directional", "y": 180 },
+        "facing=west":  { "model": "planarartifice:glass_redstone_directional", "y": 270 },
+        "facing=east":  { "model": "planarartifice:glass_redstone_directional", "y": 90 }
+    }
+}

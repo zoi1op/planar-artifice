@@ -44,12 +44,21 @@ import thaumcraft.common.items.casters.ItemCaster;
 
 @SuppressWarnings("unchecked")
 @EventBusSubscriber
-@Mod(modid = PlanarArtifice.MODID, version = PlanarArtifice.VERSION, name = PlanarArtifice.NAME, dependencies = PlanarArtifice.DEPS)
+@Mod(modid = PlanarArtifice.MODID, name = PlanarArtifice.NAME, dependencies = PlanarArtifice.DEPS)
 public class PlanarArtifice implements LoadingCallback {
 	public static final String MODID = "planarartifice";
 	public static final String NAME = "Planar Artifice";
-	public static final String VERSION = "1.1.0";
-	public static final String DEPS = "required-after:thaumcraft;after:tconstruct;after:thaumicadds;after:bewitchment;after:jei@[4.12.0.0,);after:soot";
+	public static final String DEPS =
+			"required-after:thaumcraft;" +
+					"after:jei@[4.12.0.0,);" +
+					"after:thaumicaugmentation;" +
+					"after:thaumicadds;" +
+					"after:bewitchment;" +
+					"after:soot;" +
+					"after:magicbees;" +
+					"after:tconstruct;" +
+					"after:ctm;" +
+					"after:xercapaint";
 	public static final PlanarTab creativetab = new PlanarTab();
 
 	public static boolean isSingleplayer;
