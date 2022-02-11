@@ -129,6 +129,51 @@ planarartifice.research.infusion_enchantment_2.complete.text=
 planarartifice.research.matstudy_alkimium.title=
 planarartifice.research.matstudy_alkimium.stage.1.text=
 planarartifice.research.matstudy_alkimium.complete.text=
+# Glasswork
+planarartifice.research.glasswork.title=
+planarartifice.research.glasswork.stage.1.text=
+planarartifice.research.glasswork.complete.text=
+# Glasswork Cosmetic
+planarartifice.research.glasswork_cosmetic.title=
+planarartifice.research.glasswork_cosmetic.stage.1.text=
+planarartifice.research.glasswork_cosmetic.stage.2.text=
+planarartifice.research.glasswork_cosmetic.stage.3.text=
+planarartifice.research.glasswork_cosmetic.complete.text=
+# Glasswork Rainbow
+planarartifice.research.glasswork_rainbow.title=
+planarartifice.research.glasswork_rainbow.stage.1.text=
+planarartifice.research.glasswork_rainbow.complete.text=
+# Glasswork Strong
+planarartifice.research.glasswork_strong.title=
+planarartifice.research.glasswork_strong.stage.1.text=
+planarartifice.research.glasswork_strong.complete.text=
+# Glasswork Dim
+planarartifice.research.glasswork_dim.title=
+planarartifice.research.glasswork_dim.stage.1.text=
+planarartifice.research.glasswork_dim.complete.text=
+# Glasswork Dark
+planarartifice.research.glasswork_dark.title=
+planarartifice.research.glasswork_dark.stage.1.text=
+planarartifice.research.glasswork_dark.complete.text=
+# Glasswork Bright
+planarartifice.research.glasswork_bright.title=
+planarartifice.research.glasswork_bright.stage.1.text=
+planarartifice.research.glasswork_bright.complete.text=
+# Glasswork Redstone
+planarartifice.research.glasswork_redstone.title=
+planarartifice.research.glasswork_redstone.stage.1.text=
+planarartifice.research.glasswork_redstone.stage.2.text=
+planarartifice.research.glasswork_redstone.complete.text=
+# Glasswork Ghost
+planarartifice.research.glasswork_ghost.title=
+planarartifice.research.glasswork_ghost.stage.1.text=
+planarartifice.research.glasswork_ghost.stage.2.text=
+planarartifice.research.glasswork_ghost.stage.3.text=
+planarartifice.research.glasswork_ghost.complete.text=
+# Glasswork Cutter
+planarartifice.research.glasswork_cutter.title=
+planarartifice.research.glasswork_cutter.stage.1.text=
+planarartifice.research.glasswork_cutter.complete.text=
 # Bush Alchemy Metal 1
 planarartifice.research.bush_alchemy_metal_1.title=
 planarartifice.research.bush_alchemy_metal_1.stage.1.text=

@@ -112,6 +112,7 @@ public class PAAspects {
 		setOreDict(prefix + ore, list);
 	}
 
+
 	public static void registerItemAspects() {
 		add(new ItemStack(Items.CLOCK), new AspectList().add(PAAspects.TIME, 10));
 		add(new ItemStack(Items.ENDER_PEARL), new AspectList().add(PAAspects.DIMENSIONS, 10).add(PAAspects.TIME, 5));

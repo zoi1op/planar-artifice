@@ -984,6 +984,382 @@
           "text": "planarartifice.research.matstudy_alkimium.complete.text"
         }
       ]
+    },
+    {
+      "key": "PA_GLASSWORK",
+      "name": "planarartifice.research.glasswork.title",
+      "category": "PLANARARTIFICE",
+      "icons": [
+        "minecraft:glass"
+      ],
+      "parents": [
+        "!vitreus"
+      ],
+      "location": [
+        1,
+        4
+      ],
+      "stages": [
+        {
+          "text": "planarartifice.research.glasswork.stage.1.text",
+          "required_knowledge": [
+            "OBSERVATION;PLANARARTIFICE;1"
+          ],
+          "recipes": [
+            "planarartifice:minecraft:glass_pane"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork.complete.text",
+          "recipes": [
+            "planarartifice:minecraft:glass_pane",
+            "planarartifice:glass_cutter",
+            "planarartifice:glass_pane2"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PA_GLASSWORK_COSMETIC",
+      "name": "planarartifice.research.glasswork_cosmetic.title",
+      "category": "PLANARARTIFICE",
+      "icons": [
+        "planarartifice:glass_clear"
+      ],
+      "parents": [
+        "PA_GLASSWORK",
+        "~BASEARTIFICE",
+        "~ESSENTIASMELTER"
+      ],
+      "location": [
+        2,
+        1
+      ],
+      "stages": [
+        {
+          "text": "planarartifice.research.glasswork_cosmetic.stage.1.text",
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'ignis'}]}",
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'tempus'}]}"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork_cosmetic.stage.2.text",
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'vitreus'}]}"
+          ],
+          "recipes": [
+            "planarartifice:glass_ignis",
+            "planarartifice:glass_tempus"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork_cosmetic.stage.3.text",
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'aqua'}]}"
+          ],
+          "recipes": [
+            "planarartifice:glass_ignis",
+            "planarartifice:glass_tempus",
+            "planarartifice:glass_spatio"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork_cosmetic.complete.text",
+          "recipes": [
+            "planarartifice:glass_ignis",
+            "planarartifice:glass_tempus",
+            "planarartifice:glass_spatio",
+            "planarartifice:glass_aqua"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PA_GLASSWORK_RAINBOW",
+      "name": "planarartifice.research.glasswork_rainbow.title",
+      "category": "PLANARARTIFICE",
+      "icons": [
+        "planarartifice:glass_rainbow"
+      ],
+      "parents": [
+        "PA_GLASSWORK_COSMETIC",
+        "~PA_BISMUTH"
+      ],
+      "location": [
+        4,
+        1
+      ],
+      "stages": [
+        {
+          "text": "planarartifice.research.glasswork_rainbow.stage.1.text",
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'tinctura'}]}"
+          ],
+          "required_craft": [
+            "planarartifice:bismuth_ingot"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork_rainbow.complete.text",
+          "recipes": [
+            "planarartifice:glass_bismuth"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PA_GLASSWORK_STRONG",
+      "name": "planarartifice.research.glasswork_strong.title",
+      "category": "PLANARARTIFICE",
+      "icons": [
+        "planarartifice:glass_strong"
+      ],
+      "parents": [
+        "PA_GLASSWORK",
+        "~BASEARTIFICE",
+        "~ESSENTIASMELTER"
+      ],
+      "location": [
+        3,
+        2
+      ],
+      "stages": [
+        {
+          "text": "planarartifice.research.glasswork_strong.stage.1.text",
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'praemunio'}]}",
+            "minecraft:obsidian"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork_strong.complete.text",
+          "recipes": [
+            "planarartifice:glass_praemunio"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PA_GLASSWORK_DIM",
+      "name": "planarartifice.research.glasswork_dim.title",
+      "category": "PLANARARTIFICE",
+      "icons": [
+        "planarartifice:glass_dim"
+      ],
+      "parents": [
+        "PA_GLASSWORK",
+        "~BASEARTIFICE",
+        "~ESSENTIASMELTER"
+      ],
+      "location": [
+        4,
+        3
+      ],
+      "stages": [
+        {
+          "text": "planarartifice.research.glasswork_dim.stage.1.text",
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'perditio'}]}"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork_dim.complete.text",
+          "recipes": [
+            "planarartifice:glass_perditio"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PA_GLASSWORK_DARK",
+      "name": "planarartifice.research.glasswork_dark.title",
+      "category": "PLANARARTIFICE",
+      "icons": [
+        "planarartifice:glass_dark"
+      ],
+      "parents": [
+        "PA_GLASSWORK_DIM"
+      ],
+      "location": [
+        6,
+        3
+      ],
+      "stages": [
+        {
+          "text": "planarartifice.research.glasswork_dark.stage.1.text",
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'tenebrae'}]}",
+            "minecraft:coal_block"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork_dark.complete.text",
+          "recipes": [
+            "planarartifice:glass_tenebrae"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PA_GLASSWORK_BRIGHT",
+      "name": "planarartifice.research.glasswork_bright.title",
+      "category": "PLANARARTIFICE",
+      "icons": [
+        "planarartifice:glass_bright"
+      ],
+      "parents": [
+        "PA_GLASSWORK_DIM"
+      ],
+      "location": [
+        5,
+        4
+      ],
+      "stages": [
+        {
+          "text": "planarartifice.research.glasswork_bright.stage.1.text",
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'lux'}]}",
+            "minecraft:glowstone"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork_bright.complete.text",
+          "recipes": [
+            "planarartifice:glass_lux"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PA_GLASSWORK_REDSTONE",
+      "name": "planarartifice.research.glasswork_redstone.title",
+      "category": "PLANARARTIFICE",
+      "icons": [
+        "planarartifice:glass_redstone"
+      ],
+      "parents": [
+        "PA_GLASSWORK",
+        "~BASEARTIFICE",
+        "~ESSENTIASMELTER"
+      ],
+      "location": [
+        4,
+        5
+      ],
+      "stages": [
+        {
+          "text": "planarartifice.research.glasswork_redstone.stage.1.text",
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'potentia'}]}",
+            "thaumcraft:inlay"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork_redstone.stage.2.text",
+          "required_item": [
+            "thaumcraft:mechanism_simple",
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'machina'}]}"
+          ],
+          "recipes": [
+            "planarartifice:glass_potentia"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork_redstone.complete.text",
+          "recipes": [
+            "planarartifice:glass_potentia",
+            "planarartifice:glass_machina"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PA_GLASSWORK_GHOST",
+      "name": "planarartifice.research.glasswork_ghost.title",
+      "category": "PLANARARTIFICE",
+      "icons": [
+        "planarartifice:glass_ghostly"
+      ],
+      "parents": [
+        "PA_GLASSWORK",
+        "~BASEARTIFICE",
+        "~ESSENTIASMELTER"
+      ],
+      "location": [
+        3,
+        6
+      ],
+      "stages": [
+        {
+          "text": "planarartifice.research.glasswork_ghost.stage.1.text",
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'spiritus'}]}",
+            "minecraft:soul_sand"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork_ghost.stage.2.text",
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'vinculum'}]}"
+          ],
+          "recipes": [
+            "planarartifice:glass_spiritus"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork_ghost.stage.3.text",
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'aversio'}]}"
+          ],
+          "recipes": [
+            "planarartifice:glass_spiritus",
+            "planarartifice:glass_vinculum"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork_ghost.complete.text",
+          "recipes": [
+            "planarartifice:glass_spiritus",
+            "planarartifice:glass_vinculum",
+            "planarartifice:glass_aversio"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PA_GLASSWORK_CUTTER",
+      "name": "planarartifice.research.glasswork_cutter.title",
+      "category": "PLANARARTIFICE",
+      "icons": [
+        "planarartifice:vis_glass_cutter"
+      ],
+      "parents": [
+        "PA_GLASSWORK",
+        "~RECHARGEPEDESTAL",
+        "~INFUSION"
+      ],
+      "location": [
+        2,
+        7
+      ],
+      "stages": [
+        {
+          "text": "planarartifice.research.glasswork_cutter.stage.1.text",
+          "required_item": [
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'auram'}]}"
+          ],
+          "required_craft": [
+            "planarartifice:glass_cutter"
+          ]
+        },
+        {
+          "text": "planarartifice.research.glasswork_cutter.complete.text",
+          "recipes": [
+            "planarartifice:vis_glass_cutter"
+          ]
+        }
+      ]
     }
   ]
 }

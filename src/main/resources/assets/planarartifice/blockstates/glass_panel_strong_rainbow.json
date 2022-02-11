@@ -1,0 +1,17 @@
+
+        {
+            "forge_marker": 1,
+            "defaults": {
+                "model": "planarartifice:panel_ctm_translucent",
+                "textures": {
+                    "all": "planarartifice:blocks/glass/glass_strong_rainbow",
+                    "particle": "planarartifice:blocks/glass/glass_strong_rainbow",
+                    "connected_tex": "planarartifice:blocks/glass/glass_strong_rainbow_ctm"
+                }
+            },
+            "variants": {
+                "normal": [{}],
+                "inventory": [{}]
+            }
+        }
+        

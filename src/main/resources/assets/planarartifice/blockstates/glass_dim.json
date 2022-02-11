@@ -1,0 +1,17 @@
+
+        {
+            "forge_marker": 1,
+            "defaults": {
+                "model": "planarartifice:cube_ctm_cutout",
+                "textures": {
+                    "all": "planarartifice:blocks/glass/glass_dim",
+                    "particle": "planarartifice:blocks/glass/glass_dim",
+                    "connected_tex": "planarartifice:blocks/glass/glass_dim_ctm"
+                }
+            },
+            "variants": {
+                "normal": [{}],
+                "inventory": [{}]
+            }
+        }
+        

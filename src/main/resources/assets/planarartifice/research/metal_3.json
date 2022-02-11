@@ -47,12 +47,12 @@
         "planarartifice:bismuth_ingot"
       ],
       "parents": [
-        "PA_BUSH_ALCHEMY_METAL",
+        "PA_BUSH_ALCHEMY_METAL_3",
         "~PA_BISMUTH"
       ],
       "location": [
         1,
-        -8
+        -9
       ],
       "stages": [
         {

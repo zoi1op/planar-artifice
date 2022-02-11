@@ -35,8 +35,6 @@ public class ItemMirroredHeadband extends ItemPA implements IBauble, IRenderBaub
         this.maxStackSize = 1;
         this.canRepair = false;
         this.setMaxDamage(0);
-
-        PAItems.ITEMS.add(this);
     }
 
     @Override

@@ -1,0 +1,107 @@
+
+        {
+            "forge_marker": 1,
+            "defaults": {
+                "model": "planarartifice:cube_ctm_translucent"
+            },
+            "variants": {
+                "color=white": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_white",
+                        "particle": "planarartifice:blocks/glass/glass_strong_white",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_white_ctm"
+                    }
+                }],"color=orange": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_orange",
+                        "particle": "planarartifice:blocks/glass/glass_strong_orange",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_orange_ctm"
+                    }
+                }],"color=magenta": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_magenta",
+                        "particle": "planarartifice:blocks/glass/glass_strong_magenta",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_magenta_ctm"
+                    }
+                }],"color=light_blue": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_light_blue",
+                        "particle": "planarartifice:blocks/glass/glass_strong_light_blue",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_light_blue_ctm"
+                    }
+                }],"color=yellow": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_yellow",
+                        "particle": "planarartifice:blocks/glass/glass_strong_yellow",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_yellow_ctm"
+                    }
+                }],"color=lime": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_lime",
+                        "particle": "planarartifice:blocks/glass/glass_strong_lime",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_lime_ctm"
+                    }
+                }],"color=pink": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_pink",
+                        "particle": "planarartifice:blocks/glass/glass_strong_pink",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_pink_ctm"
+                    }
+                }],"color=gray": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_gray",
+                        "particle": "planarartifice:blocks/glass/glass_strong_gray",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_gray_ctm"
+                    }
+                }],"color=silver": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_silver",
+                        "particle": "planarartifice:blocks/glass/glass_strong_silver",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_silver_ctm"
+                    }
+                }],"color=cyan": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_cyan",
+                        "particle": "planarartifice:blocks/glass/glass_strong_cyan",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_cyan_ctm"
+                    }
+                }],"color=purple": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_purple",
+                        "particle": "planarartifice:blocks/glass/glass_strong_purple",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_purple_ctm"
+                    }
+                }],"color=blue": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_blue",
+                        "particle": "planarartifice:blocks/glass/glass_strong_blue",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_blue_ctm"
+                    }
+                }],"color=brown": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_brown",
+                        "particle": "planarartifice:blocks/glass/glass_strong_brown",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_brown_ctm"
+                    }
+                }],"color=green": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_green",
+                        "particle": "planarartifice:blocks/glass/glass_strong_green",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_green_ctm"
+                    }
+                }],"color=red": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_red",
+                        "particle": "planarartifice:blocks/glass/glass_strong_red",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_red_ctm"
+                    }
+                }],"color=black": [{
+                    "textures": {
+                        "all": "planarartifice:blocks/glass/glass_strong_black",
+                        "particle": "planarartifice:blocks/glass/glass_strong_black",
+                        "connected_tex": "planarartifice:blocks/glass/glass_strong_black_ctm"
+                    }
+                }]
+            }
+        }
+        

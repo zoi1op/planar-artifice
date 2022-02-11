@@ -34,6 +34,8 @@ val versionForestry: String by project
 val versionMagicBees: String by project
 val versionMantle: String by project
 val versionTConstruct: String by project
+val versionCTM: String by project
+val versionXercaPaint: String by project
 
 version = versionThis
 group = "leppa.planarartifice"
@@ -102,9 +104,11 @@ dependencies {
     implementation(group = "curse.maven", name = "embers-rekindled-300777", version = versionEmbers)
     implementation(group = "curse.maven", name = "soot-281528", version = versionSoot)
     implementation(group = "curse.maven", name = "forestry-59751", version = versionForestry)
-    implementation(group = "curse.maven", name = "magicbees-65764", version = versionMagicBees)
+    implementation(group = "curse.maven", name = "magic-bees-65764", version = versionMagicBees)
     implementation(fg.deobf(group = "slimeknights.mantle", name = "Mantle", version = "${versionMcMajor}-${versionMantle}"))
     implementation(fg.deobf(group = "slimeknights", name = "TConstruct", version = "${versionMc}-${versionTConstruct}"))
+    implementation(group = "curse.maven", name = "ctm-267602", version = versionCTM)
+    implementation(group = "curse.maven", name = "joy-of-painting-350727", version = versionXercaPaint)
 }
 
 tasks {

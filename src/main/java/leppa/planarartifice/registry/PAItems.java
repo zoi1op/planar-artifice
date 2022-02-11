@@ -1,7 +1,5 @@
 package leppa.planarartifice.registry;
 
-import java.util.ArrayList;
-
 import leppa.planarartifice.items.*;
 import leppa.planarartifice.items.baubles.ItemAuraMeter;
 import leppa.planarartifice.items.baubles.ItemBeltOfSuspension;
@@ -16,7 +14,8 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
-import thaumcraft.api.research.ResearchEvent;
+
+import java.util.ArrayList;
 
 public class PAItems{
 	
@@ -55,6 +54,8 @@ public class PAItems{
 	public static Item mirromirous_headband = new ItemMirroredHeadband("mirromirous_headband");
 	public static Item bismuth_caster = new ItemBismuthCaster("bismuth_caster").setCreativeTab(PlanarArtifice.creativetab);
 	public static Item bismuth_claymore = new ItemBismuthSword("bismuth_claymore", toolMatBismuth);
+	public static Item glass_cutter = new ItemGlassCutter("glass_cutter");
+	public static Item vis_glass_cutter = new ItemVisGlassCutter("vis_glass_cutter");
 
 	public static Item alchemical_universe = new ItemPA("alchemical_universe").setCreativeTab(null);
 
@@ -63,7 +64,7 @@ public class PAItems{
 	}
 	
 	public static void registerModels(){
-		ITEMS.forEach(i -> registerRender(i));
+		ITEMS.forEach(PAItems::registerRender);
 	}
 	
 	public static void registerRender(Item item){

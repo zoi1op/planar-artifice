@@ -1,0 +1,1515 @@
+       
+        {
+            "forge_marker": 1,
+            "defaults": {
+                "transform": "forge:default-item"
+            },
+            "variants": {
+                "color=white,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=white,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=white,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=white,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=white,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=white,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=white,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=white,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=white,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=white,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=white,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=white,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=white,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=white,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=white,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=white,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_white",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_white",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_white",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_white_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=orange,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=orange,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=orange,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=orange,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=orange,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=orange,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=orange,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=orange,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=orange,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=orange,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=orange,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=orange,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=orange,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=orange,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=orange,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=orange,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_orange",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_orange",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_orange_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=magenta,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=magenta,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=magenta,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=magenta,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=magenta,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=magenta,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=magenta,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=magenta,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=magenta,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=magenta,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=magenta,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=magenta,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=magenta,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=magenta,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=magenta,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=magenta,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_magenta",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_magenta",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_magenta_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=light_blue,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=light_blue,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=light_blue,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=light_blue,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=light_blue,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=light_blue,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=light_blue,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=light_blue,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=light_blue,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=light_blue,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=light_blue,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=light_blue,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=light_blue,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=light_blue,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=light_blue,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=light_blue,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_light_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_light_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_light_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=yellow,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=yellow,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=yellow,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=yellow,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=yellow,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=yellow,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=yellow,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=yellow,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=yellow,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=yellow,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=yellow,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=yellow,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=yellow,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=yellow,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=yellow,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=yellow,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_yellow",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_yellow",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_yellow_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=lime,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=lime,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=lime,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=lime,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=lime,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=lime,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=lime,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=lime,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=lime,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=lime,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=lime,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=lime,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=lime,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=lime,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=lime,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=lime,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_lime",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_lime",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_lime_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=pink,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=pink,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=pink,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=pink,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=pink,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=pink,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=pink,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=pink,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=pink,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=pink,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=pink,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=pink,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=pink,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=pink,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=pink,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=pink,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_pink",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_pink",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_pink_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=gray,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=gray,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=gray,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=gray,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=gray,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=gray,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=gray,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=gray,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=gray,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=gray,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=gray,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=gray,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=gray,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=gray,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=gray,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=gray,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_gray",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_gray",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_gray_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=silver,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=silver,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=silver,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=silver,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=silver,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=silver,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=silver,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=silver,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=silver,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=silver,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=silver,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=silver,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=silver,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=silver,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=silver,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=silver,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_silver",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_silver",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_silver_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=cyan,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=cyan,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=cyan,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=cyan,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=cyan,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=cyan,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=cyan,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=cyan,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=cyan,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=cyan,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=cyan,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=cyan,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=cyan,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=cyan,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=cyan,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=cyan,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_cyan",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_cyan",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_cyan_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=purple,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=purple,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=purple,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=purple,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=purple,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=purple,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=purple,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=purple,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=purple,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=purple,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=purple,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=purple,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=purple,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=purple,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=purple,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=purple,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_purple",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_purple",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_purple_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=blue,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=blue,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=blue,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=blue,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=blue,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=blue,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=blue,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=blue,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=blue,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=blue,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=blue,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=blue,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=blue,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=blue,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=blue,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=blue,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_blue",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_blue",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_blue_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=brown,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=brown,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=brown,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=brown,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=brown,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=brown,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=brown,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=brown,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=brown,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=brown,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=brown,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=brown,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=brown,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=brown,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=brown,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=brown,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_brown",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_brown",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_brown_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=green,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=green,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=green,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=green,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=green,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=green,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=green,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=green,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=green,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=green,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=green,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=green,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=green,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=green,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=green,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=green,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_green",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_green",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_green",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_green_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=red,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=red,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=red,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=red,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=red,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=red,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=red,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=red,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=red,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=red,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=red,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=red,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=red,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=red,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=red,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=red,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_red",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_red",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_red",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_red_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }],"color=black,east=false,north=false,south=false,west=false": [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/post_translucent" }],
+                "color=black,east=false,north=true,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_n_translucent" }],
+                "color=black,east=true,north=false,south=false,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_e_translucent" }],
+                "color=black,east=false,north=false,south=true,west=false" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_s_translucent" }],
+                "color=black,east=false,north=false,south=false,west=true" : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_w_translucent" }],
+                "color=black,east=true,north=true,south=false,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_ne_translucent" }],
+                "color=black,east=true,north=false,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_se_translucent" }],
+                "color=black,east=false,north=false,south=true,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_sw_translucent" }],
+                "color=black,east=false,north=true,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_nw_translucent" }],"color=black,east=false,north=true,south=true,west=false"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_ns_translucent" }],
+                "color=black,east=true,north=false,south=false,west=true"  : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_ew_translucent" }],
+                "color=black,east=true,north=true,south=true,west=false"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_nse_translucent" }],
+                "color=black,east=true,north=false,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_sew_translucent" }],
+                "color=black,east=false,north=true,south=true,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_nsw_translucent" }],
+                "color=black,east=true,north=true,south=false,west=true"   : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_new_translucent" }],
+                "color=black,east=true,north=true,south=true,west=true"    : [{ "textures": {
+                    "edge"   : "blocks/glass_pane_top_black",
+                    "pane"   : "planarartifice:blocks/glass/glass_ethereal_black",
+                    "particle": "planarartifice:blocks/glass/glass_ethereal_black",
+                    "pane_ct": "planarartifice:blocks/glass/glass_ethereal_black_ctm"
+                }, "model": "planarartifice:pane/ctm_nsew_translucent" }]
+            }
+        }
+        

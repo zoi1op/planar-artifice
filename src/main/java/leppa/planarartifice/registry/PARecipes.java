@@ -1,11 +1,5 @@
 package leppa.planarartifice.registry;
 
-import static thaumcraft.api.ThaumcraftApiHelper.makeCrystal;
-import static leppa.planarartifice.main.PlanarArtifice.MODID;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import com.bewitchment.common.integration.thaumcraft.ThaumcraftCompat;
 import com.zeitheron.thaumicadditions.init.KnowledgeTAR;
 import leppa.planarartifice.compat.bewitchment.BewitchmentHandler;
@@ -38,6 +32,12 @@ import thaumcraft.api.blocks.BlocksTC;
 import thaumcraft.api.crafting.*;
 import thaumcraft.api.items.ItemsTC;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static leppa.planarartifice.main.PlanarArtifice.MODID;
+import static thaumcraft.api.ThaumcraftApiHelper.makeCrystal;
+
 public class PARecipes {
 	
     static ResourceLocation defaultGroup = new ResourceLocation("");
@@ -69,6 +69,30 @@ public class PARecipes {
         ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("planarartifice:bismuth_caster"), new ShapedArcaneRecipe(defaultGroup, "PA_BISMUTH_CASTERS_GAUNTLET", 175, new AspectList().add(Aspect.ORDER, 1).add(Aspect.AIR, 1).add(Aspect.FIRE, 1).add(Aspect.WATER, 1).add(Aspect.EARTH, 1).add(Aspect.ENTROPY, 1), new ItemStack(PAItems.bismuth_caster), " VO", "MGB", "BB ", 'B', new ItemStack(PAItems.bismuth_plate), 'V', new ItemStack(PAItems.flux_venting_circuit), 'M', new ItemStack(ItemsTC.mirroredGlass), 'O', new ItemStack(ItemsTC.visResonator), 'G', new ItemStack(ItemsTC.casterBasic)));
         ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("planarartifice:aura_meter"), new ShapedArcaneRecipe(defaultGroup, "PA_BISMUTH", 25, new AspectList().add(Aspect.ORDER, 1).add(Aspect.AIR, 1).add(Aspect.FIRE, 1).add(Aspect.WATER, 1).add(Aspect.EARTH, 1).add(Aspect.ENTROPY, 1), new ItemStack(PAItems.aura_meter), "A", "B", "C", 'A', Blocks.GLASS_PANE, 'B', makeCrystal(Aspect.AIR), 'C', PAItems.bismuth_plate));
         ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("planarartifice:bismuth_claymore"), new ShapedArcaneRecipe(defaultGroup, "PA_BISMUTH", 0, new AspectList().add(Aspect.FIRE, 1), new ItemStack(PAItems.bismuth_claymore), " B ", "BSB", " S ", 'B', PAItems.bismuth_ingot, 'S', Items.STICK));
+        PABlocks.glass.recipe();
+        PABlocks.glass_clear.recipe();
+        PABlocks.glass_scratched.recipe();
+        PABlocks.glass_crystal.recipe();
+        PABlocks.glass_bright.recipe();
+        PABlocks.glass_dim.recipe();
+        PABlocks.glass_dark.recipe();
+        PABlocks.glass_ghostly.recipe();
+        PABlocks.glass_ethereal.recipe();
+        PABlocks.glass_foreboding.recipe();
+        PABlocks.glass_strong.recipe();
+        PABlocks.glass.craft(Aspect.ORDER, "PA_GLASSWORK_COSMETIC");
+        PABlocks.glass_clear.craft(Aspect.FIRE, "PA_GLASSWORK_COSMETIC@2");
+        PABlocks.glass_scratched.craft(PAAspects.TIME, "PA_GLASSWORK_COSMETIC@2");
+        PABlocks.glass_crystal.craft(PAAspects.DIMENSIONS, "PA_GLASSWORK_COSMETIC@3");
+        PABlocks.glass_bright.craft(Aspect.LIGHT, "PA_GLASSWORK_BRIGHT");
+        PABlocks.glass_dim.craft(Aspect.ENTROPY, "PA_GLASSWORK_DIM");
+        PABlocks.glass_dark.craft(Aspect.DARKNESS, "PA_GLASSWORK_DARK");
+        PABlocks.glass_ghostly.craft(Aspect.SOUL, "PA_GLASSWORK_GHOST@2");
+        PABlocks.glass_ethereal.craft(Aspect.TRAP, "PA_GLASSWORK_GHOST@3");
+        PABlocks.glass_foreboding.craft(Aspect.AVERSION, "PA_GLASSWORK_GHOST");
+        PABlocks.glass_strong.craft(Aspect.PROTECT, "PA_GLASSWORK_STRONG");
+        ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("planarartifice:glass_cutter"), new ShapedArcaneRecipe(defaultGroup, "PA_GLASSWORK", 25, new AspectList().add(Aspect.ORDER, 1), new ItemStack(PAItems.glass_cutter), "  B", " S ", "S  ", 'B', "nuggetQuartz", 'S', Items.STICK));
+        ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("planarartifice:glass_cutter2"), new ShapedArcaneRecipe(defaultGroup, "PA_GLASSWORK", 25, new AspectList().add(Aspect.ORDER, 1), new ItemStack(PAItems.glass_cutter), "B  ", " S ", "  S", 'B', "nuggetQuartz", 'S', Items.STICK));
 	}
 	
 	private static void registerCrucibleRecipes(Register<IRecipe> e) {
@@ -183,6 +207,8 @@ public class PARecipes {
         if (OreDictionary.doesOreNameExist("ingotTitanium")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_titanium"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotTitanium"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.PROTECT, PAConfig.balance.bismuthCrashCost)));
         if (OreDictionary.doesOreNameExist("ingotTungsten")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_tungsten"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotTungsten"), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.AVERSION, PAConfig.balance.bismuthCrashCost)));
         if (Loader.isModLoaded("soot")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_antimony"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", new ItemStack(Registry.INGOT_ANTIMONY), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.VOID, PAConfig.balance.bismuthCrashCost)));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:glass_potentia"), new CrucibleRecipe("PA_GLASSWORK_REDSTONE@2", new ItemStack(PABlocks.glass_redstone), "blockGlass", new AspectList().add(Aspect.ENERGY, 10)));
+        ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:glass_machina"), new CrucibleRecipe("PA_GLASSWORK_REDSTONE", new ItemStack(PABlocks.glass_redstone_directional), "blockGlass", new AspectList().add(Aspect.MECHANISM, 10).add(Aspect.ENERGY, 10)));
 	}
 	
 	private static void registerInfusionRecipes(Register<IRecipe> e) {
@@ -217,6 +243,8 @@ public class PARecipes {
         recipeStack = new ItemStack(ItemsTC.thaumiumSword);
         recipeStack.setStackDisplayName(TextFormatting.RESET + recipeStack.getDisplayName() + " +" + TextFormatting.GOLD + I18n.translateToLocal("enchantment.infusion.CURIOUS"));
         ThaumcraftApi.addFakeCraftingRecipe(new ResourceLocation("planarartifice:IECuriousFake"), new InfusionEnchantmentRecipeII(IECurious, recipeStack));
+
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:vis_glass_cutter"), new InfusionRecipe("PA_GLASSWORK_CUTTER", new ItemStack(PAItems.vis_glass_cutter), 2, (new AspectList()).add(Aspect.AURA, 25).add(Aspect.CRYSTAL, 25), new ItemStack(PAItems.glass_cutter), new ItemStack(ItemsTC.amber), new ItemStack(PAItems.bismuth_nugget), new ItemStack(ItemsTC.amber), new ItemStack(PAItems.bismuth_nugget)));
 	}
 	
 	private static void registerPotionMixerRecipes(Register<IRecipe> e) {
