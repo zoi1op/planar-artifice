@@ -78,8 +78,17 @@ public class PABlocks {
 
 		@Override
 		public int getWeakPower(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) { return 15; }
+
+		@SideOnly(Side.CLIENT)
+		public BlockRenderLayer getBlockLayer() { return BlockRenderLayer.TRANSLUCENT; }
 	};
-	public static final Block glass_redstone_directional = new BlockGlassRedstoneDirectionalPA("glass_redstone_directional");
+	public static final Block glass_redstone_directional = new BlockGlassRedstoneDirectionalPA("glass_redstone_directional") {
+		@SideOnly(Side.CLIENT)
+		public BlockRenderLayer getBlockLayer()
+		{
+			return BlockRenderLayer.TRANSLUCENT;
+		}
+	};
 
 	public static void registerBlocks(RegistryEvent.Register<Block> event)
 	{
