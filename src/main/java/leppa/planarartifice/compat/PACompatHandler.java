@@ -4,6 +4,7 @@ package leppa.planarartifice.compat;
 import leppa.planarartifice.compat.bewitchment.BewitchmentHandler;
 import leppa.planarartifice.compat.tconstruct.TConstructHandler;
 import leppa.planarartifice.compat.thaumicadditions.ThaumicAdditionsHandler;
+import leppa.planarartifice.compat.xercapaint.XercaPaintHandler;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -24,6 +25,7 @@ public class PACompatHandler {
 		CLASSES.put("thaumadditions", ThaumicAdditionsHandler.class);
 		// jei
 		CLASSES.put("bewitchment", BewitchmentHandler.class);
+		CLASSES.put("xercapaint", XercaPaintHandler.class);
 	}
 
 	public static void setup() {

@@ -1,12 +1,5 @@
 package leppa.planarartifice.main;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
 import leppa.planarartifice.util.ReflectionUtils;
 import net.minecraft.item.EnumRarity;
@@ -24,6 +17,7 @@ import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -36,11 +30,17 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ServerTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import thaumcraft.api.casters.FocusEffect;
 import thaumcraft.api.casters.FocusEngine;
 import thaumcraft.api.casters.IFocusElement;
 import thaumcraft.api.golems.EnumGolemTrait;
 import thaumcraft.common.items.casters.ItemCaster;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 @SuppressWarnings("unchecked")
 @EventBusSubscriber
@@ -83,6 +83,18 @@ public class PlanarArtifice implements LoadingCallback {
 
 	static {
 		p = (HashMap<String, Integer>) ReflectionUtils.getPrivateObject("elementColor", new FocusEngine());
+	}
+
+	// stole from magical psi -p
+	public PlanarArtifice() {
+		super();
+		if (!Loader.isModLoaded("xercapaint") || FMLCommonHandler.instance().getSide().isServer()) return;
+		String classname = "leppa.planarartifice.compat.xercapaint.XercaResources";
+		System.out.println(classname);
+		try {
+			Class<?> clazz = Class.forName(classname);
+			clazz.getMethod("init").invoke(null);
+		} catch (Throwable e) { System.out.println("XercaPaint resource error: " + e); }
 	}
 
 	@EventHandler

@@ -26,8 +26,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.oredict.OreDictionary;
-import slimeknights.tconstruct.TConstruct;
-import slimeknights.tconstruct.shared.TinkerCommons;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.ThaumcraftApiHelper;
 import thaumcraft.api.aspects.Aspect;
@@ -96,15 +94,6 @@ public class PABlocks {
 
 	public static void registerBlocks(RegistryEvent.Register<Block> event)
 	{
-		if (Loader.isModLoaded("tconstruct")) {
-			if (TConstruct.pulseManager.isPulseLoaded("TinkerCommons")) {
-				glass_clear.BLOCK = TinkerCommons.blockClearGlass;
-				glass_clear.BLOCK_STAINED = TinkerCommons.blockClearStainedGlass;
-			} else {
-				glass_clear.BLOCK = new BlockGlassPA("glass_clear");
-				glass_clear.BLOCK_STAINED = new BlockGlassStainedPA("stained_glass_clear");
-			}
-		}
 		BLOCKS.forEach(b -> event.getRegistry().register(b));
 		METABLOCKS.forEach(b -> event.getRegistry().register(b));
 	}
@@ -147,18 +136,18 @@ public class PABlocks {
 		public Glasses(String name, boolean passEntity, boolean passPlayer, boolean passHostile, BlockFunction fn) {
 			this.name = name;
 			PlanarArtifice.LOGGER.info("Registering glass type " + name);
-			if (Objects.equals(name, "_crystal"))
+			if (Objects.equals(name, "_crystal")) {
 				BLOCK = fn.run(new BlockGlassPA("glass" + name, passEntity, passPlayer, passHostile) {
 					@SideOnly(Side.CLIENT)
-					public BlockRenderLayer getBlockLayer()
-					{
+					public BlockRenderLayer getBlockLayer() {
 						return BlockRenderLayer.TRANSLUCENT;
 					}
 				});
-			else if (!Objects.equals(name, "_clear") || !Loader.isModLoaded("tconstruct"))
-				BLOCK = fn.run(new BlockGlassPA("glass" + name, passEntity, passPlayer, passHostile));
-			if (!Objects.equals(name, "_clear") || !Loader.isModLoaded("tconstruct"))
 				BLOCK_STAINED = fn.run(new BlockGlassStainedPA("stained_glass" + name, passEntity, passPlayer, passHostile));
+			} else if (!Objects.equals(name, "_clear") || !Loader.isModLoaded("tconstruct")) {
+				BLOCK = fn.run(new BlockGlassPA("glass" + name, passEntity, passPlayer, passHostile));
+				BLOCK_STAINED = fn.run(new BlockGlassStainedPA("stained_glass" + name, passEntity, passPlayer, passHostile));
+			}
 			BLOCK_RAINBOW = fn.run(new BlockGlassPA("glass" + name + "_rainbow", passEntity, passPlayer, passHostile) {
 				@SideOnly(Side.CLIENT)
 				public BlockRenderLayer getBlockLayer() { return BlockRenderLayer.TRANSLUCENT; }
