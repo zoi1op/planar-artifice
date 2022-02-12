@@ -20,7 +20,7 @@ public class TileStarvingChest extends TileHungryChest {
         this.upgrades = upgrades;
     }
 
-    // stole from openblocks -p
+    // partially stole from openblocks -p
     @Override
     public void update() {
         super.update();
@@ -30,12 +30,12 @@ public class TileStarvingChest extends TileHungryChest {
             double y = (0.5 + pos.getY()) - e.posY;
             double z = (0.5 + pos.getZ()) - e.posZ;
             double dist = Math.sqrt(x * x + y * y + z * z);
-            if (dist > 1.1) {
-                double q = dist * (dist - 1) * (dist - 1);
-                e.motionX += x / (q * 11.2);
-                e.motionY += y / (q * 45);
-                e.motionZ += z / (q * 11.2);
-            }
+            if ((e.motionX * x) < 0) e.motionX = 0;
+            if ((e.motionY * y) < 0) e.motionY = 0;
+            if ((e.motionZ * z) < 0) e.motionZ = 0;
+            e.motionX += 0.05 * x / dist;
+            e.motionY += 0.05 * y / dist;
+            e.motionZ += 0.05 * z / dist;
         }
     }
 

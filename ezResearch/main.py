@@ -32,6 +32,8 @@ def recipefy(n):
     if hasExclamation(n):
         n = n[1:]
     if CONFIG_AUTO_ATTACH_MODID_IN_RECIPES:
+        if (":" in n):
+            return n
         return modid + ":" + n
     else:
         return n

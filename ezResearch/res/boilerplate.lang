@@ -17,6 +17,10 @@ planarartifice.research.alkimium_mithminite_smeltery.title=
 planarartifice.research.alkimium_mithminite_smeltery.stage.1.text=
 planarartifice.research.alkimium_mithminite_smeltery.stage.2.text=
 planarartifice.research.alkimium_mithminite_smeltery.complete.text=
+# Xercapaint
+planarartifice.research.xercapaint.title=
+planarartifice.research.xercapaint.stage.1.text=
+planarartifice.research.xercapaint.complete.text=
 # Rare Items
 planarartifice.research.rare_items.title=
 planarartifice.research.rare_items.stage.1.text=

@@ -1,16 +1,18 @@
 package leppa.planarartifice.registry;
 
+import leppa.planarartifice.compat.tconstruct.TConstructHandler;
 import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent.Register;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.aspects.AspectRegistryEvent;
 
 @EventBusSubscriber(modid = PlanarArtifice.MODID)
@@ -18,6 +20,8 @@ public class Registrar {
 
 	@SubscribeEvent
 	public static void registerBlocks(Register<Block> event) {
+		PlanarArtifice.LOGGER.info("[LOADER] " + Loader.isModLoaded("tconstruct"));
+		if (Loader.isModLoaded("tconstruct")) TConstructHandler.registerBlocks(event);
 		PABlocks.registerBlocks(event);
 	}
 

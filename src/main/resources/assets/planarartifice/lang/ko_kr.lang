@@ -791,52 +791,56 @@ planarartifice.research.matstudy_alkimium.title=재료 연구: 알키미움
 planarartifice.research.matstudy_alkimium.stage.1.text=황동은 가볍고 우아한 강철로 골렘의 재료로 적합했습니다. 그렇다면 알키미움은 작은 기계 도우미들에게 어떤 능력을 부여할까요?
 planarartifice.research.matstudy_alkimium.complete.text=연구 결과, 알키미움으로 만들어진 골렘은 원래보다 더욱 빨리 움직였습니다. 다만 그 움직임이 약간 이상합니다.
 ## Glasswork
-#planarartifice.research.glasswork.title=유리 공예
+planarartifice.research.glasswork.title=유리 공예
 #planarartifice.research.glasswork.stage.1.text=
 #planarartifice.research.glasswork.complete.text=
 ## Glasswork: Cosmetic
-#planarartifice.research.glasswork_cosmetic.title=
+planarartifice.research.glasswork_cosmetic.title=유리 공예: 겉치레
 #planarartifice.research.glasswork_cosmetic.stage.1.text=
 #planarartifice.research.glasswork_cosmetic.stage.2.text=
 #planarartifice.research.glasswork_cosmetic.stage.3.text=
 #planarartifice.research.glasswork_cosmetic.complete.text=
 ## Glasswork: Rainbow
-#planarartifice.research.glasswork_rainbow.title=
+planarartifice.research.glasswork_rainbow.title=유리 공예: 무지개 유리
 #planarartifice.research.glasswork_rainbow.stage.1.text=
 #planarartifice.research.glasswork_rainbow.complete.text=
 ## Glasswork: Strong
-#planarartifice.research.glasswork_strong.title=
+planarartifice.research.glasswork_strong.title=유리 공예: 강화 유리
 #planarartifice.research.glasswork_strong.stage.1.text=
 #planarartifice.research.glasswork_strong.complete.text=
 ## Glasswork: Dim
-#planarartifice.research.glasswork_dim.title=
+planarartifice.research.glasswork_dim.title=유리 공예: 여명의 유리
 #planarartifice.research.glasswork_dim.stage.1.text=
 #planarartifice.research.glasswork_dim.complete.text=
 ## Glasswork: Dark
-#planarartifice.research.glasswork_dark.title=
+planarartifice.research.glasswork_dark.title=유리 공예: 칠흑의 유리
 #planarartifice.research.glasswork_dark.stage.1.text=
 #planarartifice.research.glasswork_dark.complete.text=
 ## Glasswork: Bright
-#planarartifice.research.glasswork_bright.title=
+planarartifice.research.glasswork_bright.title=유리 공예: 조명 유리
 #planarartifice.research.glasswork_bright.stage.1.text=
 #planarartifice.research.glasswork_bright.complete.text=
 ## Glasswork: Redstone
-#planarartifice.research.glasswork_redstone.title=
+planarartifice.research.glasswork_redstone.title=유리 공예: 레드스톤 유리
 #planarartifice.research.glasswork_redstone.stage.1.text=
 #planarartifice.research.glasswork_redstone.stage.2.text=
 #planarartifice.research.glasswork_redstone.complete.text=
 ## Glasswork: Ghost
-#planarartifice.research.glasswork_ghost.title=
+planarartifice.research.glasswork_ghost.title=유리 공예: 유령 유리
 #planarartifice.research.glasswork_ghost.stage.1.text=
 #planarartifice.research.glasswork_ghost.complete.text=
 ## Glasswork: Cutter
-#planarartifice.research.glasswork_cutter.title=
+planarartifice.research.glasswork_cutter.title=유리 공예: 유리 절단기
 #planarartifice.research.glasswork_cutter.stage.1.text=
 #planarartifice.research.glasswork_cutter.complete.text=
 # Starving Chest
-#planarartifice.research.starving_chest.title=Starving Chest
+planarartifice.research.starving_chest.title=굶주린 상자
 #planarartifice.research.starving_chest.stage.1.text=The Hungry Chest has been doing me well with various automation needed to gather resources. However, losses were made due to it simply missing the items. Perhaps studying the elements would aid me in improving this conundrum...
 #planarartifice.research.starving_chest.complete.text=Hunger consumes all. I've created a stronger version of the chest using the recently discovered elements capable of warping the dimensions, creating a vortex around the chest and amplifying its sucktion... The more I repeat the process, the larger its radius seems to become. However, It only was capable of sustaining a total of 4 iterations before the chest became too unstable and imploded upon itself. Perhaps I'll be able to find a better alternative in the future...
+# XercaPaint integration
+planarartifice.research.xercapaint.title=마법의 팔레트
+#planarartifice.research.xercapaint.stage.1.text=Paintings are interesting things. I don't recall drawing these pictures at all, yet these drawings just appear upon hanging on a wall. I wonder if thaumaturgy is related with it all...
+#planarartifice.research.xercapaint.complete.text=Well, this research went sideways. I haven't figured out the secrets of paintings of this world fully, but I've managed to create a way of imitating one. By holding the palette in one hand, and canvas in another, I can draw whatever I want and hang it like a painting. This is much more easily erased and written over than the mundane drawings. I can drag dyes and water into various circles to mix them as well.
 # --- End of Research --- #
 planarartifice.alkimium=알키미움 업그레이드
 

@@ -25,6 +25,9 @@ public class PAConfig {
         @Config.LangKey(key + "aspectcompat")
         @Config.Name("Disable Modded Aspect in Random Crystal Crafting")
         public boolean disableAspectCompat = false;
+        @Config.LangKey(key + "xercapaintcompat")
+        @Config.Name("Disable Joy of Painting Compat")
+        public boolean disableXercaPaintCompat = false;
     }
 
     public static class Overhauls {

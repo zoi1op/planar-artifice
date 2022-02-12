@@ -4,6 +4,7 @@ import com.bewitchment.common.integration.thaumcraft.ThaumcraftCompat;
 import com.zeitheron.thaumicadditions.init.KnowledgeTAR;
 import leppa.planarartifice.compat.bewitchment.BewitchmentHandler;
 import leppa.planarartifice.compat.thaumicadditions.ThaumicAdditionsHandler;
+import leppa.planarartifice.compat.xercapaint.XercaPaintHandler;
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
 import leppa.planarartifice.enchantment.InfusionEnchantmentRecipeII;
 import leppa.planarartifice.main.PAConfig;
@@ -209,6 +210,7 @@ public class PARecipes {
         if (Loader.isModLoaded("soot")) ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:bismuth_to_antimony"), new CrucibleRecipe("PA_BUSH_ALCHEMY_METAL_BISMUTH", new ItemStack(Registry.INGOT_ANTIMONY), new ItemStack(PAItems.bismuth_ingot), new AspectList().add(Aspect.VOID, PAConfig.balance.bismuthCrashCost)));
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:glass_potentia"), new CrucibleRecipe("PA_GLASSWORK_REDSTONE@2", new ItemStack(PABlocks.glass_redstone), "blockGlass", new AspectList().add(Aspect.ENERGY, 10)));
         ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:glass_machina"), new CrucibleRecipe("PA_GLASSWORK_REDSTONE", new ItemStack(PABlocks.glass_redstone_directional), "blockGlass", new AspectList().add(Aspect.MECHANISM, 10).add(Aspect.ENERGY, 10)));
+        if (Loader.isModLoaded("xercapaint") && !PAConfig.compat.disableXercaPaintCompat) XercaPaintHandler.registerRecipes(e);
 	}
 	
 	private static void registerInfusionRecipes(Register<IRecipe> e) {

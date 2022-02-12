@@ -837,6 +837,10 @@ planarartifice.research.glasswork_cutter.complete.text=By simply imbuing itself 
 planarartifice.research.starving_chest.title=Starving Chest
 planarartifice.research.starving_chest.stage.1.text=The Hungry Chest has been doing me well with various automation needed to gather resources. However, losses were made due to it simply missing the items. Perhaps studying the elements would aid me in improving this conundrum...
 planarartifice.research.starving_chest.complete.text=Hunger consumes all. I've created a stronger version of the chest using the recently discovered elements capable of warping the dimensions, creating a vortex around the chest and amplifying its sucktion... The more I repeat the process, the larger its radius seems to become. However, It only was capable of sustaining a total of 4 iterations before the chest became too unstable and imploded upon itself. Perhaps I'll be able to find a better alternative in the future...
+# XercaPaint integration
+planarartifice.research.xercapaint.title=Arcane Palette
+planarartifice.research.xercapaint.stage.1.text=Paintings are interesting things. I don't recall drawing these pictures at all, yet these drawings just appear upon hanging on a wall. I wonder if thaumaturgy is related with it all...
+planarartifice.research.xercapaint.complete.text=Well, this research went sideways. I haven't figured out the secrets of paintings of this world fully, but I've managed to create a way of imitating one. By holding the palette in one hand, and canvas in another, I can draw whatever I want and hang it like a painting. This is much more easily erased and written over than the mundane drawings. I can drag dyes and water into various circles to mix them as well.
 # --- End of Research --- #
 planarartifice.alkimium=Alkimium Compatible
 

@@ -1006,13 +1006,13 @@
             "OBSERVATION;PLANARARTIFICE;1"
           ],
           "recipes": [
-            "planarartifice:minecraft:glass_pane"
+            "minecraft:glass_pane"
           ]
         },
         {
           "text": "planarartifice.research.glasswork.complete.text",
           "recipes": [
-            "planarartifice:minecraft:glass_pane",
+            "minecraft:glass_pane",
             "planarartifice:glass_cutter",
             "planarartifice:glass_pane2"
           ]
@@ -1039,14 +1039,14 @@
         {
           "text": "planarartifice.research.glasswork_cosmetic.stage.1.text",
           "required_item": [
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'ignis'}]}",
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'tempus'}]}"
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"ignis\"}]}",
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"tempus\"}]}"
           ]
         },
         {
           "text": "planarartifice.research.glasswork_cosmetic.stage.2.text",
           "required_item": [
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'vitreus'}]}"
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"vitreus\"}]}"
           ],
           "recipes": [
             "planarartifice:glass_ignis",
@@ -1056,7 +1056,7 @@
         {
           "text": "planarartifice.research.glasswork_cosmetic.stage.3.text",
           "required_item": [
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'aqua'}]}"
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"aqua\"}]}"
           ],
           "recipes": [
             "planarartifice:glass_ignis",
@@ -1094,7 +1094,7 @@
         {
           "text": "planarartifice.research.glasswork_rainbow.stage.1.text",
           "required_item": [
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'tinctura'}]}"
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"tinctura\"}]}"
           ],
           "required_craft": [
             "planarartifice:bismuth_ingot"
@@ -1128,7 +1128,7 @@
         {
           "text": "planarartifice.research.glasswork_strong.stage.1.text",
           "required_item": [
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'praemunio'}]}",
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"praemunio\"}]}",
             "minecraft:obsidian"
           ]
         },
@@ -1160,7 +1160,7 @@
         {
           "text": "planarartifice.research.glasswork_dim.stage.1.text",
           "required_item": [
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'perditio'}]}"
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"perditio\"}]}"
           ]
         },
         {
@@ -1189,7 +1189,7 @@
         {
           "text": "planarartifice.research.glasswork_dark.stage.1.text",
           "required_item": [
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'tenebrae'}]}",
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"tenebrae\"}]}",
             "minecraft:coal_block"
           ]
         },
@@ -1219,7 +1219,7 @@
         {
           "text": "planarartifice.research.glasswork_bright.stage.1.text",
           "required_item": [
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'lux'}]}",
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"lux\"}]}",
             "minecraft:glowstone"
           ]
         },
@@ -1251,7 +1251,7 @@
         {
           "text": "planarartifice.research.glasswork_redstone.stage.1.text",
           "required_item": [
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'potentia'}]}",
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"potentia\"}]}",
             "thaumcraft:inlay"
           ]
         },
@@ -1259,7 +1259,7 @@
           "text": "planarartifice.research.glasswork_redstone.stage.2.text",
           "required_item": [
             "thaumcraft:mechanism_simple",
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'machina'}]}"
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"machina\"}]}"
           ],
           "recipes": [
             "planarartifice:glass_potentia"
@@ -1294,9 +1294,9 @@
         {
           "text": "planarartifice.research.glasswork_ghost.stage.1.text",
           "required_item": [
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'spiritus'}]}",
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'aversio'}]}",
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'vinculum'}]}",
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"spiritus\"}]}",
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"aversio\"}]}",
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"vinculum\"}]}",
             "minecraft:soul_sand"
           ]
         },
@@ -1330,7 +1330,7 @@
         {
           "text": "planarartifice.research.glasswork_cutter.stage.1.text",
           "required_item": [
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'auram'}]}"
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:\"auram\"}]}"
           ],
           "required_craft": [
             "planarartifice:glass_cutter"

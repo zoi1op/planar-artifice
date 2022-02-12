@@ -287,9 +287,9 @@
         "parents": ["PA_GLASSWORK", "~BASEARTIFICE", "~ESSENTIASMELTER"],
         "location": [2, 1],
         "stages": [
-            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'ignis'}]}", "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'tempus'}]}"]},
-            {"recipes": ["glass_ignis", "glass_tempus"], "items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'vitreus'}]}"]},
-            {"recipes": ["glass_spatio"], "items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'aqua'}]}"]},
+            {"items": ["phial:ignis", "phial:tempus"]},
+            {"recipes": ["glass_ignis", "glass_tempus"], "items": ["phial:vitreus"]},
+            {"recipes": ["glass_spatio"], "items": ["phial:aqua"]},
             {"recipes": ["glass_aqua"]}
         ]
     },{
@@ -298,7 +298,7 @@
         "parents": ["PA_GLASSWORK_COSMETIC", "~PA_BISMUTH"],
         "location": [4, 1],
         "stages": [
-            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'tinctura'}]}"], "crafts": ["planarartifice:bismuth_ingot"]},
+            {"items": ["phial:tinctura"], "crafts": ["planarartifice:bismuth_ingot"]},
             {"recipes": ["glass_bismuth"]}
         ]
     },{
@@ -307,7 +307,7 @@
         "parents": ["PA_GLASSWORK", "~BASEARTIFICE", "~ESSENTIASMELTER"],
         "location": [3, 2],
         "stages": [
-            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'praemunio'}]}", "minecraft:obsidian"]},
+            {"items": ["phial:praemunio", "minecraft:obsidian"]},
             {"recipes": ["glass_praemunio"]}
         ]
     },{
@@ -316,7 +316,7 @@
         "parents": ["PA_GLASSWORK", "~BASEARTIFICE", "~ESSENTIASMELTER"],
         "location": [4, 3],
         "stages": [
-            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'perditio'}]}"]},
+            {"items": ["phial:perditio"]},
             {"recipes": ["glass_perditio"]}
         ]
     },{
@@ -325,7 +325,7 @@
         "parents": ["PA_GLASSWORK_DIM"],
         "location": [6, 3],
         "stages": [
-            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'tenebrae'}]}", "minecraft:coal_block"]},
+            {"items": ["phial:tenebrae", "minecraft:coal_block"]},
             {"recipes": ["glass_tenebrae"]}
         ]
     },{
@@ -334,7 +334,7 @@
         "parents": ["PA_GLASSWORK_DIM"],
         "location": [5, 4],
         "stages": [
-            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'lux'}]}", "minecraft:glowstone"]},
+            {"items": ["phial:lux", "minecraft:glowstone"]},
             {"recipes": ["glass_lux"]}
         ]
     },{
@@ -343,8 +343,8 @@
         "parents": ["PA_GLASSWORK", "~BASEARTIFICE", "~ESSENTIASMELTER"],
         "location": [4, 5],
         "stages": [
-            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'potentia'}]}", "thaumcraft:inlay"]},
-            {"recipes": ["glass_potentia"], "items": ["thaumcraft:mechanism_simple", "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'machina'}]}"]},
+            {"items": ["phial:potentia", "thaumcraft:inlay"]},
+            {"recipes": ["glass_potentia"], "items": ["thaumcraft:mechanism_simple", "phial:machina"]},
             {"recipes": ["glass_machina"]}
         ]
     },{
@@ -353,7 +353,7 @@
         "parents": ["PA_GLASSWORK", "~BASEARTIFICE", "~ESSENTIASMELTER"],
         "location": [3, 6],
         "stages": [
-            {"items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'spiritus'}]}", "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'aversio'}]}", "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'vinculum'}]}","minecraft:soul_sand"]},
+            {"items": ["phial:spiritus", "phial:aversio", "phial:vinculum","minecraft:soul_sand"]},
             {"recipes": ["glass_spiritus", "glass_vinculum", "glass_aversio"]}
         ]
     },{
@@ -362,7 +362,7 @@
         "parents": ["PA_GLASSWORK", "~RECHARGEPEDESTAL", "~INFUSION"],
         "location": [2, 7],
         "stages": [
-            {"crafts": ["planarartifice:glass_cutter"], "items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'auram'}]}"]},
+            {"crafts": ["planarartifice:glass_cutter"], "items": ["phial:auram"]},
             {"recipes": ["vis_glass_cutter"]}
         ]
     },{

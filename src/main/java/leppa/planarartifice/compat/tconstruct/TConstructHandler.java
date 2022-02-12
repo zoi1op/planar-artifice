@@ -1,30 +1,35 @@
 package leppa.planarartifice.compat.tconstruct;
 
-import static slimeknights.tconstruct.library.utils.HarvestLevels.*;
-
 import leppa.planarartifice.blocks.fluid.PAFluid;
 import leppa.planarartifice.blocks.fluid.PAFluidBlock;
+import leppa.planarartifice.blocks.glass.BlockGlassPA;
+import leppa.planarartifice.blocks.glass.BlockGlassStainedPA;
 import leppa.planarartifice.compat.PACompatHandler.ICompatModule;
 import leppa.planarartifice.main.PAConfig;
+import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import slimeknights.tconstruct.TConstruct;
 import slimeknights.tconstruct.library.MaterialIntegration;
 import slimeknights.tconstruct.library.TinkerRegistry;
 import slimeknights.tconstruct.library.client.MaterialRenderInfo;
-import slimeknights.tconstruct.library.materials.BowMaterialStats;
-import slimeknights.tconstruct.library.materials.ExtraMaterialStats;
-import slimeknights.tconstruct.library.materials.HandleMaterialStats;
-import slimeknights.tconstruct.library.materials.HeadMaterialStats;
-import slimeknights.tconstruct.library.materials.Material;
+import slimeknights.tconstruct.library.materials.*;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
+import slimeknights.tconstruct.shared.TinkerCommons;
+
+import static leppa.planarartifice.registry.PABlocks.glass_clear;
+import static slimeknights.tconstruct.library.utils.HarvestLevels.COBALT;
+import static slimeknights.tconstruct.library.utils.HarvestLevels.OBSIDIAN;
 
 public class TConstructHandler implements ICompatModule {
 	
@@ -97,6 +102,17 @@ public class TConstructHandler implements ICompatModule {
 	public static Material setMetalMaterialRenderInfo(Material material, int colour, float shinyness, float brightness, float hueshift){
 		material.setRenderInfo(new MaterialRenderInfo.Metal(colour, 0.7f, 0f, 0.1f));
 		return material;
+	}
+
+	public static void registerBlocks(RegistryEvent.Register<Block> event) {
+		PlanarArtifice.LOGGER.info("[LOADER] " + Loader.isModLoaded("tconstruct"));
+		if (TConstruct.pulseManager.isPulseLoaded("TinkerCommons")) {
+			glass_clear.BLOCK = TinkerCommons.blockClearGlass;
+			glass_clear.BLOCK_STAINED = TinkerCommons.blockClearStainedGlass;
+		} else {
+			glass_clear.BLOCK = new BlockGlassPA("glass_clear");
+			glass_clear.BLOCK_STAINED = new BlockGlassStainedPA("stained_glass_clear");
+		}
 	}
 
 
