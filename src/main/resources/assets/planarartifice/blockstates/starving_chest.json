@@ -1,0 +1,105 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "thaumcraft:chest",
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "facing=north,upgrade=1":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_1",
+        "texture": "planarartifice:models/starving_chest_1"
+      }
+    }],
+    "facing=south,upgrade=1":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_1",
+        "texture": "planarartifice:models/starving_chest_1"
+      }
+    }],
+    "facing=east,upgrade=1":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_1",
+        "texture": "planarartifice:models/starving_chest_1"
+      }
+    }],
+    "facing=west,upgrade=1":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_1",
+        "texture": "planarartifice:models/starving_chest_1"
+      }
+    }],
+    "facing=north,upgrade=2":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_2",
+        "texture": "planarartifice:models/starving_chest_2"
+      }
+    }],
+    "facing=south,upgrade=2":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_2",
+        "texture": "planarartifice:models/starving_chest_2"
+      }
+    }],
+    "facing=east,upgrade=2":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_2",
+        "texture": "planarartifice:models/starving_chest_2"
+      }
+    }],
+    "facing=west,upgrade=2":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_2",
+        "texture": "planarartifice:models/starving_chest_2"
+      }
+    }],
+    "facing=north,upgrade=3":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_3",
+        "texture": "planarartifice:models/starving_chest_3"
+      }
+    }],
+    "facing=south,upgrade=3":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_3",
+        "texture": "planarartifice:models/starving_chest_3"
+      }
+    }],
+    "facing=east,upgrade=3":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_3",
+        "texture": "planarartifice:models/starving_chest_3"
+      }
+    }],
+    "facing=west,upgrade=3":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_3",
+        "texture": "planarartifice:models/starving_chest_3"
+      }
+    }],
+    "facing=north,upgrade=4":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_4",
+        "texture": "planarartifice:models/starving_chest_4"
+      }
+    }],
+    "facing=south,upgrade=4":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_4",
+        "texture": "planarartifice:models/starving_chest_4"
+      }
+    }],
+    "facing=east,upgrade=4":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_4",
+        "texture": "planarartifice:models/starving_chest_4"
+      }
+    }],
+    "facing=west,upgrade=4":  [{
+      "textures": {
+        "particle": "planarartifice:models/starving_chest_4",
+        "texture": "planarartifice:models/starving_chest_4"
+      }
+    }]
+  }
+}

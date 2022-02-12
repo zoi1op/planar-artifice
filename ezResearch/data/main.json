@@ -365,5 +365,14 @@
             {"crafts": ["planarartifice:glass_cutter"], "items": ["thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'auram'}]}"]},
             {"recipes": ["vis_glass_cutter"]}
         ]
+    },{
+        "key": "STARVING_CHEST",
+        "icons": ["planarartifice:starving_chest"],
+        "parents": ["~HUNGRYCHEST", "PA_RARE_ITEMS@2", "~INFUSION"],
+        "location": [-6, 1],
+        "stages": [
+            {"crafts": ["thaumcraft:hungry_chest"], "knowledges": ["THEORY;ARTIFICE;1", "THEORY;INFUSION;1"]},
+            {"recipes": ["starving_chest_1", "starving_chest_2", "starving_chest_3", "starving_chest_4"]}
+        ]
     }]
 }

@@ -34,6 +34,7 @@ public class BlockGlassPA extends BlockPA {
         this.passHostile = passHostile;
         setHardness(0.3F);
         setSoundType(SoundType.GLASS);
+        variantNames = new String[] {"white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "silver", "cyan", "purple", "blue", "brown", "green", "red", "black"};
     }
 
     @SuppressWarnings("deprecation")

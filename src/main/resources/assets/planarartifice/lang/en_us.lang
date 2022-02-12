@@ -37,6 +37,10 @@ tile.teleporter.name=Mirromirous Waystone
 tile.teleporter_matrix.name=Mirromirous Matrix
 tile.potion_mixer.name=Potion Mixer
 tile.flux_scrubber.name=Flux Scrubber
+tile.starving_chest.1.name=Starving Chest
+tile.starving_chest.2.name=Starving Chest
+tile.starving_chest.3.name=Starving Chest
+tile.starving_chest.4.name=Starving Chest
 
 tile.alkimium_smeltery_mithrillium.name=Alkimium Mithrillium Smeltery
 tile.alkimium_smeltery_adaminite.name=Alkimium Adaminite Smeltery
@@ -829,6 +833,10 @@ planarartifice.research.glasswork_ghost.complete.text=Well, I tried. While not p
 planarartifice.research.glasswork_cutter.title=Glasswork: Alchemical Glass Cutter
 planarartifice.research.glasswork_cutter.stage.1.text=Glass cutters aren't the most expensive thing, but crafting new ones each time kinda ticks me off. I wonder if there's a way to harness the arcane to break glass...
 planarartifice.research.glasswork_cutter.complete.text=By simply imbuing itself with some amber, now this new glass cutter can draw from the aura to break glass without ever running out of durability.
+# Starving Chest
+planarartifice.research.starving_chest.title=Starving Chest
+planarartifice.research.starving_chest.stage.1.text=The Hungry Chest has been doing me well with various automation needed to gather resources. However, losses were made due to it simply missing the items. Perhaps studying the elements would aid me in improving this conundrum...
+planarartifice.research.starving_chest.complete.text=Hunger consumes all. I've created a stronger version of the chest using the recently discovered elements capable of warping the dimensions, creating a vortex around the chest and amplifying its sucktion... The more I repeat the process, the larger its radius seems to become. However, It only was capable of sustaining a total of 4 iterations before the chest became too unstable and imploded upon itself. Perhaps I'll be able to find a better alternative in the future...
 # --- End of Research --- #
 planarartifice.alkimium=Alkimium Compatible
 

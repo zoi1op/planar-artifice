@@ -57,6 +57,7 @@ public class PABlocks {
 	
 //	public static final Block potion_mixer = new BlockPotionMixer("potion_mixer");
 	public static final Block flux_scrubber = new BlockFluxScrubber("flux_scrubber");
+	public static final Block starving_chest = new BlockStarvingChest("starving_chest");
 
 	public static final Glasses glass = new Glasses();
 	public static final Glasses glass_clear = new Glasses("_clear");
@@ -89,13 +90,13 @@ public class PABlocks {
 	public static void registerItemBlocks(RegistryEvent.Register<Item> event)
 	{
 		BLOCKS.forEach(b -> event.getRegistry().register(new ItemBlock(b).setRegistryName(b.getRegistryName())));
-		METABLOCKS.forEach(b -> event.getRegistry().register(new ItemMultiTexture(b, null, new String[]{"white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "silver", "cyan", "purple", "blue", "brown", "green", "red", "black"}).setRegistryName(b.getRegistryName())));
+		METABLOCKS.forEach(b -> { if (b instanceof BlockPA) event.getRegistry().register(new ItemMultiTexture(b, null, ((BlockPA)b).variantNames).setRegistryName(b.getRegistryName())); });
 	}
 
 	@SideOnly(Side.CLIENT)
 	public static void registerModels() {
 		BLOCKS.forEach(PABlocks::registerRender);
-		METABLOCKS.forEach(b -> ((BlockPA)b).registerModels());
+		METABLOCKS.forEach(b -> { if (b instanceof BlockPA) ((BlockPA)b).registerModels(); });
 	}
 
 	@SideOnly(Side.CLIENT)

@@ -35,10 +35,7 @@ public class BlockGlassPaneStainedPA extends BlockGlassPanePA {
         PABlocks.METABLOCKS.add(this);
     }
 
-    public int damageDropped(IBlockState state)
-    {
-        return state.getValue(COLOR).getMetadata();
-    }
+    public int damageDropped(IBlockState state) { return state.getValue(COLOR).getMetadata(); }
     public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
     { for (int i = 0; i < EnumDyeColor.values().length; ++i) items.add(new ItemStack(this, 1, i)); }
     public MapColor getMapColor(IBlockState state, IBlockAccess worldIn, BlockPos pos)

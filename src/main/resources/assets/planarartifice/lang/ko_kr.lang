@@ -37,6 +37,10 @@ tile.teleporter.name=신기루 전송석
 tile.teleporter_matrix.name=신기루 매트릭스
 tile.potion_mixer.name=물약 혼합기
 tile.flux_scrubber.name=플럭스 닦개
+tile.starving_chest.1.name=굶주린 상자
+tile.starving_chest.2.name=굶주린 상자
+tile.starving_chest.3.name=굶주린 상자
+tile.starving_chest.4.name=굶주린 상자
 
 tile.alkimium_smeltery_mithrillium.name=알키미움 미스릴리움 에센시아 증류기
 tile.alkimium_smeltery_adaminite.name=알키미움 아다미나이트 에센시아 증류기
@@ -829,6 +833,10 @@ planarartifice.research.matstudy_alkimium.complete.text=연구 결과, 알키미
 #planarartifice.research.glasswork_cutter.title=
 #planarartifice.research.glasswork_cutter.stage.1.text=
 #planarartifice.research.glasswork_cutter.complete.text=
+# Starving Chest
+#planarartifice.research.starving_chest.title=Starving Chest
+#planarartifice.research.starving_chest.stage.1.text=The Hungry Chest has been doing me well with various automation needed to gather resources. However, losses were made due to it simply missing the items. Perhaps studying the elements would aid me in improving this conundrum...
+#planarartifice.research.starving_chest.complete.text=Hunger consumes all. I've created a stronger version of the chest using the recently discovered elements capable of warping the dimensions, creating a vortex around the chest and amplifying its sucktion... The more I repeat the process, the larger its radius seems to become. However, It only was capable of sustaining a total of 4 iterations before the chest became too unstable and imploded upon itself. Perhaps I'll be able to find a better alternative in the future...
 # --- End of Research --- #
 planarartifice.alkimium=알키미움 업그레이드
 

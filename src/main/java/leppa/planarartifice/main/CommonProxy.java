@@ -6,9 +6,7 @@ import leppa.planarartifice.network.PacketRequestUpdateTeleporter;
 import leppa.planarartifice.network.PacketUpdateTeleporter;
 import leppa.planarartifice.recipe.CrucibleRecipeRandomCrystal;
 import leppa.planarartifice.registry.PAAspects;
-import leppa.planarartifice.registry.PAMultiblocks;
 import leppa.planarartifice.registry.PAResearch;
-import leppa.planarartifice.registry.Registrar;
 import leppa.planarartifice.tiles.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
@@ -20,9 +18,6 @@ import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
-import thaumcraft.api.aspects.Aspect;
-
-import java.util.Arrays;
 
 public class CommonProxy {
 
@@ -38,6 +33,7 @@ public class CommonProxy {
 		GameRegistry.registerTileEntity(TilePotionMixer.class, new ResourceLocation(PlanarArtifice.MODID,"potionMixer"));
 		GameRegistry.registerTileEntity(TileAlkimiumSmeltery.class, new ResourceLocation(PlanarArtifice.MODID,"alkimiumSmeltery"));
 		GameRegistry.registerTileEntity(TileAlkimiumCentrifuge.class, new ResourceLocation(PlanarArtifice.MODID,"alkimiumCentrifuge"));
+		GameRegistry.registerTileEntity(TileStarvingChest.class, new ResourceLocation(PlanarArtifice.MODID,"starvingChest"));
 
 		network = NetworkRegistry.INSTANCE.newSimpleChannel(PlanarArtifice.MODID);
 		network.registerMessage(new PacketUpdateTeleporter.Handler(), PacketUpdateTeleporter.class, 0, Side.CLIENT);
