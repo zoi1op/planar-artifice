@@ -607,8 +607,8 @@ tile.stained_glass_panel_strong.green.name=Green Stained Strong Glass Panel
 tile.stained_glass_panel_strong.red.name=Red Stained Strong Glass Panel
 tile.stained_glass_panel_strong.black.name=Black Stained Strong Glass Panel
 tile.glass_panel_strong_rainbow.name=Tinctura Infused Strong Glass Panel
-tile.glass_redstone=Redstone Glass
-tile.glass_redstone_directional=Directional Redstone Glass
+tile.glass_redstone.name=Redstone Glass
+tile.glass_redstone_directional.name=Directional Redstone Glass
 
 fluid.molten_alkimium=Molten Alkimium
 fluid.molten_bismuth=Molten Bismuth

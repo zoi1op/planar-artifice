@@ -607,8 +607,8 @@ tile.stained_glass_panel_strong.green.name=강화 초록색 색유리 패널
 tile.stained_glass_panel_strong.red.name=강화 빨간색 색유리 패널
 tile.stained_glass_panel_strong.black.name=강화 검은색 색유리 패널
 tile.glass_panel_strong_rainbow.name=강화 무지개색 색유리 패널
-tile.glass_redstone=레드스톤 유리
-tile.glass_redstone_directional=방향성 레드스톤 유리
+tile.glass_redstone.name=레드스톤 유리
+tile.glass_redstone_directional.name=방향성 레드스톤 유리
 
 fluid.molten_alkimium=녹은 알키미움
 fluid.molten_bismuth=녹은 비스무트
