@@ -23,8 +23,8 @@ item.bismuth_caster.name=비스무트 주문 건틀릿
 item.flux_venting_circuit.name=플럭스 배기로
 item.condensed_crystal_cluster.name=응축된 크리스탈 덩어리
 item.alchemical_universe.name=연금우주
-item.glass_cutter=유리 절단기
-item.vis_glass_cutter=연금 유리 절단기
+item.glass_cutter.name=유리 절단기
+item.vis_glass_cutter.name=연금 유리 절단기
 
 tile.alkimium_block.name=알키미움 블록
 tile.bismuth_block.name=비스무트 블록
