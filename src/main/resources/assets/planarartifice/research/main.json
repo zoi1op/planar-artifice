@@ -1024,7 +1024,7 @@
       "name": "planarartifice.research.glasswork_cosmetic.title",
       "category": "PLANARARTIFICE",
       "icons": [
-        "planarartifice:glass_clear"
+        "planarartifice:glass_scratched"
       ],
       "parents": [
         "PA_GLASSWORK",
