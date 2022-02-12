@@ -283,7 +283,7 @@
         ]
     },{
         "key": "GLASSWORK_COSMETIC",
-        "icons": ["planarartifice:glass_clear"],
+        "icons": ["planarartifice:glass_scratched"],
         "parents": ["PA_GLASSWORK", "~BASEARTIFICE", "~ESSENTIASMELTER"],
         "location": [2, 1],
         "stages": [
