@@ -159,13 +159,31 @@ public class PABlocks {
 			PlanarArtifice.LOGGER.info("Registering glass type null");
 			BLOCK = Blocks.GLASS;
 			BLOCK_STAINED = Blocks.STAINED_GLASS;
-			BLOCK_RAINBOW = new BlockGlassPA("glass_rainbow");
+			BLOCK_RAINBOW = new BlockGlassPA("glass_rainbow") {
+				@SideOnly(Side.CLIENT)
+				public BlockRenderLayer getBlockLayer()
+				{
+					return BlockRenderLayer.TRANSLUCENT;
+				}
+			};
 			PANE = Blocks.GLASS_PANE;
 			PANE_STAINED = Blocks.STAINED_GLASS_PANE;
-			PANE_RAINBOW = new BlockGlassPanePA("glass_pane_rainbow");
+			PANE_RAINBOW = new BlockGlassPanePA("glass_pane_rainbow") {
+				@SideOnly(Side.CLIENT)
+				public BlockRenderLayer getBlockLayer()
+				{
+					return BlockRenderLayer.TRANSLUCENT;
+				}
+			};
 			PANEL = new BlockGlassPanelPA("glass_panel");
 			PANEL_STAINED = new BlockGlassPanelStainedPA("stained_glass_panel");
-			PANEL_RAINBOW = new BlockGlassPanelPA("glass_panel_rainbow");
+			PANEL_RAINBOW = new BlockGlassPanelPA("glass_panel_rainbow") {
+				@SideOnly(Side.CLIENT)
+				public BlockRenderLayer getBlockLayer()
+				{
+					return BlockRenderLayer.TRANSLUCENT;
+				}
+			};
 		}
 
 		public void oredict() {
