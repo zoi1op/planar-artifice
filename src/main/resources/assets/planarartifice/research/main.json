@@ -1295,26 +1295,9 @@
           "text": "planarartifice.research.glasswork_ghost.stage.1.text",
           "required_item": [
             "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'spiritus'}]}",
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'aversio'}]}",
+            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'vinculum'}]}",
             "minecraft:soul_sand"
-          ]
-        },
-        {
-          "text": "planarartifice.research.glasswork_ghost.stage.2.text",
-          "required_item": [
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'vinculum'}]}"
-          ],
-          "recipes": [
-            "planarartifice:glass_spiritus"
-          ]
-        },
-        {
-          "text": "planarartifice.research.glasswork_ghost.stage.3.text",
-          "required_item": [
-            "thaumcraft:phial;1;1;{Aspects:[{amount:10,key:'aversio'}]}"
-          ],
-          "recipes": [
-            "planarartifice:glass_spiritus",
-            "planarartifice:glass_vinculum"
           ]
         },
         {
@@ -1357,6 +1340,44 @@
           "text": "planarartifice.research.glasswork_cutter.complete.text",
           "recipes": [
             "planarartifice:vis_glass_cutter"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PA_STARVING_CHEST",
+      "name": "planarartifice.research.starving_chest.title",
+      "category": "PLANARARTIFICE",
+      "icons": [
+        "planarartifice:starving_chest"
+      ],
+      "parents": [
+        "~HUNGRYCHEST",
+        "PA_RARE_ITEMS@2",
+        "~INFUSION"
+      ],
+      "location": [
+        -6,
+        1
+      ],
+      "stages": [
+        {
+          "text": "planarartifice.research.starving_chest.stage.1.text",
+          "required_craft": [
+            "thaumcraft:hungry_chest"
+          ],
+          "required_knowledge": [
+            "THEORY;ARTIFICE;1",
+            "THEORY;INFUSION;1"
+          ]
+        },
+        {
+          "text": "planarartifice.research.starving_chest.complete.text",
+          "recipes": [
+            "planarartifice:starving_chest_1",
+            "planarartifice:starving_chest_2",
+            "planarartifice:starving_chest_3",
+            "planarartifice:starving_chest_4"
           ]
         }
       ]

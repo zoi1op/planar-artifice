@@ -1,12 +1,12 @@
 package leppa.planarartifice.client;
 
 import leppa.planarartifice.client.render.tile.TESRAlkimiumCentrifuge;
-import leppa.planarartifice.tiles.TileAlkimiumCentrifuge;
-import org.lwjgl.input.Mouse;
-
+import leppa.planarartifice.client.render.tile.TESRStarvingChest;
 import leppa.planarartifice.client.render.tile.TESRTeleporter;
 import leppa.planarartifice.main.CommonProxy;
 import leppa.planarartifice.main.PlanarArtifice;
+import leppa.planarartifice.tiles.TileAlkimiumCentrifuge;
+import leppa.planarartifice.tiles.TileStarvingChest;
 import leppa.planarartifice.tiles.TileTeleporter;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
@@ -23,6 +23,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.relauncher.Side;
+import org.lwjgl.input.Mouse;
 import thaumcraft.client.gui.GuiFocalManipulator;
 import thaumcraft.client.gui.plugins.GuiSliderTC;
 
@@ -45,6 +46,7 @@ public class ClientProxy extends CommonProxy{
 		super.init(e);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileTeleporter.class, new TESRTeleporter());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileAlkimiumCentrifuge.class, new TESRAlkimiumCentrifuge()); // hopium
+		ClientRegistry.bindTileEntitySpecialRenderer(TileStarvingChest.class, new TESRStarvingChest());
 	}
 	
 	@Override

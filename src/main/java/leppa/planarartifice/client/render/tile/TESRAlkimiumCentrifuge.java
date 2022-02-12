@@ -3,7 +3,6 @@ package leppa.planarartifice.client.render.tile;
 import leppa.planarartifice.tiles.TileAlkimiumCentrifuge;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import thaumcraft.client.renderers.models.block.ModelCentrifuge;
@@ -30,7 +29,7 @@ public class TESRAlkimiumCentrifuge extends TileEntitySpecialRenderer<TileAlkimi
 
         GL11.glTranslated(x + 0.5D, y + 0.5D, z + 0.5D);
         this.model.renderBoxes();
-        GL11.glRotated((double)cf.rotation, 0.0D, 1.0D, 0.0D);
+        GL11.glRotated(cf.rotation, 0.0D, 1.0D, 0.0D);
         this.model.renderSpinnyBit();
         if (destroyStage >= 0) {
             GlStateManager.matrixMode(5890);

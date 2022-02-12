@@ -167,13 +167,15 @@ planarartifice.research.glasswork_redstone.complete.text=
 # Glasswork Ghost
 planarartifice.research.glasswork_ghost.title=
 planarartifice.research.glasswork_ghost.stage.1.text=
-planarartifice.research.glasswork_ghost.stage.2.text=
-planarartifice.research.glasswork_ghost.stage.3.text=
 planarartifice.research.glasswork_ghost.complete.text=
 # Glasswork Cutter
 planarartifice.research.glasswork_cutter.title=
 planarartifice.research.glasswork_cutter.stage.1.text=
 planarartifice.research.glasswork_cutter.complete.text=
+# Starving Chest
+planarartifice.research.starving_chest.title=
+planarartifice.research.starving_chest.stage.1.text=
+planarartifice.research.starving_chest.complete.text=
 # Bush Alchemy Metal 1
 planarartifice.research.bush_alchemy_metal_1.title=
 planarartifice.research.bush_alchemy_metal_1.stage.1.text=
