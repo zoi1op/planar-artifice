@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.GameData;
 import net.minecraftforge.registries.RegistryManager;
 import thaumcraft.api.ThaumcraftApi;
@@ -54,5 +55,13 @@ public class XercaPaintHandler implements PACompatHandler.ICompatModule {
             e.getRegistry().register(new RecipeXercaPaintDye(color));
         }
         GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:palette_fake"), new ResourceLocation(""), new ItemStack(xerca.xercapaint.common.item.Items.ITEM_PALETTE), "PD", 'P', new ItemStack(xerca.xercapaint.common.item.Items.ITEM_PALETTE), 'D', "dye");
+    }
+
+    public static void registerOres() {
+        for (String color : RecipeXercaPaintDye.COLOR_LIST)
+            for (ItemStack stack : OreDictionary.getOres("dye" + color)) {
+                PlanarArtifice.LOGGER.info("[PA, ORE] Registering " + stack.getItem() + " to " + stack.getMetadata());
+                if (!stack.isEmpty()) OreDictionary.registerOre("dye", stack);
+            }
     }
 }

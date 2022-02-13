@@ -1,5 +1,6 @@
 package leppa.planarartifice.main;
 
+import leppa.planarartifice.compat.xercapaint.XercaPaintHandler;
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
 import leppa.planarartifice.util.ReflectionUtils;
 import net.minecraft.item.EnumRarity;
@@ -88,7 +89,7 @@ public class PlanarArtifice implements LoadingCallback {
 	// stole from magical psi -p
 	public PlanarArtifice() {
 		super();
-		if (!Loader.isModLoaded("xercapaint") || FMLCommonHandler.instance().getSide().isServer()) return;
+		if (!Loader.isModLoaded("xercapaint") || PAConfig.compat.disableXercaPaintCompat || FMLCommonHandler.instance().getSide().isServer()) return;
 		String classname = "leppa.planarartifice.compat.xercapaint.XercaResources";
 		System.out.println(classname);
 		try {
@@ -105,7 +106,7 @@ public class PlanarArtifice implements LoadingCallback {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.init(event);
-
+		if (Loader.isModLoaded("xercapaint") && !PAConfig.compat.disableXercaPaintCompat) XercaPaintHandler.registerOres();
 	}
 
 	@EventHandler
