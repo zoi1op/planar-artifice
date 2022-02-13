@@ -1,10 +1,15 @@
 package leppa.planarartifice.registry;
 
+import leppa.planarartifice.api.event.EventFibreSpread;
 import leppa.planarartifice.compat.tconstruct.TConstructHandler;
+import leppa.planarartifice.main.PAConfig;
 import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Loader;
@@ -14,6 +19,10 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.aspects.AspectRegistryEvent;
+import thaumcraft.api.blocks.BlocksTC;
+import thaumcraft.common.blocks.IBlockFacing;
+
+import java.util.ArrayList;
 
 @EventBusSubscriber(modid = PlanarArtifice.MODID)
 public class Registrar {
@@ -73,5 +82,24 @@ public class Registrar {
 	@SubscribeEvent
 	public static void registerAspects(AspectRegistryEvent event) {
 		PAAspects.registerItemAspects();
+	}
+
+	@SubscribeEvent
+	public static void onTaintSpread(EventFibreSpread event) {
+		if (!event.checkDefaultCancel()) return;
+		IBlockState bs = event.world.getBlockState(event.pos);
+		if (event.world.rand.nextFloat() < PAConfig.balance.taintFeatureGenRate && bs.getBlock() == BlocksTC.taintLog) {
+			ArrayList<BlockPos> fib = new ArrayList<>();
+			ArrayList<EnumFacing> face = new ArrayList<>();
+			if (event.world.isAirBlock(event.pos.up())) { fib.add(event.pos.up()); face.add(EnumFacing.UP); }
+			if (event.world.isAirBlock(event.pos.north())) { fib.add(event.pos.north()); face.add(EnumFacing.NORTH); }
+			if (event.world.isAirBlock(event.pos.south())) { fib.add(event.pos.south()); face.add(EnumFacing.SOUTH); }
+			if (event.world.isAirBlock(event.pos.east())) { fib.add(event.pos.east()); face.add(EnumFacing.EAST); }
+			if (event.world.isAirBlock(event.pos.west())) { fib.add(event.pos.west()); face.add(EnumFacing.WEST); }
+			if (fib.size() == 0) return;
+			int meta = event.world.rand.nextInt(fib.size());
+			event.world.setBlockState(fib.get(meta), BlocksTC.taintFeature.getDefaultState().withProperty(IBlockFacing.FACING, face.get(meta)));
+//			PlanarArtifice.LOGGER.info("Spawned TaintFeature at " + event.pos + " on " + face.get(meta) + "!");
+		}
 	}
 }

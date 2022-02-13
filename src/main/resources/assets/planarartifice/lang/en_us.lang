@@ -848,11 +848,13 @@ planarartifice.alkimium=Alkimium Compatible
 planarartifice.config.compat.tacompat=Set the value to true to disable compatibility with Thaumic Additions.
 planarartifice.config.compat.taextracompat=Set the value to true to disable extra compatibility (changing recipes) with Thaumic Additions.
 planarartifice.config.compat.tinkerscompat=Set the value to true to disable compatibility with Tinkers' Construct.
+planarartifice.config.compat.xercapaintcompat=Set the value to true to disable compatibility with Joy of Painting.
 planarartifice.config.compat.aspectcompat=Set the value to true to only get Thaumcraft essentia from Random Crystal Alchemy.
 planarartifice.config.overhaul.ingot_re_aspect=Set the value to true to stop Planar Artifice from overhauling aspects for ingot types.
 planarartifice.config.overhaul.alloy_re_aspect=Set the value to true to stop Planar Artifice from overhauling aspects for alloy types.
 planarartifice.config.balance.bismuth_crash_cost=Amount of essentia needed for Bush Alchemy: Bismuth Projection
 planarartifice.config.balance.duplication_cost=Amount of essentia needed for Bush Alchemy: Conjuring
+planarartifice.config.balance.taint_feature_gen=Percentage of Swollen Taint generation from Tainted Logs, set to 0 to disable.
 
 tooltip.usablevis=Current Usable Vis:
 tooltip.basevis=Current Base Vis:

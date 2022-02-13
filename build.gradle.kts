@@ -49,7 +49,8 @@ minecraft {
             properties(
                 mapOf(
                     "forge.logging.markers" to "SCAN,REGISTRIES,REGISTRYDUMP,COREMODLOG",
-                    "forge.logging.console.level" to "debug"
+                    "forge.logging.console.level" to "debug",
+                    "fml.coreMods.load" to "leppa.planarartifice.core.PlanarArtificeCore"
                 )
             )
             workingDirectory = project.file("run").canonicalPath
@@ -128,5 +129,12 @@ tasks {
 
     withType<JavaCompile> {
         options.compilerArgs.add("-Xlint:deprecation")
+    }
+}
+
+tasks.withType<Jar>() {
+    manifest {
+        attributes["FMLCorePlugin"] = "leppa.planarartifice.core.PlanarArtificeCore"
+        attributes["FMLCorePluginContainsFMLMod"] = "true"
     }
 }

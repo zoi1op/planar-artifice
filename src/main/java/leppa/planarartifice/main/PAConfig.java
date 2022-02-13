@@ -39,6 +39,9 @@ public class PAConfig {
         @Config.LangKey(key + "alloy_re_aspect")
         @Config.Name("Disable Aspect Overhaul for Alloy Types")
         public boolean disableAlloyReaspect = false;
+        @Config.LangKey(key + "disable_coremod")
+        @Config.Name("Disable Coremod")
+        public boolean disableCoremod = false;
     }
 
     public static class Balance {
@@ -52,5 +55,9 @@ public class PAConfig {
         @Config.Name("Duplication Cost")
         @Config.RangeInt(min = 1)
         public int duplicationCost = 20;
+        @Config.LangKey(key + "taint_feature_gen")
+        @Config.Name("Taint Feature Generation Rate")
+        @Config.RangeDouble(min = 0, max = 1)
+        public double taintFeatureGenRate = 0.05;
     }
 }
