@@ -22,8 +22,6 @@ import thaumcraft.api.aspects.AspectRegistryEvent;
 import thaumcraft.api.blocks.BlocksTC;
 import thaumcraft.common.blocks.IBlockFacing;
 
-import java.util.ArrayList;
-
 @EventBusSubscriber(modid = PlanarArtifice.MODID)
 public class Registrar {
 
@@ -89,16 +87,18 @@ public class Registrar {
 		if (!event.checkDefaultCancel()) return;
 		IBlockState bs = event.world.getBlockState(event.pos);
 		if (event.world.rand.nextFloat() < PAConfig.balance.taintFeatureGenRate && bs.getBlock() == BlocksTC.taintLog) {
-			ArrayList<BlockPos> fib = new ArrayList<>();
-			ArrayList<EnumFacing> face = new ArrayList<>();
-			if (event.world.isAirBlock(event.pos.up())) { fib.add(event.pos.up()); face.add(EnumFacing.UP); }
-			if (event.world.isAirBlock(event.pos.north())) { fib.add(event.pos.north()); face.add(EnumFacing.NORTH); }
-			if (event.world.isAirBlock(event.pos.south())) { fib.add(event.pos.south()); face.add(EnumFacing.SOUTH); }
-			if (event.world.isAirBlock(event.pos.east())) { fib.add(event.pos.east()); face.add(EnumFacing.EAST); }
-			if (event.world.isAirBlock(event.pos.west())) { fib.add(event.pos.west()); face.add(EnumFacing.WEST); }
-			if (fib.size() == 0) return;
-			int meta = event.world.rand.nextInt(fib.size());
-			event.world.setBlockState(fib.get(meta), BlocksTC.taintFeature.getDefaultState().withProperty(IBlockFacing.FACING, face.get(meta)));
+			final BlockPos faceBlock;
+			final EnumFacing face;
+			if (event.world.isAirBlock(event.pos.up())) {
+				faceBlock = event.pos.up();
+				face = EnumFacing.UP;
+			}
+			else if (event.world.isAirBlock(event.pos.north()) && event.world.isAirBlock(event.pos.south()) && event.world.isAirBlock(event.pos.east()) && event.world.isAirBlock(event.pos.west())) {
+				int meta = event.world.rand.nextInt(4);
+				faceBlock = (new BlockPos[]{event.pos.north(), event.pos.south(), event.pos.east(), event.pos.west()})[meta];
+				face = EnumFacing.getHorizontal(meta);
+			} else return;
+			event.world.setBlockState(faceBlock, BlocksTC.taintFeature.getDefaultState().withProperty(IBlockFacing.FACING, face));
 //			PlanarArtifice.LOGGER.info("Spawned TaintFeature at " + event.pos + " on " + face.get(meta) + "!");
 		}
 	}

@@ -59,5 +59,13 @@ public class PAConfig {
         @Config.Name("Taint Feature Generation Rate")
         @Config.RangeDouble(min = 0, max = 1)
         public double taintFeatureGenRate = 0.05;
+        @Config.LangKey(key + "centrifuge_flux_rate")
+        @Config.Name("Centrifuge Flux Rate")
+        @Config.RangeDouble(min = 0, max = 1)
+        public double centrifugeFluxRate = 0.25;
+        @Config.LangKey(key + "thaum_coat_vis_drain")
+        @Config.Name("Thaumaturgist's Coat Passive Vis Drain")
+        @Config.RangeInt(min = 0)
+        public int thaumCoatVisDrain = 200;
     }
 }

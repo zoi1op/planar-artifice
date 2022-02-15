@@ -1,6 +1,7 @@
 package leppa.planarartifice.main;
 
 import leppa.planarartifice.compat.PACompatHandler;
+import leppa.planarartifice.network.MessageOpenBook;
 import leppa.planarartifice.network.MessageProjectingAttack;
 import leppa.planarartifice.network.PacketRequestUpdateTeleporter;
 import leppa.planarartifice.network.PacketUpdateTeleporter;
@@ -36,9 +37,11 @@ public class CommonProxy {
 		GameRegistry.registerTileEntity(TileStarvingChest.class, new ResourceLocation(PlanarArtifice.MODID,"starvingChest"));
 
 		network = NetworkRegistry.INSTANCE.newSimpleChannel(PlanarArtifice.MODID);
-		network.registerMessage(new PacketUpdateTeleporter.Handler(), PacketUpdateTeleporter.class, 0, Side.CLIENT);
-		network.registerMessage(new PacketRequestUpdateTeleporter.Handler(), PacketRequestUpdateTeleporter.class, 1, Side.SERVER);
-		network.registerMessage(new MessageProjectingAttack.Handler(), MessageProjectingAttack.class, 2, Side.SERVER);
+		int id = 0;
+		network.registerMessage(new PacketUpdateTeleporter.Handler(), PacketUpdateTeleporter.class, id++, Side.CLIENT);
+		network.registerMessage(new PacketRequestUpdateTeleporter.Handler(), PacketRequestUpdateTeleporter.class, id++, Side.SERVER);
+		network.registerMessage(new MessageProjectingAttack.Handler(), MessageProjectingAttack.class, id++, Side.SERVER);
+		network.registerMessage(new MessageOpenBook.Handler(), MessageOpenBook.class, id++, Side.SERVER);
 
 		NetworkRegistry.INSTANCE.registerGuiHandler(PlanarArtifice.instance, new PAGuiHandler());
 
