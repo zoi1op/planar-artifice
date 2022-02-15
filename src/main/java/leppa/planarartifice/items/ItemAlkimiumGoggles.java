@@ -26,6 +26,7 @@ import thaumcraft.api.items.IRevealer;
 import thaumcraft.api.items.IVisDiscountGear;
 import thaumcraft.client.lib.UtilsFX;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
 
@@ -38,57 +39,47 @@ public class ItemAlkimiumGoggles extends ItemArmor implements IRevealer, IGoggle
 		setUnlocalizedName(name);
 		setRegistryName(name);
 		setCreativeTab(PlanarArtifice.creativetab);
-
 		PAItems.ITEMS.add(this);
-
 	}
 
 	public boolean showIngamePopups(ItemStack itemstack, EntityLivingBase player) {
 		return true;
 	}
-
 	public int getVisDiscount(ItemStack stack, EntityPlayer player) {
 		return 10;
 	}
-
 	public BaubleType getBaubleType(ItemStack itemstack) {
 		return BaubleType.HEAD;
 	}
-
-	public EnumRarity getRarity(ItemStack stack) {
+	public EnumRarity getRarity(@Nonnull ItemStack stack) {
 		return PlanarArtifice.rarityPA;
 	}
-
 	@Override
 	public boolean showNodes(ItemStack itemstack, EntityLivingBase player) {
 		return true;
+	}
+	@SideOnly(Side.CLIENT)
+	public void addInformation(@Nonnull ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+		tooltip.add(TextFormatting.GREEN + LocalizationHelper.localize("planarartifice.alkimium"));
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void onPlayerBaubleRender(ItemStack stack, EntityPlayer player, RenderType type, float ticks) {
 		if(type == IRenderBauble.RenderType.HEAD) {
-			boolean armor = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null;
+			player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
 			Minecraft.getMinecraft().renderEngine.bindTexture(BAUBLE_TEXTURE);
 			IRenderBauble.Helper.translateToHeadLevel(player);
 			IRenderBauble.Helper.translateToFace();
 			IRenderBauble.Helper.defaultTransforms();
 			GlStateManager.rotate(180.0F, 0.0F, 1.0F, 0.0F);
-			GlStateManager.translate(-0.5D, -0.5D, armor ? 0.11999999731779099D : 0.0D);
+			GlStateManager.translate(-0.5D, -0.5D, 0.11999999731779099D);
 			UtilsFX.renderTextureIn3D(0.0F, 0.0F, 1.0F, 1.0F, 16, 26, 0.1F);
 		}
 	}
 	
 	public static boolean shouldRenderHud(EntityPlayer player) {
-		if(player.inventory.armorItemInSlot(3).getItem() == PAItems.alkimium_goggles)
-			return true;
-		if(BaublesApi.isBaubleEquipped(player, PAItems.alkimium_goggles) != -1)
-			return true;
-		return false;
-	}
-
-	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		tooltip.add(TextFormatting.GREEN + LocalizationHelper.localize("planarartifice.alkimium"));
+		return player.inventory.armorItemInSlot(3).getItem() == PAItems.alkimium_goggles
+		|| BaublesApi.isBaubleEquipped(player, PAItems.alkimium_goggles) != -1;
 	}
 }

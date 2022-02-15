@@ -27,13 +27,13 @@ public class PAAspects {
 	public static Aspect COLOR;
 
 	public static void registerAspects() {
-		DIMENSIONS = new Aspect("spatio", 0x4AF755, new Aspect[]{Aspect.VOID, Aspect.ENTROPY}, new ResourceLocation(PlanarArtifice.MODID, "textures/aspects/spatium.png"), 1);
+		DIMENSIONS = new Aspect("spatio", 0x4AF755, new Aspect[]{Aspect.VOID, Aspect.ENTROPY}, new ResourceLocation(PlanarArtifice.MODID, "textures/aspects/spatio.png"), 1);
 		if (Loader.isModLoaded("magicbees") && IntegrationThaumcraft.ASPECT_TIME != null) TIME = IntegrationThaumcraft.ASPECT_TIME;
 		else TIME = new Aspect("tempus", 0xD6DB43, new Aspect[]{DIMENSIONS, Aspect.EXCHANGE}, new ResourceLocation(PlanarArtifice.MODID, "textures/aspects/tempus.png"), 1);
 		COLOR = new Aspect("tinctura", 0xFFFFFF, new Aspect[]{Aspect.EXCHANGE, Aspect.SENSES}, new ResourceLocation(PlanarArtifice.MODID, "textures/aspects/tinctura.png"), 1) {
 			@Override
 			public int getColor() {
-				return Color.HSBtoRGB(MinecraftServer.getCurrentTimeMillis() * 2 % 3600 / 3600F, 0.75F, 1F);
+				return Color.HSBtoRGB(MinecraftServer.getCurrentTimeMillis() * 2 % 3600 / 3600F, 0.6F, 0.8F); // less saturation please
 			}
 		};
 		if (Loader.isModLoaded("thaumadditions")) {

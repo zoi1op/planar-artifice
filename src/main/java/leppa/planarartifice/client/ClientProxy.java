@@ -3,8 +3,10 @@ package leppa.planarartifice.client;
 import leppa.planarartifice.client.render.tile.TESRAlkimiumCentrifuge;
 import leppa.planarartifice.client.render.tile.TESRStarvingChest;
 import leppa.planarartifice.client.render.tile.TESRTeleporter;
+import leppa.planarartifice.items.ItemThaumaturgistCoat;
 import leppa.planarartifice.main.CommonProxy;
 import leppa.planarartifice.main.PlanarArtifice;
+import leppa.planarartifice.network.MessageOpenBook;
 import leppa.planarartifice.tiles.TileAlkimiumCentrifuge;
 import leppa.planarartifice.tiles.TileStarvingChest;
 import leppa.planarartifice.tiles.TileTeleporter;
@@ -12,20 +14,32 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.world.World;
 import net.minecraftforge.client.event.GuiScreenEvent;
+import net.minecraftforge.client.settings.KeyConflictContext;
+import net.minecraftforge.client.settings.KeyModifier;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.InputEvent;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
+import thaumcraft.Thaumcraft;
+import thaumcraft.api.items.RechargeHelper;
 import thaumcraft.client.gui.GuiFocalManipulator;
 import thaumcraft.client.gui.plugins.GuiSliderTC;
+import thaumcraft.common.lib.SoundsTC;
 
 @EventBusSubscriber(value = Side.CLIENT)
 public class ClientProxy extends CommonProxy{
@@ -35,6 +49,8 @@ public class ClientProxy extends CommonProxy{
 	public static GuiSliderTC sliderBlue;
 	
 	static ResourceLocation tex = new ResourceLocation(PlanarArtifice.MODID, "textures/gui/colourizer_picker.png");
+
+	public static final KeyBinding OPEN_THAUMONOMICON = new KeyBinding("key.planarartifice.openThaumonomicon", KeyConflictContext.IN_GAME, KeyModifier.NONE, Keyboard.KEY_P, "Planar Artifice");
 	
 	@Override
 	public void preInit(FMLPreInitializationEvent e){
@@ -44,6 +60,8 @@ public class ClientProxy extends CommonProxy{
 	@Override
 	public void init(FMLInitializationEvent e){
 		super.init(e);
+		PlanarArtifice.LOGGER.info("[PA, CLIENT] " + OPEN_THAUMONOMICON);
+		ClientRegistry.registerKeyBinding(OPEN_THAUMONOMICON);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileTeleporter.class, new TESRTeleporter());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileAlkimiumCentrifuge.class, new TESRAlkimiumCentrifuge()); // hopium
 		ClientRegistry.bindTileEntitySpecialRenderer(TileStarvingChest.class, new TESRStarvingChest());
@@ -53,7 +71,20 @@ public class ClientProxy extends CommonProxy{
 	public void postInit(FMLPostInitializationEvent e) {
 		super.postInit(e);
 	}
-	
+
+	@SideOnly(Side.CLIENT)
+	@SubscribeEvent(priority = EventPriority.HIGH)
+	public static void onKeyInput(InputEvent.KeyInputEvent e) {
+		EntityPlayer player = Minecraft.getMinecraft().player;
+		World world = player.world;
+		if (ItemThaumaturgistCoat.isWearingThis(player) && OPEN_THAUMONOMICON.isKeyDown() && RechargeHelper.getCharge(ItemThaumaturgistCoat.findMe(player)) >= 1) {
+			if (!world.isRemote) CommonProxy.network.sendToServer(new MessageOpenBook());
+			world.playSound(player.posX, player.posY, player.posZ, SoundsTC.page, SoundCategory.PLAYERS, 1.0F, 1.0F, false);
+			player.openGui(Thaumcraft.instance, 12, world, 0, 0, 0);
+		}
+	}
+
+	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
 	public static void onGuiRender(GuiScreenEvent.DrawScreenEvent.Post event){
 		if(PlanarArtifice.isSingleplayer){
@@ -76,7 +107,8 @@ public class ClientProxy extends CommonProxy{
 			}
 		}
 	}
-	
+
+	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
 	public static void onGuiMouseClick(GuiScreenEvent.MouseInputEvent event){
 		if(PlanarArtifice.isSingleplayer){
@@ -99,7 +131,8 @@ public class ClientProxy extends CommonProxy{
 			}
 		}
 	}
-	
+
+	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
 	public static void onGuiInit(GuiScreenEvent.InitGuiEvent event){
 		if(PlanarArtifice.isSingleplayer){

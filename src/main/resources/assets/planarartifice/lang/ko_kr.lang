@@ -25,6 +25,7 @@ item.condensed_crystal_cluster.name=응축된 크리스탈 덩어리
 item.alchemical_universe.name=연금우주
 item.glass_cutter.name=유리 절단기
 item.vis_glass_cutter.name=연금 유리 절단기
+item.thaum_coat.name=미완성 아이템입니다!
 
 tile.alkimium_block.name=알키미움 블록
 tile.bismuth_block.name=비스무트 블록
@@ -684,7 +685,7 @@ planarartifice.research.alchemical_scribing_tools.addendum.1.text=이 필기구�
 # Alkimium Applications
 planarartifice.research.alkimium_applications.title=알키미움 에센시아 증류기
 planarartifice.research.alkimium_applications.stage.1.text=이 새로운 물질로 만들 수 있는 기구들로 가장 처음 증류기를 떠올렸습니다. 황동을 알키미움으로 대체하는 연구를 실행하겠습니다.
-planarartifice.research.alkimium_applications.stage.2.text=알키미움과 관련된 또 다른 생각으로는, 복합 위상의 두 절반을 모두 추출하는 원심분리기가 있습니다. 특정 에센시아를 추출할 때 운에 맡기지 않고, 온전한 양을 추출하는 좋은 방법이 될 것으로 보입니다.
+planarartifice.research.alkimium_applications.stage.2.text=알키미움과 관련된 또 다른 생각으로는, 복합 위상의 두 절반을 모두 추출하는 원심분리기가 있습니다. 특정 에센시아를 추출할 때 운에 맡기지 않고, 온전한 양을 추출하는 좋은 방법이 될 것으로 보입니다. 안타깝게도, 적은 확률로 양쪽 결과물이 모두 증발합니다.
 planarartifice.research.alkimium_applications.complete.text=성공입니다! 원본보다 약간 더 많은 에센시아를 담을 수 있고, 약간 더 빠른 기계들이 만들어졌습니다. 하지만 아무리 에센시아가 알키미움에서 더 안정하다 해도, 속도를 5% 이상으로 늘릴 수는 없었습니다.
 # Alkimium Goggles
 planarartifice.research.alkimium_goggles.title=알키미움 고글 업그레이드

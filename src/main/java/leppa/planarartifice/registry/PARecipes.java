@@ -8,6 +8,7 @@ import leppa.planarartifice.compat.xercapaint.XercaPaintHandler;
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
 import leppa.planarartifice.enchantment.InfusionEnchantmentRecipeII;
 import leppa.planarartifice.main.PAConfig;
+import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.recipe.CrucibleRecipeRandomCrystal;
 import leppa.planarartifice.recipe.RecipePotionMixer;
 import leppa.planarartifice.recipe.RecipeTransmutation;
@@ -251,6 +252,7 @@ public class PARecipes {
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:starving_chest_2"), new InfusionRecipe("PA_STARVING_CHEST", new ItemStack(PABlocks.starving_chest, 1, 1), 6, (new AspectList()).add(Aspect.TRAP, 50).add(PAAspects.DIMENSIONS, 50), new ItemStack(PABlocks.starving_chest, 1, 0), new ItemStack(Blocks.HOPPER), new ItemStack(ItemsTC.filter), new ItemStack(Blocks.HOPPER), new ItemStack(ItemsTC.filter)));
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:starving_chest_3"), new InfusionRecipe("PA_STARVING_CHEST", new ItemStack(PABlocks.starving_chest, 1, 2), 9, (new AspectList()).add(Aspect.TRAP, 75).add(PAAspects.DIMENSIONS, 75), new ItemStack(PABlocks.starving_chest, 1, 1), new ItemStack(Blocks.HOPPER), new ItemStack(ItemsTC.filter), new ItemStack(Blocks.HOPPER), new ItemStack(ItemsTC.filter)));
         ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:starving_chest_4"), new InfusionRecipe("PA_STARVING_CHEST", new ItemStack(PABlocks.starving_chest, 1, 3), 12, (new AspectList()).add(Aspect.TRAP, 99).add(PAAspects.DIMENSIONS, 99), new ItemStack(PABlocks.starving_chest, 1, 2), new ItemStack(Blocks.HOPPER), new ItemStack(ItemsTC.filter), new ItemStack(Blocks.HOPPER), new ItemStack(ItemsTC.filter)));
+        ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("planarartifice:thaum_coat"), new InfusionRecipe("PA_THAUM_COAT", new ItemStack(PAItems.thaum_coat), 15, (new AspectList()).add(PAAspects.DIMENSIONS, 100).add(Aspect.TOOL, 150).add(Aspect.SENSES, 150), new ItemStack(ItemsTC.fabric), new ItemStack(ItemsTC.thaumonomicon), new ItemStack(PAItems.bismuth_caster), new ItemStack(PAItems.alkimium_goggles), new ItemStack(BlocksTC.visBattery)));
 	}
 	
 	private static void registerPotionMixerRecipes(Register<IRecipe> e) {
@@ -288,7 +290,7 @@ public class PARecipes {
 		registerRecipe(e, new RecipeTransmutation(new ResourceLocation(MODID, "transmutation_seeds"), new ItemStack(Items.WHEAT_SEEDS), new ItemStack(Items.MELON_SEEDS)));
 	}
 
-	private static boolean doesOreExist(String name) { return OreDictionary.doesOreNameExist("ingot" + name) && (OreUtils.getFirst("ingot") != ItemStack.EMPTY); }
+	public static boolean doesOreExist(String name) { return OreDictionary.doesOreNameExist("ingot" + name) && !OreUtils.getFirst("ingot" + name).equals(ItemStack.EMPTY); }
 	
 	private static void registerRecipe(Register<IRecipe> e, IRecipe recipe) {
 		e.getRegistry().register(recipe);

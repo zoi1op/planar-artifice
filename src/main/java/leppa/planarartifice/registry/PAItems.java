@@ -44,6 +44,7 @@ public class PAItems{
 	public static Item aura_meter = new ItemAuraMeter("aura_meter");
 	public static Item belt_of_suspension = new ItemBeltOfSuspension("belt_of_suspension");
 	public static Item mirrored_amulet  = new ItemMirroredAmulet("mirrored_amulet");
+	public static Item thaum_coat = new ItemThaumaturgistCoat("thaum_coat", armorMatAlkimium);
 	
 	//Food
 	public static Item magic_apple = new ItemMagicApple("magic_apple");

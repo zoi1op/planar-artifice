@@ -18,13 +18,10 @@ public class PacketRequestUpdateTeleporter implements IMessage {
 		this.pos = pos;
 		this.dimension = dimension;
 	}
-
 	public PacketRequestUpdateTeleporter(TileTeleporter te) {
 		this(te.getPos(), te.getWorld().provider.getDimension());
 	}
-
-	public PacketRequestUpdateTeleporter() {
-	}
+	public PacketRequestUpdateTeleporter() {}
 
 	@Override
 	public void fromBytes(ByteBuf buf) {

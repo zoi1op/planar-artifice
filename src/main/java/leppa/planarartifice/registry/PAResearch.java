@@ -6,7 +6,6 @@ import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
@@ -22,6 +21,8 @@ import thaumcraft.api.research.ScanBlock;
 import thaumcraft.api.research.ScanningManager;
 import thaumcraft.common.golems.client.PartModelHauler;
 
+import static leppa.planarartifice.registry.PARecipes.doesOreExist;
+
 public class PAResearch {
 	
 	public static final ResearchCategory catPA = ResearchCategories.registerCategory("PLANARARTIFICE", "FIRSTSTEPS",
@@ -32,9 +33,9 @@ public class PAResearch {
 	public static void registerResearch() {
 		PlanarArtifice.LOGGER.info("Research active");
 		ThaumcraftApi.registerResearchLocation(new ResourceLocation("planarartifice:research/main.json"));
-		if (!OreDictionary.doesOreNameExist("ingotLead"))
+		if (!doesOreExist("Lead"))
 			ThaumcraftApi.registerResearchLocation(new ResourceLocation(PlanarArtifice.MODID, "research/metal_1.json"));
-		else if (OreDictionary.doesOreNameExist("ingotTin") && OreDictionary.doesOreNameExist("ingotCopper") && OreDictionary.doesOreNameExist("ingotSilver"))
+		else if (doesOreExist("Tin") && doesOreExist("Copper") && doesOreExist("Silver"))
 			ThaumcraftApi.registerResearchLocation(new ResourceLocation(PlanarArtifice.MODID, "research/metal_3.json"));
 		else ThaumcraftApi.registerResearchLocation(new ResourceLocation(PlanarArtifice.MODID, "research/metal_2.json"));
 
