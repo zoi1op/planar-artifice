@@ -79,7 +79,7 @@ public class DrawKnowledges {
             if (par > 0) {
                 GlStateManager.color(1.0F, 1.0F, 1.0F, 0.75F);
                 Minecraft.getMinecraft().renderEngine.bindTexture(tex1);
-                int l = (int)(par / type.getProgression() * 16.0F);
+                int l = (int)((float)par / (float)type.getProgression() * 16.0F);
                 page.drawTexturedModalRect(dx, dy + 17, 0, 232, l, 2);
                 page.drawTexturedModalRect(dx + l, dy + 17, l, 234, 16 - l, 2);
             }
