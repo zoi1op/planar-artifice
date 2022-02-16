@@ -9,6 +9,7 @@ public class PAConfig {
     public static Compat compat = new Compat();
     public static Overhauls overhaul = new Overhauls();
     public static Balance balance = new Balance(); // new balance lmao
+    public static Client client = new Client();
 
     public static class Compat {
         @Config.Ignore
@@ -67,5 +68,12 @@ public class PAConfig {
         @Config.Name("Thaumaturgist's Coat Passive Vis Drain")
         @Config.RangeInt(min = 0)
         public int thaumCoatVisDrain = 200;
+    }
+
+    public static class Client {
+        @Config.LangKey(key + "knowledge_icons_per_row")
+        @Config.Name("Knowledge Icons per Row")
+        @Config.RangeInt(min = 1)
+        public int knowledgeIconsPerRow = 7;
     }
 }
