@@ -1,7 +1,6 @@
 package leppa.planarartifice.client.gui;
 
 import leppa.planarartifice.main.PAConfig;
-import leppa.planarartifice.main.PlanarArtifice;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
@@ -20,11 +19,10 @@ public class DrawKnowledges {
     private static final ResourceLocation tex1 = new ResourceLocation("thaumcraft", "textures/gui/gui_researchbook.png");
     private static final ResourceLocation tex2 = new ResourceLocation("planarartifice", "textures/gui/gui_researchbook_div.png");
     public static void drawKnowledges(GuiResearchPage page, int x, int y, int mx, int my, IPlayerKnowledge playerKnowledge) throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
-        PlanarArtifice.LOGGER.info("[PA, KNOWLEDGE] Knowledge!");
-        x -= 10; y -= 70;
+        x -= 10; y -= 80;
         int cats = ResearchCategories.researchCategories.size();
         int cols = Math.min(cats, PAConfig.client.knowledgeIconsPerRow);
-        int crows = Math.max(3, cats / PAConfig.client.knowledgeIconsPerRow) + 1;
+        int crows = Math.max(3, (int)Math.ceil((float)cats / PAConfig.client.knowledgeIconsPerRow)) + 1;
         int rows = IPlayerKnowledge.EnumKnowledgeType.values().length * crows - 1;
         int i = 0; int j;
         for (ResearchCategory cat : ResearchCategories.researchCategories.values()) {
@@ -38,7 +36,7 @@ public class DrawKnowledges {
             i++;
         }
         for (int k = 1; k < IPlayerKnowledge.EnumKnowledgeType.values().length; k++)
-            drawDivLine(page, x, y, mx, my, (int)lerp(y, y + 200.0F, (float)(k * crows - 1) / rows));
+            drawDivLine(page, x, y, mx, my, (int)lerp(y, y + 200.0F, (float)(k * crows - 1) / rows), rows);
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         Minecraft.getMinecraft().renderEngine.bindTexture(tex1);
         page.drawTexturedModalRect(x + 4, y - i * 20 + 12, 24, 184, 96, 8);
@@ -52,7 +50,6 @@ public class DrawKnowledges {
 
     private static void drawKnowledge(ResearchCategory cat, IPlayerKnowledge.EnumKnowledgeType type, IPlayerKnowledge playerKnowledge, GuiResearchPage page, int x, int y, int mx, int my, int dx, int dy) throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
         if (!type.hasFields() && cat != null) return;
-        PlanarArtifice.LOGGER.info("[PA, KNOWLEDGE] Drawing " + cat + ", " + type + " at " + dx + ", " + dy);
         int amt = playerKnowledge.getKnowledge(type, cat);
         int par = playerKnowledge.getKnowledgeRaw(type, cat) % type.getProgression();
         if (amt > 0 || par > 0) {
@@ -90,12 +87,11 @@ public class DrawKnowledges {
         }
     }
 
-    private static void drawDivLine(GuiResearchPage page, int x, int y, int mx, int my, int dy) {
-        PlanarArtifice.LOGGER.info("[PA, KNOWLEDGE] Drawing div at " + x + ", " + dy);
+    private static void drawDivLine(GuiResearchPage page, int x, int y, int mx, int my, int dy, int rows) {
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         GL11.glPushMatrix();
         Minecraft.getMinecraft().renderEngine.bindTexture(tex2);
-        GL11.glTranslatef(x + (164.0F / 6), dy, 1.0F);
+        GL11.glTranslatef(x + (164.0F / 6), dy + (200.0F / (rows * 3)), 1.0F);
         GL11.glScaled(0.4D, 0.017D, 0.017D);
         page.drawTexturedModalRect(0, 0, 0, 0, 255, 255);
         GL11.glPopMatrix();
