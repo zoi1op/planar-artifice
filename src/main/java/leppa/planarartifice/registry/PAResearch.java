@@ -3,39 +3,32 @@ package leppa.planarartifice.registry;
 import leppa.planarartifice.foci.FocusEffectColourized;
 import leppa.planarartifice.foci.FocusEffectPrismLight;
 import leppa.planarartifice.main.PlanarArtifice;
+import leppa.planarartifice.util.OreUtils;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import thaumcraft.api.ThaumcraftApi;
-import thaumcraft.api.aspects.Aspect;
-import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.casters.FocusEngine;
 import thaumcraft.api.golems.EnumGolemTrait;
 import thaumcraft.api.golems.parts.GolemAddon;
 import thaumcraft.api.golems.parts.GolemMaterial;
 import thaumcraft.api.golems.parts.PartModel;
 import thaumcraft.api.items.ItemsTC;
-import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchCategory;
 import thaumcraft.api.research.ScanBlock;
 import thaumcraft.api.research.ScanningManager;
 import thaumcraft.common.golems.client.PartModelHauler;
 
-import static leppa.planarartifice.registry.PARecipes.doesOreExist;
-
 public class PAResearch {
 	
-	public static final ResearchCategory catPA = ResearchCategories.registerCategory("PLANARARTIFICE", "FIRSTSTEPS",
-			new AspectList().add(Aspect.AURA, 1),
-			new ResourceLocation("planarartifice:textures/meta/logo_icon.png"),
-			new ResourceLocation("planarartifice:textures/research/gui_research_back_2.jpg"));
+	public static ResearchCategory catPA;
 
 	public static void registerResearch() {
 		PlanarArtifice.LOGGER.info("Research active");
 		ThaumcraftApi.registerResearchLocation(new ResourceLocation("planarartifice:research/main.json"));
-		if (!doesOreExist("Lead"))
+		if (!OreUtils.exists("ingotLead"))
 			ThaumcraftApi.registerResearchLocation(new ResourceLocation(PlanarArtifice.MODID, "research/metal_1.json"));
-		else if (doesOreExist("Tin") && doesOreExist("Copper") && doesOreExist("Silver"))
+		else if (OreUtils.exists("ingotTin") && OreUtils.exists("ingotCopper") && OreUtils.exists("ingotSilver"))
 			ThaumcraftApi.registerResearchLocation(new ResourceLocation(PlanarArtifice.MODID, "research/metal_3.json"));
 		else ThaumcraftApi.registerResearchLocation(new ResourceLocation(PlanarArtifice.MODID, "research/metal_2.json"));
 

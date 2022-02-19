@@ -3,6 +3,8 @@ package leppa.planarartifice.registry;
 import leppa.planarartifice.blocks.*;
 import leppa.planarartifice.blocks.glass.*;
 import leppa.planarartifice.main.PlanarArtifice;
+import leppa.planarartifice.util.Aspects;
+import leppa.planarartifice.util.OreUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -29,7 +31,6 @@ import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.ThaumcraftApiHelper;
 import thaumcraft.api.aspects.Aspect;
-import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.CrucibleRecipe;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
 
@@ -74,11 +75,13 @@ public class PABlocks {
 	public static final Glasses glass_strong = new Glasses("_strong", s -> s.setHardness(5).setResistance(1200));
 	public static final Block glass_redstone = new BlockGlassPA("glass_redstone") {
 		@Override
+		@SuppressWarnings("deprecation")
 		public boolean canProvidePower(IBlockState state) {
 			return true;
 		}
 
 		@Override
+		@SuppressWarnings("deprecation")
 		public int getWeakPower(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) { return 15; }
 
 		@SideOnly(Side.CLIENT)
@@ -205,23 +208,23 @@ public class PABlocks {
 			if (type != null) PlanarArtifice.LOGGER.info("Registering oredict for glass type " + type);
 			else PlanarArtifice.LOGGER.info("Registering oredict for glass type null");
 			OreDictionary.registerOre("blockGlass", BLOCK);
-			OreDictionary.registerOre("blockGlass", new ItemStack(BLOCK_STAINED, 1, OreDictionary.WILDCARD_VALUE));
+			OreDictionary.registerOre("blockGlass", OreUtils.meta(BLOCK_STAINED, OreDictionary.WILDCARD_VALUE));
 			OreDictionary.registerOre("blockGlass", BLOCK_RAINBOW);
 			OreDictionary.registerOre("paneGlass", PANE);
-			OreDictionary.registerOre("paneGlass", new ItemStack(PANE_STAINED, 1, OreDictionary.WILDCARD_VALUE));
+			OreDictionary.registerOre("paneGlass", OreUtils.meta(PANE_STAINED, OreDictionary.WILDCARD_VALUE));
 			OreDictionary.registerOre("paneGlass", PANE_RAINBOW);
 			OreDictionary.registerOre("panelGlass", PANEL);
-			OreDictionary.registerOre("panelGlass", new ItemStack(PANEL_STAINED, 1, OreDictionary.WILDCARD_VALUE));
+			OreDictionary.registerOre("panelGlass", OreUtils.meta(PANEL_STAINED, OreDictionary.WILDCARD_VALUE));
 			OreDictionary.registerOre("panelGlass", PANEL_RAINBOW);
 			if (type != null) {
 				OreDictionary.registerOre("blockGlass" + type, BLOCK);
-				OreDictionary.registerOre("blockGlass" + type, new ItemStack(BLOCK_STAINED, 1, OreDictionary.WILDCARD_VALUE));
+				OreDictionary.registerOre("blockGlass" + type, OreUtils.meta(BLOCK_STAINED, OreDictionary.WILDCARD_VALUE));
 				OreDictionary.registerOre("blockGlass" + type, BLOCK_RAINBOW);
 				OreDictionary.registerOre("paneGlass" + type, PANE);
-				OreDictionary.registerOre("paneGlass" + type, new ItemStack(PANE_STAINED, 1, OreDictionary.WILDCARD_VALUE));
+				OreDictionary.registerOre("paneGlass" + type, OreUtils.meta(PANE_STAINED, OreDictionary.WILDCARD_VALUE));
 				OreDictionary.registerOre("paneGlass" + type, PANE_RAINBOW);
 				OreDictionary.registerOre("panelGlass" + type, PANEL);
-				OreDictionary.registerOre("panelGlass" + type, new ItemStack(PANEL_STAINED, 1, OreDictionary.WILDCARD_VALUE));
+				OreDictionary.registerOre("panelGlass" + type, OreUtils.meta(PANEL_STAINED, OreDictionary.WILDCARD_VALUE));
 				OreDictionary.registerOre("panelGlass" + type, PANEL_RAINBOW);
 			}
 			OreDictionary.registerOre("blockGlassColorless", BLOCK);
@@ -231,9 +234,9 @@ public class PABlocks {
 			OreDictionary.registerOre("panelGlassColorless", PANEL);
 			OreDictionary.registerOre("panelGlassRainbow", PANEL_RAINBOW);
 			for (int i = 0; i < 16; i++) {
-				OreDictionary.registerOre("blockGlass" + COLORS[i], new ItemStack(BLOCK_STAINED, 1, i));
-				OreDictionary.registerOre("paneGlass" + COLORS[i], new ItemStack(PANE_STAINED, 1, i));
-				OreDictionary.registerOre("panelGlass" + COLORS[i], new ItemStack(PANEL_STAINED, 1, i));
+				OreDictionary.registerOre("blockGlass" + COLORS[i], OreUtils.meta(BLOCK_STAINED, i));
+				OreDictionary.registerOre("paneGlass" + COLORS[i], OreUtils.meta(PANE_STAINED, i));
+				OreDictionary.registerOre("panelGlass" + COLORS[i], OreUtils.meta(PANEL_STAINED, i));
 			}
 		}
 
@@ -251,28 +254,28 @@ public class PABlocks {
 			ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("planarartifice:glass_aqua" + name), new ShapedArcaneRecipe(PARecipes.defaultGroup, "PA_GLASSWORK_COSMETIC", 5, null, new ItemStack(BLOCK, 8), "###", "#C#", "###", '#', BLOCK, 'C', ThaumcraftApiHelper.makeCrystal(Aspect.WATER)));
 			ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("planarartifice:pane_aqua" + name), new ShapedArcaneRecipe(PARecipes.defaultGroup, "PA_GLASSWORK_COSMETIC", 5, null, new ItemStack(PANE, 8), "###", "#C#", "###", '#', PANE, 'C', ThaumcraftApiHelper.makeCrystal(Aspect.WATER)));
 			ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("planarartifice:panel_aqua" + name), new ShapedArcaneRecipe(PARecipes.defaultGroup, "PA_GLASSWORK_COSMETIC", 5, null, new ItemStack(PANEL, 8), "###", "#C#", "###", '#', PANEL, 'C', ThaumcraftApiHelper.makeCrystal(Aspect.WATER)));
-			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:glass_bismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(BLOCK_RAINBOW), BLOCK, new AspectList().add(PAAspects.COLOR, 5)));
-			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:pane_bismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(PANE_RAINBOW), PANE, new AspectList().add(PAAspects.COLOR, 5)));
-			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:panel_bismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(PANEL_RAINBOW), PANEL, new AspectList().add(PAAspects.COLOR, 5)));
-			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:glass_rebismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(BLOCK_RAINBOW), new ItemStack(BLOCK_STAINED, 1, OreDictionary.WILDCARD_VALUE), new AspectList().add(PAAspects.COLOR, 5)));
-			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:pane_rebismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(PANE_RAINBOW), new ItemStack(PANE_STAINED, 1, OreDictionary.WILDCARD_VALUE), new AspectList().add(PAAspects.COLOR, 5)));
-			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:panel_rebismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(PANEL_RAINBOW), new ItemStack(PANEL_STAINED, 1, OreDictionary.WILDCARD_VALUE), new AspectList().add(PAAspects.COLOR, 5)));
+			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:glass_bismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(BLOCK_RAINBOW), BLOCK, new Aspects("tinctura", 5)));
+			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:pane_bismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(PANE_RAINBOW), PANE, new Aspects("tinctura", 5)));
+			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:panel_bismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(PANEL_RAINBOW), PANEL, new Aspects("tinctura", 5)));
+			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:glass_rebismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(BLOCK_RAINBOW), new ItemStack(BLOCK_STAINED, OreDictionary.WILDCARD_VALUE), new Aspects("tinctura", 5)));
+			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:pane_rebismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(PANE_RAINBOW), new ItemStack(PANE_STAINED, OreDictionary.WILDCARD_VALUE), new Aspects("tinctura", 5)));
+			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:panel_rebismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(PANEL_RAINBOW), new ItemStack(PANEL_STAINED, OreDictionary.WILDCARD_VALUE), new Aspects("tinctura", 5)));
 			for (int i = 0; i < 16; i++) {
 				// dye / redye
 				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:glass_dye" + name + "_" + i), new ResourceLocation(""), new ItemStack(BLOCK_STAINED, 8, i), "###", "#C#", "###", '#', BLOCK, 'C', "dye" + COLORS[i]);
-				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:glass_redye" + name + "_" + i), new ResourceLocation(""), new ItemStack(BLOCK_STAINED, 8, i), "###", "#C#", "###", '#', new ItemStack(BLOCK_STAINED, 1, OreDictionary.WILDCARD_VALUE), 'C', "dye" + COLORS[i]);
+				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:glass_redye" + name + "_" + i), new ResourceLocation(""), new ItemStack(BLOCK_STAINED, 8, i), "###", "#C#", "###", '#', OreUtils.meta(BLOCK_STAINED, OreDictionary.WILDCARD_VALUE), 'C', "dye" + COLORS[i]);
 				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:glass_redye2" + name + "_" + i), new ResourceLocation(""), new ItemStack(BLOCK_STAINED, 8, i), "###", "#C#", "###", '#', BLOCK_RAINBOW, 'C', "dye" + COLORS[i]);
 				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:pane_dye" + name + "_" + i), new ResourceLocation(""), new ItemStack(PANE_STAINED, 8, i), "###", "#C#", "###", '#', PANE, 'C', "dye" + COLORS[i]);
-				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:pane_redye" + name + "_" + i), new ResourceLocation(""), new ItemStack(PANE_STAINED, 8, i), "###", "#C#", "###", '#', new ItemStack(PANE_STAINED, 1, OreDictionary.WILDCARD_VALUE), 'C', "dye" + COLORS[i]);
+				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:pane_redye" + name + "_" + i), new ResourceLocation(""), new ItemStack(PANE_STAINED, 8, i), "###", "#C#", "###", '#', OreUtils.meta(PANE_STAINED, OreDictionary.WILDCARD_VALUE), 'C', "dye" + COLORS[i]);
 				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:pane_redye2" + name + "_" + i), new ResourceLocation(""), new ItemStack(PANE_STAINED, 8, i), "###", "#C#", "###", '#', PANE_RAINBOW, 'C', "dye" + COLORS[i]);
 				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:panel_dye" + name + "_" + i), new ResourceLocation(""), new ItemStack(PANEL_STAINED, 8, i), "###", "#C#", "###", '#', PANEL, 'C', "dye" + COLORS[i]);
-				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:panel_redye" + name + "_" + i), new ResourceLocation(""), new ItemStack(PANEL_STAINED, 8, i), "###", "#C#", "###", '#', new ItemStack(PANEL_STAINED, 1, OreDictionary.WILDCARD_VALUE), 'C', "dye" + COLORS[i]);
+				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:panel_redye" + name + "_" + i), new ResourceLocation(""), new ItemStack(PANEL_STAINED, 8, i), "###", "#C#", "###", '#', OreUtils.meta(PANEL_STAINED, OreDictionary.WILDCARD_VALUE), 'C', "dye" + COLORS[i]);
 				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:panel_redye2" + name + "_" + i), new ResourceLocation(""), new ItemStack(PANEL_STAINED, 8, i), "###", "#C#", "###", '#', PANEL_RAINBOW, 'C', "dye" + COLORS[i]);
 				// panes
-				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:glass_pane" + name + "_" + i), new ResourceLocation(""), new ItemStack(PANE_STAINED, 16, i), "###", "###", '#', new ItemStack(BLOCK_STAINED, 1, i));
-				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:glass_pane2" + name + "_" + i), new ResourceLocation(""), new ItemStack(PANEL_STAINED, 16, i), "##", "##", "##", '#', new ItemStack(BLOCK_STAINED, 1, i));
-				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:glass_pane3" + name + "_" + i), new ResourceLocation(""), new ItemStack(PANEL_STAINED, 1), "#", '#', new ItemStack(PANE_STAINED, 1, i));
-				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:glass_pane4" + name + "_" + i), new ResourceLocation(""), new ItemStack(PANE_STAINED, 1), "#", '#', new ItemStack(PANE_STAINED, 1, i));
+				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:glass_pane" + name + "_" + i), new ResourceLocation(""), new ItemStack(PANE_STAINED, 16, i), "###", "###", '#', OreUtils.meta(BLOCK_STAINED, i));
+				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:glass_pane2" + name + "_" + i), new ResourceLocation(""), new ItemStack(PANEL_STAINED, 16, i), "##", "##", "##", '#', OreUtils.meta(BLOCK_STAINED, i));
+				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:glass_pane3" + name + "_" + i), new ResourceLocation(""), OreUtils.meta(PANEL_STAINED, i), "#", '#', OreUtils.meta(PANE_STAINED, i));
+				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:glass_pane4" + name + "_" + i), new ResourceLocation(""), OreUtils.meta(PANE_STAINED, i), "#", '#', OreUtils.meta(PANEL_STAINED, i));
 			}
 		}
 

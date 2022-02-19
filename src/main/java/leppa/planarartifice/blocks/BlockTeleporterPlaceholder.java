@@ -1,32 +1,28 @@
 package leppa.planarartifice.blocks;
 
-import java.util.List;
-import java.util.Random;
-
-import javax.annotation.Nullable;
-
 import leppa.planarartifice.registry.PABlocks;
 import leppa.planarartifice.tiles.TileTeleporter;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.world.IBlockAccess;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
-import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.blocks.BlocksTC;
+import thaumcraft.common.lib.SoundsTC;
+
+import javax.annotation.Nonnull;
+import java.util.List;
+import java.util.Random;
 
 public class BlockTeleporterPlaceholder extends BlockPA {
 
@@ -35,7 +31,8 @@ public class BlockTeleporterPlaceholder extends BlockPA {
 		setHardness(3);
 	}
 	
-	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ){
+	public boolean onBlockActivated(World world, BlockPos pos, @Nonnull IBlockState state, @Nonnull EntityPlayer player, @Nonnull EnumHand hand, @Nonnull EnumFacing facing, float hitX, float hitY, float hitZ){
+		if (hand == EnumHand.OFF_HAND) return false;
 		if(world.getBlockState(pos.down()).getBlock() == PABlocks.teleporter){
 			TileTeleporter tep = (TileTeleporter)world.getTileEntity(pos.down());
 			TileTeleporter dep = null;
@@ -44,46 +41,48 @@ public class BlockTeleporterPlaceholder extends BlockPA {
 			for(TileEntity e : allTEs){
 				if(e instanceof TileTeleporter){
 					TileTeleporter t = (TileTeleporter)e;
+					assert tep != null;
 					if(tep.getAspect() == t.getAspect() && tep.getPos() != t.getPos()){
 						dep = t;
 						count++;
 					}
 				}
 			}
-			if(count == 1){
+			if (count == 1) {
 				int diffX = dep.getPos().getX() - tep.getPos().getX();
 				int diffY = dep.getPos().getY() - tep.getPos().getY();
 				int diffZ = dep.getPos().getZ() - tep.getPos().getZ();
 				player.setPositionAndUpdate(player.getPosition().getX() + diffX + 0.5, player.getPosition().getY() + diffY + 0.5, player.getPosition().getZ() + diffZ + 0.5);
-			}else if(count == 0){
-				if(world.isRemote){
-					//TODO: Translate!
-					player.sendMessage(new TextComponentString("There are no Waystones with this Aspect."));
+				if (world.isRemote) {
+					world.playSound(dep.getPos().getX(), dep.getPos().getY(), dep.getPos().getZ(), SoundsTC.wandfail, SoundCategory.BLOCKS, 0.5f, 1f, false);
+					world.playSound(tep.getPos().getX(), tep.getPos().getY(), tep.getPos().getZ(), SoundsTC.wandfail, SoundCategory.BLOCKS, 0.5f, 1f, false);
 				}
-			}else if(count > 1){
-				if(world.isRemote){
-					//TODO: Translate!
-					player.sendMessage(new TextComponentString("There are too many Waystones with this Aspect."));
-				}
+			} else if (count == 0) {
+				if (world.isRemote) player.sendMessage(new TextComponentString(I18n.translateToLocal("planarartifice.waystone.none")));
+			} else {
+				if (world.isRemote) player.sendMessage(new TextComponentString(I18n.translateToLocal("planarartifice.waystone.toomuch")));
 			}
 		}
 		return false;
 	}
 	
-	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+	@Nonnull
+	public Item getItemDropped(@Nonnull IBlockState state, @Nonnull Random rand, int fortune) {
 		return Item.getItemFromBlock(Blocks.AIR);
 	}
 	
-	public void breakBlock(World worldIn, BlockPos pos, IBlockState state){
-		if(worldIn.getBlockState(pos.down()).getBlock() == PABlocks.teleporter){
+	public void breakBlock(World worldIn, BlockPos pos, @Nonnull IBlockState state){
+		if (worldIn.getBlockState(pos.down()).getBlock() == PABlocks.teleporter) {
 			worldIn.setBlockState(pos, PABlocks.teleporter_matrix.getDefaultState());
 			worldIn.setBlockState(pos.down(), BlocksTC.stoneArcaneBrick.getDefaultState());
 			worldIn.setBlockState(pos.down(2), BlocksTC.stoneArcaneBrick.getDefaultState());
+			InventoryHelper.spawnItemStack(worldIn, pos.getX(), pos.getY(), pos.getZ(), ((TileTeleporter)(worldIn.getTileEntity(pos.down()))).crystal.getStackInSlot(0));
 			worldIn.removeTileEntity(pos.down());
-		}else if(worldIn.getBlockState(pos.up()).getBlock() == PABlocks.teleporter){
+		} else if (worldIn.getBlockState(pos.up()).getBlock() == PABlocks.teleporter) {
 			worldIn.setBlockState(pos, BlocksTC.stoneArcaneBrick.getDefaultState());
 			worldIn.setBlockState(pos.up(), BlocksTC.stoneArcaneBrick.getDefaultState());
 			worldIn.setBlockState(pos.up(2), PABlocks.teleporter_matrix.getDefaultState());
+			InventoryHelper.spawnItemStack(worldIn, pos.getX(), pos.getY(), pos.getZ(), ((TileTeleporter)(worldIn.getTileEntity(pos.up()))).crystal.getStackInSlot(0));
 			worldIn.removeTileEntity(pos.up());
 		}
 	}
@@ -96,23 +95,23 @@ public class BlockTeleporterPlaceholder extends BlockPA {
         return false;
     }
 	
-	public boolean isNormalCube(IBlockState state){
+	public boolean isNormalCube(@Nonnull IBlockState state){
 		return false;
 	}
 	
-	public boolean isOpaqueCube(IBlockState state){
+	public boolean isOpaqueCube(@Nonnull IBlockState state){
 		return false;
 	}
 	
-	public boolean isBlockNormalCube(IBlockState state){
+	public boolean isBlockNormalCube(@Nonnull IBlockState state){
 		return false;
 	}
 	
-	public boolean isFullBlock(IBlockState state){
+	public boolean isFullBlock(@Nonnull IBlockState state){
 		return false;
 	}
 	
-	public boolean isTranslucent(IBlockState state){
+	public boolean isTranslucent(@Nonnull IBlockState state){
 		return false;
 	}
 	
@@ -120,7 +119,7 @@ public class BlockTeleporterPlaceholder extends BlockPA {
 		return false;
 	}
 	
-	public boolean isFullCube(IBlockState state){
+	public boolean isFullCube(@Nonnull IBlockState state){
         return false;
     }
 }

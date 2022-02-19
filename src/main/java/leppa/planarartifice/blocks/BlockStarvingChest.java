@@ -2,6 +2,7 @@ package leppa.planarartifice.blocks;
 
 import leppa.planarartifice.registry.PABlocks;
 import leppa.planarartifice.tiles.TileStarvingChest;
+import leppa.planarartifice.util.OreUtils;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
@@ -116,7 +117,7 @@ public class BlockStarvingChest extends BlockPA implements ITileEntityProvider {
 
     public int damageDropped(IBlockState state) { return state.getValue(UPGRADES); }
     public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
-    { for (int i = 0; i < MAX_UPGRADES; ++i) items.add(new ItemStack(this, 1, i)); }
+    { for (int i = 0; i < MAX_UPGRADES; ++i) items.add(OreUtils.meta(this, i)); }
     public IBlockState getStateFromMeta(int meta) {
         if (meta >= MAX_UPGRADES) meta = MAX_UPGRADES - 1;
         return this.getDefaultState().withProperty(UPGRADES, meta + 1);
@@ -126,7 +127,7 @@ public class BlockStarvingChest extends BlockPA implements ITileEntityProvider {
         return new BlockStateContainer(this, FACING, UPGRADES);
     }
     public ItemStack getPickBlock(@Nonnull IBlockState state, RayTraceResult target, @Nonnull World world, @Nonnull BlockPos pos, EntityPlayer player)
-    { return new ItemStack(this, 1, getMetaFromState(state)); }
+    { return OreUtils.meta(this, getMetaFromState(state)); }
 
     public boolean hasTileEntity(IBlockState state) {
         return true;

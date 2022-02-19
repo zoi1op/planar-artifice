@@ -1,13 +1,10 @@
 package leppa.planarartifice.enchantment;
 
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-
-import com.google.common.collect.Multimap;
-
 import baubles.api.IBauble;
+import com.google.common.collect.Multimap;
+import leppa.planarartifice.util.Aspects;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
@@ -23,7 +20,10 @@ import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.capabilities.ThaumcraftCapabilities;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.items.IRechargable;
-import thaumcraft.common.lib.crafting.InfusionEnchantmentRecipe;
+
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 /*
  * This is a complete copypasta. I am not responsible for any deaths associated with the use of this.
@@ -32,12 +32,12 @@ public class InfusionEnchantmentRecipeII extends InfusionRecipe{
 	EnumInfusionEnchantmentII enchantment;
 	
 	public InfusionEnchantmentRecipeII(EnumInfusionEnchantmentII ench, AspectList as, Object... components){
-		super(ench.research, null, 4, as, (Object)Ingredient.EMPTY, components);
+		super(ench.research, null, 4, as, Ingredient.EMPTY, components);
 		this.enchantment = ench;
 	}
 	
 	public InfusionEnchantmentRecipeII(InfusionEnchantmentRecipeII recipe, ItemStack in){
-		super(recipe.enchantment.research, null, recipe.instability, recipe.aspects, (Object)in, recipe.components.toArray());
+		super(recipe.enchantment.research, null, recipe.instability, recipe.aspects, in, recipe.components.toArray());
 		this.enchantment = recipe.enchantment;
 	}
 	
@@ -47,11 +47,8 @@ public class InfusionEnchantmentRecipeII extends InfusionRecipe{
 		if(EnumInfusionEnchantmentII.getInfusionEnchantmentLevel(central, this.enchantment) >= this.enchantment.maxLevel){ return false; }
 		if(!this.enchantment.toolClasses.contains("all")){
 			String at;
-			Multimap itemMods = central.getAttributeModifiers(EntityEquipmentSlot.MAINHAND);
-			boolean cool = false;
-			if(itemMods != null && itemMods.containsKey((Object)SharedMonsterAttributes.ATTACK_DAMAGE.getName()) && this.enchantment.toolClasses.contains("weapon")){
-				cool = true;
-			}
+			Multimap<String, AttributeModifier> itemMods = central.getAttributeModifiers(EntityEquipmentSlot.MAINHAND);
+			boolean cool = itemMods.containsKey(SharedMonsterAttributes.ATTACK_DAMAGE.getName()) && this.enchantment.toolClasses.contains("weapon");
 			if(!cool && central.getItem() instanceof ItemTool){
 				Set<String> tcs = central.getItem().getToolClasses(central);
 				for(String tc : tcs){
@@ -130,6 +127,7 @@ public class InfusionEnchantmentRecipeII extends InfusionRecipe{
 		if(rand.nextInt(10) < el.size()){
 			int base = 1;
 			if(input.hasTagCompound()){
+				assert input.getTagCompound() != null;
 				base += input.getTagCompound().getByte("TC.WARP");
 			}
 			out.setTagInfo("TC.WARP", (NBTBase)new NBTTagByte((byte)base));
@@ -139,8 +137,8 @@ public class InfusionEnchantmentRecipeII extends InfusionRecipe{
 	}
 	
 	@Override
-	public AspectList getAspects(EntityPlayer player, ItemStack input, List<ItemStack> comps){
-		AspectList out = new AspectList();
+	public Aspects getAspects(EntityPlayer player, ItemStack input, List<ItemStack> comps){
+		Aspects out = new Aspects();
 		if(input == null || input.isEmpty())
 			return out;
 		int cl = EnumInfusionEnchantmentII.getInfusionEnchantmentLevel(input, this.enchantment) + 1;
@@ -148,7 +146,7 @@ public class InfusionEnchantmentRecipeII extends InfusionRecipe{
 			return out;
 		List<EnumInfusionEnchantmentII> el = EnumInfusionEnchantmentII.getInfusionEnchantments(input);
 		int otherEnchantments = el.size();
-		if(el.contains((Object)this.enchantment)){
+		if(el.contains(this.enchantment)){
 			--otherEnchantments;
 		}
 		float modifier = cl + otherEnchantments * 0.33f;

@@ -16,10 +16,11 @@ import java.util.Map;
 // stole from thaumic augmentation -p
 public class PlanarArtificeCore implements IFMLLoadingPlugin {
     static final Logger LOGGER = LogManager.getLogger(PlanarArtifice.MODID + "core");
+    static Configuration config;
     public static boolean enabled;
 
     public PlanarArtificeCore() {
-        Configuration config = new Configuration(new File("config", PlanarArtifice.MODID + ".cfg"));
+        config = new Configuration(new File("config", PlanarArtifice.MODID + ".cfg"));
         enabled = !config.getBoolean("Disable Coremod", "overhaul", false, "");
         LOGGER.info("[PA, CORE] coremod status: " + enabled);
     }

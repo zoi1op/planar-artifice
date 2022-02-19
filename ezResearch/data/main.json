@@ -124,7 +124,7 @@
         "stages": [
             {"knowledges": ["THEORY;INFUSION;3", "THEORY;ARTIFICE;1"]},
             {"recipes": ["!teleporter_matrix"]},
-            {"recipes": ["teleporter_matrix2", "mirror_teleporter"]}
+            {"recipes": ["mirror_teleporter"]}
         ]
     },{
         "key": "BISMUTH",

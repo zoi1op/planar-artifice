@@ -54,12 +54,28 @@ public class PlanarArtifice implements LoadingCallback {
 					"after:jei@[4.12.0.0,);" +
 					"after:thaumicaugmentation;" +
 					"after:thaumicadds;" +
+					"after:thaumicwonders;" +
+					"after:thaumicpotatoes;" +
+					"after:botania;" +
+					"after:botanicadds;" +
+					"after:extrabotany;" +
+					"after:astralsorcery;" +
 					"after:bewitchment;" +
+					"after:embers;" +
 					"after:soot;" +
 					"after:magicbees;" +
+					"after:twilightforest;" +
 					"after:tconstruct;" +
+					"after:appliedenergistics2;" +
+					"after:refinedstorage;" +
+					"after:arcanearchives;" +
 					"after:ctm;" +
-					"after:xercapaint";
+					"after:xercapaint;" +
+					"after:aeadditions;" +
+					"after:aether_legacy;" +
+					"after:lost_aether;" +
+					"after:aether_legacy_addon;" +
+					"after:tinkersaether";
 	public static final PlanarTab creativetab = new PlanarTab();
 
 	public static boolean isSingleplayer;
@@ -106,7 +122,7 @@ public class PlanarArtifice implements LoadingCallback {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.init(event);
-		if (Loader.isModLoaded("xercapaint") && !PAConfig.compat.disableXercaPaintCompat) XercaPaintHandler.registerOres();
+		if (Loader.isModLoaded("xercapaint")) XercaPaintHandler.registerOresLate();
 	}
 
 	@EventHandler

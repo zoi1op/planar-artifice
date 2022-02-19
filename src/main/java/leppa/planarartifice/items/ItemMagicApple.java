@@ -22,6 +22,7 @@ public class ItemMagicApple extends ItemFood {
 		PAItems.ITEMS.add(this);
 	}
 
+	@SuppressWarnings("deprecation")
 	public EnumRarity getRarity(ItemStack stack) {
 		return PlanarArtifice.rarityPA;
 	}

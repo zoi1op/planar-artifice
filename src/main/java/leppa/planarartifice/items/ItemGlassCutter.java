@@ -1,6 +1,7 @@
 package leppa.planarartifice.items;
 
 import leppa.planarartifice.main.PlanarArtifice;
+import leppa.planarartifice.util.OreUtils;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -33,7 +34,7 @@ public class ItemGlassCutter extends ItemPA {
                 && event.getHarvester().getHeldItemMainhand().getItem() instanceof ItemGlassCutter
                 && event.getState().getMaterial() == Material.GLASS
                 && event.getState().getBlock().canSilkHarvest(event.getWorld(), event.getPos(), event.getState(), event.getHarvester()))
-            event.getDrops().add(new ItemStack(event.getState().getBlock(), 1, event.getState().getBlock().getMetaFromState(event.getState())));
+            event.getDrops().add(OreUtils.meta(event.getState().getBlock(), event.getState().getBlock().getMetaFromState(event.getState())));
     }
 
     @Override

@@ -1,9 +1,5 @@
 package leppa.planarartifice.compat.tconstruct;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ListIterator;
-
 import leppa.planarartifice.recipe.RecipeTransmutation;
 import leppa.planarartifice.registry.PARecipes;
 import net.minecraft.entity.item.EntityItem;
@@ -21,6 +17,9 @@ import slimeknights.tconstruct.library.traits.AbstractTrait;
 import slimeknights.tconstruct.library.utils.TinkerUtil;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.TinkerTraits;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TraitTransmutative extends AbstractTrait {
 
@@ -45,30 +44,22 @@ public class TraitTransmutative extends AbstractTrait {
 			NBTTagCompound tag = TinkerUtil.getModifierTag(item, "transmutative");
 			int level = ModifierNBT.readTag(tag).level;
 			if(level > 0) {
-
 				ArrayList<ItemStack> items = new ArrayList<>();
-
 				List<RecipeTransmutation> recipes = PARecipes.getRecipesOfType(RecipeTransmutation.class);
-
 				recipes.forEach(r -> {
-					ListIterator<EntityItem> iter = e.getDrops().listIterator();
-					while(iter.hasNext()) {
-						EntityItem ei = iter.next();
+					for (EntityItem ei : e.getDrops()) {
 						ItemStack it = ei.getItem();
 
-						if(r.matches(it)) {
+						if (r.matches(it)) {
 							ItemStack output = r.getRecipeOutput();
 							output.setCount(it.getCount());
 							items.add(output);
-						}
-
-						else {
+						} else {
 							items.add(it);
 						}
 
 					}
 				});
-
 				for(int i = 0; i < e.getDrops().size(); i++) {
 					e.getDrops().get(i).setItem(items.get(i));
 				}

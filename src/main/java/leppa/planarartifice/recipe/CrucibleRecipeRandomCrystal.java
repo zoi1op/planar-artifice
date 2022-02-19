@@ -14,10 +14,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+import static leppa.planarartifice.util.Aspects.yangAspects;
+import static leppa.planarartifice.util.Aspects.yinAspects;
+
 public class CrucibleRecipeRandomCrystal extends CrucibleRecipe {
 
-	public static ArrayList<Aspect> yangAspects = new ArrayList<>();
-	public static ArrayList<Aspect> yinAspects = new ArrayList<>();
 	public Random random;
 	public boolean isDark;
 

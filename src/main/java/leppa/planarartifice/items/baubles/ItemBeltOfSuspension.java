@@ -44,6 +44,7 @@ public class ItemBeltOfSuspension extends ItemPA implements IBauble, IVisDiscoun
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	public EnumRarity getRarity(ItemStack stack) {
 		return PlanarArtifice.rarityPA;
 	}

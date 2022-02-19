@@ -643,6 +643,8 @@ focus.colourizer.colour.start=→ 를 눌러 입력
 
 itemGroup.planarartifice.tab.name=경면학
 planarartifice.beaconBase=신호기 받침으로 사용할 수 있음
+planarartifice.waystone.none=이 위상을 가진 전송석이 없습니다.
+planarartifice.waystone.toomuch=이 위상을 가진 전송석이 너무 많습니다.
 
 # ---   ----   --- #
 # --- Research --- #

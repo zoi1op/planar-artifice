@@ -22,6 +22,7 @@ public class ItemVisGlassCutter extends ItemGlassCutter implements IRechargable 
         setMaxDamage(0);
     }
 
+    @SuppressWarnings("deprecation")
     public EnumRarity getRarity(ItemStack itemstack) {
         return EnumRarity.RARE;
     }

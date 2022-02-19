@@ -1,6 +1,7 @@
 package leppa.planarartifice.blocks.glass;
 
 import leppa.planarartifice.registry.PABlocks;
+import leppa.planarartifice.util.OreUtils;
 import net.minecraft.block.BlockBeacon;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.properties.PropertyEnum;
@@ -37,7 +38,8 @@ public class BlockGlassPaneStainedPA extends BlockGlassPanePA {
 
     public int damageDropped(IBlockState state) { return state.getValue(COLOR).getMetadata(); }
     public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
-    { for (int i = 0; i < EnumDyeColor.values().length; ++i) items.add(new ItemStack(this, 1, i)); }
+    { for (int i = 0; i < EnumDyeColor.values().length; ++i) items.add(OreUtils.meta(this, i)); }
+    @SuppressWarnings("deprecation")
     public MapColor getMapColor(IBlockState state, IBlockAccess worldIn, BlockPos pos)
     { return MapColor.getBlockColor(state.getValue(COLOR)); }
 
@@ -62,7 +64,7 @@ public class BlockGlassPaneStainedPA extends BlockGlassPanePA {
     @Nonnull
     @Override
     public ItemStack getPickBlock(@Nonnull IBlockState state, RayTraceResult target, @Nonnull World world, @Nonnull BlockPos pos, EntityPlayer player)
-    { return new ItemStack(this, 1, getMetaFromState(state)); }
+    { return OreUtils.meta(this, getMetaFromState(state)); }
     @Override
     @SideOnly(Side.CLIENT)
     public void registerModels() {

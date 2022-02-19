@@ -33,6 +33,7 @@ public class ItemAlchemicalScribingTools extends ItemPA implements IScribeTools,
 	}
 	
 	@Override
+	@SuppressWarnings("deprecation")
 	public EnumRarity getRarity(ItemStack stack) {
 		return PlanarArtifice.rarityPA;
 	}

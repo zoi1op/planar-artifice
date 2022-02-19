@@ -6,16 +6,14 @@ import leppa.planarartifice.blocks.glass.BlockGlassPA;
 import leppa.planarartifice.blocks.glass.BlockGlassStainedPA;
 import leppa.planarartifice.compat.PACompatHandler.ICompatModule;
 import leppa.planarartifice.main.PAConfig;
-import leppa.planarartifice.main.PlanarArtifice;
+import leppa.planarartifice.util.Aspects;
+import leppa.planarartifice.util.OreUtils;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -26,8 +24,10 @@ import slimeknights.tconstruct.library.client.MaterialRenderInfo;
 import slimeknights.tconstruct.library.materials.*;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
 import slimeknights.tconstruct.shared.TinkerCommons;
+import slimeknights.tconstruct.tools.TinkerTools;
 
 import static leppa.planarartifice.registry.PABlocks.glass_clear;
+import static leppa.planarartifice.util.AspectUtils.add;
 import static slimeknights.tconstruct.library.utils.HarvestLevels.COBALT;
 import static slimeknights.tconstruct.library.utils.HarvestLevels.OBSIDIAN;
 
@@ -69,7 +69,7 @@ public class TConstructHandler implements ICompatModule {
 			TinkerRegistry.registerSmelteryFuel(new FluidStack(fluidAlkimium, 50), 120);
 		}
 
-		if (TinkerRegistry.getMaterial("alkimium") == Material.UNKNOWN) {
+		if (TinkerRegistry.getMaterial("bismuth") == Material.UNKNOWN) {
 			Material bismuth = new Material("bismuth", 0xFFFF0000);
 			bismuth.setCraftable(false).setCastable(true);
 			bismuth.setFluid(fluidBismuth);
@@ -88,24 +88,14 @@ public class TConstructHandler implements ICompatModule {
 		}
 	}
 	
-	@Override
-	public void init(FMLInitializationEvent e) {
-		
-	}
-
-	@Override
-	public void postInit(FMLPostInitializationEvent e) {
-		
-	}
-	
 	@SideOnly(Side.CLIENT)
 	public static Material setMetalMaterialRenderInfo(Material material, int colour, float shinyness, float brightness, float hueshift){
 		material.setRenderInfo(new MaterialRenderInfo.Metal(colour, 0.7f, 0f, 0.1f));
 		return material;
 	}
 
-	public static void registerBlocks(RegistryEvent.Register<Block> event) {
-		PlanarArtifice.LOGGER.info("[LOADER] " + Loader.isModLoaded("tconstruct"));
+	@Override
+	public void registerBlocks(RegistryEvent.Register<Block> event) {
 		if (TConstruct.pulseManager.isPulseLoaded("TinkerCommons")) {
 			glass_clear.BLOCK = TinkerCommons.blockClearGlass;
 			glass_clear.BLOCK_STAINED = TinkerCommons.blockClearStainedGlass;
@@ -115,5 +105,9 @@ public class TConstructHandler implements ICompatModule {
 		}
 	}
 
-
+	@Override
+	public void registerAspects() {
+		add(OreUtils.meta(TinkerTools.toolTables, 4), new Aspects("spatio", 6));
+		add(OreUtils.meta(TinkerTools.toolTables, 5), new Aspects("spatio", 2));
+	}
 }

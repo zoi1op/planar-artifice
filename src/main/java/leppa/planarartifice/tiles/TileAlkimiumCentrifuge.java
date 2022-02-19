@@ -1,6 +1,7 @@
 package leppa.planarartifice.tiles;
 
 import leppa.planarartifice.main.PAConfig;
+import leppa.planarartifice.util.Aspects;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -10,7 +11,6 @@ import net.minecraft.util.math.BlockPos;
 import thaumcraft.api.ThaumcraftApiHelper;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectHelper;
-import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.aspects.IEssentiaTransport;
 import thaumcraft.api.aura.AuraHelper;
 import thaumcraft.common.lib.SoundsTC;
@@ -80,7 +80,7 @@ public class TileAlkimiumCentrifuge extends TileCentrifuge {
                 final IBlockState state = this.world.getBlockState(pos);
                 this.aspectIn = ta;
                 success = (this.world.rand.nextFloat() > PAConfig.balance.centrifugeFluxRate);
-                if (!success) pp = AspectHelper.reduceToPrimals(new AspectList().add(ta, 1)).aspects.values().parallelStream().reduce(0, Integer::sum);
+                if (!success) pp = AspectHelper.reduceToPrimals(new Aspects(ta, 1)).aspects.values().parallelStream().reduce(0, Integer::sum);
                 this.process = 40;
                 this.markDirty();
                 this.world.markAndNotifyBlock(pos, this.world.getChunkFromBlockCoords(pos), state, state, 3);
