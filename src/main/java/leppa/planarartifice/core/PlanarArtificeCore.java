@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.File;
 import java.util.Map;
 
-@IFMLLoadingPlugin.Name("Planar Artifice FibreSpread Hook")
+@IFMLLoadingPlugin.Name("Planar Artifice Coremod")
 @IFMLLoadingPlugin.MCVersion("1.12.2")
 @IFMLLoadingPlugin.SortingIndex(1004)
 @IFMLLoadingPlugin.TransformerExclusions("leppa.planarartifice.core")

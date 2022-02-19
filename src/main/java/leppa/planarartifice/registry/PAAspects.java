@@ -71,7 +71,10 @@ public class PAAspects {
 		}
 		else { aspectBase = new Aspects("metallum", 10); prefix = "ingot"; }
 		if (!OreUtils.exists(prefix + ore)) return;
-		for (String a : aspects) aspectBase.add(a, 5);
+		for (String a : aspects) {
+			if (Aspects.exists(a)) aspectBase.add(a, 5);
+			else if (aspectRepl.containsKey(a)) aspectBase.add(aspectRepl.get(a), 5);
+		}
 		setOreDict(prefix + ore, aspectBase);
 		PlanarArtifice.LOGGER.info("[PA, ORE] Ingot overhaul: " + prefix + ore + ", " + aspectBase);
 		registerIngotDerivative("ore", ore, aspectBase, 1.0F/0.75F, new Aspects("terra", 5));

@@ -1,5 +1,6 @@
 package leppa.planarartifice.compat.thaumicadditions;
 
+import com.zeitheron.thaumicadditions.api.AspectUtil;
 import com.zeitheron.thaumicadditions.init.ItemsTAR;
 import com.zeitheron.thaumicadditions.init.KnowledgeTAR;
 import leppa.planarartifice.blocks.BlockAlkimiumSmeltery;
@@ -20,7 +21,9 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.blocks.BlocksTC;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 import static leppa.planarartifice.util.AspectUtils.get;
 import static leppa.planarartifice.util.AspectUtils.set;
@@ -64,5 +67,9 @@ public class ThaumicAdditionsHandler implements ICompatModule {
 			final Aspect[] taYinAspects = {KnowledgeTAR.DRACO, KnowledgeTAR.EXITIUM, KnowledgeTAR.IMPERIUM, KnowledgeTAR.INFERNUM};
 			Aspects.yinAspects.addAll(Arrays.asList(taYinAspects));
 		}
+	}
+
+	public static ItemStack getSalt(ArrayList<Aspect> listToUse, Random random) {
+		return AspectUtil.salt(listToUse.get(random.nextInt(listToUse.size())), 4);
 	}
 }
