@@ -5,7 +5,10 @@ import com.zxc74171.thaumicpotatoes.guidebooks.GuideBookVol1;
 import com.zxc74171.thaumicpotatoes.init.ModItems;
 import leppa.planarartifice.compat.PACompatHandler;
 import leppa.planarartifice.main.PAConfig;
+import leppa.planarartifice.registry.PARecipes;
+import leppa.planarartifice.util.Aspects;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
@@ -30,5 +33,6 @@ public class ThaumicPotatoesHandler implements PACompatHandler.ICompatModule {
         IDustTrigger.registerDustTrigger(new DustTriggerSimple("!gotdream", Blocks.BOOKSHELF, GuideAPI.getBookToStack().get(GuideBookVol1.guideBookv1)));
         IDustTrigger.registerDustTrigger(new DustTriggerOre("!gotdream", "bookshelf", GuideAPI.getBookToStack().get(GuideBookVol1.guideBookv1)));
         GameRegistry.addShapedRecipe(new ResourceLocation(MODID, "revive_thaumaturgy"), new ResourceLocation(""), new ItemStack(ItemsTC.thaumonomicon), "#", '#', new ItemStack(ModItems.TRUTH));
+        PARecipes.registerCrucibleRecipe("potato_thaum", "PA_THAUMIC_FARMING", ModItems.THAUMIC_POTATO, Items.POTATO, new Aspects("praecantatio", 5));
     }
 }

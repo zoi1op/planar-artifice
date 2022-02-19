@@ -16,6 +16,7 @@ import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
@@ -33,6 +34,7 @@ public class BlockTeleporterMiddle extends BlockPA implements ITileEntityProvide
 	public BlockTeleporterMiddle(String name){
 		super(Material.ROCK, name);
 		setHardness(3);
+		setLightLevel(0.5F);
 	}
 	
 	@Nonnull
@@ -93,7 +95,12 @@ public class BlockTeleporterMiddle extends BlockPA implements ITileEntityProvide
 	public TileEntity createNewTileEntity(@Nonnull World worldIn, int meta){
 		return new TileTeleporter();
 	}
-	
+
+	@Nonnull
+	@Override
+	public ItemStack getPickBlock(@Nonnull IBlockState state, RayTraceResult target, @Nonnull World world, @Nonnull BlockPos pos, EntityPlayer player)
+	{ return new ItemStack(BlocksTC.stoneArcaneBrick); }
+
 	@Override
 	public boolean onBlockActivated(World world, @Nonnull BlockPos pos, @Nonnull IBlockState state, @Nonnull EntityPlayer player, @Nonnull EnumHand hand, @Nonnull EnumFacing facing, float hitX, float hitY, float hitZ) {
 		if (!world.isRemote) {

@@ -9,6 +9,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.math.ChunkPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
 import net.minecraftforge.common.ForgeChunkManager.Type;
@@ -18,6 +19,7 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.items.ItemGenericEssentiaContainer;
+import thaumcraft.client.fx.FXDispatcher;
 
 import javax.annotation.Nullable;
 
@@ -80,10 +82,18 @@ public class TileTeleporter extends TileEntity implements ITickable{
 	
 	@Override
 	public void update(){
-		if (chunkTicket == null)
-			chunkTicket = ForgeChunkManager.requestTicket(PlanarArtifice.instance, world, Type.NORMAL);
-		if (chunkTicket == null)
-			System.out.println("Planar Artifice: A Waystone couldn't load chunks, since there are no chunkloaders left.");
+		if (chunkTicket == null) chunkTicket = ForgeChunkManager.requestTicket(PlanarArtifice.instance, world, Type.NORMAL);
+		if (chunkTicket == null) PlanarArtifice.LOGGER.warn("[PA, WAYSTONE] A Waystone couldn't load chunks, since there are no chunkloaders left.");
 		ForgeChunkManager.forceChunk(chunkTicket, new ChunkPos(pos));
+		if (world.isRemote && getAspect() != null) {
+			int c = getAspect().getColor();
+			float r = ((c & 0xFF0000) >> 16) / 255.0F;
+			float g = ((c & 0x00FF00) >> 8) / 255.0F;
+			float b = (c & 0x0000FF) / 255.0F;
+			for (int i = 0; i < 5; i++) {
+				float theta = world.rand.nextFloat() * ((float)Math.PI * 2);
+				FXDispatcher.INSTANCE.drawSimpleSparkle(world.rand, pos.getX() + 0.5 + MathHelper.cos(theta), pos.getY() + 0.5, pos.getZ() + 0.5 + MathHelper.sin(theta), 0.0D, 0.0025D, 0.0D, 0.4F + (float)this.getWorld().rand.nextGaussian() * 0.1F, r, g, b, world.rand.nextInt(5), 1.0F, 0, 8);
+			}
+		}
 	}
 }

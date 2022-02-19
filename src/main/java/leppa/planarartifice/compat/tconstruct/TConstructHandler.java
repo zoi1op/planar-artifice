@@ -107,7 +107,9 @@ public class TConstructHandler implements ICompatModule {
 
 	@Override
 	public void registerAspects() {
-		add(OreUtils.meta(TinkerTools.toolTables, 4), new Aspects("spatio", 6));
-		add(OreUtils.meta(TinkerTools.toolTables, 5), new Aspects("spatio", 2));
+		if (TConstruct.pulseManager.isPulseLoaded("TinkerTools")) {
+			add(OreUtils.meta(TinkerTools.toolTables, 4), new Aspects("spatio", 2));
+			add(OreUtils.meta(TinkerTools.toolTables, 5), new Aspects("spatio", 2));
+		}
 	}
 }

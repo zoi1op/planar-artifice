@@ -2,18 +2,19 @@ package leppa.planarartifice.blocks;
 
 import leppa.planarartifice.registry.PABlocks;
 import leppa.planarartifice.tiles.TileTeleporter;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.inventory.InventoryHelper;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
@@ -22,7 +23,6 @@ import thaumcraft.common.lib.SoundsTC;
 
 import javax.annotation.Nonnull;
 import java.util.List;
-import java.util.Random;
 
 public class BlockTeleporterPlaceholder extends BlockPA {
 
@@ -31,17 +31,18 @@ public class BlockTeleporterPlaceholder extends BlockPA {
 		setHardness(3);
 	}
 	
-	public boolean onBlockActivated(World world, BlockPos pos, @Nonnull IBlockState state, @Nonnull EntityPlayer player, @Nonnull EnumHand hand, @Nonnull EnumFacing facing, float hitX, float hitY, float hitZ){
+	public boolean onBlockActivated(@Nonnull World world, @Nonnull BlockPos pos, @Nonnull IBlockState state, @Nonnull EntityPlayer player, @Nonnull EnumHand hand, @Nonnull EnumFacing facing, float hitX, float hitY, float hitZ){
 		if (hand == EnumHand.OFF_HAND) return false;
-		if(world.getBlockState(pos.down()).getBlock() == PABlocks.teleporter){
+		if (world.getBlockState(pos.down()).getBlock() == PABlocks.teleporter) {
 			TileTeleporter tep = (TileTeleporter)world.getTileEntity(pos.down());
 			TileTeleporter dep = null;
+			assert tep != null;
+			if (tep.getAspect() == null) return false;
 			int count = 0;
 			List<TileEntity> allTEs = world.loadedTileEntityList;
-			for(TileEntity e : allTEs){
-				if(e instanceof TileTeleporter){
+			for (TileEntity e : allTEs) {
+				if (e instanceof TileTeleporter) {
 					TileTeleporter t = (TileTeleporter)e;
-					assert tep != null;
 					if(tep.getAspect() == t.getAspect() && tep.getPos() != t.getPos()){
 						dep = t;
 						count++;
@@ -65,10 +66,13 @@ public class BlockTeleporterPlaceholder extends BlockPA {
 		}
 		return false;
 	}
-	
+
 	@Nonnull
-	public Item getItemDropped(@Nonnull IBlockState state, @Nonnull Random rand, int fortune) {
-		return Item.getItemFromBlock(Blocks.AIR);
+	@Override
+	public ItemStack getPickBlock(@Nonnull IBlockState state, @Nonnull RayTraceResult target, @Nonnull World world, @Nonnull BlockPos pos, EntityPlayer player)
+	{
+		if (world.getBlockState(pos.down()).getBlock() == PABlocks.teleporter) return new ItemStack(PABlocks.teleporter_matrix);
+		else return new ItemStack(BlocksTC.stoneArcaneBrick);
 	}
 	
 	public void breakBlock(World worldIn, BlockPos pos, @Nonnull IBlockState state){
@@ -86,7 +90,12 @@ public class BlockTeleporterPlaceholder extends BlockPA {
 			worldIn.removeTileEntity(pos.up());
 		}
 	}
-	
+
+	@Override
+	public Block setLightLevel(float value) {
+		return super.setLightLevel(value);
+	}
+
 	public BlockRenderLayer getBlockLayer(){
 		return BlockRenderLayer.TRANSLUCENT;
 	}
