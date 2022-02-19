@@ -257,9 +257,9 @@ public class PABlocks {
 			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:glass_bismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(BLOCK_RAINBOW), BLOCK, new Aspects("tinctura", 5)));
 			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:pane_bismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(PANE_RAINBOW), PANE, new Aspects("tinctura", 5)));
 			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:panel_bismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(PANEL_RAINBOW), PANEL, new Aspects("tinctura", 5)));
-			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:glass_rebismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(BLOCK_RAINBOW), new ItemStack(BLOCK_STAINED, OreDictionary.WILDCARD_VALUE), new Aspects("tinctura", 5)));
-			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:pane_rebismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(PANE_RAINBOW), new ItemStack(PANE_STAINED, OreDictionary.WILDCARD_VALUE), new Aspects("tinctura", 5)));
-			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:panel_rebismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(PANEL_RAINBOW), new ItemStack(PANEL_STAINED, OreDictionary.WILDCARD_VALUE), new Aspects("tinctura", 5)));
+			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:glass_rebismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(BLOCK_RAINBOW), OreUtils.meta(BLOCK_STAINED, OreDictionary.WILDCARD_VALUE), new Aspects("tinctura", 5)));
+			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:pane_rebismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(PANE_RAINBOW), OreUtils.meta(PANE_STAINED, OreDictionary.WILDCARD_VALUE), new Aspects("tinctura", 5)));
+			ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("planarartifice:panel_rebismuth" + name), new CrucibleRecipe("PA_GLASSWORK_RAINBOW", new ItemStack(PANEL_RAINBOW), OreUtils.meta(PANEL_STAINED, OreDictionary.WILDCARD_VALUE), new Aspects("tinctura", 5)));
 			for (int i = 0; i < 16; i++) {
 				// dye / redye
 				GameRegistry.addShapedRecipe(new ResourceLocation("planarartifice:glass_dye" + name + "_" + i), new ResourceLocation(""), new ItemStack(BLOCK_STAINED, 8, i), "###", "#C#", "###", '#', BLOCK, 'C', "dye" + COLORS[i]);
