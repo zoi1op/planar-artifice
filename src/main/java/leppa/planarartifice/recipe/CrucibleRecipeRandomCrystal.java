@@ -1,10 +1,10 @@
 package leppa.planarartifice.recipe;
 
-import com.zeitheron.thaumicadditions.api.AspectUtil;
 import leppa.planarartifice.compat.thaumicadditions.ThaumicAdditionsHandler;
 import leppa.planarartifice.main.PAConfig;
 import leppa.planarartifice.registry.PAAspects;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.Loader;
 import thaumcraft.api.ThaumcraftApiHelper;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+import static leppa.planarartifice.compat.thaumicadditions.ThaumicAdditionsHandler.getSalt;
 import static leppa.planarartifice.util.Aspects.yangAspects;
 import static leppa.planarartifice.util.Aspects.yinAspects;
 
@@ -31,8 +32,7 @@ public class CrucibleRecipeRandomCrystal extends CrucibleRecipe {
 	@Override
 	public ItemStack getRecipeOutput() {
 		ArrayList<Aspect> listToUse = isDark ? yinAspects : yangAspects;
-		if (ThaumicAdditionsHandler.extraActivated)
-			return AspectUtil.salt(listToUse.get(random.nextInt(listToUse.size())), 4);
+		if (Loader.isModLoaded("thaumadditions") && ThaumicAdditionsHandler.extraActivated) return getSalt(listToUse, random);
 		return ThaumcraftApiHelper.makeCrystal(listToUse.get(random.nextInt(listToUse.size())), 3);
 	}
 
