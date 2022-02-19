@@ -51,6 +51,7 @@ public class ItemAlkimiumGoggles extends ItemArmor implements IRevealer, IGoggle
 	public BaubleType getBaubleType(ItemStack itemstack) {
 		return BaubleType.HEAD;
 	}
+	@SuppressWarnings("deprecation")
 	public EnumRarity getRarity(@Nonnull ItemStack stack) {
 		return PlanarArtifice.rarityPA;
 	}

@@ -1,9 +1,5 @@
 package leppa.planarartifice.items;
 
-import java.util.List;
-
-import javax.annotation.Nullable;
-
 import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.util.LocalizationHelper;
 import net.minecraft.client.util.ITooltipFlag;
@@ -17,15 +13,16 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
-import thaumcraft.Registrar;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.capabilities.IPlayerKnowledge;
-import thaumcraft.api.items.ItemsTC;
 import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchCategory;
 import thaumcraft.common.lib.SoundsTC;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class ItemCurio extends ItemPA {
 
@@ -37,7 +34,8 @@ public class ItemCurio extends ItemPA {
 		this.category = category;
 	}
 
-	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
+	@Nonnull
+	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, @Nonnull EnumHand hand) {
 		world.playSound(null, player.posX, player.posY, player.posZ, SoundsTC.learn, SoundCategory.NEUTRAL, 0.5f,
 				0.4f / (itemRand.nextFloat() * 0.4f + 0.8f));
 		if(!world.isRemote) {
@@ -64,11 +62,12 @@ public class ItemCurio extends ItemPA {
 		return super.onItemRightClick(world, player, hand);
 	}
 
-	public EnumRarity getRarity(ItemStack itemstack) {
+	@SuppressWarnings("deprecation")
+	public EnumRarity getRarity(@Nonnull ItemStack itemstack) {
 		return PlanarArtifice.rarityPA;
 	}
 
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+	public void addInformation(@Nonnull ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		tooltip.add(LocalizationHelper.localize("planarartifice." + name));
 	}
 }

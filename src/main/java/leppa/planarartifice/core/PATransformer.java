@@ -15,6 +15,7 @@ public class PATransformer implements IClassTransformer {
     static {
         transformers.put("thaumcraft.common.blocks.world.taint.TaintHelper", new TransformSpreadFibre());
         transformers.put("thaumcraft.client.gui.GuiResearchPage", new TransformDrawKnowledge());
+        transformers.put("thaumcraft.api.aspects.Aspect", new TransformGelumComposition());
     }
 
     @Override
@@ -51,6 +52,18 @@ public class PATransformer implements IClassTransformer {
             if (insn instanceof MethodInsnNode) {
                 MethodInsnNode method = (MethodInsnNode) insn;
                 if (method.name.equals(name) && method.desc.equals(desc) && method.owner.equals(owningClass)) return i;
+            }
+        }
+        return -1;
+    }
+    static int findField(MethodNode node, int startIndex, String name, String desc, String owningClass) {
+        if (startIndex < 0 || startIndex >= node.instructions.size())
+            return -1;
+        for (int i = startIndex; i < node.instructions.size(); ++i) {
+            AbstractInsnNode insn = node.instructions.get(i);
+            if (insn instanceof FieldInsnNode) {
+                FieldInsnNode field = (FieldInsnNode) insn;
+                if (field.name.equals(name) && field.desc.equals(desc) && field.owner.equals(owningClass)) return i;
             }
         }
         return -1;

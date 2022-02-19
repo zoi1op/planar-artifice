@@ -643,6 +643,8 @@ focus.colourizer.colour.start=-> to type
 
 itemGroup.planarartifice.tab.name=Planar Artifice
 planarartifice.beaconBase=Can be used as a beacon base
+planarartifice.waystone.none=There are no Waystones with this Aspect.
+planarartifice.waystone.toomuch=There are too many Waystones with this Aspect.
 
 # ---   ----   --- #
 # --- Research --- #

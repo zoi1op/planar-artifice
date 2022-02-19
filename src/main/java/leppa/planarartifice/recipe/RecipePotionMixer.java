@@ -13,7 +13,7 @@ public class RecipePotionMixer extends Impl<IRecipe> implements IRecipe {
 	private final ItemStack input;
 	private final Potion[] potions;
 
-	public RecipePotionMixer(ResourceLocation name, ItemStack input, Potion... potions) {
+	public RecipePotionMixer(ResourceLocation name, ItemStack input, Potion ...potions) {
 		this.input = input;
 		this.potions = potions;
 		

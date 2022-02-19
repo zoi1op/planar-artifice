@@ -1,12 +1,9 @@
 package leppa.planarartifice.tiles;
 
-import javax.annotation.Nullable;
-
 import leppa.planarartifice.main.CommonProxy;
 import leppa.planarartifice.main.PlanarArtifice;
 import leppa.planarartifice.network.PacketRequestUpdateTeleporter;
 import leppa.planarartifice.network.PacketUpdateTeleporter;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
@@ -18,10 +15,11 @@ import net.minecraftforge.common.ForgeChunkManager.Type;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.items.ItemGenericEssentiaContainer;
+
+import javax.annotation.Nullable;
 
 public class TileTeleporter extends TileEntity implements ITickable{
 	
@@ -82,13 +80,10 @@ public class TileTeleporter extends TileEntity implements ITickable{
 	
 	@Override
 	public void update(){
-		if(chunkTicket == null){
+		if (chunkTicket == null)
 			chunkTicket = ForgeChunkManager.requestTicket(PlanarArtifice.instance, world, Type.NORMAL);
-		}
-		if(chunkTicket == null){
+		if (chunkTicket == null)
 			System.out.println("Planar Artifice: A Waystone couldn't load chunks, since there are no chunkloaders left.");
-		}
-		
 		ForgeChunkManager.forceChunk(chunkTicket, new ChunkPos(pos));
 	}
 }

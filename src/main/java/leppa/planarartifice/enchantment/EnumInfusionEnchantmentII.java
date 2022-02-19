@@ -1,24 +1,23 @@
 package leppa.planarartifice.enchantment;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
-
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Multimap;
-
 import leppa.planarartifice.registry.PAItems;
+import leppa.planarartifice.util.OreUtils;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import thaumcraft.api.items.ItemsTC;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
 
 public enum EnumInfusionEnchantmentII{
 	TRANSMUTATIVE(ImmutableSet.of("axe", "pickaxe", "shovel", "weapon"), 1, "PA_INFUSION_ENCHANTMENT_2"),
@@ -30,9 +29,9 @@ public enum EnumInfusionEnchantmentII{
 	public int maxLevel;
 	public String research;
 
-	public static final ItemStack[] CURIOS = {new ItemStack(ItemsTC.curio), new ItemStack(ItemsTC.curio, 1, 1), new ItemStack(ItemsTC.curio, 1, 2), new ItemStack(ItemsTC.curio, 1, 3), new ItemStack(ItemsTC.curio, 1, 4), new ItemStack(ItemsTC.curio, 1, 5), new ItemStack(PAItems.dimensional_curiosity), new ItemStack(PAItems.fundamental_curiosity)};
+	public static final ItemStack[] CURIOS = {new ItemStack(ItemsTC.curio), OreUtils.meta(ItemsTC.curio, 1), OreUtils.meta(ItemsTC.curio, 2), OreUtils.meta(ItemsTC.curio, 3), OreUtils.meta(ItemsTC.curio, 4), OreUtils.meta(ItemsTC.curio, 5), new ItemStack(PAItems.dimensional_curiosity), new ItemStack(PAItems.fundamental_curiosity)};
 	
-	private EnumInfusionEnchantmentII(Set<String> toolClasses, int ml, String research){
+	EnumInfusionEnchantmentII(Set<String> toolClasses, int ml, String research){
 		this.toolClasses = toolClasses;
 		this.maxLevel = ml;
 		this.research = research;
@@ -59,7 +58,6 @@ public enum EnumInfusionEnchantmentII{
 	
 	public static int getInfusionEnchantmentLevel(ItemStack stack, EnumInfusionEnchantmentII enchantment){
 		NBTTagList nbttaglist = EnumInfusionEnchantmentII.getInfusionEnchantmentTagList(stack);
-		ArrayList list = new ArrayList();
 		if(nbttaglist != null){
 			for(int j = 0; j < nbttaglist.tagCount(); ++j){
 				short k = nbttaglist.getCompoundTagAt(j).getShort("id");
@@ -86,7 +84,7 @@ public enum EnumInfusionEnchantmentII{
 					continue;
 				if(level <= l){ return; }
 				nbttaglist.getCompoundTagAt(j).setShort("lvl", (short)level);
-				stack.setTagInfo("infenchplanar", (NBTBase)nbttaglist);
+				stack.setTagInfo("infenchplanar", nbttaglist);
 				if(ie == PROJECTING)
 					handleProjecting(stack);
 				return;
@@ -97,9 +95,9 @@ public enum EnumInfusionEnchantmentII{
 		NBTTagCompound nbttagcompound = new NBTTagCompound();
 		nbttagcompound.setShort("id", (short)ie.ordinal());
 		nbttagcompound.setShort("lvl", (short)level);
-		nbttaglist.appendTag((NBTBase)nbttagcompound);
+		nbttaglist.appendTag(nbttagcompound);
 		if(nbttaglist.tagCount() > 0){
-			stack.setTagInfo("infenchplanar", (NBTBase)nbttaglist);
+			stack.setTagInfo("infenchplanar", nbttaglist);
 		}
 		
 		if(ie == PROJECTING)

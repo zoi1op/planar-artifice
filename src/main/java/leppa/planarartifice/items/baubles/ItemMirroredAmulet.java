@@ -26,7 +26,8 @@ public class ItemMirroredAmulet extends ItemPA implements IBauble, IVisDiscountG
 	public BaubleType getBaubleType(ItemStack arg0){
 		return BaubleType.AMULET;
 	}
-	
+
+	@SuppressWarnings("deprecation")
 	public EnumRarity getRarity(ItemStack stack){
 		return PlanarArtifice.rarityPA;
 	}

@@ -9,6 +9,7 @@ import leppa.planarartifice.recipe.CrucibleRecipeRandomCrystal;
 import leppa.planarartifice.registry.PAAspects;
 import leppa.planarartifice.registry.PAResearch;
 import leppa.planarartifice.tiles.*;
+import leppa.planarartifice.util.Aspects;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -19,6 +20,9 @@ import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
+import thaumcraft.api.research.ResearchCategories;
+
+import static leppa.planarartifice.main.PlanarArtifice.MODID;
 
 public class CommonProxy {
 
@@ -29,14 +33,19 @@ public class CommonProxy {
 		PACompatHandler.setup();
 		PACompatHandler.preInit(e);
 
-		GameRegistry.registerTileEntity(TileTeleporter.class, new ResourceLocation(PlanarArtifice.MODID, "mirrorTeleporter"));
-		GameRegistry.registerTileEntity(TileFluxScrubber.class, new ResourceLocation(PlanarArtifice.MODID,"fluxScrubber"));
-		GameRegistry.registerTileEntity(TilePotionMixer.class, new ResourceLocation(PlanarArtifice.MODID,"potionMixer"));
-		GameRegistry.registerTileEntity(TileAlkimiumSmeltery.class, new ResourceLocation(PlanarArtifice.MODID,"alkimiumSmeltery"));
-		GameRegistry.registerTileEntity(TileAlkimiumCentrifuge.class, new ResourceLocation(PlanarArtifice.MODID,"alkimiumCentrifuge"));
-		GameRegistry.registerTileEntity(TileStarvingChest.class, new ResourceLocation(PlanarArtifice.MODID,"starvingChest"));
+		PAResearch.catPA = ResearchCategories.registerCategory("PLANARARTIFICE", "FIRSTSTEPS",
+				new Aspects("spatio", 20, "tempus", 20, "tinctura", 10, "vitreus", 10, "auram", 10, "ordo", 5),
+				new ResourceLocation(MODID, "textures/meta/logo_icon.png"),
+				new ResourceLocation(MODID, "textures/research/gui_research_back_2.jpg"));
 
-		network = NetworkRegistry.INSTANCE.newSimpleChannel(PlanarArtifice.MODID);
+		GameRegistry.registerTileEntity(TileTeleporter.class, new ResourceLocation(MODID, "mirrorTeleporter"));
+		GameRegistry.registerTileEntity(TileFluxScrubber.class, new ResourceLocation(MODID,"fluxScrubber"));
+		GameRegistry.registerTileEntity(TilePotionMixer.class, new ResourceLocation(MODID,"potionMixer"));
+		GameRegistry.registerTileEntity(TileAlkimiumSmeltery.class, new ResourceLocation(MODID,"alkimiumSmeltery"));
+		GameRegistry.registerTileEntity(TileAlkimiumCentrifuge.class, new ResourceLocation(MODID,"alkimiumCentrifuge"));
+		GameRegistry.registerTileEntity(TileStarvingChest.class, new ResourceLocation(MODID,"starvingChest"));
+
+		network = NetworkRegistry.INSTANCE.newSimpleChannel(MODID);
 		int id = 0;
 		network.registerMessage(new PacketUpdateTeleporter.Handler(), PacketUpdateTeleporter.class, id++, Side.CLIENT);
 		network.registerMessage(new PacketRequestUpdateTeleporter.Handler(), PacketRequestUpdateTeleporter.class, id++, Side.SERVER);
@@ -54,6 +63,7 @@ public class CommonProxy {
 	}
 
 	public void postInit(FMLPostInitializationEvent e){
+		PAAspects.registerEntityAspects();
 		PACompatHandler.postInit(e);
 	}
 

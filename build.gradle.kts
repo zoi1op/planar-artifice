@@ -24,18 +24,34 @@ val versionJEI: String by project
 val versionBaubles: String by project
 val versionThaumcraft: String by project
 val versionAugmentation: String by project
+val versionWonders: String by project
+val versionGuideAPI: String by project
+val versionPotatoes: String by project
 val versionHammerLib: String by project
 val versionThaumAdds: String by project
 val versionPatchouli: String by project
+val versionBotania: String by project
+val versionBotanicAdditions: String by project
+val versionExtraBotany: String by project
+val versionAstralSorcery: String by project
 val versionBewitchment: String by project
 val versionEmbers: String by project
 val versionSoot: String by project
 val versionForestry: String by project
 val versionMagicBees: String by project
+val versionTwilight: String by project
 val versionMantle: String by project
 val versionTConstruct: String by project
+val versionAE2: String by project
+val versionRS: String by project
+val versionMysticalLib: String by project
+val versionArcArc: String by project
 val versionCTM: String by project
 val versionXercaPaint: String by project
+val versionAether: String by project
+val versionAetherLostContent: String by project
+val versionAetherContinuation: String by project
+val versionAetherAdditions: String by project
 
 version = versionThis
 group = "leppa.planarartifice"
@@ -98,18 +114,34 @@ dependencies {
     implementation(group = "com.azanor.baubles", name = "Baubles", version = "${versionMcMajor}-${versionBaubles}")
     implementation(fg.deobf(group = "curse.maven", name = "thaumcraft-223628", version = versionThaumcraft))
     implementation(group = "curse.maven", name = "thaumicaugmentation-319441", version = versionAugmentation)
+    implementation(group = "curse.maven", name = "thaumic-wonders-316704", version = versionWonders)
+    implementation(group = "curse.maven", name = "guide-api-228832", version = versionGuideAPI)
+    implementation(group = "curse.maven", name = "thaumic-potatoes-2-270721", version = versionPotatoes)
     implementation("tk.zeitheron.HammerLib:HammerLib-${versionMc}:${versionHammerLib}:deobf")
     implementation("tk.zeitheron.ThaumicAdditions:ThaumicAdditions-${versionMc}:${versionThaumAdds}:deobf")
     implementation(group = "curse.maven", name = "patchouli-306770", version = versionPatchouli)
+    implementation(group = "curse.maven", name = "botania-225643", version = versionBotania)
+    implementation(group = "curse.maven", name = "botanic-additions-310637", version = versionBotanicAdditions)
+    implementation(group = "curse.maven", name = "extrabotany-299086", version = versionExtraBotany)
+    implementation(group = "curse.maven", name = "astral-sorcery-241721", version = versionAstralSorcery)
     implementation(group = "curse.maven", name = "bewitchment-285439", version = versionBewitchment)
     implementation(group = "curse.maven", name = "embers-rekindled-300777", version = versionEmbers)
     implementation(group = "curse.maven", name = "soot-281528", version = versionSoot)
     implementation(group = "curse.maven", name = "forestry-59751", version = versionForestry)
     implementation(group = "curse.maven", name = "magic-bees-65764", version = versionMagicBees)
+    implementation(group = "curse.maven", name = "the-twilight-forest-227639", version = versionTwilight)
     implementation(fg.deobf(group = "slimeknights.mantle", name = "Mantle", version = "${versionMcMajor}-${versionMantle}"))
     implementation(fg.deobf(group = "slimeknights", name = "TConstruct", version = "${versionMc}-${versionTConstruct}"))
+    implementation(group = "curse.maven", name = "applied-energistics-2-223794", version = versionAE2)
+    implementation(group = "curse.maven", name = "refined-storage-243076", version = versionRS)
+    implementation(group = "curse.maven", name = "mysticallib-277064", version = versionMysticalLib)
+    implementation(group = "curse.maven", name = "arcane-archives-311357", version = versionArcArc)
     implementation(group = "curse.maven", name = "ctm-267602", version = versionCTM)
     implementation(group = "curse.maven", name = "joy-of-painting-350727", version = versionXercaPaint)
+    implementation(group = "curse.maven", name = "aether-255308", version = versionAether)
+    implementation(group = "curse.maven", name = "aether-lost-content-318602", version = versionAetherLostContent)
+    implementation(group = "curse.maven", name = "aether-addon-294269", version = versionAetherContinuation)
+    implementation(group = "curse.maven", name = "aether-additions-351809", version = versionAetherAdditions)
 }
 
 tasks {

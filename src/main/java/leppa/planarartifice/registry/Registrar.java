@@ -1,9 +1,10 @@
 package leppa.planarartifice.registry;
 
 import leppa.planarartifice.api.event.EventFibreSpread;
-import leppa.planarartifice.compat.tconstruct.TConstructHandler;
+import leppa.planarartifice.compat.PACompatHandler;
 import leppa.planarartifice.main.PAConfig;
 import leppa.planarartifice.main.PlanarArtifice;
+import leppa.planarartifice.util.AspectUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
@@ -12,7 +13,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent.Register;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -27,15 +27,15 @@ public class Registrar {
 
 	@SubscribeEvent
 	public static void registerBlocks(Register<Block> event) {
-		PlanarArtifice.LOGGER.info("[LOADER] " + Loader.isModLoaded("tconstruct"));
-		if (Loader.isModLoaded("tconstruct")) TConstructHandler.registerBlocks(event);
 		PABlocks.registerBlocks(event);
+		PACompatHandler.registerBlocks(event);
 	}
 
 	@SubscribeEvent
 	public static void registerItems(Register<Item> event) {
 		PABlocks.registerItemBlocks(event);
 		PAItems.registerItems(event);
+		PACompatHandler.registerItems(event);
 		Registrar.registerOres();
 	}
 
@@ -43,6 +43,7 @@ public class Registrar {
 	public static void registerRecipes(Register<IRecipe> event) {
 		PARecipes.registerRecipes(event);
 		PAMultiblocks.registerMultiblocks();
+		PACompatHandler.registerRecipes(event);
 	}
 
 	@SubscribeEvent
@@ -50,6 +51,7 @@ public class Registrar {
 	public static void registerModels(ModelRegistryEvent event) {
 		PABlocks.registerModels();
 		PAItems.registerModels();
+		PACompatHandler.registerModels(event);
 	}
 
 	public static void registerOres() {
@@ -75,11 +77,14 @@ public class Registrar {
 		PABlocks.glass_foreboding.oredict();
 		PABlocks.glass_strong.oredict();
 		OreDictionary.registerOre("blockGlass", PABlocks.glass_redstone);
+		PACompatHandler.registerOres();
 	}
 
 	@SubscribeEvent
 	public static void registerAspects(AspectRegistryEvent event) {
+		AspectUtils.event = event.register;
 		PAAspects.registerItemAspects();
+		PACompatHandler.registerAspects();
 	}
 
 	@SubscribeEvent

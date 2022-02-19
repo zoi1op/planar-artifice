@@ -29,6 +29,9 @@ public class PAConfig {
         @Config.LangKey(key + "xercapaintcompat")
         @Config.Name("Disable Joy of Painting Compat")
         public boolean disableXercaPaintCompat = false;
+        @Config.LangKey(key + "thaumicpotatoescompat")
+        @Config.Name("Disable Thaumic Potatoes Compat")
+        public boolean disableThaumicPotatoesCompat = false;
     }
 
     public static class Overhauls {
@@ -43,6 +46,9 @@ public class PAConfig {
         @Config.LangKey(key + "disable_coremod")
         @Config.Name("Disable Coremod")
         public boolean disableCoremod = false;
+        @Config.LangKey(key + "gelum_is_ignis_perditio")
+        @Config.Name("Disable Gelum Aspect Change")
+        public boolean disableGelumAspectChange = false;
     }
 
     public static class Balance {

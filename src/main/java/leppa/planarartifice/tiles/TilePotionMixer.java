@@ -1,10 +1,8 @@
 package leppa.planarartifice.tiles;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import leppa.planarartifice.recipe.RecipePotionMixer;
 import leppa.planarartifice.registry.PARecipes;
+import leppa.planarartifice.util.Aspects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -18,6 +16,9 @@ import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.aspects.IAspectContainer;
 import thaumcraft.api.aspects.IEssentiaTransport;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 public class TilePotionMixer extends TileEntity implements ITickable, IAspectContainer, IEssentiaTransport{
 	
 	/**
@@ -28,8 +29,8 @@ public class TilePotionMixer extends TileEntity implements ITickable, IAspectCon
 	public ItemStackHandler inventory = new ItemStackHandler(7);
 	public int currentProgress;
 	public int maxProgress = 200;
-	public AspectList recipe = new AspectList();
-	public AspectList recipeProgress = new AspectList();
+	public Aspects recipe = new Aspects();
+	public Aspects recipeProgress = new Aspects();
 	public Aspect currentSuction = null;
 	public RecipePotionMixer currentRecipe;
 	
@@ -61,16 +62,11 @@ public class TilePotionMixer extends TileEntity implements ITickable, IAspectCon
 	
 	@Override
 	public void update(){
-		ItemStack catalyst = inventory.getStackInSlot(3);		
-		
+		ItemStack catalyst = inventory.getStackInSlot(3);
 		PARecipes.getRecipesOfType(RecipePotionMixer.class).forEach(recipe -> {
-			
 			if(recipe.matches(catalyst))
 				currentRecipe = recipe;
-			
 		});
-		
-		
 	}
 	
 	@Override
