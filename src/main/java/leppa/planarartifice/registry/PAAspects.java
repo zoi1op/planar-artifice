@@ -214,25 +214,18 @@ public class PAAspects {
 		registerIngot("Nickel", "fabrico");
 		registerIngot("Bronze", "instrumentum");
 		registerIngot("Copper", "permutatio");
-		registerIngot("AstralStarmetal", "stellae");
-		registerIngot("Manasteel", "praecantatio");
-		registerIngot("ElvenElementium", "alienis");
-		registerIngot("Dawnstone", "machina", "ignis");
 		registerIngot("Draconium", "draco");
 		registerIngot("Netherite", "infernum");
-		registerIngot("Uranium","potentia", "mortuus");
-		registerIngot("Alkimium", "alkimia");
-		registerIngot("Bismuth","tinctura");
+		registerIngot("Uranium", "potentia", "mortuus");
 		registerIngot("Cobalt", "tempus");
 		registerIngot("Ardite", "spatio");
 		registerIngot("Osmium", "ventus");
-		registerIngot("ColdIron", "gelum");
 		registerIngot("Antimony", "vacuos");
 		registerIngot("Iridium", "motus", "machina");
 		registerIngot("Platinum", "caeles", "desiderium");
-		registerIngot("Mithril", "praecantatio");
 		registerIngot("Titanium", "praemunio");
 		registerIngot("Tungsten", "aversio");
+		registerIngot("Aquamarine", true, "aqua", "tempus");
 		registerIngot("Endorium", "motus", "alienis");
 		registerIngot("Ambrosium", true, "lux", "ordo");
 		registerIngot("Zanite", true, "motus", "metallum");
@@ -247,17 +240,27 @@ public class PAAspects {
 		registerIngot("EnchantedMetal", "praecantatio", "vitreus");
 		registerIngot("Shadowium", "tenebrae");
 		registerIngot("Photonium", "lux");
-		registerIngot("Manyullyn", "diabolus");
+		registerIngot("Orichalcos", "caeles", "draco", "desiderium", "spatio", "tempus");
+		registerIngot("AstralStarmetal", "stellae");
+		registerIngot("Manasteel", "praecantatio");
+		registerIngot("ElvenElementium", "alienis");
+		registerIngot("Dawnstone", "machina", "ignis");
+		registerIngot("Alkimium", "alkimia");
+		registerIngot("Bismuth","tinctura");
+		registerIngot("ColdIron", "gelum");
 		registerIngot("Constantan", "sonus");
 		registerIngot("Signalum", "fluctus", "desiderium");
 		registerIngot("Lumium", "lux", "desiderium");
+		registerIngot("Mithril", "praecantatio");
 		registerIngot("Alubrass", "visum");
 		registerIngot("Knightslime", "aversio", "praemunio");
 		registerIngot("Pigiron", "bestia");
 		registerIngot("Valkyrie", "aversio", "aer");
+		registerIngot("Manyullyn", "diabolus");
 		registerIngot("QuartzEnrichedIron", "vitreus");
 		registerIngot("Fluix", true, true, "tempus", "spatio");
 		registerIngot("RadiantQuartzShaped", true, "praecantatio", "lux", "spatio");
+		registerIngot("Potato", "herba", "victus", "terra");
 	}
 
 	public static void registerEntityAspects() {

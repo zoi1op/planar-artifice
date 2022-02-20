@@ -14,10 +14,13 @@ import thaumcraft.api.aspects.AspectHelper;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.internal.CommonInternals;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class AspectUtils {
     public static AspectEventProxy event;
+    public static ArrayList<AspectListFunction> recipes = new ArrayList<>();
+    public interface AspectListFunction { AspectList run(ItemStack stack, ArrayList<String> history); }
 
     public static Aspects getEntityAspect(String name, ThaumcraftApi.EntityTagsNBT... nbt) {
         for (ThaumcraftApi.EntityTags et : CommonInternals.scanEntities) {
@@ -127,4 +130,13 @@ public class AspectUtils {
     }
 
     private static String getOldName(String newName) { return EntityList.getTranslationName(new ResourceLocation(newName)); }
+
+    public static AspectList generateTagsFromRecipes(ItemStack stack, ArrayList<String> history) {
+        AspectList ret;
+        for (AspectListFunction fn : recipes) {
+            ret = fn.run(stack, history);
+            if (ret != null) return ret;
+        }
+        return null;
+    }
 }

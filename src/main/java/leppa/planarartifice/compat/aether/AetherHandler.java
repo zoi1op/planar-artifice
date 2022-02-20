@@ -9,6 +9,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.items.ItemsTC;
 
@@ -139,6 +140,11 @@ public class AetherHandler implements PACompatHandler.ICompatModule {
         addByRegex(".*ring.*", new Aspects("praemunio", 3));
         addByRegex(".*pendant.*", new Aspects("praemunio", 3));
         add(ItemsAether.chain_gloves, get(Items.IRON_INGOT).multiply(2F*0.75F*0.75F));
+    }
+
+    @Override
+    public void registerOres() {
+        OreDictionary.registerOre("record", ItemsAether.legacy);
     }
 
     private void registerImaginaryArmor(Aspects ingot, Item helm, Item chest, Item legs, Item boots, Item gloves) {
