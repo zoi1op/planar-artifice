@@ -165,4 +165,14 @@ public class OreUtils {
         stack.setTagCompound(tag);
         return stack;
     }
+    public static ItemStack ingredient(Object stack) {
+        if (stack instanceof String) return OreUtils.getFirst((String)stack);
+        if (stack instanceof Item) return new ItemStack((Item)stack);
+        if (stack instanceof Block) return new ItemStack((Block)stack);
+        if (stack instanceof ItemStack) {
+            if (((ItemStack) stack).getMetadata() == OreDictionary.WILDCARD_VALUE) return OreUtils.meta((ItemStack) stack, 0);
+            return (ItemStack)stack;
+        }
+        return ItemStack.EMPTY;
+    }
 }

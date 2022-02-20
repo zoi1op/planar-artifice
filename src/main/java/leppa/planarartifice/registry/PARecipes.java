@@ -1,7 +1,6 @@
 package leppa.planarartifice.registry;
 
 import com.bewitchment.common.integration.thaumcraft.ThaumcraftCompat;
-import com.zeitheron.thaumicadditions.init.KnowledgeTAR;
 import leppa.planarartifice.compat.bewitchment.BewitchmentHandler;
 import leppa.planarartifice.compat.thaumicadditions.ThaumicAdditionsHandler;
 import leppa.planarartifice.enchantment.EnumInfusionEnchantmentII;
@@ -192,16 +191,16 @@ public class PARecipes {
         if (OreUtils.exists("ingotCobalt")) registerCrucibleRecipe("bismuth_to_cobalt", "PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotCobalt"), PAItems.bismuth_ingot, new Aspects("tempus", PAConfig.balance.bismuthCrashCost));
         if (OreUtils.exists("ingotIridium")) registerCrucibleRecipe("bismuth_to_iridium", "PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotIridium"), PAItems.bismuth_ingot, new Aspects("machina", PAConfig.balance.bismuthCrashCost));
         if (OreUtils.exists("ingotPlatinum")) {
-            if (ThaumicAdditionsHandler.extraActivated) registerCrucibleRecipe("bismuth_to_platinum", "PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotPlatinum"), PAItems.bismuth_ingot, new Aspects(KnowledgeTAR.CAELES, PAConfig.balance.bismuthCrashCost));
+            if (ThaumicAdditionsHandler.extraActivated) registerCrucibleRecipe("bismuth_to_platinum", "PA_BUSH_ALCHMY_METAL_BISMUTH", OreUtils.getFirst("ingotPlatinum"), PAItems.bismuth_ingot, new Aspects("caeles", PAConfig.balance.bismuthCrashCost));
             else registerCrucibleRecipe("bismuth_to_platinum", "PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotPlatinum"), PAItems.bismuth_ingot, new Aspects("humanus", PAConfig.balance.bismuthCrashCost));
         }
         if (OreUtils.exists("ingotOsmium")) {
-            if (ThaumicAdditionsHandler.extraActivated) registerCrucibleRecipe("bismuth_to_osmium", "PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotOsmium"), PAItems.bismuth_ingot, new Aspects(KnowledgeTAR.VENTUS, PAConfig.balance.bismuthCrashCost));
+            if (ThaumicAdditionsHandler.extraActivated) registerCrucibleRecipe("bismuth_to_osmium", "PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotOsmium"), PAItems.bismuth_ingot, new Aspects("ventus", PAConfig.balance.bismuthCrashCost));
             else registerCrucibleRecipe("bismuth_to_osmium", "PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotOsmium"), PAItems.bismuth_ingot, new Aspects("vacuos", PAConfig.balance.bismuthCrashCost));
         }
         if (OreUtils.exists("ingotUranium")) registerCrucibleRecipe("bismuth_to_uranium", "PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotUranium"), PAItems.bismuth_ingot, new Aspects("mortuus", PAConfig.balance.bismuthCrashCost));
         if (OreUtils.exists("ingotDraconium")) {
-            if (ThaumicAdditionsHandler.extraActivated) registerCrucibleRecipe("bismuth_to_draconium", "PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotDraconium"), PAItems.bismuth_ingot, new Aspects(KnowledgeTAR.DRACO, PAConfig.balance.bismuthCrashCost));
+            if (ThaumicAdditionsHandler.extraActivated) registerCrucibleRecipe("bismuth_to_draconium", "PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotDraconium"), PAItems.bismuth_ingot, new Aspects("draco", PAConfig.balance.bismuthCrashCost));
             else registerCrucibleRecipe("bismuth_to_draconium", "PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotDraconium"), PAItems.bismuth_ingot, new Aspects("alienis", PAConfig.balance.bismuthCrashCost));
         }
         if (OreUtils.exists("ingotMithril")) registerCrucibleRecipe("bismuth_to_mithril", "PA_BUSH_ALCHEMY_METAL_BISMUTH", OreUtils.getFirst("ingotMithril"), PAItems.bismuth_ingot, new Aspects("praecantatio", PAConfig.balance.bismuthCrashCost));
