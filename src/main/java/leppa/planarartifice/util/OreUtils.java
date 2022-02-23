@@ -1,14 +1,18 @@
 package leppa.planarartifice.util;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.UUID;
 
 public class OreUtils {
@@ -165,14 +169,28 @@ public class OreUtils {
         stack.setTagCompound(tag);
         return stack;
     }
-    public static ItemStack ingredient(Object stack) {
-        if (stack instanceof String) return OreUtils.getFirst((String)stack);
-        if (stack instanceof Item) return new ItemStack((Item)stack);
-        if (stack instanceof Block) return new ItemStack((Block)stack);
-        if (stack instanceof ItemStack) {
-            if (((ItemStack) stack).getMetadata() == OreDictionary.WILDCARD_VALUE) return OreUtils.meta((ItemStack) stack, 0);
-            return (ItemStack)stack;
-        }
-        return ItemStack.EMPTY;
+    public static ItemStack ingredient(Object stack) { return ingredient(stack, true); }
+    public static ItemStack ingredient(Object stack, boolean detectWildcard) {
+        ItemStack ret = null;
+        if (stack instanceof ItemStack) ret = (ItemStack) stack;
+        else if (stack instanceof Block) ret = new ItemStack((Block)stack);
+        else if (stack instanceof Item) ret = new ItemStack((Item)stack);
+        else if (stack instanceof String) ret = OreUtils.getFirst((String)stack);
+        else if (stack instanceof IBlockState) ret = new ItemStack(((IBlockState) stack).getBlock());
+        else if ((stack instanceof Ingredient) && ((Ingredient) stack).getMatchingStacks().length > 0) ret = ((Ingredient) stack).getMatchingStacks()[0];
+        if (ret == null) return ItemStack.EMPTY;
+        if (detectWildcard && ret.getMetadata() == OreDictionary.WILDCARD_VALUE) return OreUtils.meta(ret, 0);
+        return ret;
+
+    }
+    public static boolean equals(Object a, Object b) {
+        return ItemStack.areItemStacksEqual(count(ingredient(a), 1), count(ingredient(b), 1));
+    }
+    public static LinkedList<String> historyFallback = new LinkedList<>();
+    public static boolean historyContains(List<String> history, Object stack) {
+        String q = ingredient(stack, false).serializeNBT().toString();
+        if (history.contains(q)) return true;
+        if (historyFallback.contains(q)) return true;
+        history.add(q); historyFallback.add(q); return false;
     }
 }

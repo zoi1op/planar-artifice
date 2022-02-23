@@ -135,8 +135,12 @@ public class AspectUtils {
         AspectList ret;
         for (AspectListFunction fn : recipes) {
             ret = fn.run(stack, history);
-            if (ret != null) return ret;
+            if (ret != null) {
+                OreUtils.historyFallback.clear();
+                return ret;
+            }
         }
+        OreUtils.historyFallback.clear();
         return null;
     }
 }

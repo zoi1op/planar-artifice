@@ -1,14 +1,20 @@
 package leppa.planarartifice.compat.aether;
 
+import com.gildedgames.the_aether.api.AetherAPI;
+import com.gildedgames.the_aether.api.enchantments.AetherEnchantment;
+import com.gildedgames.the_aether.api.freezables.AetherFreezable;
 import com.gildedgames.the_aether.blocks.BlocksAether;
 import com.gildedgames.the_aether.items.ItemsAether;
 import leppa.planarartifice.compat.PACompatHandler;
+import leppa.planarartifice.main.PlanarArtifice;
+import leppa.planarartifice.util.AspectUtils;
 import leppa.planarartifice.util.Aspects;
 import leppa.planarartifice.util.OreUtils;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.items.ItemsTC;
@@ -16,6 +22,26 @@ import thaumcraft.api.items.ItemsTC;
 import static leppa.planarartifice.util.AspectUtils.*;
 
 public class AetherHandler implements PACompatHandler.ICompatModule {
+    @Override
+    public void preInit(FMLPreInitializationEvent e) {
+        AspectUtils.recipes.add(
+            (stack, history) -> { for (AetherFreezable recipe : AetherAPI.getInstance().getFreezableValues()) {
+                if (!OreUtils.equals(recipe.output, stack)) continue;
+                if (OreUtils.historyContains(history, recipe.output)) return null;
+                PlanarArtifice.LOGGER.info("[PA, AETHER] Patching for freeze recipe " + stack.getItem().getUnlocalizedName());
+                return new Aspects("gelum", 5).multiply(1F-(20F/Math.max(20, recipe.timeRequired))).add(get(recipe.input)).multiply(1F/Math.max(1, recipe.output.getCount()));
+            } return null; }
+        );
+        AspectUtils.recipes.add(
+            (stack, history) -> { for (AetherEnchantment recipe : AetherAPI.getInstance().getEnchantmentValues()) {
+                if (!OreUtils.equals(recipe.output, stack)) continue;
+                if (OreUtils.historyContains(history, recipe.output)) return null;
+                PlanarArtifice.LOGGER.info("[PA, AETHER] Patching for enchantment recipe " + stack.getItem().getUnlocalizedName());
+                return new Aspects("praecantatio", 5, "lux", 3, "ordo", 1).multiply(1F-(20F/Math.max(20, recipe.timeRequired))).add(get(recipe.input)).multiply(1F/Math.max(1, recipe.output.getCount()));
+            } return null; }
+        );
+    }
+
     @Override
     public void registerAspects() {
         // register items
@@ -77,8 +103,6 @@ public class AetherHandler implements PACompatHandler.ICompatModule {
         set(ItemsAether.valkyrie_lance, get(ItemsAether.skyroot_stick).add(new Aspects("metallum", 10, "aer", 5, "aversio", 5).multiply(2F)).multiply(0.75F));
         set(ItemsAether.valkyrie_cape, new Aspects("metallum", 10, "aer", 5, "aversio", 5).multiply(6F*0.75F));
         set(ItemsAether.phoenix_bow, get(Items.STRING).multiply(3F).add(new Aspects("metallum", 10, "ignis", 5).add("sol", 15, "volatus").multiply(3F)).multiply(0.75F));
-        set(ItemsAether.ice_pendant, get(BlocksAether.icestone).multiply(0.75F).add(get(ItemsAether.iron_pendant)));
-        set(ItemsAether.ice_ring, get(BlocksAether.icestone).multiply(0.75F).add(get(ItemsAether.iron_ring)));
         set(ItemsAether.swet_cape, get(ItemsAether.swetty_ball).multiply(6F*0.75F));
         set(ItemsAether.sentry_boots, get(BlocksAether.dungeon_block).multiply(6F*0.75F).add("spatio", 5).add("motus", 5));
         set(ItemsAether.flaming_sword, get(ItemsAether.holystone_sword).add("ignis", 15).add("sol", 15, "potentia"));

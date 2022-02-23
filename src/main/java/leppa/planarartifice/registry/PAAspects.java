@@ -53,6 +53,7 @@ public class PAAspects {
 		aspectRepl.put("stellae", PAAspects.DIMENSIONS);
 		aspectRepl.put("luna", Aspect.SOUL);
 		aspectRepl.put("sol", Aspect.DESIRE);
+		aspectRepl.put("mythus", Aspect.BEAST);
 	}
 
 	private static final HashMap<String, Aspect> aspectRepl = new HashMap<>();
@@ -196,6 +197,7 @@ public class PAAspects {
 		registerIngot("Iron");
 		registerIngot("Gold", "desiderium", "sol");
 		registerIngot("Quartz", true, true);
+		set(OreUtils.meta(ItemsTC.nuggets, 9), new Aspects()); // sliver should be aspectless
 		registerIngot("Lapis", true, "tinctura", "tinctura", "tinctura", "tinctura", "sensus", "desiderium");
 		registerIngot("Diamond", true, "desiderium", "desiderium");
 		registerIngot("Emerald", true, "desiderium", "humanus");
@@ -244,7 +246,7 @@ public class PAAspects {
 		registerIngot("AstralStarmetal", "stellae");
 		registerIngot("Manasteel", "praecantatio");
 		registerIngot("ElvenElementium", "alienis");
-		registerIngot("Dawnstone", "machina", "ignis");
+		registerIngot("Dawnstone", "machina", "sol", "ignis");
 		registerIngot("Alkimium", "alkimia");
 		registerIngot("Bismuth","tinctura");
 		registerIngot("ColdIron", "gelum");

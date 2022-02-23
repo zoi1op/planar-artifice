@@ -11,6 +11,7 @@ import leppa.planarartifice.compat.bewitchment.BewitchmentHandler;
 import leppa.planarartifice.compat.botania.BotaniaHandler;
 import leppa.planarartifice.compat.botania.BotanicAdditionsHandler;
 import leppa.planarartifice.compat.botania.ExtraBotanyHandler;
+import leppa.planarartifice.compat.botania.NaturalPledgeHandler;
 import leppa.planarartifice.compat.embers.EmbersHandler;
 import leppa.planarartifice.compat.embers.SootHandler;
 import leppa.planarartifice.compat.storage.AE2Handler;
@@ -43,30 +44,34 @@ public class PACompatHandler {
 	public static final ArrayList<ICompatModule> MODULES = new ArrayList<ICompatModule>();
 
 	static {
-		CLASSES.put("tconstruct", TConstructHandler.class);
+		// thaum additions
 		CLASSES.put("thaumadditions", ThaumicAdditionsHandler.class);
 		CLASSES.put("thaumicaugmentation", ThaumicAugmentationHandler.class);
 		CLASSES.put("thaumicwonders", ThaumicWondersHandler.class);
 		CLASSES.put("thaumicpotatoes", ThaumicPotatoesHandler.class);
-		// jei //
+		// botania
 		CLASSES.put("botania", BotaniaHandler.class);
 		CLASSES.put("botanicadds", BotanicAdditionsHandler.class);
 		CLASSES.put("extrabotany", ExtraBotanyHandler.class);
+		CLASSES.put("naturalpledge", NaturalPledgeHandler.class);
+		// other magic mods
 		CLASSES.put("astralsorcery", AstralSorceryHandler.class);
 		CLASSES.put("bewitchment", BewitchmentHandler.class);
-		CLASSES.put("twilightforest", TwilightForestHandler.class);
-		CLASSES.put("xercapaint", XercaPaintHandler.class);
 		CLASSES.put("embers", EmbersHandler.class);
 		CLASSES.put("soot", SootHandler.class);
-		// storage options
-		CLASSES.put("appliedenergistics2", AE2Handler.class);
-		CLASSES.put("refinedstorage", RSHandler.class);
-		CLASSES.put("arcanearchives", ArcaneArchivesHandler.class);
 		// aether
 		CLASSES.put("aether_legacy", AetherHandler.class);
 		CLASSES.put("aether_legacy_addon", AetherContinuationHandler.class);
 		CLASSES.put("aeadditions", AetherAdditionsHandler.class);
 		CLASSES.put("lost_aether", AetherLostContentHandler.class);
+		// storage options
+		CLASSES.put("appliedenergistics2", AE2Handler.class);
+		CLASSES.put("refinedstorage", RSHandler.class);
+		CLASSES.put("arcanearchives", ArcaneArchivesHandler.class);
+		// other
+		CLASSES.put("twilightforest", TwilightForestHandler.class);
+		CLASSES.put("xercapaint", XercaPaintHandler.class);
+		CLASSES.put("tconstruct", TConstructHandler.class);
 	}
 
 	public static void setup() {
