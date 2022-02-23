@@ -59,7 +59,9 @@ public class PlanarArtifice implements LoadingCallback {
 					"after:botania;" +
 					"after:botanicadds;" +
 					"after:extrabotany;" +
+					"after:naturalpledge;" +
 					"after:astralsorcery;" +
+					"after:moretweaker;" +
 					"after:bewitchment;" +
 					"after:embers;" +
 					"after:soot;" +

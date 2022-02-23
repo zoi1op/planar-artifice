@@ -33,7 +33,11 @@ val versionPatchouli: String by project
 val versionBotania: String by project
 val versionBotanicAdditions: String by project
 val versionExtraBotany: String by project
+val versionNaturalPledge: String by project
 val versionAstralSorcery: String by project
+val versionCraftTweaker: String by project
+val versionMTLib: String by project
+val versionMoreTweaker: String by project
 val versionBewitchment: String by project
 val versionEmbers: String by project
 val versionSoot: String by project
@@ -48,6 +52,8 @@ val versionMysticalLib: String by project
 val versionArcArc: String by project
 val versionCTM: String by project
 val versionXercaPaint: String by project
+val versionLLibrary: String by project
+val versionIceAndFire: String by project
 val versionAether: String by project
 val versionAetherLostContent: String by project
 val versionAetherContinuation: String by project
@@ -123,7 +129,11 @@ dependencies {
     implementation(group = "curse.maven", name = "botania-225643", version = versionBotania)
     implementation(group = "curse.maven", name = "botanic-additions-310637", version = versionBotanicAdditions)
     implementation(group = "curse.maven", name = "extrabotany-299086", version = versionExtraBotany)
+    implementation(group = "curse.maven", name = "natural-pledge-247704", version = versionNaturalPledge)
     implementation(group = "curse.maven", name = "astral-sorcery-241721", version = versionAstralSorcery)
+    implementation(group = "curse.maven", name = "crafttweaker-239197", version = versionCraftTweaker)
+    implementation(group = "curse.maven", name = "mtlib-253211", version = versionMTLib)
+    implementation(group = "curse.maven", name = "moretweaker-336569", version = versionMoreTweaker)
     implementation(group = "curse.maven", name = "bewitchment-285439", version = versionBewitchment)
     implementation(group = "curse.maven", name = "embers-rekindled-300777", version = versionEmbers)
     implementation(group = "curse.maven", name = "soot-281528", version = versionSoot)
@@ -138,6 +148,8 @@ dependencies {
     implementation(group = "curse.maven", name = "arcane-archives-311357", version = versionArcArc)
     implementation(group = "curse.maven", name = "ctm-267602", version = versionCTM)
     implementation(group = "curse.maven", name = "joy-of-painting-350727", version = versionXercaPaint)
+    implementation(group = "curse.maven", name = "llibrary-243298", version = versionLLibrary)
+    implementation(group = "curse.maven", name = "ice-and-fire-dragons-264231", version = versionIceAndFire)
     implementation(group = "curse.maven", name = "aether-255308", version = versionAether)
     implementation(group = "curse.maven", name = "aether-lost-content-318602", version = versionAetherLostContent)
     implementation(group = "curse.maven", name = "aether-addon-294269", version = versionAetherContinuation)
