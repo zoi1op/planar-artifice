@@ -110,7 +110,7 @@ public class PARecipes {
         registerCrucibleRecipe("alkimium_ingot", "METALLURGY@2", PAItems.alkimium_ingot, OreUtils.meta(ItemsTC.ingots, 2), new Aspects("alkimia", 5, "ordo",  5));
         registerCrucibleRecipe("magic_apple", "PA_RARE_ITEMS@4", PAItems.magic_apple, Items.APPLE, new Aspects("praecantatio", 10, "victus", 70, "bestia",  25, "terra",  15));
         registerCrucibleRecipe("alchemical_scribing_tools", "PA_ALCHEMICAL_SCRIBING_TOOLS", PAItems.alchemical_scribing_tools, ItemsTC.scribingTools, new Aspects("auram",  15, "alkimia", 15));
-        registerCrucibleRecipe("bismuth", "!Portal", PAItems.bismuth_ingot, ItemsTC.ingots, new Aspects("auram",  20, "potentia", 20));
+        registerCrucibleRecipe("bismuth", "!Portal", PAItems.bismuth_ingot, OreUtils.meta(ItemsTC.ingots, 0), new Aspects("auram",  20, "potentia", 20));
         registerCrucibleRecipe("endereye", "PA_BUSH_ALCHEMY@1", Items.ENDER_EYE, Items.SPIDER_EYE, new Aspects("spatio", 10, "ignis", 10, "alienis", 20));
         registerCrucibleRecipe("redstone", "PA_BUSH_ALCHEMY@1", Items.REDSTONE, Items.GUNPOWDER, new Aspects("potentia", 5));
         registerCrucibleRecipe("blaze_powder", "PA_BUSH_ALCHEMY@2", new ItemStack(Items.BLAZE_POWDER, 2), Items.GUNPOWDER, new Aspects("ignis", 14, "praecantatio", 5));
