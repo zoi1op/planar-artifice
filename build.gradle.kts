@@ -105,10 +105,6 @@ repositories {
         url = uri("https://dvs1.progwml6.com/files/maven")
     }
     maven {
-        name = "DragonForge"
-        url = uri("https://raw.github.com/dragon-forge/maven/master")
-    }
-    maven {
         name = "thiakil"
         url = uri("https://maven.thiakil.com")
     }
@@ -123,8 +119,8 @@ dependencies {
     implementation(group = "curse.maven", name = "thaumic-wonders-316704", version = versionWonders)
     implementation(group = "curse.maven", name = "guide-api-228832", version = versionGuideAPI)
     implementation(group = "curse.maven", name = "thaumic-potatoes-2-270721", version = versionPotatoes)
-    implementation("tk.zeitheron.HammerLib:HammerLib-${versionMc}:${versionHammerLib}:deobf")
-    implementation("tk.zeitheron.ThaumicAdditions:ThaumicAdditions-${versionMc}:${versionThaumAdds}:deobf")
+    implementation(fg.deobf(group = "curse.maven", name = "hammer-lib-247401", version = versionHammerLib))
+    implementation(fg.deobf(group = "curse.maven", name = "thaumic-additions-232564", version = versionThaumAdds))
     implementation(group = "curse.maven", name = "patchouli-306770", version = versionPatchouli)
     implementation(group = "curse.maven", name = "botania-225643", version = versionBotania)
     implementation(group = "curse.maven", name = "botanic-additions-310637", version = versionBotanicAdditions)

@@ -1,8 +1,8 @@
 package leppa.planarartifice.compat.thaumicadditions;
 
-import com.zeitheron.thaumicadditions.api.AspectUtil;
-import com.zeitheron.thaumicadditions.init.ItemsTAR;
-import com.zeitheron.thaumicadditions.init.KnowledgeTAR;
+import org.zeith.thaumicadditions.api.AspectUtil;
+import org.zeith.thaumicadditions.init.ItemsTAR;
+import org.zeith.thaumicadditions.init.KnowledgeTAR;
 import leppa.planarartifice.blocks.BlockAlkimiumSmeltery;
 import leppa.planarartifice.compat.PACompatHandler.ICompatModule;
 import leppa.planarartifice.main.PAConfig;
