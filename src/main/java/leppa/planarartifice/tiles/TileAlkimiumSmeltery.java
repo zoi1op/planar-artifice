@@ -47,7 +47,7 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 
 			if(this.count % speed == 0 && this.aspects.size() > 0) {
 				for(Aspect aspect : this.aspects.getAspects()) {
-					if(this.aspects.getAmount(aspect) <= 0 || !this.processAlembics(aspect))
+					if(this.aspects.getAmount(aspect) <= 0 || !this.processAlembics(this.getPos(), aspect))
 						continue;
 					this.takeFromContainer(aspect, 1);
 					break;
@@ -57,7 +57,7 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 					IBlockState aux = this.world.getBlockState(this.getPos().offset(face));
 					if(aux.getBlock() != PABlocks.smelter_aux || BlockStateUtils.getFacing(aux) != face.getOpposite()) continue;
 					for(Aspect aspect : this.aspects.getAspects()) {
-						if (this.aspects.getAmount(aspect) <= 0 || !processAlembics(aspect)) continue;
+						if (this.aspects.getAmount(aspect) <= 0 || !processAlembics(this.getPos().offset(face), aspect)) continue;
 						this.takeFromContainer(aspect, 1);
 					}
 				}
@@ -176,13 +176,13 @@ public class TileAlkimiumSmeltery extends TileSmelter {
 		}
 	}
 
-	public boolean processAlembics(Aspect a) {
+	public boolean processAlembics(BlockPos pos, Aspect a) {
 		try {
 			if (processAlembics == null) {
 				processAlembics = TileAlembic.class.getDeclaredMethod("processAlembics", World.class, BlockPos.class, Aspect.class);
 				processAlembics.setAccessible(true);
 			}
-			return (boolean) processAlembics.invoke(null, this.getWorld(), this.getPos(), a);
+			return (boolean) processAlembics.invoke(null, this.getWorld(), pos, a);
 		}
 		catch(Exception e) {
 			PlanarArtifice.LOGGER.error(e);
