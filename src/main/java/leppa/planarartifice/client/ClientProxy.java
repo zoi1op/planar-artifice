@@ -40,6 +40,7 @@ import thaumcraft.api.items.RechargeHelper;
 import thaumcraft.client.gui.GuiFocalManipulator;
 import thaumcraft.client.gui.plugins.GuiSliderTC;
 import thaumcraft.common.lib.SoundsTC;
+import thaumcraft.common.lib.research.ResearchManager;
 
 @EventBusSubscriber(value = Side.CLIENT)
 public class ClientProxy extends CommonProxy{
@@ -87,8 +88,9 @@ public class ClientProxy extends CommonProxy{
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
 	public static void onGuiRender(GuiScreenEvent.DrawScreenEvent.Post event){
-		if(PlanarArtifice.isSingleplayer){
-			if(event.getGui() instanceof GuiFocalManipulator){
+		if(PlanarArtifice.isSingleplayer) {
+			if(event.getGui() instanceof GuiFocalManipulator) {
+				if (!ResearchManager.doesPlayerHaveRequisites(event.getGui().mc.player, "PA_FOCUS_COLOUR")) return;
 				GlStateManager.enableBlend();
 				GlStateManager.color(255, 255, 255, 255);
 				event.getGui().mc.getTextureManager().bindTexture(tex);
