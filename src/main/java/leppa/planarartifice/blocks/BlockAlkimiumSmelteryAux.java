@@ -1,9 +1,5 @@
 package leppa.planarartifice.blocks;
 
-import java.util.List;
-
-import javax.annotation.Nullable;
-
 import leppa.planarartifice.util.LocalizationHelper;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -25,6 +21,9 @@ import thaumcraft.common.blocks.IBlockFacingHorizontal;
 import thaumcraft.common.lib.utils.BlockStateUtils;
 import thaumcraft.common.lib.utils.InventoryUtils;
 
+import javax.annotation.Nullable;
+import java.util.List;
+
 public class BlockAlkimiumSmelteryAux extends BlockPA implements IBlockFacingHorizontal {
 
 	public BlockAlkimiumSmelteryAux(String name) {
@@ -45,7 +44,7 @@ public class BlockAlkimiumSmelteryAux extends BlockPA implements IBlockFacingHor
 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
 		InventoryUtils.dropItems(worldIn, pos);
 		TileEntity tileentity = worldIn.getTileEntity(pos);
-		if(tileentity != null && tileentity instanceof IEssentiaTransport && !worldIn.isRemote) {
+		if(tileentity instanceof IEssentiaTransport && !worldIn.isRemote) {
 			int ess = ((IEssentiaTransport) tileentity).getEssentiaAmount(EnumFacing.UP);
 			if(ess > 0)
 				AuraHelper.polluteAura(worldIn, pos, ess, true);
